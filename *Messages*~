@@ -1,0 +1,13 @@
+Loading 00debian-vars...done
+Loading /etc/emacs/site-start.d/50cmake-data.el (source)...done
+Loading /etc/emacs/site-start.d/50dictionaries-common.el (source)...
+Loading debian-ispell...
+Loading /var/cache/dictionaries-common/emacsen-ispell-default.el (source)...done
+Loading debian-ispell...done
+Loading /var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...done
+Loading /etc/emacs/site-start.d/50dictionaries-common.el (source)...done
+For information about GNU Emacs and the GNU system, type C-h C-a.
+byte-code: Beginning of buffer
+completing-read-default: Command attempted to use minibuffer while in minibuffer
+user-error: All files processed
+(No files need saving)

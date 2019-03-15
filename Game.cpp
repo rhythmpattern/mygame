@@ -1,0 +1,544 @@
+#include "Game.h"
+#include "ObjectEnumerations.h"
+#include "SteeringBehaviors.h"
+#include "Navigation/PathPlanner.h"
+#include "Game/EntityManager.h"
+#include "2D/WallIntersectionTests.h"
+#include "Map.h"
+#include "Door.h"
+#include "UserOptions.h"
+#include "SensoryMemory.h"
+#include "WeaponSystem.h"
+#include "Messaging/MessageDispatcher.h"
+#include "Messages.h"
+#include "GraveMarkers.h"
+
+#include "Armory/Projectile.h"
+#include "Armory/Projectile_Shot.h"
+#include "Armory/Shooter.h"
+#include "Goals/Goal_Think.h"
+#include "Goals/Goal_Types.h"
+
+//uncomment to write object creation/deletion to debug console
+//#define  LOG_CREATIONAL_STUFF
+
+
+//----------------------------- ctor ------------------------------------------
+//-----------------------------------------------------------------------------
+Game::Game():m_pSelectedBot(NULL),
+                         m_bPaused(false),
+                         m_bRemoveABot(false),
+                         m_pMap(NULL),
+                         m_pPathManager(NULL),
+                         m_pGraveMarkers(NULL)
+{
+  //load in the default map
+  LoadMap("DM1.map");
+}
+
+
+//------------------------------ dtor -----------------------------------------
+//-----------------------------------------------------------------------------
+Game::~Game()
+{
+  Clear();
+  delete m_pPathManager;
+  delete m_pMap;
+  
+  delete m_pGraveMarkers;
+}
+
+
+//---------------------------- Clear ------------------------------------------
+//
+//  deletes all the current objects ready for a map load
+//-----------------------------------------------------------------------------
+void Game::Clear()
+{
+#ifdef LOG_CREATIONAL_STUFF
+    debug_con << "\n------------------------------ Clearup -------------------------------" <<"";
+#endif
+
+  //delete the bots
+  std::vector<Character*>::iterator it = m_Bots.begin();
+  for (it; it != m_Bots.end(); ++it)
+  {
+#ifdef LOG_CREATIONAL_STUFF
+    debug_con << "deleting entity id: " << (*it)->ID() << " of type "
+              << GetNameOfType((*it)->EntityType()) << "(" << (*it)->EntityType() << ")" <<"";
+#endif
+
+    delete *it;
+  }
+
+  //delete any active projectiles
+  std::list<Projectile*>::iterator curW = m_Projectiles.begin();
+  for (curW; curW != m_Projectiles.end(); ++curW)
+  {
+#ifdef LOG_CREATIONAL_STUFF
+    debug_con << "deleting projectile id: " << (*curW)->ID() << "";
+#endif
+
+    delete *curW;
+  }
+
+  //clear the containers
+  m_Projectiles.clear();
+  m_Bots.clear();
+
+  m_pSelectedBot = NULL;
+
+
+}
+
+//-------------------------------- Update -------------------------------------
+//
+//  calls the update function of each entity
+//-----------------------------------------------------------------------------
+void Game::Update()
+{ 
+  //don't update if the user has paused the game
+  if (m_bPaused) return;
+
+  m_pGraveMarkers->Update();
+
+  //get any player keyboard input
+  GetPlayerInput();
+  
+  //update all the queued searches in the path manager
+  m_pPathManager->UpdateSearches();
+
+  //update any doors
+  std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
+  for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
+  {
+    (*curDoor)->Update();
+  }
+
+  //update any current projectiles
+  std::list<Projectile*>::iterator curW = m_Projectiles.begin();
+  while (curW != m_Projectiles.end())
+  {
+    //test for any dead projectiles and remove them if necessary
+    if (!(*curW)->isDead())
+    {
+      (*curW)->Update();
+
+      ++curW;
+    }
+    else
+    {    
+      delete *curW;
+
+      curW = m_Projectiles.erase(curW);
+    }   
+  }
+  
+  //update the bots
+  bool bSpawnPossible = true;
+  
+  std::vector<Character*>::iterator curBot = m_Bots.begin();
+  for (curBot; curBot != m_Bots.end(); ++curBot)
+  {
+    //if this bot's status is 'respawning' attempt to resurrect it from
+    //an unoccupied spawn point
+    if ((*curBot)->isSpawning() && bSpawnPossible)
+    {
+      bSpawnPossible = AttemptToAddBot(*curBot);
+    }
+    
+    //if this bot's status is 'dead' add a grave at its current location 
+    //then change its status to 'respawning'
+    else if ((*curBot)->isDead())
+    {
+      //create a grave
+      m_pGraveMarkers->AddGrave((*curBot)->Pos());
+
+      //change its status to spawning
+      (*curBot)->SetSpawning();
+    }
+
+    //if this bot is alive update it.
+    else if ( (*curBot)->isAlive())
+    {
+      (*curBot)->Update();
+    }  
+  } 
+
+  //update the triggers
+  m_pMap->UpdateTriggerSystem(m_Bots);
+
+  //if the user has requested that the number of bots be decreased, remove
+  //one
+  if (m_bRemoveABot)
+  { 
+    if (!m_Bots.empty())
+    {
+      Character* pBot = m_Bots.back();
+      if (pBot == m_pSelectedBot)m_pSelectedBot=0;
+      NotifyAllBotsOfRemoval(pBot);
+      delete m_Bots.back();
+      m_Bots.erase(m_Bots.begin()+m_Bots.size()-1);
+      pBot = 0;
+    }
+
+    m_bRemoveABot = false;
+  }
+}
+
+
+//----------------------------- AttemptToAddBot -------------------------------
+//-----------------------------------------------------------------------------
+bool Game::AttemptToAddBot(Character* pBot)
+{//g_screenLog->log(LL_INFO, "Attempting to add bot");
+  //make sure there are some spawn points available
+  if (m_pMap->GetSpawnPoints().size() <= 0)
+  {
+    std::cout << ("Map has no spawn points!"); return false;
+  }
+
+  //we'll make the same number of attempts to spawn a bot this update as
+  //there are spawn points
+  int attempts = m_pMap->GetSpawnPoints().size();
+  //g_screenLog->log(LL_INFO, "attempts = %d",attempts);
+
+  while (--attempts >= 0)
+  { 
+    //select a random spawn point
+    Vector2D pos = m_pMap->GetRandomSpawnPoint();
+
+    //check to see if it's occupied
+    std::vector<Character*>::const_iterator curBot = m_Bots.begin();
+
+    bool bAvailable = true;
+
+    for (curBot; curBot != m_Bots.end(); ++curBot)
+    {
+      //if the spawn point is unoccupied spawn a bot
+      if (Vec2DDistance(pos, (*curBot)->Pos()) < (*curBot)->BRadius())
+      {
+        bAvailable = false;
+      }
+    }
+
+    if (bAvailable)
+    {  
+      pBot->Spawn(pos);
+
+      return true;   
+    }
+  }
+
+  return false;
+}
+
+//-------------------------- AddBots --------------------------------------
+//
+//  Adds a bot and switches on the default steering behavior
+//-----------------------------------------------------------------------------
+void Game::AddBots(unsigned int NumBotsToAdd)
+{ //g_screenLog->log(LL_INFO, "adding a bot \n");
+  while (NumBotsToAdd--)
+  {
+    //create a bot. (its position is irrelevant at this point because it will
+    //not be rendered until it is spawned)
+    Character* rb = new Character(this, Vector2D());
+
+    //switch the default steering behaviors on
+    rb->GetSteering()->WallAvoidanceOn();
+    rb->GetSteering()->SeparationOn();
+
+    m_Bots.push_back(rb);
+    //register the bot with the entity manager
+    EntityMgr->RegisterEntity(rb);
+
+    
+#ifdef LOG_CREATIONAL_STUFF
+  debug_con << "Adding bot with ID " << ttos(rb->ID()) << "";
+#endif
+  }
+}
+
+//---------------------------- NotifyAllBotsOfRemoval -------------------------
+//
+//  when a bot is removed from the game by a user all remianing bots
+//  must be notifies so that they can remove any references to that bot from
+//  their memory
+//-----------------------------------------------------------------------------
+void Game::NotifyAllBotsOfRemoval(Character* pRemovedBot)const
+{
+    std::vector<Character*>::const_iterator curBot = m_Bots.begin();
+    for (curBot; curBot != m_Bots.end(); ++curBot)
+    {
+      Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+                              SENDER_ID_IRRELEVANT,
+                              (*curBot)->ID(),
+                              Msg_UserHasRemovedBot,
+                              pRemovedBot);
+
+    }
+}
+//-------------------------------RemoveBot ------------------------------------
+//
+//  removes the last bot to be added from the game
+//-----------------------------------------------------------------------------
+void Game::RemoveBot()
+{
+  m_bRemoveABot = true;
+}
+
+//--------------------------- AddShot -----------------------------------------
+//-----------------------------------------------------------------------------
+void Game::AddShot(Character* shooter, Vector2D target)
+{
+  Projectile* rp = new Projectile_Shot(shooter, target);
+
+  m_Projectiles.push_back(rp);
+  
+  #ifdef LOG_CREATIONAL_STUFF
+  debug_con << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "";
+  #endif
+}
+
+
+
+
+//----------------------------- GetBotAtPosition ------------------------------
+//
+//  given a position on the map this method returns the bot found with its
+//  bounding radius of that position.
+//  If there is no bot at the position the method returns NULL
+//-----------------------------------------------------------------------------
+Character* Game::GetBotAtPosition(Vector2D CursorPos)const
+{
+  std::vector<Character*>::const_iterator curBot = m_Bots.begin();
+
+  for (curBot; curBot != m_Bots.end(); ++curBot)
+  {
+    if (Vec2DDistance((*curBot)->Pos(), CursorPos) < (*curBot)->BRadius())
+    {
+      if ((*curBot)->isAlive())
+      {
+        return *curBot;
+      }
+    }
+  }
+
+  return NULL;
+}
+
+//-------------------------------- LoadMap ------------------------------------
+//
+//  sets up the game environment from map file
+//-----------------------------------------------------------------------------
+bool Game::LoadMap(const std::string& filename)
+{ 
+  //clear any current bots and projectiles
+  Clear();
+  
+  //out with the old
+  delete m_pMap;
+  delete m_pGraveMarkers;
+  delete m_pPathManager;
+
+  //in with the new
+  m_pGraveMarkers = new GraveMarkers(10);
+  m_pPathManager = new PathManager<PathPlanner>(10);
+  m_pMap = new Map();
+
+  //make sure the entity manager is reset
+  EntityMgr->Reset();
+
+ 
+  //load the new map data
+  if (m_pMap->LoadMap(filename))
+  { 
+    AddBots(2);
+   //g_screenLog->log(LL_INFO, "Bots added");
+    return true;
+  }
+
+  return false;
+}
+
+
+//------------------------- ExorciseAnyPossessedBot ---------------------------
+//
+//  when called will release any possessed bot from user control
+//-----------------------------------------------------------------------------
+void Game::ExorciseAnyPossessedBot()
+{
+  if (m_pSelectedBot) m_pSelectedBot->Exorcise();
+}
+
+
+
+
+
+
+
+//---------------------------- isLOSOkay --------------------------------------
+//
+//  returns true if the ray between A and B is unobstructed.
+//------------------------------------------------------------------------------
+bool Game::isLOSOkay(Vector2D A, Vector2D B)const
+{
+  return !doWallsObstructLineSegment(A, B, m_pMap->GetWalls());
+}
+
+//------------------------- isPathObstructed ----------------------------------
+//
+//  returns true if a bot cannot move from A to B without bumping into 
+//  world geometry. It achieves this by stepping from A to B in steps of
+//  size BoundingRadius and testing for intersection with world geometry at
+//  each point.
+//-----------------------------------------------------------------------------
+bool Game::isPathObstructed(Vector2D A,
+                                  Vector2D B,
+                                  double    BoundingRadius)const
+{
+  Vector2D ToB = Vec2DNormalize(B-A);
+
+  Vector2D curPos = A;
+
+  while (Vec2DDistanceSq(curPos, B) > BoundingRadius*BoundingRadius)
+  {   
+    //advance curPos one step
+    curPos += ToB * 0.5 * BoundingRadius;
+    
+    //test all walls against the new position
+    if (doWallsIntersectCircle(m_pMap->GetWalls(), curPos, BoundingRadius))
+    {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+
+//----------------------------- GetAllBotsInFOV ------------------------------
+//
+//  returns a vector of pointers to bots within the given bot's field of view
+//-----------------------------------------------------------------------------
+std::vector<Character*>
+Game::GetAllBotsInFOV(const Character* pBot)const
+{
+  std::vector<Character*> VisibleBots;
+
+  std::vector<Character*>::const_iterator curBot = m_Bots.begin();
+  for (curBot; curBot != m_Bots.end(); ++curBot)
+  {
+    //make sure time is not wasted checking against the same bot or against a
+    // bot that is dead or re-spawning
+    if (*curBot == pBot ||  !(*curBot)->isAlive()) continue;
+
+    //first of all test to see if this bot is within the FOV
+    if (isSecondInFOVOfFirst(pBot->Pos(),
+                             pBot->Facing(),
+                             (*curBot)->Pos(),
+                             pBot->FieldOfView()))
+    {
+      //cast a ray from between the bots to test visibility. If the bot is
+      //visible add it to the vector
+      if (!doWallsObstructLineSegment(pBot->Pos(),
+                              (*curBot)->Pos(),
+                              m_pMap->GetWalls()))
+      {
+        VisibleBots.push_back(*curBot);
+      }
+    }
+  }
+
+  return VisibleBots;
+}
+
+//---------------------------- isSecondVisibleToFirst -------------------------
+
+bool
+Game::isSecondVisibleToFirst(const Character* pFirst,
+                                   const Character* pSecond)const
+{
+  //if the two bots are equal or if one of them is not alive return false
+  if ( !(pFirst == pSecond) && pSecond->isAlive())
+  {
+    //first of all test to see if this bot is within the FOV
+    if (isSecondInFOVOfFirst(pFirst->Pos(),
+                             pFirst->Facing(),
+                             pSecond->Pos(),
+                             pFirst->FieldOfView()))
+    {
+      //test the line segment connecting the bot's positions against the walls.
+      //If the bot is visible add it to the vector
+      if (!doWallsObstructLineSegment(pFirst->Pos(),
+                                      pSecond->Pos(),
+                                      m_pMap->GetWalls()))
+      {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+
+void Game::GetPlayerInput()const
+{
+  if (m_pSelectedBot && m_pSelectedBot->isPossessed())
+  {
+      
+   }
+}
+
+
+
+//--------------------- GetPosOfClosestSwitch -----------------------------
+//
+//  returns the position of the closest visible switch that triggers the
+//  door of the specified ID
+//-----------------------------------------------------------------------------
+Vector2D 
+Game::GetPosOfClosestSwitch(Vector2D botPos, unsigned int doorID)const
+{
+  std::vector<unsigned int> SwitchIDs;
+  
+  //first we need to get the ids of the switches attached to this door
+  std::vector<Door*>::const_iterator curDoor;
+  for (curDoor = m_pMap->GetDoors().begin();
+       curDoor != m_pMap->GetDoors().end();
+       ++curDoor)
+  {
+    if ((*curDoor)->ID() == doorID)
+    {
+       SwitchIDs = (*curDoor)->GetSwitchIDs(); break;
+    }
+  }
+
+  Vector2D closest;
+  double ClosestDist = MaxDouble;
+  
+  //now test to see which one is closest and visible
+  std::vector<unsigned int>::iterator it;
+  for (it = SwitchIDs.begin(); it != SwitchIDs.end(); ++it)
+  {
+    Entity* trig = EntityMgr->GetEntityFromID(*it);
+
+    if (isLOSOkay(botPos, trig->Pos()))
+    {
+      double dist = Vec2DDistanceSq(botPos, trig->Pos());
+
+      if ( dist < ClosestDist)
+      {
+        ClosestDist = dist;
+        closest = trig->Pos();
+      }
+    }
+  }
+
+  return closest;
+}
+
+
+
+
+
