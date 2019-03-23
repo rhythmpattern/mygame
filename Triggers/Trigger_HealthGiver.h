@@ -31,7 +31,7 @@ public:
 
   //if triggered, the bot's health will be incremented
   void Try(Character* pBot);
-  
+   void load(const LoadParams* pParams){}
   //draws a box with a red cross at the trigger's location
   void Render();
 

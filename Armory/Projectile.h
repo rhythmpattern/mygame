@@ -98,7 +98,7 @@ public:
   //save/restore (which can be useful for debugging purposes)
   void Write(std::ostream&  os)const{}
   void Read (std::ifstream& is){}
-
+  void load(const LoadParams* pParams){}
   //must be implemented
   virtual void Update() = 0;
   

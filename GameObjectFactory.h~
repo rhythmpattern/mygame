@@ -1,0 +1,36 @@
+#ifndef GAME_OBJECT_FACTORY_H
+#define GAME_OBJECT_FACTORY_H
+
+#include <string>
+#include <map>
+#include "Game/Entity.h"
+
+
+
+class GameObjectFactory
+{
+ public:
+  static GameObjectFactory* Instance()
+  {
+    if(pInstance == 0)
+      {
+	pInstance = new GameObjectFactory();
+      }
+    return pInstance;
+  }
+
+
+
+ private:
+  GameObjectFactory() {}
+  ~GameObjectFactory() {}
+
+
+  static GameObjectFactory* pInstance;
+  
+
+};
+
+
+
+#endif

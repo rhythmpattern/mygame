@@ -1,0 +1,20 @@
+#ifndef FACTORY_H
+#define FACTORY_H
+
+#include <string>
+#include <map>
+
+class Factory
+{
+ public:
+  virtual Entity* createEntity() const = 0;
+
+
+
+
+  
+}
+
+
+
+#endif

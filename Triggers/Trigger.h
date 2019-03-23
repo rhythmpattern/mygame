@@ -12,6 +12,7 @@
 //-----------------------------------------------------------------------------
 #include "../Game/Entity.h"
 #include "TriggerRegion.h"
+#include "../LoadParams.h"
 
 struct Telegram;
 struct Vector2D;
@@ -70,6 +71,8 @@ public:
   //trigger's region of influence. If it is then the trigger will be 
   //triggered and the appropriate action will be taken.
   virtual void  Try(entity_type*) = 0;
+
+  void load(const LoadParams* pParams){}
 
   //called each update-step of the game. This methods updates any internal
   //state the trigger may have

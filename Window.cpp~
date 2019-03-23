@@ -1,0 +1,9 @@
+#include "Window.h"
+
+SDL_Window* Window::Instance()   {
+
+ SDL_Window*  gWindow = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_SHOWN );
+ return gWindow;
+
+
+}

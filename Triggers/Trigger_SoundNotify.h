@@ -29,8 +29,8 @@ private:
 public:
 
   Trigger_SoundNotify(Character* source, double range);
-
-
+   
+  void load(LoadParams* pParams){}
   void  Try(Character*);
 
   void  Render(){}

@@ -9,7 +9,7 @@
 #include "Time/Regulator.h"
 #include "WeaponSystem.h"
 #include "SensoryMemory.h"
-
+#include "TextureManager.h"
 #include "Messaging/Telegram.h"
 #include "Messages.h"
 #include "Messaging/MessageDispatcher.h"
@@ -97,6 +97,30 @@ Character::~Character()
   delete m_pWeaponSys;
   delete m_pSensoryMem;
 }
+
+//-------------------------------load-------------------------
+//
+//---------------------------------------------------
+void Character::load(std::unique_ptr<LoadParams> const &pParams)
+{
+
+  // m_vPosition = Vector2D(pParams->getX(),pParams->getY());
+  // m_width = pParams->getWidth();
+  //   m_height = pParams->getHeight();
+  //m_textureID = pParams->getTextureID();
+  //  m_numFrames = pParams->getNumFrames();
+}
+
+
+//-------------------------------draw------------------------
+//
+//-----------------------------------------------------------
+void Character::draw()
+{
+  // TextureManager::Instance()->drawFrame(m_textureID, m_vPosition.x, m_vPosition.y,
+  //     m_width, m_height, m_currentRow, m_currentFrame, Game::Instance()->getRenderer(), m_angle, m_alpha);
+}
+
 
 //------------------------------- Spawn ---------------------------------------
 //

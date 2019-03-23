@@ -15,6 +15,7 @@
 #include <iosfwd>
 #include "2D/Vector2D.h"
 #include "Game/Entity.h"
+#include "LoadParams.h"
 
 
 
@@ -70,6 +71,8 @@ public:
   Door(Map* pMap, std::ifstream& is);
   ~Door();
 
+  void load(const LoadParams* pParams){}
+  
   //the usual suspects
   void Update();
   bool HandleMessage(const Telegram& msg);

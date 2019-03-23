@@ -17,6 +17,7 @@
 #include "../2D/Vector2D.h"
 #include "../2D/Geometry.h"
 #include "../misc/utils.h"
+#include "../LoadParams.h"
 
 
 
@@ -30,6 +31,7 @@ public:
   enum {default_entity_type = -1};
 
 private:
+ 
   
   //each entity has a unique ID
   int         m_ID;
@@ -52,11 +54,21 @@ private:
 
 
 protected:
+   //Texture variables.
+  int m_width;
+  int m_height;
+  std::string m_textureID;
+  int m_numFrames;
+  int m_currentFrame;
+  double m_angle;
+  int m_alpha;
+  int m_currentRow;
   
   //its location in the environment
   Vector2D m_vPosition;
 
   Vector2D m_vScale;
+ 
 
   //the magnitude of this object's bounding radius
   double    m_dBoundingRadius;
@@ -68,8 +80,10 @@ public:
 
   virtual ~Entity(){}
 
-  virtual void Update(){}; 
+  virtual void Update(){};
+  virtual void draw(){};
 
+  void load(std::unique_ptr<LoadParams> const &pParams);
   
   virtual bool HandleMessage(const Telegram& msg){return false;}
   
@@ -83,7 +97,7 @@ public:
   //this can be used to reset the next ID
   static void  ResetNextValidID(){m_iNextValidID = 0;}
   
-
+  void         Render();
 
   Vector2D     Pos()const{return m_vPosition;}
   void         SetPos(Vector2D new_pos){m_vPosition = new_pos;}

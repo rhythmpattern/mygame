@@ -20,9 +20,9 @@
 #include "Goals/Goal_Types.h"
 
 //uncomment to write object creation/deletion to debug console
-//#define  LOG_CREATIONAL_STUFF
+#define  LOG
 
-
+Game* Game::s_pInstance = 0;
 //----------------------------- ctor ------------------------------------------
 //-----------------------------------------------------------------------------
 Game::Game():m_pSelectedBot(NULL),
@@ -33,11 +33,12 @@ Game::Game():m_pSelectedBot(NULL),
                          m_pGraveMarkers(NULL)
 {
   //load in the default map
-  LoadMap("DM1.map");
+   LoadMap("DM1.map");
+  
 }
 
 
-//------------------------------ dtor -----------------------------------------
+//------------------------------ dtor ----------------------------------------
 //-----------------------------------------------------------------------------
 Game::~Game()
 {
@@ -49,23 +50,100 @@ Game::~Game()
 }
 
 
+bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
+ int flags = 0;
+ m_bRunning = true;
+    // store the game width and height
+    m_gameWidth = width;
+    m_gameHeight = height;
+
+   
+
+    
+    if(fullscreen)
+    {
+        flags = SDL_WINDOW_FULLSCREEN;
+    }
+    
+    // attempt to initialise SDL
+    if(SDL_Init(SDL_INIT_EVERYTHING) == 0)
+    {
+        cout << "SDL init success\n";
+        // init the window
+        m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
+        
+        if(m_pWindow != 0) // window init success
+        {
+            cout << "window creation success\n";
+            m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, SDL_RENDERER_ACCELERATED);
+            
+            if(m_pRenderer != 0) // renderer init success
+            {
+                cout << "renderer creation success\n";
+                SDL_SetRenderDrawColor(m_pRenderer, 0,0,0,255);
+            }
+            else
+            {
+                cout << "renderer init fail\n";
+                return false; // renderer init fail
+            }
+        }
+        else
+        {
+            cout << "window init fail\n";
+            return false; // window init fail
+        }
+    }
+    else
+    {
+        cout << "SDL init fail\n";
+        return false; // SDL init fail
+    }
+
+
+    GameObjectFactory::Instance();
+    
+  m_pGameStateMachine = new GameStateMachine();
+   m_pGameStateMachine->changeState(new PlayState());
+
+   return true;
+
+    
+}
+
+
+
+void Game::Render()
+{
+    SDL_RenderClear(m_pRenderer);
+    
+
+    //	m_pGameStateMachine->render();
+
+
+    SDL_RenderPresent(m_pRenderer);
+}
+
+
+
+
 //---------------------------- Clear ------------------------------------------
 //
 //  deletes all the current objects ready for a map load
 //-----------------------------------------------------------------------------
 void Game::Clear()
 {
-#ifdef LOG_CREATIONAL_STUFF
-    debug_con << "\n------------------------------ Clearup -------------------------------" <<"";
+#ifdef LOG
+    std::cout << "\n------------------------------ Clearup -------------------------------" << endl;
 #endif
 
   //delete the bots
   std::vector<Character*>::iterator it = m_Bots.begin();
   for (it; it != m_Bots.end(); ++it)
   {
-#ifdef LOG_CREATIONAL_STUFF
-    debug_con << "deleting entity id: " << (*it)->ID() << " of type "
-              << GetNameOfType((*it)->EntityType()) << "(" << (*it)->EntityType() << ")" <<"";
+#ifdef LOG
+    std::cout << "deleting entity id: " << (*it)->ID() << " of type "
+              << GetNameOfType((*it)->EntityType()) << "(" << (*it)->EntityType() << ")" <<endl;
 #endif
 
     delete *it;
@@ -75,8 +153,8 @@ void Game::Clear()
   std::list<Projectile*>::iterator curW = m_Projectiles.begin();
   for (curW; curW != m_Projectiles.end(); ++curW)
   {
-#ifdef LOG_CREATIONAL_STUFF
-    debug_con << "deleting projectile id: " << (*curW)->ID() << "";
+#ifdef LOG
+    std::cout << "deleting projectile id: " << (*curW)->ID() << endl;
 #endif
 
     delete *curW;
@@ -96,7 +174,12 @@ void Game::Clear()
 //  calls the update function of each entity
 //-----------------------------------------------------------------------------
 void Game::Update()
-{ 
+{
+   SDL_RenderClear(m_pRenderer);
+   m_pGameStateMachine->render();
+   SDL_RenderPresent(m_pRenderer);
+
+  
   //don't update if the user has paused the game
   if (m_bPaused) return;
 
@@ -237,26 +320,34 @@ bool Game::AttemptToAddBot(Character* pBot)
 //  Adds a bot and switches on the default steering behavior
 //-----------------------------------------------------------------------------
 void Game::AddBots(unsigned int NumBotsToAdd)
-{ //g_screenLog->log(LL_INFO, "adding a bot \n");
-  while (NumBotsToAdd--)
+{
+#ifdef LOG
+    std::cout << "Adding Bots\n";
+  #endif
+   while (NumBotsToAdd--)
   {
     //create a bot. (its position is irrelevant at this point because it will
     //not be rendered until it is spawned)
+    #ifdef LOG
+    std::cout << "Creating new Character()\n";
+    #endif
+    
     Character* rb = new Character(this, Vector2D());
 
+    
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();
     rb->GetSteering()->SeparationOn();
 
     m_Bots.push_back(rb);
     //register the bot with the entity manager
-    EntityMgr->RegisterEntity(rb);
-
+     EntityMgr->RegisterEntity(rb);
     
-#ifdef LOG_CREATIONAL_STUFF
-  debug_con << "Adding bot with ID " << ttos(rb->ID()) << "";
+    
+#ifdef LOG
+     std::cout << "Adding bot with ID " << rb->ID() << "\n";
 #endif
-  }
+} 
 }
 
 //---------------------------- NotifyAllBotsOfRemoval -------------------------
@@ -295,8 +386,8 @@ void Game::AddShot(Character* shooter, Vector2D target)
 
   m_Projectiles.push_back(rp);
   
-  #ifdef LOG_CREATIONAL_STUFF
-  debug_con << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "";
+  #ifdef LOG
+  std::cout << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "\n";
   #endif
 }
 
@@ -334,7 +425,7 @@ Character* Game::GetBotAtPosition(Vector2D CursorPos)const
 bool Game::LoadMap(const std::string& filename)
 { 
   //clear any current bots and projectiles
-  Clear();
+   Clear();
   
   //out with the old
   delete m_pMap;
@@ -345,19 +436,22 @@ bool Game::LoadMap(const std::string& filename)
   m_pGraveMarkers = new GraveMarkers(10);
   m_pPathManager = new PathManager<PathPlanner>(10);
   m_pMap = new Map();
-
+  
   //make sure the entity manager is reset
   EntityMgr->Reset();
 
  
   //load the new map data
   if (m_pMap->LoadMap(filename))
-  { 
-    AddBots(2);
-   //g_screenLog->log(LL_INFO, "Bots added");
+  {
+    #ifdef LOG
+    std::cout << "LoadMap called succesfully" <<endl;
+    #endif
+    AddBots(3);
+  
     return true;
   }
-
+  
   return false;
 }
 

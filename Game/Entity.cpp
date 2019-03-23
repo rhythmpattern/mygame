@@ -13,6 +13,8 @@ Entity::Entity(int ID):m_dBoundingRadius(0.0),
   SetID(ID);
 }
 
+
+
 //----------------------------- SetID -----------------------------------------
 //
 //  this must be called within each constructor to make sure the ID is set
@@ -30,3 +32,5 @@ void Entity::SetID(int val)
   m_iNextValidID = m_ID + 1;
 }
 
+
+void Entity::Render(){}

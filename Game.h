@@ -12,7 +12,12 @@
 #include "Character.h"
 #include "Navigation/PathManager.h"
 #include "Game/EntityFunctionTemplates.h"
-
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include "GameStateMachine.h"
+#include "GameState.h"
+#include "PlayState.h"
+#include "GameObjectFactory.h"
 
 class Entity;
 class Projectile;
@@ -24,7 +29,7 @@ class Game {
 
   private:
 
-   
+  bool m_bRunning;
     Map* m_pMap;
     std::vector<Character*>       m_Bots; 
     Character* m_pSelectedBot;
@@ -40,19 +45,43 @@ class Game {
   GraveMarkers*                    m_pGraveMarkers;
 //this list contains any active projectiles
   std::list<Projectile*>     m_Projectiles;
-
-
+  static Game* s_pInstance;
+  int m_gameWidth;
+  int m_gameHeight;
+  
+    SDL_Window* m_pWindow;
+    SDL_Renderer* m_pRenderer;
+    
+    GameStateMachine* m_pGameStateMachine;
+    
 
 public:
  
 Game();
 ~Game();
 
+ static Game* Instance()
+    {
+        if(s_pInstance == 0)
+        {
+            s_pInstance = new Game();
+            return s_pInstance;
+        }
+        
+        return s_pInstance;
+    }
+
+SDL_Renderer* getRenderer() const { return m_pRenderer; }
+    SDL_Window* getWindow() const { return m_pWindow; }
+    int getGameWidth(){return m_gameWidth;}
+    int getGameHeight(){return m_gameHeight;}
+
+    void Render();
 void Update();
 bool LoadMap(const std::string& FileName);
+ bool Running() {return m_bRunning;}
 
-
-
+ bool init(const char* title, int xpos, int ypos, int width , int height, bool fullscreen);
 void AddBots(unsigned int NumBotsToAdd);
 void RemoveBot();
 

@@ -8,6 +8,7 @@
 #include "misc/utils.h"
 #include "TargetingSystem.h"
 #include "WeaponSystem.h"
+#include "LoadParams.h"
 
 class Game;
 class Steering;
@@ -28,7 +29,7 @@ class Character : public MovingEntity{
 
 		enum Status{alive, dead, spawning};
 		
-
+		
 		Status                m_Status;	
 		Game*                    m_pWorld;
 		Goal_Think*		m_pBrain;
@@ -64,11 +65,13 @@ class Character : public MovingEntity{
 
 
 		Character(Game* world, Vector2D pos);
-  		
+	        
 
+		void load(std::unique_ptr<LoadParams> const &pParams);
+		virtual void draw();
 		virtual ~Character();
 
-
+	
 		
 		void Update();
 		bool HandleMessage(const Telegram& msg);
@@ -120,9 +123,12 @@ class Character : public MovingEntity{
 		SensoryMemory* const GetSensoryMem()const{return m_pSensoryMem;}
 		 WeaponSystem* const          GetWeaponSys()const{return m_pWeaponSys;}
 
-		
+	    
 
 };
+
+
+
 
 
 #endif

@@ -68,7 +68,7 @@ class Map {
   //one node to any other.
   std::vector<std::vector<double> >  m_PathCosts;
 
-
+  
     //stream constructors for loading from a file
   void AddWall(std::ifstream& in);
   void AddSpawnPoint(std::ifstream& in);
@@ -84,8 +84,8 @@ void AddWeapon_Giver(int type_of_weapon, std::ifstream& in);
  Map();
  ~Map();
 
-
-
+ void render();
+void update();
  bool LoadMap(const std::string& FileName);
 
 
