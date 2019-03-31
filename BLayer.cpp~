@@ -1,0 +1,6 @@
+#include "BLayer.h"
+
+BLayer::render()
+{
+
+}

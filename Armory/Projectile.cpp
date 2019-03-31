@@ -12,10 +12,12 @@ Character* Projectile::GetClosestIntersectingBot(Vector2D    From,
 
   //iterate through all entities checking against the line segment FromTo
   std::vector<Character*>::const_iterator curBot;
+
+  
   for (curBot =  m_pWorld->GetAllBots().begin();
        curBot != m_pWorld->GetAllBots().end();
        ++curBot)
-  {
+    { if ((*curBot) != NULL) {
     //make sure we don't check against the shooter of the projectile
     if ( ((*curBot)->ID() != m_iShooterID))
     {
@@ -33,7 +35,7 @@ Character* Projectile::GetClosestIntersectingBot(Vector2D    From,
         }
       }
     }
-
+      }
   }
 
   return ClosestIntersectingBot;

@@ -29,7 +29,7 @@ class Game {
 
   private:
 
-  bool m_bRunning;
+    bool m_bRunning;
     Map* m_pMap;
     std::vector<Character*>       m_Bots; 
     Character* m_pSelectedBot;
@@ -42,7 +42,7 @@ class Game {
     void NotifyAllBotsOfRemoval(Character* pRemovedBot)const;
      //when a bot is killed a "grave" is displayed for a few seconds. This
   //class manages the graves
-  GraveMarkers*                    m_pGraveMarkers;
+  GraveMarkers*  m_pGraveMarkers;
 //this list contains any active projectiles
   std::list<Projectile*>     m_Projectiles;
   static Game* s_pInstance;
@@ -53,7 +53,8 @@ class Game {
     SDL_Renderer* m_pRenderer;
     
     GameStateMachine* m_pGameStateMachine;
-    
+      std::vector<std::string> m_levelFiles;
+      int m_currentLevel;
 
 public:
  
@@ -71,6 +72,8 @@ Game();
         return s_pInstance;
     }
 
+  int getCurrentLevel(){return m_currentLevel;}
+  std::vector<std::string> getLevelFiles() {return m_levelFiles;}
 SDL_Renderer* getRenderer() const { return m_pRenderer; }
     SDL_Window* getWindow() const { return m_pWindow; }
     int getGameWidth(){return m_gameWidth;}

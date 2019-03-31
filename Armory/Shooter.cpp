@@ -32,7 +32,7 @@ Shooter::Shooter(Character*   owner):
   }
 
   //setup the fuzzy module
-  InitializeFuzzyModule();
+  //InitializeFuzzyModule();
 }
 
 

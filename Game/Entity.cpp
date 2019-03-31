@@ -23,9 +23,9 @@ Entity::Entity(int ID):m_dBoundingRadius(0.0),
 //  the next valid ID
 //-----------------------------------------------------------------------------
 void Entity::SetID(int val)
-{
+{  
   //make sure the val is equal to or greater than the next available ID
-  assert ( (val >= m_iNextValidID) && "<Entity::SetID>: invalid ID");
+  //assert ( (val >= m_iNextValidID) && "<Entity::SetID>: invalid ID");
 
   m_ID = val;
     

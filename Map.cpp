@@ -149,6 +149,7 @@ void Map::AddSpawnPoint(std::ifstream& in)
 
   in >> dummy >> x >> y >> dummy >> dummy;                   //dummy values are artifacts from the map editor
 
+
   m_SpawnPoints.push_back(Vector2D(x,y));
 }
 

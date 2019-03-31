@@ -19,7 +19,7 @@ int ItemTypeToGoalType(int gt)
     return goal_get_health;
 
 
-  default: throw std::runtime_error("Goal_GetItem cannot determine item type");
+  default: break; //throw std::runtime_error("Goal_GetItem cannot determine item type");
 
   }//end switch
 }

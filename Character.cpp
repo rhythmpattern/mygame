@@ -16,36 +16,38 @@
 
 #include "Goals/Goal_Types.h"
 #include "Goals/Goal_Think.h"
+#include "Goals/Goal_Think_Zombie.h"
+#define debug
 
 
 //-------------------------- ctor ---------------------------------------------
 Character::Character(Game* world,Vector2D pos):
 
   MovingEntity(pos,
-               10,
+               1,
                Vector2D(0,0),
-               10,
+               5,
                Vector2D(1,0),
-               10,
+               2,
                Vector2D(1,1),
-               10,
-               10),
+               0.2,
+               1),
                  
-                 m_iMaxHealth(10),
-                 m_iHealth(10),
+                 m_iMaxHealth(1),
+                 m_iHealth(1),
                  m_pPathPlanner(NULL),
                  m_pSteering(NULL),
                  m_pWorld(world),
                  m_pBrain(NULL),
-                 m_iNumUpdatesHitPersistant((int)(FrameRate * 10)),
+                 m_iNumUpdatesHitPersistant((int)(FrameRate * 0.2)),
                  m_bHit(false),
                  m_iScore(0),
                  m_Status(spawning),
                  m_bPossessed(false),
-                 m_dFieldOfView(DegsToRads(10))
+                 m_dFieldOfView(DegsToRads(180))
            
 {
-  SetEntityType(type_bot);
+  SetEntityType(type_zomb);
 
   SetUpVertexBuffer();
   
@@ -59,24 +61,26 @@ Character::Character(Game* world,Vector2D pos):
   m_pSteering = new Steering(world, this);
 
   //create the regulators
-  m_pWeaponSelectionRegulator = new Regulator(10);
-  m_pGoalArbitrationRegulator =  new Regulator(10);
-  m_pTargetSelectionRegulator = new Regulator(10);
-  m_pTriggerTestRegulator = new Regulator(10);
-  m_pVisionUpdateRegulator = new Regulator(10);
+  m_pWeaponSelectionRegulator = new Regulator(2);
+  m_pGoalArbitrationRegulator =  new Regulator(4);
+  m_pTargetSelectionRegulator = new Regulator(2);
+  m_pTriggerTestRegulator = new Regulator(8);
+  m_pVisionUpdateRegulator = new Regulator(4);
 
+  
+  
   //create the goal queue
-  m_pBrain = new Goal_Think(this);
+  m_pBrain = new Goal_Think_Zombie(this);
 
   //create the targeting system
   m_pTargSys = new TargetingSystem(this);
 
-  m_pWeaponSys = new WeaponSystem(this,
-                                        10,
-                                        10,
-                                       10);
+  m_pWeaponSys = new ZombieWeaponSystem(this,
+                                        0.2,
+                                        0,
+                                       1);
 
-  m_pSensoryMem = new SensoryMemory(this, 10);
+  m_pSensoryMem = new SensoryMemory(this, 5);
 }
 
 //-------------------------------- dtor ---------------------------------------
@@ -117,8 +121,7 @@ void Character::load(std::unique_ptr<LoadParams> const &pParams)
 //-----------------------------------------------------------
 void Character::draw()
 {
-  // TextureManager::Instance()->drawFrame(m_textureID, m_vPosition.x, m_vPosition.y,
-  //     m_width, m_height, m_currentRow, m_currentFrame, Game::Instance()->getRenderer(), m_angle, m_alpha);
+  TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x, m_vPosition.y, 148, 125,0,0, Game::Instance()->getRenderer(),0,100);
 }
 
 
@@ -128,11 +131,14 @@ void Character::draw()
 //-----------------------------------------------------------------------------
 void Character::Spawn(Vector2D pos)
 {
+#ifdef debug
+    std::cout << "Bot Spawning";
+    #endif
     SetAlive();
     m_pBrain->RemoveAllSubgoals();
     m_pTargSys->ClearTarget();
     SetPos(pos);
-    //m_pWeaponSys->Initialize();
+    m_pWeaponSys->Initialize();
     RestoreHealthToMaximum();
 }
 
@@ -140,6 +146,7 @@ void Character::Spawn(Vector2D pos)
 //
 void Character::Update()
 {
+ 
   //process the currently active goal. Note this is required even if the bot
   //is under user control. This is because a goal is created whenever a user 
   //clicks on an area of the map that necessitates a path planning request.
@@ -150,11 +157,11 @@ void Character::Update()
 
   //if the bot is under AI control but not scripted
   if (!isPossessed())
-  {           
+    {          
     //examine all the opponents in the bots sensory memory and select one
     //to be the current target
     if (m_pTargetSelectionRegulator->isReady())
-    {      
+      {      
       m_pTargSys->Update();
     }
 
@@ -172,13 +179,14 @@ void Character::Update()
   
     //select the appropriate weapon to use from the weapons currently in
     //the inventory
-    if (m_pWeaponSelectionRegulator->isReady())
-    {       
-      m_pWeaponSys->SelectWeapon();       
-    }
+    //  if (m_pWeaponSelectionRegulator->isReady())
+    // {      
+    //    m_pWeaponSys->SelectWeapon();       
+    //  }
 
     //this method aims the bot's current weapon at the current target
     //and takes a shot if a shot is possible
+   
     m_pWeaponSys->TakeAimAndShoot();
   }
 }
@@ -244,7 +252,9 @@ bool Character::HandleMessage(const Telegram& msg)
   switch(msg.Msg)
   {
   case Msg_TakeThatMF:
-
+     #ifdef debug
+    std::cout << "HIT";
+    #endif
     //just return if already dead or spawning
     if (isDead() || isSpawning()) return true;
 
@@ -399,6 +409,9 @@ void Character::Exorcise()
 //-----------------------------------------------------------------------------
 void Character::FireWeapon(Vector2D pos)
 {
+  #ifdef debug
+  std::cout << "Weapon fired";
+  #endif
   m_pWeaponSys->ShootAt(pos);
 }
 

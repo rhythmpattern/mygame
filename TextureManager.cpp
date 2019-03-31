@@ -51,7 +51,7 @@ void TextureManager::drawFrame(std::string id, int x, int y, int width, int heig
     destRect.x = x;
     destRect.y = y;
     
-    SDL_SetTextureAlphaMod(m_textureMap[id], alpha);
+    //SDL_SetTextureAlphaMod(m_textureMap[id], alpha);
     SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, angle, 0, flip);
 }
 

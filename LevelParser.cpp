@@ -1,22 +1,15 @@
-//
-//  LevelParser.cpp
-//  SDL Game Programming Book
-//
-//  Created by shaun mitchell on 10/03/2013.
-//  Copyright (c) 2013 shaun mitchell. All rights reserved.
-//
 
 #include <string>
 #include "LevelParser.h"
 #include "TextureManager.h"
 #include "Game.h"
 #include "ObjectLayer.h"
-//#include "TileLayer.h"
+#include "TileLayer.h"
 #include "GameObjectFactory.h"
 #include "base64.h"
 #include "zlib.h"
 #include "Map.h"
-/*
+
 Level* LevelParser::parseLevel(const char *levelFile)
 {
     // create a tinyXML document and load the map xml
@@ -26,71 +19,37 @@ Level* LevelParser::parseLevel(const char *levelFile)
     // create the level object
     Level* pLevel = new Level();
     
+     
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
+    std::cout << pRoot->Value();
+ 
+    for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
+      {
+	parseTextures(e);
+      }
+ 
+    //  pRoot->Attribute("width", &m_width);
+    // pRoot->Attribute("height", &m_height);
     
-    std::cout << "Loading level:\n" << "Version: " << pRoot->Attribute("version") << "\n";
-    std::cout << "Width:" << pRoot->Attribute("width") << " - Height:" << pRoot->Attribute("height") << "\n";
-    std::cout << "Tile Width:" << pRoot->Attribute("tilewidth") << " - Tile Height:" << pRoot->Attribute("tileheight") << "\n";
-    
-    pRoot->Attribute("tilewidth", &m_tileSize);
-    pRoot->Attribute("width", &m_width);
-    pRoot->Attribute("height", &m_height);
-    
-    //we know that properties is the first child of the root
-    TiXmlElement* pProperties = pRoot->FirstChildElement();
-    
-    // we must parse the textures needed for this level, which have been added to properties
-    for(TiXmlElement* e = pProperties->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
-    {
-        if(e->Value() == std::string("property"))
-        {
-            parseTextures(e);
-        }
-    }
-    
-    // we must now parse the tilesets
-    for(TiXmlElement* e = pRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
-    {
-        if(e->Value() == std::string("tileset"))
-        {
-            parseTilesets(e, pLevel->getTilesets());
-        }
-    }
-    
-    // parse any object layers
-    for(TiXmlElement* e = pRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
-    {
-        if(e->Value() == std::string("objectgroup") || e->Value() == std::string("layer"))
-        {
-            if(e->FirstChildElement()->Value() == std::string("object"))
-            {
-                parseObjectLayer(e, pLevel->getLayers(), pLevel);
-            }
-            else if(e->FirstChildElement()->Value() == std::string("data") ||
-                    (e->FirstChildElement()->NextSiblingElement() != 0 && e->FirstChildElement()->NextSiblingElement()->Value() == std::string("data")))
-            {
-                parseTileLayer(e, pLevel->getLayers(), pLevel->getTilesets(), pLevel->getCollisionLayers());
-            }
-        }
-    }
+   
     
     return pLevel;
 }
 
-*/
+
 void LevelParser::parseTextures(TiXmlElement* pTextureRoot)
 {
     std::cout << "adding texture " << pTextureRoot->Attribute("value") << " with ID " << pTextureRoot->Attribute("name") << std::endl;
     TextureManager::Instance()->load(pTextureRoot->Attribute("value"), pTextureRoot->Attribute("name"), Game::Instance()->getRenderer());
 }
-/*
+
 void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>* pTilesets)
 {
 	std::string assetsTag = "assets/";
     // first add the tileset to texture manager
     std::cout << "adding texture " << pTilesetRoot->FirstChildElement()->Attribute("source") << " with ID " << pTilesetRoot->Attribute("name") << std::endl;
-	TheTextureManager::Instance()->load(assetsTag.append(pTilesetRoot->FirstChildElement()->Attribute("source")), pTilesetRoot->Attribute("name"), TheGame::Instance()->getRenderer());
+	TheTextureManager::Instance()->load(assetsTag.append(pTilesetRoot->FirstChildElement()->Attribute("source")), pTilesetRoot->Attribute("name"), Game::Instance()->getRenderer());
     
     // create a tileset object
     Tileset tileset;
@@ -107,7 +66,7 @@ void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>
     
     pTilesets->push_back(tileset);
 }
-*/
+
 void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Layer*> *pLayers, Level* pLevel)
 {
     // create an object layer
@@ -180,7 +139,7 @@ void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Lay
     pLayers->push_back(pObjectLayer);
 }
 
-/*
+
 void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*> *pLayers, const std::vector<Tileset>* pTilesets, std::vector<TileLayer*> *pCollisionLayers)
 {
     TileLayer* pTileLayer = new TileLayer(m_tileSize, *pTilesets);
@@ -253,4 +212,4 @@ void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>
     pLayers->push_back(pTileLayer);
 }
 
-*/
+

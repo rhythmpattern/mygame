@@ -32,10 +32,10 @@ void PlayState::update()
       //       TheGame::Instance()->getStateMachine()->changeState(new GameOverState());
       //   }
         
-        if(pLevel != 0)
-        {
-            pLevel->update();
-        }
+      // if(pLevel != 0)
+      //  {
+      //      pLevel->update();
+      //  }
     }
 }
 
@@ -43,9 +43,11 @@ void PlayState::render()
 {
     if(m_loadingComplete)
     {
+      //TextureManager::Instance()->drawFrame("background",  0, 0, 1455, 796,0,0, Game::Instance()->getRenderer(),0,100);
         if(pLevel != 0)
         {
-            pLevel->render();
+	   pLevel->render();
+	  
         }
         
 	//  for(int i = 0; i < TheGame::Instance()->getPlayerLives(); i++)
@@ -60,15 +62,19 @@ void PlayState::render()
 bool PlayState::onEnter()
 {
   //Game::Instance()->setPlayerLives(3);
-    
-   // LevelParser levelParser;
-  //  map = levelParser.parseLevel(TheGame::Instance()->getLevelFiles()[TheGame::Instance()->getCurrentLevel() - 1].c_str());
-    
+   
+   LevelParser* levelParser = new LevelParser();
+    pLevel = levelParser->parseLevel(Game::Instance()->getLevelFiles()[Game::Instance()->getCurrentLevel() - 1].c_str());
+   // TextureManager::Instance()-> load("assets/background.png", "background", Game::Instance()->getRenderer());
+   // TextureManager::Instance()-> load("assets/isaac.png", "isaac", Game::Instance()->getRenderer());
+   // TextureManager::Instance()->load("assets/dot.bmp","dot",Game::Instance()->getRenderer());
   //  TheTextureManager::Instance()->load("assets/bullet1.png", "bullet1", TheGame::Instance()->getRenderer());
   //  TheTextureManager::Instance()->load("assets/bullet2.png", "bullet2", TheGame::Instance()->getRenderer());
   //  TheTextureManager::Instance()->load("assets/bullet3.png", "bullet3", TheGame::Instance()->getRenderer());
   //  TheTextureManager::Instance()->load("assets/lives.png", "lives", TheGame::Instance()->getRenderer());
-    
+
+      m_loadingComplete = true;
+     
     if(pLevel != 0)
     {
         m_loadingComplete = true;

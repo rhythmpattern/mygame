@@ -4,6 +4,7 @@
 #include "GameState.h"
 #include "Level.h"
 #include <vector>
+#include "TextureManager.h"
 
 class Entity;
 class SDLGameObject;

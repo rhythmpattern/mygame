@@ -9,6 +9,7 @@
 #include "TargetingSystem.h"
 #include "WeaponSystem.h"
 #include "LoadParams.h"
+#include "ZombieWeaponSystem.h"
 
 class Game;
 class Steering;
@@ -19,6 +20,7 @@ class Character;
 class Goal_Think;
 class SensoryMemory;
 class WeaponSystem;
+class Goal_Think_Zombie;
 
 class Goal_Think;
 

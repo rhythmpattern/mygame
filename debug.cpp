@@ -5,6 +5,7 @@
 #include <map>
 #include "TextureManager.h"
 #include "GameObjectFactory.h"
+#include "BLayer.h"
 
 int main( int argc, char* args[] )
 {
@@ -12,12 +13,19 @@ int main( int argc, char* args[] )
   SDL_Renderer* m_pRenderer;
   SDL_Event e;
   bool running = true;
-   Game* game = Game::Instance();
-  game->init("Test", 100,100,640,480,false);
-  TextureManager::Instance()-> load("assets/bg.png", "lives", game->getRenderer());
+  
+  
+   Game::Instance()->init("Test", 0,0,1455,796,false);
+ 
+  // LevelParser* lp = new LevelParser();
+  // lp->parseLevel("assets/test.xml");
+
+
   while (running)
     {
+     
       
+      // Game::Instance()->Update();
 
 		        
 				//Handle events on queue
@@ -30,37 +38,17 @@ int main( int argc, char* args[] )
 					}
 				}
       
-      SDL_RenderClear(game->getRenderer());
-      TextureManager::Instance()->drawFrame("lives",  30, 30, 640, 280,0,0, Game::Instance()->getRenderer(), 0.0,100);
-      SDL_RenderPresent(game->getRenderer());
+				  
+
+				  
 
     }
   
 
 
-  //---------basic input from file -------superceded by XML data driven design.
-  /* std::ifstream params("params");
-if (params.is_open() && params.good()) {
-    std::string buffer;
-    while (std::getline(params, buffer)) {
-        //Do something about the buffer.
-      if (buffer.front() != '-' && !buffer.empty()) {
-      
-   
-   vector<string> results;
-   stringstream s(buffer);
-   while(!s.eof()) {
-      string tmp;
-      s >> tmp;
-      std::cout << tmp;
-   }
-   std::cout  <<endl;
-      
-        //Then clear the buffer once you're done with it.
-        buffer.clear();
-      }
-    };
-    }*/
+
+
+
 
 }
 

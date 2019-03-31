@@ -6,7 +6,7 @@
 
 
 
-
+//#define debug
 
 
 //------------------------------- Activate ------------------------------------
@@ -14,6 +14,7 @@
 void Goal_AttackTarget::Activate()
 {
   m_iStatus = active;
+ 
 
   //if this goal is reactivated then there may be some existing subgoals that
   //must be removed

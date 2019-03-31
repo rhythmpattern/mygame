@@ -15,7 +15,8 @@ enum
   type_shooter,
   type_obstacle,
   type_sliding_door,
-  type_door_trigger
+  type_door_trigger,
+  type_zomb
 };
 
 

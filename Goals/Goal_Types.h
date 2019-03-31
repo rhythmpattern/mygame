@@ -23,7 +23,12 @@ enum
   goal_hunt_target,
   goal_strafe,
   goal_adjust_range,
-  goal_say_phrase
+  goal_say_phrase,
+  goal_pause,
+  goal_fly,
+  goal_flywander,
+  goal_flyexplore,
+  goal_zombie
   
 };
 

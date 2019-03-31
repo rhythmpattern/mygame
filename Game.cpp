@@ -22,6 +22,7 @@
 //uncomment to write object creation/deletion to debug console
 #define  LOG
 
+
 Game* Game::s_pInstance = 0;
 //----------------------------- ctor ------------------------------------------
 //-----------------------------------------------------------------------------
@@ -32,8 +33,11 @@ Game::Game():m_pSelectedBot(NULL),
                          m_pPathManager(NULL),
                          m_pGraveMarkers(NULL)
 {
+
   //load in the default map
    LoadMap("DM1.map");
+    m_levelFiles.push_back("assets/test.xml");
+   m_currentLevel = 1;
   
 }
 
@@ -68,43 +72,43 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     // attempt to initialise SDL
     if(SDL_Init(SDL_INIT_EVERYTHING) == 0)
     {
-        cout << "SDL init success\n";
+      std::cout << "SDL init success\n";
         // init the window
-        m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
+        m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, SDL_WINDOW_SHOWN);
         
         if(m_pWindow != 0) // window init success
         {
-            cout << "window creation success\n";
+            std::cout << "window creation success\n";
             m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, SDL_RENDERER_ACCELERATED);
             
             if(m_pRenderer != 0) // renderer init success
             {
-                cout << "renderer creation success\n";
-                SDL_SetRenderDrawColor(m_pRenderer, 0,0,0,255);
+                std::cout << "renderer creation success\n";
+                SDL_SetRenderDrawColor(m_pRenderer,0,0,0,255);
             }
             else
             {
-                cout << "renderer init fail\n";
+                std::cout << "renderer init fail\n";
                 return false; // renderer init fail
             }
         }
         else
         {
-            cout << "window init fail\n";
+            std::cout << "window init fail\n";
             return false; // window init fail
         }
     }
     else
     {
-        cout << "SDL init fail\n";
+        std::cout << "SDL init fail\n";
         return false; // SDL init fail
     }
 
 
-    GameObjectFactory::Instance();
+    // GameObjectFactory::Instance();
     
-  m_pGameStateMachine = new GameStateMachine();
-   m_pGameStateMachine->changeState(new PlayState());
+     m_pGameStateMachine = new GameStateMachine();
+     m_pGameStateMachine->changeState(new PlayState());
 
    return true;
 
@@ -115,13 +119,11 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 void Game::Render()
 {
-    SDL_RenderClear(m_pRenderer);
-    
+ 
 
-    //	m_pGameStateMachine->render();
+    	m_pGameStateMachine->render();
 
-
-    SDL_RenderPresent(m_pRenderer);
+ 
 }
 
 
@@ -176,13 +178,12 @@ void Game::Clear()
 void Game::Update()
 {
    SDL_RenderClear(m_pRenderer);
-   m_pGameStateMachine->render();
-   SDL_RenderPresent(m_pRenderer);
-
+    
+  Render();
   
   //don't update if the user has paused the game
   if (m_bPaused) return;
-
+  
   m_pGraveMarkers->Update();
 
   //get any player keyboard input
@@ -206,6 +207,7 @@ void Game::Update()
     if (!(*curW)->isDead())
     {
       (*curW)->Update();
+     
 
       ++curW;
     }
@@ -226,14 +228,14 @@ void Game::Update()
     //if this bot's status is 'respawning' attempt to resurrect it from
     //an unoccupied spawn point
     if ((*curBot)->isSpawning() && bSpawnPossible)
-    {
+    { 
       bSpawnPossible = AttemptToAddBot(*curBot);
     }
     
     //if this bot's status is 'dead' add a grave at its current location 
     //then change its status to 'respawning'
     else if ((*curBot)->isDead())
-    {
+    { 
       //create a grave
       m_pGraveMarkers->AddGrave((*curBot)->Pos());
 
@@ -243,8 +245,9 @@ void Game::Update()
 
     //if this bot is alive update it.
     else if ( (*curBot)->isAlive())
-    {
-      (*curBot)->Update();
+    { 
+      (*curBot)->Update();  (*curBot)->draw();
+       
     }  
   } 
 
@@ -254,7 +257,7 @@ void Game::Update()
   //if the user has requested that the number of bots be decreased, remove
   //one
   if (m_bRemoveABot)
-  { 
+    { 
     if (!m_Bots.empty())
     {
       Character* pBot = m_Bots.back();
@@ -267,6 +270,10 @@ void Game::Update()
 
     m_bRemoveABot = false;
   }
+
+ 
+
+   SDL_RenderPresent(m_pRenderer);
 }
 
 
@@ -334,7 +341,7 @@ void Game::AddBots(unsigned int NumBotsToAdd)
     
     Character* rb = new Character(this, Vector2D());
 
-    
+   
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();
     rb->GetSteering()->SeparationOn();
@@ -342,7 +349,7 @@ void Game::AddBots(unsigned int NumBotsToAdd)
     m_Bots.push_back(rb);
     //register the bot with the entity manager
      EntityMgr->RegisterEntity(rb);
-    
+   
     
 #ifdef LOG
      std::cout << "Adding bot with ID " << rb->ID() << "\n";

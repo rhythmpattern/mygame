@@ -55,7 +55,7 @@ void Projectile_Shot::Update()
     
     //if hit
     if (hit)
-    {
+    { 
       m_bImpacted = true;
       m_bDead     = true;
 
@@ -75,7 +75,7 @@ void Projectile_Shot::Update()
                                                  dist,
                                                  m_vImpactPoint,
                                                  m_pWorld->GetMap()->GetWalls()))
-     {
+     { 
        m_bDead     = true;
        m_bImpacted = true;
 
@@ -83,6 +83,8 @@ void Projectile_Shot::Update()
 
        return;
      }
+    
+     
   }
 }
 

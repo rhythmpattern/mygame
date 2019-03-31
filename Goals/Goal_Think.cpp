@@ -14,12 +14,14 @@
 
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
-
+//#define debug
 
 
 Goal_Think::Goal_Think(Character* pBot):Goal_Composite<Character>(pBot, goal_think)
 {
-  
+  #ifdef debug
+  std::cout<< "Goal_Think called";
+  #endif
   //these biases could be loaded in from a script on a per bot basis
   //but for now we'll just give them some random values
   const double LowRangeOfBias = 0.5;
@@ -64,6 +66,8 @@ void Goal_Think::Activate()
 //-----------------------------------------------------------------------------
 int Goal_Think::Process()
 {
+
+ 
   ActivateIfInactive();
   
   int SubgoalStatus = ProcessSubgoals();
@@ -125,6 +129,9 @@ bool Goal_Think::notPresent(unsigned int GoalType)const
 
 void Goal_Think::AddGoal_MoveToPosition(Vector2D pos)
 {
+  #ifdef debug
+  std::cout << "Moving to Position";
+  #endif
   AddSubgoal( new Goal_MoveToPosition(m_pOwner, pos));
 }
 
@@ -143,6 +150,9 @@ void Goal_Think::AddGoal_AttackTarget()
 {
   if (notPresent(goal_attack_target))
   {
+    #ifdef debug
+    std::cout << "attacking target";
+    #endif
     RemoveAllSubgoals();
     AddSubgoal( new Goal_AttackTarget(m_pOwner));
   }

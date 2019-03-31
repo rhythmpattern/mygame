@@ -142,7 +142,7 @@ inline bool GetTangentPoints (Vector2D C, double R, Vector2D P, Vector2D& T1, Ve
 inline double DistToLineSegment(Vector2D A,
                                 Vector2D B,
                                 Vector2D P)
-{
+{ 
   //if the angle is obtuse between PA and AB is obtuse then the closest
   //vertex must be A
   double dotA = (P.x - A.x)*(B.x - A.x) + (P.y - A.y)*(B.y - A.y);

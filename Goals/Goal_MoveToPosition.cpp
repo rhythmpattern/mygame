@@ -15,7 +15,7 @@
 void Goal_MoveToPosition::Activate()
 {
   m_iStatus = active;
-  
+ 
   //make sure the subgoal list is clear.
   RemoveAllSubgoals();
 

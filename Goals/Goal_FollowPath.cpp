@@ -65,8 +65,8 @@ void Goal_FollowPath::Activate()
     break;
 
   default:
-
-    throw std::runtime_error("<Goal_FollowPath::Activate>: Unrecognized edge type");
+break;
+    //throw std::runtime_error("<Goal_FollowPath::Activate>: Unrecognized edge type");
   }
 }
 

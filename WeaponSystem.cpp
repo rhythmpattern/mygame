@@ -19,6 +19,7 @@ WeaponSystem::WeaponSystem(Character* owner,
                                                           m_dAimPersistance(AimPersistance)
 {
   Initialize();
+SelectWeapon();
 }
 
 //------------------------- dtor ----------------------------------------------
@@ -47,7 +48,7 @@ void WeaponSystem::Initialize()
   m_WeaponMap.clear();
 
   //set up the container
-  m_pCurrentWeapon = new Shooter(m_pOwner);
+   m_pCurrentWeapon = new Shooter(m_pOwner);
 
   m_WeaponMap[type_shooter]         = m_pCurrentWeapon;
  
@@ -57,7 +58,7 @@ void WeaponSystem::Initialize()
 //
 //-----------------------------------------------------------------------------
 void WeaponSystem::SelectWeapon()
-{ 
+{ /*
   //if a target is present use fuzzy logic to determine the most desirable 
   //weapon.
   if (m_pOwner->GetTargetSys()->isTargetPresent())
@@ -90,7 +91,7 @@ void WeaponSystem::SelectWeapon()
     }
   }
 
-  else
+  else */
   {
     m_pCurrentWeapon = m_WeaponMap[type_shooter];
   }
@@ -171,6 +172,7 @@ void WeaponSystem::TakeAimAndShoot()const
       (m_pOwner->GetTargetSys()->GetTimeTargetHasBeenOutOfView() < 
        m_dAimPersistance) )
   {
+    
     //the position the weapon will be aimed at
     Vector2D AimingPos = m_pOwner->GetTargetBot()->Pos();
     

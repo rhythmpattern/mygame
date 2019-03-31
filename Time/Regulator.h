@@ -34,11 +34,11 @@ public:
   
   Regulator(double NumUpdatesPerSecondRqd)
   {
-    m_dwNextUpdateTime = (Clock->GetCurrentTime()+RandFloat()*1000);
+    m_dwNextUpdateTime = (Clock->GetCurrentTime()+RandFloat());
 
     if (NumUpdatesPerSecondRqd > 0)
     {
-      m_dUpdatePeriod = 1000.0 / NumUpdatesPerSecondRqd; 
+      m_dUpdatePeriod = 1.0 / NumUpdatesPerSecondRqd; 
     }
 
     else if (isEqual(0.0, NumUpdatesPerSecondRqd))
@@ -69,7 +69,7 @@ public:
     //the number of milliseconds the update period can vary per required
     //update-step. This is here to make sure any multiple clients of this class
     //have their updates spread evenly
-    static const double UpdatePeriodVariator = 10.0;
+    static const double UpdatePeriodVariator = 1.0;
 
     if (CurrentTime >= m_dwNextUpdateTime)
     {
