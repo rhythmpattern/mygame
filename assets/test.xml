@@ -3,8 +3,5 @@
  <property name="background" value="assets/background.png"/>
  <property name="isaac" value="assets/isaac.png"/>
  <property name="dot" value="assets/dot.bmp"/>
- <layer>
-  <object name="object" value="value"/>
- </layer>
 </map>
 

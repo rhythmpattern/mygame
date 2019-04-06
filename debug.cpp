@@ -25,7 +25,7 @@ int main( int argc, char* args[] )
     {
      
       
-      // Game::Instance()->Update();
+       Game::Instance()->Update();
 
 		        
 				//Handle events on queue
