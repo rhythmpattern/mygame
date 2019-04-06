@@ -5,6 +5,7 @@
 #include "../Time/CrudeTimer.h"
 #include "../constants.h"
 #include "../Navigation/PathPlanner.h"
+#include "../Scriptor.h"
 
 
 

@@ -25,9 +25,9 @@ MessageDispatcher* MessageDispatcher::Instance()
 //------------------------------------------------------------------------
 void MessageDispatcher::Discharge(Entity* pReceiver, const Telegram& telegram)
 {
-  if (pReceiver == NULL) {std::cout << "RECEIVER IS NULL, MESSAGE NOT HANDLED" << endl; }
+  if (pReceiver == NULL ) {std::cout << "RECEIVER or telegram IS NULL, MESSAGE NOT HANDLED" << endl; return;}
 else {
-  if (!pReceiver == NULL) {
+ 
   if (!pReceiver->HandleMessage(telegram))
   {
     //telegram could not be handled
@@ -35,7 +35,7 @@ else {
     debug_con << "Message not handled" << "";
     #endif
   }
-  }}
+  }
 }
 
 //---------------------------- DispatchMsg ---------------------------

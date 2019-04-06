@@ -3,6 +3,7 @@
 #include "../Game.h"
 #include "../Map.h"
 #include "../Fuzzy/FuzzyOperators.h"
+#include "../Scriptor.h"
 
 
 //--------------------------- ctor --------------------------------------------
@@ -10,11 +11,11 @@
 Shooter::Shooter(Character*   owner):
 
                       Weapon(type_shooter,
-                                   100,
-                                   100,
-                                   2.0,
-                                   5.0,
-                                   50.0,
+			     script->getInt("blasterdefaultrounds"),
+			     script->getInt("blastermaxroundscarried"),
+			     script->getNum("blasterfiringfreq"),
+			     script->getNum("blasteridealrange"),
+			     script->getNum("boltmaxspeed"),
                                    owner)
 {
   //setup the vertex buffer
@@ -50,7 +51,7 @@ inline void Shooter::ShootAt(Vector2D pos)
 
     //add a trigger to the game so that the other bots can hear this shot
     //(provided they are within range)
-    m_pOwner->GetWorld()->GetMap()->AddSoundTrigger(m_pOwner, 10);
+    m_pOwner->GetWorld()->GetMap()->AddSoundTrigger(m_pOwner, script->getNum("blastersoundrange"));
   }
 }
 

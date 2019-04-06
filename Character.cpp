@@ -13,7 +13,7 @@
 #include "Messaging/Telegram.h"
 #include "Messages.h"
 #include "Messaging/MessageDispatcher.h"
-
+#include "Scriptor.h"
 #include "Goals/Goal_Types.h"
 #include "Goals/Goal_Think.h"
 #include "Goals/Goal_Think_Zombie.h"
@@ -24,30 +24,30 @@
 Character::Character(Game* world,Vector2D pos):
 
   MovingEntity(pos,
-               1,
+               script->getNum("charscale"),
                Vector2D(0,0),
-               5,
+               script->getNum("charmaxspeed"),
                Vector2D(1,0),
-               2,
-               Vector2D(1,1),
-               0.2,
-               1),
+               script->getNum("charmass"),
+               Vector2D(script->getNum("charscale"),script->getNum("charscale")),
+	       script->getNum("charmaxheadturnrate"),
+		 script->getNum("charmaxforce")),
                  
-                 m_iMaxHealth(1),
-                 m_iHealth(1),
+	       m_iMaxHealth(script->getInt("charmaxhealth")),
+	       m_iHealth(script->getInt("charmaxhealth")),
                  m_pPathPlanner(NULL),
                  m_pSteering(NULL),
                  m_pWorld(world),
                  m_pBrain(NULL),
-                 m_iNumUpdatesHitPersistant((int)(FrameRate * 0.2)),
+	       m_iNumUpdatesHitPersistant((int)(FrameRate * script->getNum("hitflashtime"))),
                  m_bHit(false),
                  m_iScore(0),
                  m_Status(spawning),
                  m_bPossessed(false),
-                 m_dFieldOfView(DegsToRads(180))
+  m_dFieldOfView(DegsToRads(script->getNum("charfov")))
            
 {
-  SetEntityType(type_zomb);
+  SetEntityType(type_bot);
 
   SetUpVertexBuffer();
   
@@ -61,27 +61,28 @@ Character::Character(Game* world,Vector2D pos):
   m_pSteering = new Steering(world, this);
 
   //create the regulators
-  m_pWeaponSelectionRegulator = new Regulator(2);
-  m_pGoalArbitrationRegulator =  new Regulator(4);
-  m_pTargetSelectionRegulator = new Regulator(2);
-  m_pTriggerTestRegulator = new Regulator(8);
-  m_pVisionUpdateRegulator = new Regulator(4);
+  m_pWeaponSelectionRegulator = new Regulator(script->getNum("charweaponselectionfrequency"));
+  m_pGoalArbitrationRegulator =  new Regulator(script->getNum("chargoalappraisalupdatefreq"));
+  m_pTargetSelectionRegulator = new Regulator(script->getNum("chartargetingupdatefreq"));
+  m_pTriggerTestRegulator = new Regulator(script->getNum("chartriggerupdatefreq"));
+  m_pVisionUpdateRegulator = new Regulator(script->getNum("charvisionupdatefreq"));
 
   
   
   //create the goal queue
-  m_pBrain = new Goal_Think_Zombie(this);
+  m_pBrain = new Goal_Think(this);
 
   //create the targeting system
   m_pTargSys = new TargetingSystem(this);
 
-  m_pWeaponSys = new ZombieWeaponSystem(this,
-                                        0.2,
-                                        0,
-                                       1);
+  m_pWeaponSys = new WeaponSystem(this,
+                                        script->getNum("charreactiontime"),
+                                        script->getNum("charaimaccuracy"),
+					script->getNum("charaimpersistance"));
 
-  m_pSensoryMem = new SensoryMemory(this, 5);
+  m_pSensoryMem = new SensoryMemory(this, script->getNum("charmemoryspan"));
 }
+
 
 //-------------------------------- dtor ---------------------------------------
 //-----------------------------------------------------------------------------
@@ -370,7 +371,7 @@ void Character::ReduceHealth(unsigned int val)
 
   m_bHit = true;
 
-  m_iNumUpdatesHitPersistant = (int)(FrameRate * 5);
+  m_iNumUpdatesHitPersistant = (int)(FrameRate *script->getNum("hitflashtime"));
 }
 
 //--------------------------- Possess -----------------------------------------
@@ -514,7 +515,7 @@ void Character::SetUpVertexBuffer()
                                      Vector2D(-3,-8)};
 
   m_dBoundingRadius = 0.0;
-  double scale = 1;
+  double scale = script->getNum("charscale");
   
   for (int vtx=0; vtx<NumBotVerts; ++vtx)
   {

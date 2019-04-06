@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<map>
+<!-- object groups are in same level as properties -->
+<map map="DM1.map">
  <property name="background" value="assets/background.png"/>
  <property name="isaac" value="assets/isaac.png"/>
- <property name="dot" value="assets/dot.bmp"/>
 </map>
 

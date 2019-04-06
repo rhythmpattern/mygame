@@ -6,7 +6,7 @@
 #include "Game.h"
 #include "2D/Geometry.h"
 #include "Map.h"
-
+#include "Scriptor.h"
 #include <cassert>
 
 
@@ -23,11 +23,11 @@ Steering::Steering(Game* world, Character* agent):
              m_pWorld(world),
              m_pCharacter(agent),
              m_iFlags(0),
-             m_dWeightSeparation(10),
-             m_dWeightWander(10),
-             m_dWeightWallAvoidance(10),
-             m_dViewDistance(10),
-             m_dWallDetectionFeelerLength(10),
+             m_dWeightSeparation(script->getNum("separationweight")),
+             m_dWeightWander(script->getNum("wanderweight")),
+             m_dWeightWallAvoidance(script->getNum("wallavoidanceweight")),
+             m_dViewDistance(script->getNum("viewdistance")),
+             m_dWallDetectionFeelerLength(script->getNum("walldetectionfeelerlength")),
              m_Feelers(3),
              m_Deceleration(normal),
              m_pTargetAgent1(NULL),
@@ -35,8 +35,8 @@ Steering::Steering(Game* world, Character* agent):
              m_dWanderDistance(WanderDist),
              m_dWanderJitter(WanderJitterPerSec),
              m_dWanderRadius(WanderRad),
-             m_dWeightSeek(10),
-             m_dWeightArrive(10),
+             m_dWeightSeek(script->getNum("seekweight")),
+             m_dWeightArrive(script->getNum("arriveweight")),
              m_bCellSpaceOn(false),
              m_SummingMethod(prioritized)
              

@@ -12,7 +12,7 @@
 #include "Messaging/MessageDispatcher.h"
 #include "Messages.h"
 #include "GraveMarkers.h"
-
+#include "Scriptor.h"
 #include "Armory/Projectile.h"
 #include "Armory/Projectile_Shot.h"
 #include "Armory/Shooter.h"
@@ -440,8 +440,8 @@ bool Game::LoadMap(const std::string& filename)
   delete m_pPathManager;
 
   //in with the new
-  m_pGraveMarkers = new GraveMarkers(10);
-  m_pPathManager = new PathManager<PathPlanner>(10);
+  m_pGraveMarkers = new GraveMarkers(script->getNum("gravelifetime"));
+  m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
   m_pMap = new Map();
   
   //make sure the entity manager is reset

@@ -4,7 +4,7 @@
 #include "../constants.h"
 #include "../2D/WallIntersectionTests.h"
 #include "../Map.h"
-
+#include "../Scriptor.h"
 #include "../Messages.h"
 #include "../Messaging/MessageDispatcher.h"
 
@@ -18,11 +18,11 @@ Projectile_Shot::Projectile_Shot(Character* shooter, Vector2D target):
                          shooter->ID(),
                          shooter->Pos(),
                          shooter->Facing(),
-                         10,
-                         10,
-                         10,
-                         10,
-                         10)
+		   script->getInt("boltdamage"),
+		   script->getNum("boltscale"),
+		   script->getNum("boltmaxspeed"),
+		   script->getNum("boltmass"),
+		   script->getNum("boltmaxforce"))
 {
    assert (target != Vector2D());
 }

@@ -11,6 +11,7 @@
 #include <sstream>
 #include "UserOptions.h"
 #include <stdio.h>
+#include "Scriptor.h"
 
 #define Debug
 
@@ -295,8 +296,8 @@ void Map::PartitionNavGraph()
 
   m_pSpacePartition = new CellSpacePartition<NavGraph::NodeType*>(m_iSizeX,
                                                                   m_iSizeY,
-                                                                  10,
-                                                                  10,
+                                                                  script->getInt("numcellsx"),
+                                                                  script->getInt("numcellsy"),
                                                                   m_pNavGraph->NumNodes());
 
   //add the graph nodes to the space partition
