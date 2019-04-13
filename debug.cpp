@@ -13,8 +13,7 @@ int main( int argc, char* args[] )
   SDL_Renderer* m_pRenderer;
   SDL_Event e;
   bool running = true;
-  
-  
+ 
    Game::Instance()->init("Test", 0,0,1455,796,false);
  
   // LevelParser* lp = new LevelParser();
