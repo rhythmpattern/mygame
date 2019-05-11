@@ -38,7 +38,7 @@ Game::Game():m_pSelectedBot(NULL),
    LoadMap("DM1.map");
     m_levelFiles.push_back("assets/test.xml");
    m_currentLevel = 1;
-  
+   
 }
 
 
@@ -178,7 +178,7 @@ void Game::Clear()
 void Game::Update()
 {
    SDL_RenderClear(m_pRenderer);
-    
+ 
   Render();
   
   //don't update if the user has paused the game
@@ -203,8 +203,9 @@ void Game::Update()
   std::list<Projectile*>::iterator curW = m_Projectiles.begin();
   while (curW != m_Projectiles.end())
   {
+    
     //test for any dead projectiles and remove them if necessary
-    if (!(*curW)->isDead())
+    if (!(*curW)->isDead() && !(*curW) == NULL)
     {
       (*curW)->Update();
      
@@ -261,6 +262,7 @@ void Game::Update()
     if (!m_Bots.empty())
     {
       Character* pBot = m_Bots.back();
+     
       if (pBot == m_pSelectedBot)m_pSelectedBot=0;
       NotifyAllBotsOfRemoval(pBot);
       delete m_Bots.back();
@@ -341,7 +343,7 @@ void Game::AddBots(unsigned int NumBotsToAdd)
     
     Character* rb = new Character(this, Vector2D());
 
-   
+    
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();
     rb->GetSteering()->SeparationOn();

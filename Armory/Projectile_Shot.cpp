@@ -25,6 +25,7 @@ Projectile_Shot::Projectile_Shot(Character* shooter, Vector2D target):
 		   script->getNum("boltmaxforce"))
 {
    assert (target != Vector2D());
+     
 }
 
 
@@ -35,15 +36,15 @@ void Projectile_Shot::Update()
   if (!m_bImpacted)
   {
     m_vVelocity = MaxSpeed() * Heading();
-
+    
     //make sure vehicle does not exceed maximum velocity
     m_vVelocity.Truncate(m_dMaxSpeed);
 
     //update the position
     m_vPosition += m_vVelocity;
-
     
-    //if the projectile has reached the target position or it hits an entity
+    //TextureManager::Instance()->drawFrame("dot",  m_vPosition.x, m_vPosition.y, 20, 20,0,0, Game::Instance()->getRenderer(),0,100);
+    //if the projectile has reached the target podotsition or it hits an entity
     //or wall it should explode/inflict damage/whatever and then mark itself
     //as dead
 

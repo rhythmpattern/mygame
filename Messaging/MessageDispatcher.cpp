@@ -6,7 +6,7 @@
 using std::set;
 
 //uncomment below to send message info to the debug window
-//#define SHOW_MESSAGING_INFO
+#define SHOW_MESSAGING_INFO
 
 //--------------------------- Instance ----------------------------------------
 //
@@ -25,14 +25,15 @@ MessageDispatcher* MessageDispatcher::Instance()
 //------------------------------------------------------------------------
 void MessageDispatcher::Discharge(Entity* pReceiver, const Telegram& telegram)
 {
-  if (pReceiver == NULL ) {std::cout << "RECEIVER or telegram IS NULL, MESSAGE NOT HANDLED" << endl; return;}
-else {
+  // if (pReceiver == NULL | telegram.Msg == NULL ) {std::cout << "RECEIVER or telegram IS NULL, MESSAGE NOT HANDLED" << endl; return;}
+  //else
+  {
  
   if (!pReceiver->HandleMessage(telegram))
   {
     //telegram could not be handled
     #ifdef SHOW_MESSAGING_INFO
-    debug_con << "Message not handled" << "";
+    std::cout << "Message not handled" << "";
     #endif
   }
   }
@@ -58,7 +59,7 @@ void MessageDispatcher::DispatchMsg(double       delay,
   if (pReceiver == NULL)
   {
     #ifdef SHOW_MESSAGING_INFO
-    debug_con << "\nWarning! No Receiver with ID of " << receiver << " found" << "";
+    std::cout << "\nWarning! No Receiver with ID of " << receiver << " found" << "";
     #endif
 
     return;
@@ -71,7 +72,7 @@ void MessageDispatcher::DispatchMsg(double       delay,
   if (delay <= 0.0)                                                        
   {
     #ifdef SHOW_MESSAGING_INFO
-    debug_con << "\nTelegram dispatched at time: " << TickCounter->GetCurrentFrame()
+    std::cout << "\nTelegram dispatched at time: " << TickCounter->GetCurrentFrame()
          << " by " << sender << " for " << receiver 
          << ". Msg is " << msg << "";
     #endif
@@ -91,7 +92,7 @@ void MessageDispatcher::DispatchMsg(double       delay,
     PriorityQ.insert(telegram);   
 
     #ifdef SHOW_MESSAGING_INFO
-    debug_con << "\nDelayed telegram from " << sender << " recorded at time " 
+    std::cout << "\nDelayed telegram from " << sender << " recorded at time " 
             << TickCounter->GetCurrentFrame() << " for " << receiver
             << ". Msg is " << msg << "";
     #endif
@@ -122,7 +123,7 @@ void MessageDispatcher::DispatchDelayedMessages()
     Entity* pReceiver = EntityMgr->GetEntityFromID(telegram.Receiver);
 
     #ifdef SHOW_MESSAGING_INFO
-    debug_con << "\nQueued telegram ready for dispatch: Sent to " 
+    std::cout << "\nQueued telegram ready for dispatch: Sent to " 
          << pReceiver->ID() << ". Msg is "<< telegram.Msg << "";
     #endif
 

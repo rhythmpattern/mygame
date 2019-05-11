@@ -10,7 +10,7 @@
  <charfov value="180" />
  <charreactiontime value="0.2" />
  <charaimpersistance value="1" />
- <charaimaccuracy value="0" />
+ <charaimaccuracy value="1" />
  <charmemoryspan value="5" />
  <charhealthgoaltweaker value="1" />
  <charshotgungoaltweaker value="1" />
@@ -35,8 +35,8 @@
  <weaponrespawndelay value="15" />
  <blasterfiringfreq value="3" />
  <blastermaxspeed value="5" />
- <blasterdefaultrounds value="0" />
- <blastermaxroundscarried value="0" />
+ <blasterdefaultrounds value="1" />
+ <blastermaxroundscarried value="1" />
  <blasteridealrange value="50" />
  <blastersoundrange value="100" />
  <boltmaxspeed value="5" />

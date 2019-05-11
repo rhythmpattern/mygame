@@ -61,11 +61,11 @@ Character::Character(Game* world,Vector2D pos):
   m_pSteering = new Steering(world, this);
 
   //create the regulators
-  m_pWeaponSelectionRegulator = new Regulator(script->getNum("charweaponselectionfrequency"));
-  m_pGoalArbitrationRegulator =  new Regulator(script->getNum("chargoalappraisalupdatefreq"));
-  m_pTargetSelectionRegulator = new Regulator(script->getNum("chartargetingupdatefreq"));
-  m_pTriggerTestRegulator = new Regulator(script->getNum("chartriggerupdatefreq"));
-  m_pVisionUpdateRegulator = new Regulator(script->getNum("charvisionupdatefreq"));
+  m_pWeaponSelectionRegulator = new Regulator(script->getNum("weaponselectionfrequency"));
+  m_pGoalArbitrationRegulator =  new Regulator(script->getNum("goalappraisalupdatefreq"));
+  m_pTargetSelectionRegulator = new Regulator(script->getNum("targetingupdatefreq"));
+  m_pTriggerTestRegulator = new Regulator(script->getNum("triggerupdatefreq"));
+  m_pVisionUpdateRegulator = new Regulator(script->getNum("visionupdatefreq"));
 
   
   
@@ -122,7 +122,7 @@ void Character::load(std::unique_ptr<LoadParams> const &pParams)
 //-----------------------------------------------------------
 void Character::draw()
 {
-  TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x, m_vPosition.y, 148, 125,0,0, Game::Instance()->getRenderer(),0,100);
+    TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x, m_vPosition.y, 148, 125,0,0, Game::Instance()->getRenderer(),0,100);
 }
 
 
@@ -246,6 +246,8 @@ bool Character::isReadyForTriggerUpdate()const
 //-----------------------------------------------------------------------------
 bool Character::HandleMessage(const Telegram& msg)
 {
+  
+  //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
   //first see if the current goal accepts the message
   if (GetBrain()->HandleMessage(msg)) return true;
  

@@ -3,5 +3,6 @@
 <map map="DM1.map">
  <property name="background" value="assets/background.png"/>
  <property name="isaac" value="assets/isaac.png"/>
+ <property name="dot" value="assets/dot.bmp" />
 </map>
 
