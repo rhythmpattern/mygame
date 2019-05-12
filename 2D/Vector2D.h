@@ -62,7 +62,9 @@ struct Vector2D
   //returns the vector that is the reverse of this vector
   inline Vector2D  GetReverse()const;
 
-
+  inline void setX(double val);
+  inline void setY(double val);
+  
   //we need some overloaded operators
   const Vector2D& operator+=(const Vector2D &rhs)
   {
@@ -119,6 +121,18 @@ std::ifstream& operator>>(std::ifstream& is, Vector2D& lhs);
 
 
 //------------------------------------------------------------------------member functions
+
+inline void      Vector2D::setX(double val)
+  {
+    x = val;
+  }
+
+inline void      Vector2D::setY(double val)
+{
+  y = val;
+}
+
+
 
 //------------------------- Length ---------------------------------------
 //

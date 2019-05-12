@@ -20,7 +20,7 @@
 #include "Goals/Goal_Types.h"
 
 //uncomment to write object creation/deletion to debug console
-#define  LOG
+//#define  LOG
 
 
 Game* Game::s_pInstance = 0;

@@ -22,7 +22,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
      
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
-    std::cout << pRoot->Value();
+    
  
     for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
       {

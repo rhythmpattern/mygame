@@ -8,6 +8,7 @@ enum
 {
   type_wall,
   type_bot,
+  type_player,
   type_unused,
   type_waypoint,
   type_health,
