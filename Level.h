@@ -7,8 +7,12 @@
 #include "LevelParser.h"
 //#include "Player.h"
 #include "CollisionManager.h"
+#include "Map.h"
+#include "Navigation/PathManager.h"
 
 //class TileLayer;
+class GraveMarkers;
+class Projectile;
 
 struct Tileset
 {
@@ -48,7 +52,11 @@ private:
     Level();
     
     //  Player* m_pPlayer;
-    
+    Map* m_pMap;
+    std::vector<Character*> m_Bots;
+    PathManager<PathPlanner>* m_pPathManager;
+    GraveMarkers* m_pGraveMarkers;
+    std::list<Projectile*>     m_Projectiles;
      std::vector<Layer*> m_layers;
       std::vector<Tileset> m_tilesets;
      std::vector<TileLayer*> m_collisionLayers;

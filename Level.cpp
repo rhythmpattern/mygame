@@ -27,6 +27,7 @@ void Level::render()
    {
         m_layers[i]->render();
     }
+
 }
 
 void Level::update()
@@ -36,4 +37,5 @@ void Level::update()
     {
         m_layers[i]->update(this);
     }
+
 }
