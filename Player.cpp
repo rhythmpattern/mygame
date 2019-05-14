@@ -1,6 +1,6 @@
  #include "Player.h"
  #include "ObjectEnumerations.h"
-
+ #include "PlayerSteering.h"
 
 //-------------------------- ctor ---------------------------------------------
 Player::Player(Game* world,Vector2D pos):
@@ -12,13 +12,3 @@ Player::Player(Game* world,Vector2D pos):
   
 }
 
-void Player::handleinput()
-{
-  if (!isDead())
-    {
-       if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP) && m_vPosition.y > 0)
-        {
-            m_vVelocity.setY(-m_dMaxSpeed);
-        }
-    }
-}

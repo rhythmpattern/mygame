@@ -70,7 +70,7 @@ public:
     m_dBoundingRadius = radius; 
     m_vScale = scale;
   }
-
+ MovingEntity():Entity(Entity::GetNextValidID()){}
 
   virtual ~MovingEntity(){}
 

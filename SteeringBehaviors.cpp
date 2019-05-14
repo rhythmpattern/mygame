@@ -50,6 +50,8 @@ Steering::Steering(Game* world, Character* agent):
   m_vWanderTarget = Vector2D(m_dWanderRadius * cos(theta),
                               m_dWanderRadius * sin(theta));
 
+
+  int temp;
 }
 
 //---------------------------------dtor ----------------------------------
@@ -152,13 +154,18 @@ Vector2D Steering::CalculatePrioritized()
 {       
   Vector2D force;
 
-  if (On(wall_avoidance))
+
+ if (On(wall_avoidance))
   {
+   
     force = WallAvoidance(m_pWorld->GetMap()->GetWalls()) *
             m_dWeightWallAvoidance;
-
-    if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
+   
+    if (!AccumulateForce(m_vSteeringForce, force))  return m_vSteeringForce;
   }
+  
+ 
+ 
 
  
   //these next three can be combined for flocking behavior (wander is
@@ -193,6 +200,11 @@ Vector2D Steering::CalculatePrioritized()
 
     if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
   }
+ if (m_pCharacter->isPossessed() && !m_pCharacter->isDead())
+    {
+      force = m_pCharacter->handleinput();
+      if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
+    }
 
 
   return m_vSteeringForce;
@@ -293,6 +305,8 @@ Vector2D Steering::Wander()
 //------------------------------------------------------------------------
 Vector2D Steering::WallAvoidance(const vector<Wall2D*> &walls)
 {
+
+ 
   //the feelers are contained in a std::vector, m_Feelers
   CreateFeelers();
   
@@ -336,6 +350,8 @@ Vector2D Steering::WallAvoidance(const vector<Wall2D*> &walls)
     //that will direct the agent away
     if (ClosestWall >=0)
     {
+    
+     
       //calculate by what distance the projected position of the agent
       //will overshoot the wall
       Vector2D OverShoot = m_Feelers[flr] - ClosestPoint;
@@ -369,6 +385,8 @@ void Steering::CreateFeelers()
   temp = m_pCharacter->Heading();
   Vec2DRotateAroundOrigin(temp, HalfPi * 0.5);
   m_Feelers[2] = m_pCharacter->Pos() + m_dWallDetectionFeelerLength/2.0 * temp;
+
+ 
 }
 
 

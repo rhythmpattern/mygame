@@ -17,7 +17,8 @@
 #include "Goals/Goal_Types.h"
 #include "Goals/Goal_Think.h"
 #include "Goals/Goal_Think_Zombie.h"
-#define debug
+#include "InputHandler.h"
+//#define debug
 
 
 //-------------------------- ctor ---------------------------------------------
@@ -84,6 +85,9 @@ Character::Character(Game* world,Vector2D pos):
 }
 
 
+
+
+
 //-------------------------------- dtor ---------------------------------------
 //-----------------------------------------------------------------------------
 Character::~Character()
@@ -147,17 +151,25 @@ void Character::Spawn(Vector2D pos)
 //
 void Character::Update()
 {
- 
+
+
+  
   //process the currently active goal. Note this is required even if the bot
   //is under user control. This is because a goal is created whenever a user 
   //clicks on an area of the map that necessitates a path planning request.
   m_pBrain->Process();
-  
+   //if the bot is under AI control but not scripted
+  if (isPossessed())
+    {
+      handleinput();
+    }
+
+ 
   //Calculate the steering force and update the bot's velocity and position
   UpdateMovement();
 
-  //if the bot is under AI control but not scripted
-  if (!isPossessed())
+
+  if(!isPossessed())
     {          
     //examine all the opponents in the bots sensory memory and select one
     //to be the current target
@@ -191,6 +203,48 @@ void Character::Update()
     m_pWeaponSys->TakeAimAndShoot();
   }
 }
+
+//--------------------------HandleInput----------------------------------------
+//
+//
+//
+Vector2D Character::handleinput()
+{
+  Vector2D force;
+  TheInputHandler::Instance()->update();
+  if (!isDead())
+    { 
+      if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_SPACE))
+	{
+	  //FireWeapon(Pos());
+	}
+      
+       if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_W))
+        {
+	 
+           force.y = -1;
+        }
+        if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_S))
+        {
+	 
+            force.y = 1;
+        }
+	 if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_A))
+        {
+	 
+           force.x = -1;
+        }
+	  if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_D))
+        {
+	 
+           force.x=1;
+        }
+	  force.Normalize();
+    }
+  return force - Velocity();
+}
+
+
 
 
 //------------------------- UpdateMovement ------------------------------------

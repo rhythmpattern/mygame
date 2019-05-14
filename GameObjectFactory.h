@@ -3,12 +3,12 @@
 
 #include <string>
 #include <map>
-#include "Game/Entity.h"
+#include "Character.h"
 
 class BaseCreator
 {
  public:
-  virtual Entity* createGameObject() const = 0;
+  virtual Character* createGameObject() const = 0;
   virtual ~BaseCreator() {}
 
 
@@ -47,7 +47,7 @@ class GameObjectFactory
 
 
 
-  Entity* create(std::string typeID)
+  Character* create(std::string typeID)
   {
     std::map<std::string, BaseCreator*>::iterator it = m_creators.find(typeID);
 

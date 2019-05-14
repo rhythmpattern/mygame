@@ -8,7 +8,6 @@ enum
 {
   type_wall,
   type_bot,
-  type_player,
   type_unused,
   type_waypoint,
   type_health,
@@ -17,7 +16,9 @@ enum
   type_obstacle,
   type_sliding_door,
   type_door_trigger,
-  type_zomb
+  type_zomb,
+  type_player,
+  type_melee
 };
 
 

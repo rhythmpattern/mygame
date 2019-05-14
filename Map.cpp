@@ -205,7 +205,7 @@ if (!in)
     return false;
   }
 Clear();
-
+ 
 Entity::ResetNextValidID();
 
 m_pNavGraph = new NavGraph(false);
@@ -215,6 +215,7 @@ m_pNavGraph->Load(in);
  m_dCellSpaceNeighborhoodRange = CalculateAverageGraphEdgeLength(*m_pNavGraph) + 1;
 //load in the map size and adjust the client window accordingly
   in >> m_iSizeX >> m_iSizeY;
+  
 //partition the graph nodes
   PartitionNavGraph();
 
@@ -247,7 +248,7 @@ m_pNavGraph->Load(in);
 
    case type_health:
 
-       AddHealth_Giver(in); break;
+     AddHealth_Giver(in); break;
 
     default:
 

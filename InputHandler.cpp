@@ -169,9 +169,12 @@ Vector2D* InputHandler::getMousePosition() const
 
 void InputHandler::update()
 {
+
+  
     SDL_Event event;
     while(SDL_PollEvent(&event))
     {
+     
         switch (event.type)
         {
             
@@ -201,6 +204,7 @@ void InputHandler::update()
                 break;
                 
             case SDL_KEYDOWN:
+	     
                 onKeyDown();
                 break;
                 
@@ -216,7 +220,8 @@ void InputHandler::update()
 
 void InputHandler::onKeyDown()
 {
-    m_keystates = SDL_GetKeyboardState(0);
+  
+  m_keystates = SDL_GetKeyboardState(0);
 }
 
 void InputHandler::onKeyUp()
@@ -226,6 +231,7 @@ void InputHandler::onKeyUp()
 
 void InputHandler::onMouseMove(SDL_Event &event)
 {
+ 
     m_mousePosition->setX(event.motion.x);
     m_mousePosition->setY(event.motion.y);
 }

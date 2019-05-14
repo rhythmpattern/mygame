@@ -1,0 +1,32 @@
+#ifndef ZOMBIE_H
+#define ZOMBIE_H
+
+#include "Character.h"
+#include "ObjectEnumerations.h"
+#include "misc/utils.h"
+#include "2D/Transformations.h"
+#include "Game.h"
+#include "Navigation/PathPlanner.h"
+#include "SteeringBehaviors.h"
+#include "UserOptions.h"
+#include "Time/Regulator.h"
+#include "WeaponSystem.h"
+#include "SensoryMemory.h"
+#include "Messaging/Telegram.h"
+#include "Messages.h"
+#include "Messaging/MessageDispatcher.h"
+#include "Goals/Goal_Think_Zombie.h"
+
+
+class Zombie : public Character
+{
+ private:
+  bool speedUp;
+ public:
+  Zombie(Game* world, Vector2D pos);
+  virtual bool HandleMessage(const Telegram& msg);
+  virtual void Update();
+
+};
+
+#endif

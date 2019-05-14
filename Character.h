@@ -10,6 +10,7 @@
 #include "WeaponSystem.h"
 #include "LoadParams.h"
 #include "ZombieWeaponSystem.h"
+#include "GameObjectFactory.h"
 
 class Game;
 class Steering;
@@ -26,7 +27,7 @@ class Goal_Think;
 
 class Character : public MovingEntity{
 
-	private: 
+	protected: 
 
 
 		enum Status{alive, dead, spawning};
@@ -52,6 +53,7 @@ class Character : public MovingEntity{
 		std::vector<Vector2D>	m_vecBotVBTrans;
 		void UpdateMovement();
 		void SetUpVertexBuffer();
+                		
 		
 		
 		 Regulator*                         m_pWeaponSelectionRegulator;
@@ -67,14 +69,14 @@ class Character : public MovingEntity{
 
 
 		Character(Game* world, Vector2D pos);
-	        
+		Character();
 
 		void load(std::unique_ptr<LoadParams> const &pParams);
 		virtual void draw();
 		virtual ~Character();
 
 	
-		
+	        Vector2D handleinput();
 		void Update();
 		bool HandleMessage(const Telegram& msg);
 		void Write(std::ostream& os)const{}
@@ -129,7 +131,13 @@ class Character : public MovingEntity{
 
 };
 
-
+class CharacterCreator : public BaseCreator
+{
+    Character* createGameObject() const
+    {
+        return new Character();
+    }
+};
 
 
 

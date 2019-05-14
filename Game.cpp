@@ -18,9 +18,12 @@
 #include "Armory/Shooter.h"
 #include "Goals/Goal_Think.h"
 #include "Goals/Goal_Types.h"
+#include "Player.h"
+#include "InputHandler.h"
+#include "Zombie.h"
 
 //uncomment to write object creation/deletion to debug console
-//#define  LOG
+#define  LOG
 
 
 Game* Game::s_pInstance = 0;
@@ -38,6 +41,18 @@ Game::Game():m_pSelectedBot(NULL),
    LoadMap("DM1.map");
     m_levelFiles.push_back("assets/test.xml");
    m_currentLevel = 1;
+ Player* player = new Player(this, Vector2D());
+    //switch the default steering behaviors on
+    player->GetSteering()->WallAvoidanceOn();
+    
+    player->Spawn(Vector2D(150,150));
+    player->TakePossession();
+    m_pSelectedBot = player;    m_Bots.push_back(player);
+    //register the bot with the entity manager
+     EntityMgr->RegisterEntity(player);
+   
+  
+   
    
 }
 
@@ -177,17 +192,18 @@ void Game::Clear()
 //-----------------------------------------------------------------------------
 void Game::Update()
 {
-   SDL_RenderClear(m_pRenderer);
+
  
-  Render();
+   SDL_RenderClear(m_pRenderer);
   
+  Render();
+ 
   //don't update if the user has paused the game
   if (m_bPaused) return;
   
   m_pGraveMarkers->Update();
 
-  //get any player keyboard input
-  GetPlayerInput();
+ 
   
   //update all the queued searches in the path manager
   m_pPathManager->UpdateSearches();
@@ -333,6 +349,9 @@ void Game::AddBots(unsigned int NumBotsToAdd)
 #ifdef LOG
     std::cout << "Adding Bots\n";
   #endif
+
+ 
+    
    while (NumBotsToAdd--)
   {
     //create a bot. (its position is irrelevant at this point because it will
