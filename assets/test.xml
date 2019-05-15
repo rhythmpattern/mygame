@@ -1,6 +1,11 @@
 <?xml version="1.0" ?>
-<map map="DM1.map">
- <property name="background" value="assets/background.png"/>
- <property name="isaac" value="assets/isaac.png"/>
- <property name="dot" value="assets/dot.bmp" />
-</map>
+<level map="DM1.map">
+ <textures>
+  <property name="background" value="assets/background.png"/>
+  <property name="isaac" value="assets/isaac.png"/>
+  <property name="dot" value="assets/dot.bmp" />
+ </textures>
+ <chars>
+  <property name="Character" />
+ </chars>
+</level>

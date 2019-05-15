@@ -22,13 +22,19 @@ Level* LevelParser::parseLevel(const char *levelFile)
      
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
+    TiXmlElement* pSRoot = pRoot->FirstChildElement();
     
- 
-    for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
+     for (TiXmlElement* e = pSRoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
       {
 	parseTextures(e);
       }
- 
+    TiXmlElement* pORoot = pSRoot->NextSiblingElement();
+    for (TiXmlElement* e = pORoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
+      {
+	parseObjectLayer(e, pLevel->getLayers() , pLevel);
+
+      }
+    
     //  pRoot->Attribute("width", &m_width);
     // pRoot->Attribute("height", &m_height);
     
@@ -72,7 +78,7 @@ void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Lay
     // create an object layer
     ObjectLayer* pObjectLayer = new ObjectLayer();
     
-   
+    std::cout << pObjectElement->Value();
     
     pLayers->push_back(pObjectLayer);
 }

@@ -2,8 +2,10 @@
 #define GAME_OBJECT_FACTORY_H
 
 #include <string>
+#include <iostream>
 #include <map>
 #include "Character.h"
+
 
 class BaseCreator
 {

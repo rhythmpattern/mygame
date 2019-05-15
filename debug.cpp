@@ -14,10 +14,11 @@ int main( int argc, char* args[] )
   SDL_Event e;
   bool running = true;
  
-   Game::Instance()->init("Test", 0,0,1455,796,false);
+  Game::Instance()->init("Test", 0,0,1455,796,false);
  
-  // LevelParser* lp = new LevelParser();
+  //LevelParser* lp = new LevelParser();
   // lp->parseLevel("assets/test.xml");
+  
 
 
   while (running)

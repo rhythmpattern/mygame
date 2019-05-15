@@ -22,7 +22,6 @@ class Goal_Think;
 class SensoryMemory;
 class WeaponSystem;
 class Goal_Think_Zombie;
-
 class Goal_Think;
 
 class Character : public MovingEntity{
@@ -130,6 +129,7 @@ class Character : public MovingEntity{
 	    
 
 };
+
 
 
 
