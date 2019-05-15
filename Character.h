@@ -23,7 +23,7 @@ class SensoryMemory;
 class WeaponSystem;
 class Goal_Think_Zombie;
 class Goal_Think;
-
+class BaseCreator;
 class Character : public MovingEntity{
 
 	protected: 
@@ -68,7 +68,7 @@ class Character : public MovingEntity{
 
 
 		Character(Game* world, Vector2D pos);
-		Character();
+ Character():MovingEntity(){}
 
 		void load(std::unique_ptr<LoadParams> const &pParams);
 		virtual void draw();
@@ -130,7 +130,13 @@ class Character : public MovingEntity{
 
 };
 
-
+class CharacterCreator : public BaseCreator
+{
+  Character* createGameObject() const
+  {
+    return new Character();
+  }
+};
 
 
 

@@ -20,7 +20,6 @@
 #include "InputHandler.h"
 //#define debug
 
-
 //-------------------------- ctor ---------------------------------------------
 Character::Character(Game* world,Vector2D pos):
 
