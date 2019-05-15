@@ -6,7 +6,7 @@
 #include "Layer.h"
 #include "LevelParser.h"
 //#include "Player.h"
-#include "CollisionManager.h"
+//#include "CollisionManager.h"
 #include "Map.h"
 #include "Navigation/PathManager.h"
 
