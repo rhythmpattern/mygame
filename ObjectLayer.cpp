@@ -7,7 +7,7 @@
 
 ObjectLayer::~ObjectLayer()
 {
-    for(std::vector<Entity*>::iterator it = m_gameObjects.begin(); it != m_gameObjects.end(); ++it)// < m_gameObjects.size(); i++)
+    for(std::vector<Character*>::iterator it = m_gameObjects.begin(); it != m_gameObjects.end(); ++it)// < m_gameObjects.size(); i++)
     {
         delete (*it);
     }
