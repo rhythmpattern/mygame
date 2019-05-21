@@ -39,19 +39,12 @@ private:
   //every entity has a type associated with it (health, troll, ammo etc)
   int         m_iType;
 
-  //this is a generic flag. 
-  bool        m_bTag;
-
+  
   //this is the next valid ID. Each time a Entity is instantiated
   //this value is updated
   static int  m_iNextValidID;
 
-  //this must be called within each constructor to make sure the ID is set
-  //correctly. It verifies that the value passed to the method is greater
-  //or equal to the next valid ID, before setting the ID and incrementing
-  //the next valid ID
-  void SetID(int val);
-
+ 
 
 protected:
    //Texture variables.
@@ -63,7 +56,14 @@ protected:
   double m_angle;
   int m_alpha;
   int m_currentRow;
-  
+   //this must be called within each constructor to make sure the ID is set
+  //correctly. It verifies that the value passed to the method is greater
+  //or equal to the next valid ID, before setting the ID and incrementing
+  //the next valid ID
+  void SetID(int val);
+//this is a generic flag. 
+  bool        m_bTag;
+
   //its location in the environment
   Vector2D m_vPosition;
 

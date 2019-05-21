@@ -70,7 +70,7 @@ class Character : public MovingEntity{
 		Character(Game* world, Vector2D pos);
  Character():MovingEntity(){}
 
-		void load(std::unique_ptr<LoadParams> const &pParams);
+		void load();
 		virtual void draw();
 		virtual ~Character();
 

@@ -92,7 +92,7 @@ Character::Character(Game* world,Vector2D pos):
 Character::~Character()
 {
   std::cout << "deleting  bot (id = " << ID() << ")" << "";
-  
+ 
   delete m_pBrain;
   delete m_pPathPlanner;
   delete m_pSteering;
@@ -109,14 +109,50 @@ Character::~Character()
 //-------------------------------load-------------------------
 //
 //---------------------------------------------------
-void Character::load(std::unique_ptr<LoadParams> const &pParams)
+void Character::load()
 {
+  m_bTag = false;
+  SetID(GetNextValidID());
+  m_vHeading = Vector2D(1,0);
+  m_vVelocity = Vector2D(0,0);
+  m_dMass = script->getNum("charmass");
+  m_vSide = m_vHeading.Perp();
+  m_dMaxSpeed = script->getNum("charmaxspeed");
+  m_dMaxTurnRate = script->getNum("charmaxheadturnrate");
+  m_dMaxForce = script->getNum("charmaxforce");
+  m_iMaxHealth = script->getInt("charmaxhealth");
+  m_pWorld = Game::Instance();
+  m_iNumUpdatesHitPersistant = (int)(FrameRate * script->getNum("hitflashtime"));
+  m_bHit = false;
+  m_iScore = 0;
+  m_Status = spawning;
+  m_bPossessed = false;
+  m_dFieldOfView = DegsToRads(script->getNum("charfov"));
+  m_vPosition = Vector2D(100,100);
+  m_dBoundingRadius = script->getNum("charscale");
+  m_vScale = Vector2D(m_dBoundingRadius,m_dBoundingRadius);
+  SetEntityType(type_bot);
+  SetUpVertexBuffer();
+  m_vFacing = m_vHeading;
+  m_pPathPlanner = new PathPlanner(this);
+  m_pSteering = new Steering(Game::Instance(), this);
+  m_pWeaponSelectionRegulator = new Regulator(script->getNum("weaponselectionfrequency"));
+   m_pGoalArbitrationRegulator =  new Regulator(script->getNum("goalappraisalupdatefreq"));
+  m_pTargetSelectionRegulator = new Regulator(script->getNum("targetingupdatefreq"));
+  m_pTriggerTestRegulator = new Regulator(script->getNum("triggerupdatefreq"));
+  m_pVisionUpdateRegulator = new Regulator(script->getNum("visionupdatefreq"));
+  //create the goal queue
+  m_pBrain = new Goal_Think(this);
 
-  // m_vPosition = Vector2D(pParams->getX(),pParams->getY());
-  // m_width = pParams->getWidth();
-  //   m_height = pParams->getHeight();
-  //m_textureID = pParams->getTextureID();
-  //  m_numFrames = pParams->getNumFrames();
+  //create the targeting system
+  m_pTargSys = new TargetingSystem(this);
+
+  m_pWeaponSys = new WeaponSystem(this,
+                                        script->getNum("charreactiontime"),
+                                        script->getNum("charaimaccuracy"),
+					script->getNum("charaimpersistance"));
+
+  m_pSensoryMem = new SensoryMemory(this, script->getNum("charmemoryspan"));
 }
 
 

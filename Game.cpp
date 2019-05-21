@@ -36,22 +36,9 @@ Game::Game():m_pSelectedBot(NULL),
                          m_pPathManager(NULL),
                          m_pGraveMarkers(NULL)
 {
-
-  //load in the default map
-   LoadMap("DM1.map");
-    m_levelFiles.push_back("assets/test.xml");
-   m_currentLevel = 1;
- Player* player = new Player(this, Vector2D());
-    //switch the default steering behaviors on
-    player->GetSteering()->WallAvoidanceOn();
-    
-    player->Spawn(Vector2D(150,150));
-    player->TakePossession();
-    m_pSelectedBot = player;    m_Bots.push_back(player);
-    //register the bot with the entity manager
-     EntityMgr->RegisterEntity(player);
-   
+  GameObjectFactory::Instance()->registerType("Character" , new CharacterCreator());
   
+ 
    
    
 }
@@ -70,6 +57,25 @@ Game::~Game()
 
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
+
+  
+ LoadMap("DM1.map");
+    m_levelFiles.push_back("assets/test.xml");
+   m_currentLevel = 1;
+ Player* player = new Player(this, Vector2D());
+    //switch the default steering behaviors on
+    player->GetSteering()->WallAvoidanceOn();
+    
+    player->Spawn(Vector2D(150,150));
+    player->TakePossession();
+    m_pSelectedBot = player;    m_Bots.push_back(player);
+    //register the bot with the entity manager
+     EntityMgr->RegisterEntity(player);
+   
+    
+    
+
+  
  int flags = 0;
  m_bRunning = true;
     // store the game width and height
@@ -360,9 +366,8 @@ void Game::AddBots(unsigned int NumBotsToAdd)
     std::cout << "Creating new Character()\n";
     #endif
     
-    Character* rb = new Character(this, Vector2D());
-
-    
+    Character* rb =  GameObjectFactory::Instance()->create("Character");
+    rb->load();
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();
     rb->GetSteering()->SeparationOn();
