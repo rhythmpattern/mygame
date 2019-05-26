@@ -9,6 +9,7 @@
 //#include "CollisionManager.h"
 #include "Map.h"
 #include "Navigation/PathManager.h"
+#include "Room.h"
 
 //class TileLayer;
 class GraveMarkers;
@@ -39,8 +40,8 @@ public:
      std::vector<Tileset>* getTilesets() { return &m_tilesets; }
      std::vector<Layer*>* getLayers() { return &m_layers; }    
      std::vector<TileLayer*>* getCollisionLayers() { return &m_collisionLayers; }
-    
-      const std::vector<TileLayer*>& getCollidableLayers() { return m_collisionLayers; }
+     std::vector<Room*>* getRooms(){ return &m_rooms;}     
+     const std::vector<TileLayer*>& getCollidableLayers() { return m_collisionLayers; }
     
      // Player* getPlayer() { return m_pPlayer; }
      // void setPlayer(Player* pPlayer) { m_pPlayer = pPlayer; }
@@ -58,6 +59,7 @@ private:
     GraveMarkers* m_pGraveMarkers;
     std::list<Projectile*>     m_Projectiles;
      std::vector<Layer*> m_layers;
+     std::vector<Room*> m_rooms;
       std::vector<Tileset> m_tilesets;
      std::vector<TileLayer*> m_collisionLayers;
 };

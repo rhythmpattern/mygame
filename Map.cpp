@@ -132,6 +132,10 @@ void Map::AddDoor(std::ifstream& in)
 //-----------------------------------------------------------------------------
 void Map::AddDoorTrigger(std::ifstream& in)
 {
+
+  #ifdef Debug
+  std::cout << "ADDING DOOR TRIGGER";
+  #endif
   Trigger_OnButtonSendMsg<Character>* tr = new Trigger_OnButtonSendMsg<Character>(in);
 
   m_TriggerSystem.Register(tr);

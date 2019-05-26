@@ -15,6 +15,7 @@
 #include <fstream>
 #include <sstream>
 #include "../misc/Stream_Utility_Functions.h"
+#include "../Messages.h"
 
 template <class entity_type>
 class Trigger_OnButtonSendMsg : public Trigger<entity_type>
@@ -33,6 +34,7 @@ public:
       
       Trigger<entity_type>(GetValueFromStream<int>(datafile))
   {
+   
      Read(datafile);
    }
 
@@ -56,9 +58,11 @@ public:
 template <class entity_type>
 void  Trigger_OnButtonSendMsg<entity_type>::Try(entity_type* pEnt)
 {
-
+  
   if (this->isTouchingTrigger(pEnt->Pos(), pEnt->BRadius()))
   {
+    
+   
       Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
                               this->ID(),
                               m_iReceiver,
@@ -71,6 +75,8 @@ void  Trigger_OnButtonSendMsg<entity_type>::Try(entity_type* pEnt)
 template <class entity_type>
 void Trigger_OnButtonSendMsg<entity_type>::Update()
 {
+
+ 
 }
 
 
@@ -82,7 +88,6 @@ void Trigger_OnButtonSendMsg<entity_type>::Read(std::ifstream& is)
 
   //grab the message type
   is >> m_iMessageToSend;
-
   //grab the position and radius
   double x,y,r;
   is >> x >> y >> r;

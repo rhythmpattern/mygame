@@ -13,6 +13,8 @@ class Room
  public:
   Room(std::string mapName);
   ~Room();
+  void Update();
+  void Render();
 
  private:
   Map* m_pMap;
@@ -20,6 +22,7 @@ class Room
   void clear();
   void NotifyAllCharsOfRemoval(Character* pRemovedChar)const;
   GraveMarkers* m_pGraveMarkers;
+  void LoadMap(const std::string& FileName);
 };
 
 

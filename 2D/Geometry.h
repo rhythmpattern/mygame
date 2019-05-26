@@ -142,7 +142,8 @@ inline bool GetTangentPoints (Vector2D C, double R, Vector2D P, Vector2D& T1, Ve
 inline double DistToLineSegment(Vector2D A,
                                 Vector2D B,
                                 Vector2D P)
-{ 
+{
+  
   //if the angle is obtuse between PA and AB is obtuse then the closest
   //vertex must be A
   double dotA = (P.x - A.x)*(B.x - A.x) + (P.y - A.y)*(B.y - A.y);
@@ -159,7 +160,50 @@ inline double DistToLineSegment(Vector2D A,
   Vector2D Point = A + ((B - A) * dotA)/(dotA + dotB);
 
   //calculate the distance P-Point
-  return Vec2DDistance(P,Point);
+   return Vec2DDistance(P,Point);
+  //return ((A-P)-((A-P).Dot(Vec2DNormalize(B-A))*(Vec2DNormalize(B-A)))).Length();
+  /*
+  Vector2D closest;
+  double dx = B.x - A.x;
+  double dy = B.y - A.y;
+  if ((dx == 0) && (dy == 0))
+    {
+      //It's a point not a line segment.
+      closest = A;
+      dx = P.x - A.x;
+      dy = P.y - A.y;
+      return std::sqrt(dx * dx + dy*dy);
+    }
+  //Calculate the t that minimizes the distance.
+  double t = ((P.x - A.x) * dx + (P.y - A.y) * dy) / (dx * dx + dy * dy);
+
+  //See if this represents one of the segment's end points or a point in the middle.
+  if (t<0)
+    {
+      closest =  Vector2D(B.x , B.y);
+      dx = P.x - B.x;
+      dy = P.y - B.y;
+     
+    }
+  else if (t>1)
+    {
+      closest =  Vector2D(A.x , A.y);
+      dx = P.x - A.x;
+      dy = P.y - A.y;
+    }
+  else if (t > 1)
+    {
+      closest =  Vector2D(B.x , B.y);
+      dx = P.x - B.x;
+      dy = P.y - B.y;
+    }
+  else
+    {
+      closest =  Vector2D(A.x + t*dx , A.y + t*dy);
+      dx = P.x - closest.x;
+      dy = P.y - closest.y;
+    }
+    return std::sqrt(dx * dx + dy * dy);*/
 }
 
 //------------------------- DistToLineSegmentSq ----------------------------
@@ -187,6 +231,7 @@ inline double DistToLineSegmentSq(Vector2D A,
 
   //calculate the distance P-Point
   return Vec2DDistanceSq(P,Point);
+  //return DistToLineSegment(A,B,P)*DistToLineSegment(A,B,P);
 }
 
 

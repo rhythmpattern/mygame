@@ -8,7 +8,7 @@ Player::Player(Game* world,Vector2D pos):
            
 {
   SetEntityType(type_player);
-  
-  
+  SetID(0);
+
 }
 

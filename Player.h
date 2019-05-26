@@ -7,7 +7,6 @@ class Player : public Character{
  public:
   Player(Game* world, Vector2D pos);
 
-
 };
 
 

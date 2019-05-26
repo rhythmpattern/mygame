@@ -180,8 +180,8 @@ void Character::Spawn(Vector2D pos)
     SetPos(pos);
     m_pWeaponSys->Initialize();
     RestoreHealthToMaximum();
-}
 
+}
 //-------------------------------- Update -------------------------------------
 //
 void Character::Update()
@@ -336,6 +336,7 @@ bool Character::isReadyForTriggerUpdate()const
 bool Character::HandleMessage(const Telegram& msg)
 {
   
+  std::cout << "MSSAGE IS : " <<MessageToString(msg.Msg);
   //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
   //first see if the current goal accepts the message
   if (GetBrain()->HandleMessage(msg)) return true;
@@ -397,7 +398,10 @@ bool Character::HandleMessage(const Telegram& msg)
       return true;
     }
 
-
+  case Msg_OpenSesame:
+    {
+      std::cout << "OPEN SESAME";
+    }
   default: return false;
   }
 }

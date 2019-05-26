@@ -13,7 +13,7 @@
 #include "misc/CellSpacePartition.h"
 #include "Graph/GraphNodeTypes.h"
 #include "Graph/GraphEdgeTypes.h"
-
+#include "Player.h"
 
 class Entity;
 class Door;
