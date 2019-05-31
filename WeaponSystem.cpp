@@ -5,6 +5,7 @@
 #include "UserOptions.h"
 #include "2D/Transformations.h"
 #include "Armory/Shooter.h"
+#include "Armory/Melee.h"
 
 
 
@@ -51,6 +52,7 @@ void WeaponSystem::Initialize()
    m_pCurrentWeapon = new Shooter(m_pOwner);
 
   m_WeaponMap[type_shooter]         = m_pCurrentWeapon;
+  m_WeaponMap[type_melee]           = new Melee(m_pOwner);
  
 }
 

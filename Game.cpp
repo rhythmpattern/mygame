@@ -21,6 +21,7 @@
 #include "Player.h"
 #include "InputHandler.h"
 #include "Zombie.h"
+#include "ProjectileManager.h"
 
 //uncomment to write object creation/deletion to debug console
 #define  LOG
@@ -53,6 +54,7 @@ Game::~Game()
   delete m_pMap;
   
   delete m_pGraveMarkers;
+  ProjectileManager::Instance()->Clear();
 }
 
 
@@ -172,19 +174,7 @@ void Game::Clear()
     delete *it;
   }
 
-  //delete any active projectiles
-  std::list<Projectile*>::iterator curW = m_Projectiles.begin();
-  for (curW; curW != m_Projectiles.end(); ++curW)
-  {
-#ifdef LOG
-    std::cout << "deleting projectile id: " << (*curW)->ID() << endl;
-#endif
-
-    delete *curW;
-  }
-
-  //clear the containers
-  m_Projectiles.clear();
+ 
   m_Bots.clear();
 
   m_pSelectedBot = NULL;
@@ -221,26 +211,7 @@ void Game::Update()
     (*curDoor)->Update();
   }
 
-  //update any current projectiles
-  std::list<Projectile*>::iterator curW = m_Projectiles.begin();
-  while (curW != m_Projectiles.end())
-  {
-    
-    //test for any dead projectiles and remove them if necessary
-    if (!(*curW)->isDead() && !(*curW) == NULL)
-    {
-      (*curW)->Update();
-     
-
-      ++curW;
-    }
-    else
-    {    
-      delete *curW;
-
-      curW = m_Projectiles.erase(curW);
-    }   
-  }
+  ProjectileManager::Instance()->Update();
   
   //update the bots
   bool bSpawnPossible = true;
@@ -365,8 +336,10 @@ void Game::AddBots(unsigned int NumBotsToAdd)
     #ifdef LOG
     std::cout << "Creating new Character()\n";
     #endif
-    
+    //Character* rb = new Character(this, Vector2D(0,0));
     Character* rb =  GameObjectFactory::Instance()->create("Character");
+    //Zombie* rb = new Zombie(this, Vector2D(0,0));
+
     rb->load();
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();

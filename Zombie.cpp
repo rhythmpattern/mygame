@@ -57,8 +57,8 @@ void Zombie::Update()
 
     //this method aims the bot's current weapon at the current target
     //and takes a shot if a shot is possible
-    m_pWeaponSys->ChangeWeapon(type_melee);
-    m_pWeaponSys->TakeAimAndShoot();
+     m_pWeaponSys->ChangeWeapon(type_melee);
+     m_pWeaponSys->TakeAimAndShoot();
     
   }
 

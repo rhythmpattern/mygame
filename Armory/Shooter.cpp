@@ -4,6 +4,7 @@
 #include "../Map.h"
 #include "../Fuzzy/FuzzyOperators.h"
 #include "../Scriptor.h"
+#include "../ProjectileManager.h"
 
 
 //--------------------------- ctor --------------------------------------------
@@ -45,7 +46,7 @@ inline void Shooter::ShootAt(Vector2D pos)
   if (isReadyForNextShot())
   {
     //fire!
-    m_pOwner->GetWorld()->AddShot(m_pOwner, pos);
+    ProjectileManager::Instance()->AddShot(m_pOwner, pos);
 
     UpdateTimeWeaponIsNextAvailable();
 

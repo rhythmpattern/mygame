@@ -32,7 +32,7 @@ void Goal_Zombie::Activate()
   //if the bot is able to shoot the target (there is LOS between bot and
   //target), then select a tactic to follow while shooting
   if (m_pOwner->GetTargetSys()->isTargetShootable())
-  {
+    {std::cout << "CHEKCING";
    
       AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_pOwner->GetTargetBot()->Pos()));
     

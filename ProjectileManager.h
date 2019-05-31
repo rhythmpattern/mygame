@@ -3,6 +3,8 @@
 
 #include <vector>
 #include "Armory/Projectile.h"
+#include "Character.h"
+#include "Armory/Projectile_Shot.h"
 
 class ProjectileManager
 {
@@ -16,9 +18,9 @@ class ProjectileManager
       }
     return pInstance;
   }
-
+   void AddShot(Character* shooter, Vector2D target);
    void Clear();
-
+   void Update();
  private:
 
    ProjectileManager(){}

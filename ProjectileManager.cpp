@@ -21,3 +21,40 @@ void ProjectileManager::Clear()
 
   
 }
+
+void ProjectileManager::Update()
+{
+   //update any current projectiles
+  std::list<Projectile*>::iterator curW = m_Projectiles.begin();
+  while (curW != m_Projectiles.end())
+  {
+    
+    //test for any dead projectiles and remove them if necessary
+    if (!(*curW)->isDead() && !(*curW) == NULL)
+    {
+      (*curW)->Update();
+     
+
+      ++curW;
+    }
+    else
+    {    
+      delete *curW;
+
+      curW = m_Projectiles.erase(curW);
+    }   
+  }
+}
+
+
+void ProjectileManager::AddShot(Character* shooter, Vector2D target)
+{
+
+  Projectile* rp = new Projectile_Shot(shooter, target);
+
+  m_Projectiles.push_back(rp);
+  
+  #ifdef LOG
+  // std::cout << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "\n";
+  #endif
+}
