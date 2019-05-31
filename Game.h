@@ -43,8 +43,6 @@ class Game {
      //when a bot is killed a "grave" is displayed for a few seconds. This
   //class manages the graves
   GraveMarkers*  m_pGraveMarkers;
-//this list contains any active projectiles
-  std::list<Projectile*>     m_Projectiles;
   static Game* s_pInstance;
   int m_gameWidth;
   int m_gameHeight;
@@ -89,7 +87,6 @@ void AddBots(unsigned int NumBotsToAdd);
 void RemoveBot();
 
 void AddShooter(Character* shooter, Vector2D target);
-void AddShot(Character* shooter, Vector2D target);
 
 bool isPathObstructed(Vector2D A, Vector2D B, double BoundingRadius = 0)const;
 std::vector<Character*> GetAllBotsInFOV(const Character* pBot)const;

@@ -384,19 +384,6 @@ void Game::RemoveBot()
   m_bRemoveABot = true;
 }
 
-//--------------------------- AddShot -----------------------------------------
-//-----------------------------------------------------------------------------
-void Game::AddShot(Character* shooter, Vector2D target)
-{
-  Projectile* rp = new Projectile_Shot(shooter, target);
-
-  m_Projectiles.push_back(rp);
-  
-  #ifdef LOG
-  // std::cout << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "\n";
-  #endif
-}
-
 
 
 
