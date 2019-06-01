@@ -66,10 +66,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
    m_currentLevel = 1;
  Player* player = new Player(this, Vector2D());
     //switch the default steering behaviors on
-    player->GetSteering()->WallAvoidanceOn();
-    
-    player->Spawn(Vector2D(150,150));
-    player->TakePossession();
+   
     m_pSelectedBot = player;    m_Bots.push_back(player);
     //register the bot with the entity manager
      EntityMgr->RegisterEntity(player);

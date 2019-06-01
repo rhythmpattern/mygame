@@ -56,8 +56,6 @@ private:
     Map* m_pMap;
     std::vector<Character*> m_Bots;
     PathManager<PathPlanner>* m_pPathManager;
-    GraveMarkers* m_pGraveMarkers;
-    std::list<Projectile*>     m_Projectiles;
      std::vector<Layer*> m_layers;
      std::vector<Room*> m_rooms;
       std::vector<Tileset> m_tilesets;

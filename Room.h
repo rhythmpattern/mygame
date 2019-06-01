@@ -4,9 +4,6 @@
 #include <string>
 #include <vector>
 
-class Map;
-class Character;
-class GraveMarkers;
 
 class Room
 {
@@ -17,12 +14,7 @@ class Room
   void Render();
 
  private:
-  Map* m_pMap;
-  std::vector<Character*> m_Chars;
   void clear();
-  void NotifyAllCharsOfRemoval(Character* pRemovedChar)const;
-  GraveMarkers* m_pGraveMarkers;
-  void LoadMap(const std::string& FileName);
 };
 
 
