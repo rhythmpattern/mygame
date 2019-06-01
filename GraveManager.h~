@@ -1,0 +1,16 @@
+#ifndef GRAVE_MANAGER_H
+#define GRAVE_MANAGER_H
+
+class GraveManager
+{
+  GraveManager* Instance()
+  {
+    
+  }
+
+  
+};
+
+
+
+#endif

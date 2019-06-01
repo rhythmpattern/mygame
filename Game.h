@@ -40,9 +40,6 @@ class Game {
     void Clear();
     bool AttemptToAddBot(Character* pBot);
     void NotifyAllBotsOfRemoval(Character* pRemovedBot)const;
-     //when a bot is killed a "grave" is displayed for a few seconds. This
-  //class manages the graves
-  GraveMarkers*  m_pGraveMarkers;
   static Game* s_pInstance;
   int m_gameWidth;
   int m_gameHeight;

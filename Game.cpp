@@ -22,6 +22,7 @@
 #include "InputHandler.h"
 #include "Zombie.h"
 #include "ProjectileManager.h"
+#include "GraveManager.h"
 
 //uncomment to write object creation/deletion to debug console
 #define  LOG
@@ -34,8 +35,7 @@ Game::Game():m_pSelectedBot(NULL),
                          m_bPaused(false),
                          m_bRemoveABot(false),
                          m_pMap(NULL),
-                         m_pPathManager(NULL),
-                         m_pGraveMarkers(NULL)
+                         m_pPathManager(NULL)
 {
   GameObjectFactory::Instance()->registerType("Character" , new CharacterCreator());
   
@@ -53,7 +53,7 @@ Game::~Game()
   delete m_pPathManager;
   delete m_pMap;
   
-  delete m_pGraveMarkers;
+  GraveManager::Instance()->Clear();
   ProjectileManager::Instance()->Clear();
 }
 
@@ -173,7 +173,8 @@ void Game::Clear()
 
     delete *it;
   }
-
+  
+  GraveManager::Instance()->load();
  
   m_Bots.clear();
 
@@ -197,7 +198,7 @@ void Game::Update()
   //don't update if the user has paused the game
   if (m_bPaused) return;
   
-  m_pGraveMarkers->Update();
+  GraveManager::Instance()->Update();
 
  
   
@@ -231,7 +232,7 @@ void Game::Update()
     else if ((*curBot)->isDead())
     { 
       //create a grave
-      m_pGraveMarkers->AddGrave((*curBot)->Pos());
+      GraveManager::Instance()->AddGrave((*curBot)->Pos());
 
       //change its status to spawning
       (*curBot)->SetSpawning();
@@ -422,11 +423,10 @@ bool Game::LoadMap(const std::string& filename)
   
   //out with the old
   delete m_pMap;
-  delete m_pGraveMarkers;
   delete m_pPathManager;
 
   //in with the new
-  m_pGraveMarkers = new GraveMarkers(script->getNum("gravelifetime"));
+  GraveManager::Instance()->load();
   m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
   m_pMap = new Map();
   
