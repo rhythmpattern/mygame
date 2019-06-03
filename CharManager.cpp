@@ -1,6 +1,15 @@
 #include "CharManager.h"
 
 
+CharManager* CharManager::pInstance = 0;
+
+CharManager::CharManager()
+{
+  
+   
+}
+
+
 void CharManager::Clear()
 {
    //delete the chars
@@ -129,3 +138,6 @@ void CharManager::AddChars(unsigned int NumCharsToAdd)
 #endif
 } 
 }
+
+void CharManager::AddChar(Character* pChar)
+ {m_Chars.push_back(pChar);}

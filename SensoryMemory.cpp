@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "Time/CrudeTimer.h"
 #include "misc/Stream_Utility_Functions.h"
+#include "CharManager.h"
 
 //------------------------------- ctor ----------------------------------------
 //-----------------------------------------------------------------------------
@@ -82,7 +83,7 @@ void SensoryMemory::UpdateVision()
 {
   //for each bot in the world test to see if it is visible to the owner of
   //this class
-  const std::vector<Character*>& bots = m_pOwner->GetWorld()->GetAllBots();
+  const std::vector<Character*>& bots = CharManager::Instance()->GetAllChars();
   std::vector<Character*>::const_iterator curBot;
   for (curBot = bots.begin(); curBot!=bots.end(); ++curBot)
   {

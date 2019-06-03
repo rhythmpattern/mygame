@@ -8,7 +8,7 @@
 #include "Map.h"
 #include "Scriptor.h"
 #include <cassert>
-
+#include "CharManager.h"
 
 using std::string;
 using std::vector;
@@ -173,7 +173,7 @@ Vector2D Steering::CalculatePrioritized()
 
     if (On(separation))
     {
-      force = Separation(m_pWorld->GetAllBots()) * m_dWeightSeparation;
+      force = Separation(CharManager::Instance()->GetAllChars()) * m_dWeightSeparation;
 
       if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
     }

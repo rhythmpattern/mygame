@@ -23,6 +23,7 @@
 #include "Zombie.h"
 #include "ProjectileManager.h"
 #include "GraveManager.h"
+#include "CharManager.h"
 
 //uncomment to write object creation/deletion to debug console
 #define  LOG
@@ -64,15 +65,14 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
  LoadMap("DM1.map");
     m_levelFiles.push_back("assets/test.xml");
    m_currentLevel = 1;
- Player* player = new Player(this, Vector2D());
+
+    
+    Player* player = new Player(this, Vector2D());
     //switch the default steering behaviors on
    
-    m_pSelectedBot = player;    m_Bots.push_back(player);
+    CharManager::Instance()->AddChar(player);
     //register the bot with the entity manager
      EntityMgr->RegisterEntity(player);
-   
-    
-    
 
   
  int flags = 0;
@@ -159,24 +159,11 @@ void Game::Clear()
     std::cout << "\n------------------------------ Clearup -------------------------------" << endl;
 #endif
 
-  //delete the bots
-  std::vector<Character*>::iterator it = m_Bots.begin();
-  for (it; it != m_Bots.end(); ++it)
-  {
-#ifdef LOG
-    std::cout << "deleting entity id: " << (*it)->ID() << " of type "
-              << GetNameOfType((*it)->EntityType()) << "(" << (*it)->EntityType() << ")" <<endl;
-#endif
-
-    delete *it;
-  }
-  
+    CharManager::Instance()->Clear();
+ 
   GraveManager::Instance()->load();
  
-  m_Bots.clear();
-
-  m_pSelectedBot = NULL;
-
+ 
 
 }
 
@@ -196,7 +183,7 @@ void Game::Update()
   if (m_bPaused) return;
   
   GraveManager::Instance()->Update();
-
+  CharManager::Instance()->Update();
  
   
   //update all the queued searches in the path manager
@@ -211,58 +198,11 @@ void Game::Update()
 
   ProjectileManager::Instance()->Update();
   
-  //update the bots
-  bool bSpawnPossible = true;
-  
-  std::vector<Character*>::iterator curBot = m_Bots.begin();
-  for (curBot; curBot != m_Bots.end(); ++curBot)
-  {
-    //if this bot's status is 'respawning' attempt to resurrect it from
-    //an unoccupied spawn point
-    if ((*curBot)->isSpawning() && bSpawnPossible)
-    { 
-      bSpawnPossible = AttemptToAddBot(*curBot);
-    }
-    
-    //if this bot's status is 'dead' add a grave at its current location 
-    //then change its status to 'respawning'
-    else if ((*curBot)->isDead())
-    { 
-      //create a grave
-      GraveManager::Instance()->AddGrave((*curBot)->Pos());
-
-      //change its status to spawning
-      (*curBot)->SetSpawning();
-    }
-
-    //if this bot is alive update it.
-    else if ( (*curBot)->isAlive())
-    { 
-      (*curBot)->Update();  (*curBot)->draw();
-       
-    }  
-  } 
+ 
 
   //update the triggers
   m_pMap->UpdateTriggerSystem(m_Bots);
 
-  //if the user has requested that the number of bots be decreased, remove
-  //one
-  if (m_bRemoveABot)
-    { 
-    if (!m_Bots.empty())
-    {
-      Character* pBot = m_Bots.back();
-     
-      if (pBot == m_pSelectedBot)m_pSelectedBot=0;
-      NotifyAllBotsOfRemoval(pBot);
-      delete m_Bots.back();
-      m_Bots.erase(m_Bots.begin()+m_Bots.size()-1);
-      pBot = 0;
-    }
-
-    m_bRemoveABot = false;
-  }
 
  
 
@@ -437,7 +377,7 @@ bool Game::LoadMap(const std::string& filename)
     #ifdef LOG
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    AddBots(3);
+    CharManager::Instance()->AddChars(3);
   
     return true;
   }

@@ -1,6 +1,7 @@
 #include "Projectile.h"
 #include "../Game.h"
 #include <list>
+#include "../CharManager.h"
 
 //------------------ GetClosestIntersectingBot --------------------------------
 
@@ -13,7 +14,7 @@ Character* Projectile::GetClosestIntersectingBot(Vector2D    From,
   //iterate through all entities checking against the line segment FromTo
   std::vector<Character*>::const_iterator curBot;
   //Creating new variable here is critical to avoid Segmentation Faults! Straight m_pWorld->GetAllBots() leads to faulty memory.
-  const std::vector<Character* > allbots = m_pWorld->GetAllBots();
+  const std::vector<Character* > allbots = CharManager::Instance()->GetAllChars();
  
   for (curBot =  allbots.begin();
        curBot != allbots.end();
@@ -54,8 +55,8 @@ std::vector<Character*> Projectile::GetListOfIntersectingBots(Vector2D From,
 
   //iterate through all entities checking against the line segment FromTo
   std::vector<Character*>::const_iterator curBot;
-  for (curBot =  m_pWorld->GetAllBots().begin();
-       curBot != m_pWorld->GetAllBots().end();
+  for (curBot =  CharManager::Instance()->GetAllChars().begin();
+       curBot != CharManager::Instance()->GetAllChars().end();
        ++curBot)
   {
     if ((*curBot != NULL))
