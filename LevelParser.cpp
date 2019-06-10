@@ -12,6 +12,9 @@
 
 Level* LevelParser::parseLevel(const char *levelFile)
 {
+  //Create parameters class to send all parameters from data file paragraph into any desired class when creating.
+
+    
     // create a tinyXML document and load the map xml
     TiXmlDocument levelDocument;
     levelDocument.LoadFile(levelFile);
