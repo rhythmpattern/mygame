@@ -255,99 +255,8 @@ bool Game::AttemptToAddBot(Character* pBot)
   return false;
 }
 
-//-------------------------- AddBots --------------------------------------
-//
-//  Adds a bot and switches on the default steering behavior
-//-----------------------------------------------------------------------------
-void Game::AddBots(unsigned int NumBotsToAdd)
-{
-#ifdef LOG
-    std::cout << "Adding Bots\n";
-  #endif
-
- 
-    
-   while (NumBotsToAdd--)
-  {
-    //create a bot. (its position is irrelevant at this point because it will
-    //not be rendered until it is spawned)
-    #ifdef LOG
-    std::cout << "Creating new Character()\n";
-    #endif
-    //Character* rb = new Character(this, Vector2D(0,0));
-    Character* rb =  GameObjectFactory::Instance()->create("Character");
-    //Zombie* rb = new Zombie(this, Vector2D(0,0));
-
-    rb->load();
-    //switch the default steering behaviors on
-    rb->GetSteering()->WallAvoidanceOn();
-    rb->GetSteering()->SeparationOn();
-
-    m_Bots.push_back(rb);
-    //register the bot with the entity manager
-     EntityMgr->RegisterEntity(rb);
-   
-    
-#ifdef LOG
-     std::cout << "Adding bot with ID " << rb->ID() << "\n";
-#endif
-} 
-}
-
-//---------------------------- NotifyAllBotsOfRemoval -------------------------
-//
-//  when a bot is removed from the game by a user all remianing bots
-//  must be notifies so that they can remove any references to that bot from
-//  their memory
-//-----------------------------------------------------------------------------
-void Game::NotifyAllBotsOfRemoval(Character* pRemovedBot)const
-{
-    std::vector<Character*>::const_iterator curBot = m_Bots.begin();
-    for (curBot; curBot != m_Bots.end(); ++curBot)
-    {
-      Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
-                              SENDER_ID_IRRELEVANT,
-                              (*curBot)->ID(),
-                              Msg_UserHasRemovedBot,
-                              pRemovedBot);
-
-    }
-}
-//-------------------------------RemoveBot ------------------------------------
-//
-//  removes the last bot to be added from the game
-//-----------------------------------------------------------------------------
-void Game::RemoveBot()
-{
-  m_bRemoveABot = true;
-}
 
 
-
-
-//----------------------------- GetBotAtPosition ------------------------------
-//
-//  given a position on the map this method returns the bot found with its
-//  bounding radius of that position.
-//  If there is no bot at the position the method returns NULL
-//-----------------------------------------------------------------------------
-Character* Game::GetBotAtPosition(Vector2D CursorPos)const
-{
-  std::vector<Character*>::const_iterator curBot = m_Bots.begin();
-
-  for (curBot; curBot != m_Bots.end(); ++curBot)
-  {
-    if (Vec2DDistance((*curBot)->Pos(), CursorPos) < (*curBot)->BRadius())
-    {
-      if ((*curBot)->isAlive())
-      {
-        return *curBot;
-      }
-    }
-  }
-
-  return NULL;
-}
 
 //-------------------------------- LoadMap ------------------------------------
 //
@@ -383,16 +292,6 @@ bool Game::LoadMap(const std::string& filename)
   }
   
   return false;
-}
-
-
-//------------------------- ExorciseAnyPossessedBot ---------------------------
-//
-//  when called will release any possessed bot from user control
-//-----------------------------------------------------------------------------
-void Game::ExorciseAnyPossessedBot()
-{
-  if (m_pSelectedBot) m_pSelectedBot->Exorcise();
 }
 
 
@@ -440,42 +339,6 @@ bool Game::isPathObstructed(Vector2D A,
   return false;
 }
 
-
-//----------------------------- GetAllBotsInFOV ------------------------------
-//
-//  returns a vector of pointers to bots within the given bot's field of view
-//-----------------------------------------------------------------------------
-std::vector<Character*>
-Game::GetAllBotsInFOV(const Character* pBot)const
-{
-  std::vector<Character*> VisibleBots;
-
-  std::vector<Character*>::const_iterator curBot = m_Bots.begin();
-  for (curBot; curBot != m_Bots.end(); ++curBot)
-  {
-    //make sure time is not wasted checking against the same bot or against a
-    // bot that is dead or re-spawning
-    if (*curBot == pBot ||  !(*curBot)->isAlive()) continue;
-
-    //first of all test to see if this bot is within the FOV
-    if (isSecondInFOVOfFirst(pBot->Pos(),
-                             pBot->Facing(),
-                             (*curBot)->Pos(),
-                             pBot->FieldOfView()))
-    {
-      //cast a ray from between the bots to test visibility. If the bot is
-      //visible add it to the vector
-      if (!doWallsObstructLineSegment(pBot->Pos(),
-                              (*curBot)->Pos(),
-                              m_pMap->GetWalls()))
-      {
-        VisibleBots.push_back(*curBot);
-      }
-    }
-  }
-
-  return VisibleBots;
-}
 
 //---------------------------- isSecondVisibleToFirst -------------------------
 

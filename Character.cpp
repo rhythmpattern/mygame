@@ -201,7 +201,7 @@ void Character::Update()
 
  
   //Calculate the steering force and update the bot's velocity and position
-  UpdateMovement();
+  //UpdateMovement();
 
 
   if(!isPossessed())

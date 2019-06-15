@@ -1,5 +1,5 @@
 #include "CharManager.h"
-
+#define LOG
 
 CharManager* CharManager::pInstance = 0;
 

@@ -14,28 +14,29 @@
 #include <map>
 #include "2D/Vector2D.h"
 
-class Character;
 class Weapon;
-
-
+class Character;
 
 class WeaponSystem
 {
-private:
-  
-  //a map of weapon instances indexed into by type
+ protected:
+  //a pointer to the weapon the bot is currently holding
+  Weapon*    m_pCurrentWeapon;
+   //a map of weapon instances indexed into by type
   typedef std::map<int, Weapon*>  WeaponMap;
-
-private:
-
-  Character*       m_pOwner;
-
-  //pointers to the weapons the bot is carrying (a bot may only carry one
+   Character*       m_pOwner;
+ //pointers to the weapons the bot is carrying (a bot may only carry one
   //instance of each weapon)
   WeaponMap        m_WeaponMap;
 
-  //a pointer to the weapon the bot is currently holding
-  Weapon*    m_pCurrentWeapon;
+  
+  
+
+
+private:
+
+ 
+ 
 
   //this is the minimum amount of time a bot needs to see an opponent before
   //it can react to it. This variable is used to prevent a bot shooting at
@@ -71,12 +72,12 @@ public:
   ~WeaponSystem();
 
   //sets up the weapon map with just one weapon: the blaster
-  void          Initialize();
+  virtual void          Initialize();
 
   //this method aims the bot's current weapon at the target (if there is a
   //target) and, if aimed correctly, fires a round. (Called each update-step
   //from Character::Update)
-  void          TakeAimAndShoot()const;
+  virtual void          TakeAimAndShoot()const;
 
 void          SelectWeapon();
   //this will add a weapon of the specified type to the bot's inventory. 

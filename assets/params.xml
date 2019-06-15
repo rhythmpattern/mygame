@@ -18,7 +18,7 @@
  <charrocketlaunchertweaker value="1" />
  <charaggrogoaltweaker value="1" />
  <weaponselectionfrequency value="2" />
- <goalappraisalupdatefreq value="4" />
+ <goalappraisalupdatefreq value="0.2" />
  <targetingupdatefreq value="2" />
  <triggerupdatefreq value="8" />
  <visionupdatefreq value="4" />

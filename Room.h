@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-
+#include "Map.h"
 
 class Room
 {
@@ -12,9 +12,10 @@ class Room
   ~Room();
   void Update();
   void Render();
-
+  bool LoadMap(const std::string& filename);
  private:
-  void clear();
+  Map* m_pMap;
+  void Clear();
 };
 
 
