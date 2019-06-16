@@ -21,7 +21,7 @@ public:
     
     virtual bool onEnter();
     virtual bool onExit();
-    
+    virtual void resume();    
     virtual std::string getStateID() const { return s_playID; }
     
 private:

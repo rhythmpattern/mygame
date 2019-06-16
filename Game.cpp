@@ -93,6 +93,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     // attempt to initialise SDL
     if(SDL_Init(SDL_INIT_EVERYTHING) == 0)
     {
+      
       std::cout << "SDL init success\n";
         // init the window
         m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, SDL_WINDOW_SHOWN);
@@ -145,9 +146,6 @@ void Game::Render()
 
  
   m_pGameStateMachine->render();
-  GraveManager::Instance()->Render();
-  CharManager::Instance()->Render();
-  ProjectileManager::Instance()->Render();
   SDL_RenderPresent(m_pRenderer);
  
 }
@@ -168,9 +166,14 @@ void Game::Clear()
     CharManager::Instance()->Clear();
  
   GraveManager::Instance()->load();
- 
+  SDL_Quit();
  
 
+}
+
+void Game::handleInput()
+{
+  InputHandler::Instance()->update();
 }
 
 //-------------------------------- Update -------------------------------------
@@ -180,9 +183,7 @@ void Game::Clear()
 void Game::Update()
 {
   
- 
-  //TheInputHandler::Instance()->update();
-    // if (TheInputHandler::Instance()->isKeyDown(SDLK_ESCAPE)){m_bPaused = !m_bPaused; std::cout << "paused\n";}
+  m_pGameStateMachine->update(); 
    //don't update if the user has paused the game
   if (m_bPaused) return;
   

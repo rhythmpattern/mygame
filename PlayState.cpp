@@ -1,12 +1,15 @@
 #include <iostream>
 #include "PlayState.h"
 //#include "GameOverState.h"
-//#include "PauseState.h"
+#include "PauseState.h"
 #include "Game.h"
-//#include "InputHandler.h"
+#include "InputHandler.h"
 //#include "LevelParser.h"
 #include "Level.h"
 //#include "BulletHandler.h"
+#include "GraveManager.h"
+#include "ProjectileManager.h"
+#include "CharManager.h"
 #define debug
 
 const std::string PlayState::s_playID = "PLAY";
@@ -15,11 +18,18 @@ void PlayState::update()
 {
     if(m_loadingComplete && !m_exiting)
     {
-      //  if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
-      //  {
-      //      TheGame::Instance()->getStateMachine()->pushState(new PauseState());
-      //  }
-        
+      
+        if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
+	  {   
+            Game::Instance()->Quit();
+        }
+
+	if (InputHandler::Instance()->isKeyDown(SDL_SCANCODE_RETURN))
+	  {
+	    m_exiting = true; 
+	    Game::Instance()->getStateMachine()->pushState(new PauseState());
+	  }
+       
 //        if(TheInputHandler::Instance()->getButtonState(0, 8))
 //        {
 //            TheGame::Instance()->getStateMachine()->pushState(new PauseState());
@@ -49,7 +59,10 @@ void PlayState::render()
 	   pLevel->render();
 	  
         }
-        
+      
+  GraveManager::Instance()->Render();
+  CharManager::Instance()->Render();
+  ProjectileManager::Instance()->Render();  
 	//  for(int i = 0; i < TheGame::Instance()->getPlayerLives(); i++)
 	//   {
 	//       TheTextureManager::Instance()->drawFrame("lives", i * 30, 0, 32, 30, 0, 0, TheGame::Instance()->getRenderer(), 0.0, 255);
@@ -94,4 +107,11 @@ bool PlayState::onExit()
     
     std::cout << "exiting PlayState\n";
     return true;
+}
+
+void PlayState::resume()
+{
+  std::cout << "resuming Playstate";
+  Game::Instance()->TogglePause();
+  m_exiting = false; 
 }

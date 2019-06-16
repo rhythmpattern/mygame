@@ -37,7 +37,7 @@ class Game {
     bool m_bPaused;
     bool m_bRemoveABot;
     void UpdateTriggers();
-    void Clear();
+   
     bool AttemptToAddBot(Character* pBot);
     void NotifyAllBotsOfRemoval(Character* pRemovedBot)const;
   static Game* s_pInstance;
@@ -55,7 +55,7 @@ public:
  
 Game();
 ~Game();
-
+ void Clear();
  static Game* Instance()
     {
         if(s_pInstance == 0)
@@ -66,7 +66,7 @@ Game();
         
         return s_pInstance;
     }
-
+ GameStateMachine* getStateMachine() {return m_pGameStateMachine;}
   int getCurrentLevel(){return m_currentLevel;}
   std::vector<std::string> getLevelFiles() {return m_levelFiles;}
 SDL_Renderer* getRenderer() const { return m_pRenderer; }
@@ -82,7 +82,7 @@ bool LoadMap(const std::string& FileName);
  bool init(const char* title, int xpos, int ypos, int width , int height, bool fullscreen);
 void AddBots(unsigned int NumBotsToAdd);
 void RemoveBot();
-
+ void Quit() {m_bRunning = false;}
 void AddShooter(Character* shooter, Vector2D target);
 
 bool isPathObstructed(Vector2D A, Vector2D B, double BoundingRadius = 0)const;
@@ -96,6 +96,7 @@ Character* GetBotAtPosition(Vector2D CursorPos)const;
 void TogglePause(){m_bPaused = !m_bPaused;}
 void ExorciseAnyPossessedBot();
 void GetPlayerInput()const;
+ void handleInput();
 Character* PossessedBot()const{return m_pSelectedBot;}
 const Map* const GetMap()const{return m_pMap;}
 Map* const GetMap(){return m_pMap;}

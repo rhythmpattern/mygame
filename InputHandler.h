@@ -1,6 +1,6 @@
 
-#ifndef __SDL_Game_Programming_Book__InputHandler__
-#define __SDL_Game_Programming_Book__InputHandler__
+#ifndef INPUT_HANDLER_H
+#define INPUT_HANDLER_H_
 
 #include <iostream>
 #include <vector>
@@ -40,7 +40,7 @@ public:
     void clean();
     
     // keyboard events
-    bool isKeyDown(SDL_Scancode key) const;
+    bool isKeyDown(SDL_Scancode key)const;
     bool isKeyDown(SDL_Keycode key) const;
     
     // joystick events

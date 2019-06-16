@@ -103,10 +103,13 @@ void InputHandler::reset()
     m_mouseButtonStates[MIDDLE] = false;
 }
 
-bool InputHandler::isKeyDown(SDL_Scancode key) const
+bool InputHandler::isKeyDown(SDL_Scancode key)const
 {
+  
+ 
     if(m_keystates != 0)
     {
+      
         if(m_keystates[key] == 1)
         {
             return true;
@@ -121,6 +124,7 @@ bool InputHandler::isKeyDown(SDL_Scancode key) const
 }
 bool InputHandler::isKeyDown(SDL_Keycode key) const
 {
+  
     if(m_keystates != 0)
     {
         if(m_keystates[key] == 1)
@@ -193,8 +197,16 @@ void InputHandler::update()
      
         switch (event.type)
         {
-            
+	 
+            case SDL_KEYDOWN:
+	     
+	       onKeyDown();
+                break;
                 
+            case SDL_KEYUP:
+                onKeyUp();
+                break;
+		
             case SDL_JOYAXISMOTION:
                 onJoystickAxisMove(event);
                 break;
@@ -219,14 +231,7 @@ void InputHandler::update()
                 onMouseButtonUp(event);
                 break;
                 
-            case SDL_KEYDOWN:
-	      onKeyDown(event);
-	       onKeyDown();
-                break;
-                
-            case SDL_KEYUP:
-                onKeyUp();
-                break;
+           
                 
             default:
                 break;
@@ -242,8 +247,6 @@ void InputHandler::onKeyDown()
 
 void InputHandler::onKeyDown(SDL_Event& event)
 {
-  // std::cout << event.key.keysym.sym << '\n';
-  //std::cout <<  SDL_GetKeyName( event.key.keysym.sym ) << '\n';
   
 }
 void InputHandler::onKeyUp(SDL_Event& event)

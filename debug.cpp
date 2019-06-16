@@ -9,6 +9,7 @@
 
 int main( int argc, char* args[] )
 {
+  freopen("CON", "w", stdout);
   SDL_Window* m_pWindow;
   SDL_Renderer* m_pRenderer;
   SDL_Event e;
@@ -20,31 +21,17 @@ int main( int argc, char* args[] )
  
 
  
-   while (running)
+  while (Game::Instance()->Running())
     {
      
-      
+      Game::Instance()->handleInput();
        Game::Instance()->Update();
        Game::Instance()->Render();
 
-		        
-				//Handle events on queue
-				while( SDL_PollEvent( &e ) != 0 )
-				{
-					//User requests quit
-					if( e.type == SDL_QUIT )
-					{
-					  running = false;
-					}
-				}
-      
-				  
-
-				  
 
     }
 
-
+   Game::Instance()->Clear();
 
 
 

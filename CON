@@ -1,0 +1,182 @@
+
+------------------------------ Clearup -------------------------------
+LoadMap called
+ADDING DOOR TRIGGERADDING DOOR TRIGGERLoadMap called succesfully
+Creating new Character()
+Adding bot with ID 2
+Creating new Character()
+Adding bot with ID 4
+Creating new Character()
+Adding bot with ID 6
+Player Possesses bot 0SDL init success
+window creation success
+renderer creation success
+adding texture assets/background.png with ID background
+adding texture assets/title.png with ID title
+adding texture assets/pause.png with ID pause
+adding texture assets/isaac.png with ID isaac
+adding texture assets/dot.bmp with ID dot
+propertyentering PlayState
+exiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming PlaystateBOT 2 IS STUCK!!exiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming Playstateexiting PauseState
+resuming PlaystateBOT 4 IS STUCK!!
+------------------------------ Clearup -------------------------------
+deleting entity id: 2 of type bot(1)
+deleting  bot (id = 2)deleting entity id: 4 of type bot(1)
+deleting  bot (id = 4)deleting entity id: 6 of type bot(1)
+deleting  bot (id = 6)deleting entity id: 0 of type UNKNOWN OBJECT TYPE(11)
+deleting  bot (id = 0)
