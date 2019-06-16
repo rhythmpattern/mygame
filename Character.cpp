@@ -161,7 +161,7 @@ void Character::load()
 //-----------------------------------------------------------
 void Character::draw()
 {
-    TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x, m_vPosition.y, 148, 125,0,0, Game::Instance()->getRenderer(),0,100);
+    TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x - 148/2, m_vPosition.y - 125/2, 148, 125,0,0, Game::Instance()->getRenderer(),0,100);
 }
 
 

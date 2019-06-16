@@ -77,6 +77,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
   
  int flags = 0;
  m_bRunning = true;
+ m_bPaused = false;
     // store the game width and height
     m_gameWidth = width;
     m_gameHeight = height;
@@ -173,14 +174,15 @@ void Game::Clear()
 //-----------------------------------------------------------------------------
 void Game::Update()
 {
-
- 
+    TheInputHandler::Instance()->update();
+    if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE)){m_bPaused = !m_bPaused; std::cout << "paused\n";}
+   //don't update if the user has paused the game
+  if (m_bPaused) return;
    SDL_RenderClear(m_pRenderer);
   
   Render();
  
-  //don't update if the user has paused the game
-  if (m_bPaused) return;
+ 
   
   GraveManager::Instance()->Update();
   CharManager::Instance()->Update();
