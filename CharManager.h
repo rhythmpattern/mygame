@@ -26,6 +26,7 @@ class CharManager
   ~CharManager();
   void Clear();
   void Update();
+  void Render();
    void AddChars(unsigned int NumCharsToAdd);
    void AddChar(Character* pChar);
   const std::vector<Character*> GetAllChars()const{ return m_Chars;}

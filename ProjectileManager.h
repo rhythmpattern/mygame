@@ -21,6 +21,7 @@ class ProjectileManager
    void AddShot(Character* shooter, Vector2D target);
    void Clear();
    void Update();
+   void Render();
  private:
 
    ProjectileManager(){}

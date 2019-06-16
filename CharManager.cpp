@@ -29,6 +29,15 @@ void CharManager::Clear()
  
 }
 
+void CharManager::Render()
+{
+  std::vector<Character*>::iterator curChar = m_Chars.begin();
+  for (curChar; curChar != m_Chars.end(); ++curChar)
+    {
+      if ((*curChar)->isAlive())
+   (*curChar)->draw();
+    }
+}
 
 void CharManager::Update()
 {
@@ -58,7 +67,7 @@ void CharManager::Update()
     //if this bot is alive update it.
     else if ( (*curChar)->isAlive())
     { 
-      (*curChar)->Update();  (*curChar)->draw();
+      (*curChar)->Update(); 
        
     }  
   } 

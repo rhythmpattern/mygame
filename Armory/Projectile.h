@@ -101,7 +101,7 @@ public:
   void load(const LoadParams* pParams){}
   //must be implemented
   virtual void Update() = 0;
-  
+  virtual void Render() = 0;  
   //set to true if the projectile has impacted and has finished any explosion 
   //sequence. When true the projectile will be removed from the game
   bool isDead()const{return m_bDead;}

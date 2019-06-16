@@ -41,6 +41,7 @@ public:
     
     // keyboard events
     bool isKeyDown(SDL_Scancode key) const;
+    bool isKeyDown(SDL_Keycode key) const;
     
     // joystick events
     int getAxisX(int joy, int stick) const;
@@ -63,7 +64,9 @@ private:
     
     // handle keyboard events
     void onKeyDown();
+    void onKeyDown(SDL_Event& event);
     void onKeyUp();
+    void onKeyUp(SDL_Event& event);
     
     // handle mouse events
     void onMouseMove(SDL_Event& event);
@@ -79,11 +82,13 @@ private:
     
     // keyboard specific
     const Uint8* m_keystates;
+     std::vector<bool> m_keyStates;
     
     // joystick specific
     std::vector<std::pair<Vector2D*, Vector2D*>> m_joystickValues;
     std::vector<SDL_Joystick*> m_joysticks;
     std::vector<std::vector<bool>> m_buttonStates;
+   
     bool m_bJoysticksInitialised;
     static const int m_joystickDeadZone = 10000;
     

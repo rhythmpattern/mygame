@@ -140,10 +140,15 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 void Game::Render()
 {
+  SDL_RenderClear(m_pRenderer);
+  
+
  
-
-    	m_pGameStateMachine->render();
-
+  m_pGameStateMachine->render();
+  GraveManager::Instance()->Render();
+  CharManager::Instance()->Render();
+  ProjectileManager::Instance()->Render();
+  SDL_RenderPresent(m_pRenderer);
  
 }
 
@@ -174,13 +179,13 @@ void Game::Clear()
 //-----------------------------------------------------------------------------
 void Game::Update()
 {
-    TheInputHandler::Instance()->update();
-    if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE)){m_bPaused = !m_bPaused; std::cout << "paused\n";}
+  
+ 
+  //TheInputHandler::Instance()->update();
+    // if (TheInputHandler::Instance()->isKeyDown(SDLK_ESCAPE)){m_bPaused = !m_bPaused; std::cout << "paused\n";}
    //don't update if the user has paused the game
   if (m_bPaused) return;
-   SDL_RenderClear(m_pRenderer);
   
-  Render();
  
  
   
@@ -208,7 +213,7 @@ void Game::Update()
 
  
 
-   SDL_RenderPresent(m_pRenderer);
+  
 }
 
 

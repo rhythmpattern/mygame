@@ -37,10 +37,9 @@ void TextureManager::draw(std::string id, int x, int y, int width, int height, S
     destRect.x = x;
     destRect.y = y;
     
-<<<<<<< Updated upstream
-=======
+
     //SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
->>>>>>> Stashed changes
+
     SDL_RenderCopy(pRenderer, m_textureMap[id], &srcRect, &destRect);
 }
 
@@ -56,10 +55,8 @@ void TextureManager::drawFrame(std::string id, int x, int y, int width, int heig
     destRect.y = y;
     
     //SDL_SetTextureAlphaMod(m_textureMap[id], alpha);
-<<<<<<< Updated upstream
-=======
+
     //SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, angle, 0, flip);
->>>>>>> Stashed changes
     SDL_RenderCopy(pRenderer, m_textureMap[id], &srcRect, &destRect);
 }
 

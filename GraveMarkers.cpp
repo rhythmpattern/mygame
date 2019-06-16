@@ -39,7 +39,9 @@ void GraveMarkers::Update()
   }
 }
     
-
+void GraveMarkers::Render()
+{
+}
 
 
 void GraveMarkers::AddGrave(Vector2D pos)

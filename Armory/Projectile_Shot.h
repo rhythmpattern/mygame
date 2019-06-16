@@ -30,7 +30,7 @@ public:
   Projectile_Shot(Character* shooter, Vector2D target);
   
  
-
+  void Render();
   void Update();
   
 };

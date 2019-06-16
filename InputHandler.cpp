@@ -119,6 +119,22 @@ bool InputHandler::isKeyDown(SDL_Scancode key) const
     
     return false;
 }
+bool InputHandler::isKeyDown(SDL_Keycode key) const
+{
+    if(m_keystates != 0)
+    {
+        if(m_keystates[key] == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    return false;
+}
 
 int InputHandler::getAxisX(int joy, int stick) const
 {
@@ -204,8 +220,8 @@ void InputHandler::update()
                 break;
                 
             case SDL_KEYDOWN:
-	     
-                onKeyDown();
+	      onKeyDown(event);
+	       onKeyDown();
                 break;
                 
             case SDL_KEYUP:
@@ -222,6 +238,17 @@ void InputHandler::onKeyDown()
 {
   
   m_keystates = SDL_GetKeyboardState(0);
+}
+
+void InputHandler::onKeyDown(SDL_Event& event)
+{
+  // std::cout << event.key.keysym.sym << '\n';
+  //std::cout <<  SDL_GetKeyName( event.key.keysym.sym ) << '\n';
+  
+}
+void InputHandler::onKeyUp(SDL_Event& event)
+{
+ 
 }
 
 void InputHandler::onKeyUp()

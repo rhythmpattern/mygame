@@ -13,6 +13,11 @@ void GraveManager::Update()
   m_pGraveMarkers->Update();
 }
 
+void GraveManager::Render()
+{
+  m_pGraveMarkers->Render();
+}
+
 void GraveManager::AddGrave(Vector2D pos)
 {
   m_pGraveMarkers->AddGrave(pos);

@@ -18,6 +18,7 @@ class GraveManager
 
   void Clear();
   void Update();
+  void Render();
   void AddGrave(Vector2D pos);
   void load();
  private:
