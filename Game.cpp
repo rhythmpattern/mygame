@@ -67,7 +67,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
    m_currentLevel = 1;
 
     
-    Player* player = new Player(this, Vector2D());
+   Player* player = new Player(this, Vector2D(0,0));
     //switch the default steering behaviors on
    
     CharManager::Instance()->AddChar(player);

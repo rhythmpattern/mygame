@@ -2,8 +2,10 @@
 <level map="DM1.map">
  <textures>
   <property name="background" value="assets/background.png"/>
+  <property name="title" value="assets/title.png" />
+  <property name="pause" value="assets/pause.png" />
   <property name="isaac" value="assets/isaac.png"/>
-  <property name="dot" value="assets/dot.bmp" />
+  <property name="dot" value="assets/dot.png" />
  </textures>
  <chars>
   <property name="Character" />

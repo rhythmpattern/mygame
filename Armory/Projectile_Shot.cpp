@@ -43,7 +43,9 @@ void Projectile_Shot::Update()
     //update the position
     m_vPosition += m_vVelocity;
     
-    TextureManager::Instance()->drawFrame("dot",  m_vPosition.x, m_vPosition.y, 20, 20,0,0, Game::Instance()->getRenderer(),0,100);
+    TextureManager::Instance()->drawFrame("dot",  m_vPosition.x, m_vPosition.y, 100, 100,0,0, Game::Instance()->getRenderer(),0,100);
+    //TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x, m_vPosition.y, 20, 20,0,0, Game::Instance()->getRenderer(),0,100);
+    
     //if the projectile has reached the target podotsition or it hits an entity
     //or wall it should explode/inflict damage/whatever and then mark itself
     //as dead
