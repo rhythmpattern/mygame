@@ -62,7 +62,7 @@ Game::~Game()
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
 
   
- LoadMap("DM1.map");
+ LoadMap("test.map");
     m_levelFiles.push_back("assets/test.xml");
    m_currentLevel = 1;
 

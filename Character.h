@@ -75,7 +75,7 @@ class Character : public MovingEntity{
 		virtual ~Character();
 
 	
-	        Vector2D handleinput();
+	       void handleinput();
 		void Update();
 		bool HandleMessage(const Telegram& msg);
 		void Write(std::ostream& os)const{}

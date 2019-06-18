@@ -136,7 +136,6 @@ void CharManager::AddChars(unsigned int NumCharsToAdd)
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();
     rb->GetSteering()->SeparationOn();
-
     m_Chars.push_back(rb);
     //register the bot with the entity manager
      EntityMgr->RegisterEntity(rb);

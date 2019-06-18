@@ -186,7 +186,7 @@ void Character::Spawn(Vector2D pos)
 //
 void Character::Update()
 {
-
+ 
 
   
   //process the currently active goal. Note this is required even if the bot
@@ -195,8 +195,8 @@ void Character::Update()
   m_pBrain->Process();
    //if the bot is under AI control but not scripted
   if (isPossessed())
-    {
-      handleinput();
+    {  
+       handleinput();
     }
 
  
@@ -210,7 +210,7 @@ void Character::Update()
     //to be the current target
     if (m_pTargetSelectionRegulator->isReady())
       {      
-      m_pTargSys->Update();
+	m_pTargSys->Update();
     }
 
     //appraise and arbitrate between all possible high level goals
@@ -243,10 +243,10 @@ void Character::Update()
 //
 //
 //
-Vector2D Character::handleinput()
+void Character::handleinput()
 {
-  Vector2D force;
-  TheInputHandler::Instance()->update();
+ 
+  //TheInputHandler::Instance()->update();
   if (!isDead())
     { 
       if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_SPACE))
@@ -257,26 +257,26 @@ Vector2D Character::handleinput()
        if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_W))
         {
 	 
-           force.y = -1;
+	  m_vVelocity.y = -m_dMaxSpeed;
         }
         if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_S))
         {
 	 
-            force.y = 1;
+            m_vVelocity.y = m_dMaxSpeed;
         }
 	 if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_A))
         {
 	 
-           force.x = -1;
+           m_vVelocity.x = -m_dMaxSpeed;
         }
 	  if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_D))
         {
 	 
-           force.x=1;
+           m_vVelocity.x = m_dMaxSpeed;
         }
-	  force.Normalize();
+	 
     }
-  return force - Velocity();
+  
 }
 
 

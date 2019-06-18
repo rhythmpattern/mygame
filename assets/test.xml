@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level map="DM1.map">
+<level map="test.map">
  <textures>
   <property name="background" value="assets/background.png"/>
   <property name="title" value="assets/title.png" />

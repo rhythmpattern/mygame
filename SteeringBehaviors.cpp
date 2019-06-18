@@ -160,6 +160,7 @@ Vector2D Steering::CalculatePrioritized()
    
     force = WallAvoidance(m_pWorld->GetMap()->GetWalls()) *
             m_dWeightWallAvoidance;
+    
    
     if (!AccumulateForce(m_vSteeringForce, force))  return m_vSteeringForce;
   }
@@ -200,11 +201,7 @@ Vector2D Steering::CalculatePrioritized()
 
     if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
   }
- if (m_pCharacter->isPossessed() && !m_pCharacter->isDead())
-    {
-      force = m_pCharacter->handleinput();
-      if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
-    }
+
 
 
   return m_vSteeringForce;

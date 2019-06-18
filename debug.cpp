@@ -9,7 +9,7 @@
 
 int main( int argc, char* args[] )
 {
-  freopen("CON", "w", stdout);
+  // freopen("CON", "w", stdout);
   SDL_Window* m_pWindow;
   SDL_Renderer* m_pRenderer;
   SDL_Event e;
