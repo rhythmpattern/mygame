@@ -63,7 +63,7 @@ void ProjectileManager::AddShot(Character* shooter, Vector2D target)
   Projectile* rp = new Projectile_Shot(shooter, target);
 
   m_Projectiles.push_back(rp);
-  std::cout << "Projectiles size is: " << m_Projectiles.size() << '\n';  
+ 
   #ifdef LOG
   // std::cout << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "\n";
   #endif

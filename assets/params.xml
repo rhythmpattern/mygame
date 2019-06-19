@@ -11,7 +11,7 @@
  <charreactiontime value="0.01" />
  <charaimpersistance value="0.001" />
  <charaimaccuracy value="1" />
- <charmemoryspan value="0.5" />
+ <charmemoryspan value="3" />
  <charhealthgoaltweaker value="1" />
  <charshotgungoaltweaker value="1" />
  <charrailgungoaltweaker value="1" />
