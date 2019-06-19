@@ -5,7 +5,7 @@
 #include "../Fuzzy/FuzzyOperators.h"
 #include "../Scriptor.h"
 #include "../ProjectileManager.h"
-
+#include "Weapon.h"
 
 //--------------------------- ctor --------------------------------------------
 //-----------------------------------------------------------------------------
@@ -42,9 +42,11 @@ Shooter::Shooter(Character*   owner):
 //------------------------------ ShootAt --------------------------------------
 
 inline void Shooter::ShootAt(Vector2D pos)
-{ 
+{
+ 
   if (isReadyForNextShot())
   {
+    
     //fire!
     ProjectileManager::Instance()->AddShot(m_pOwner, pos);
 
@@ -52,7 +54,7 @@ inline void Shooter::ShootAt(Vector2D pos)
 
     //add a trigger to the game so that the other bots can hear this shot
     //(provided they are within range)
-    m_pOwner->GetWorld()->GetMap()->AddSoundTrigger(m_pOwner, script->getNum("blastersoundrange"));
+     m_pOwner->GetWorld()->GetMap()->AddSoundTrigger(m_pOwner, script->getNum("blastersoundrange"));
   }
 }
 

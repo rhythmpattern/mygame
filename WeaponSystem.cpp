@@ -166,6 +166,7 @@ void WeaponSystem::ChangeWeapon(unsigned int type)
 //-----------------------------------------------------------------------------
 void WeaponSystem::TakeAimAndShoot()const
 {
+  
   //aim the weapon only if the current target is shootable or if it has only
   //very recently gone out of view (this latter condition is to ensure the 
   //weapon is aimed at the target even if it temporarily dodges behind a wall
@@ -174,7 +175,7 @@ void WeaponSystem::TakeAimAndShoot()const
       (m_pOwner->GetTargetSys()->GetTimeTargetHasBeenOutOfView() < 
        m_dAimPersistance) )
   {
-    
+   
     //the position the weapon will be aimed at
     Vector2D AimingPos = m_pOwner->GetTargetBot()->Pos();
     
@@ -183,6 +184,7 @@ void WeaponSystem::TakeAimAndShoot()const
     //target
     if (GetCurrentWeapon()->GetType() == type_shooter)
     {
+      
       AimingPos = PredictFuturePositionOfTarget();
 
       //if the weapon is aimed correctly, there is line of sight between the
@@ -193,6 +195,7 @@ void WeaponSystem::TakeAimAndShoot()const
             m_dReactionTime) &&
            m_pOwner->hasLOSto(AimingPos) )
       {
+        
         AddNoiseToAim(AimingPos);
 
         GetCurrentWeapon()->ShootAt(AimingPos);
@@ -202,6 +205,7 @@ void WeaponSystem::TakeAimAndShoot()const
     //no need to predict movement, aim directly at target
     else
     {
+     
       //if the weapon is aimed correctly and it has been in view for a period
       //longer than the bot's reaction time, shoot the weapon
       if ( m_pOwner->RotateFacingTowardPosition(AimingPos) &&

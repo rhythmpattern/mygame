@@ -29,7 +29,7 @@ private:
   double m_dStartTime;
 
   //set the start time
-  CrudeTimer(){m_dStartTime = time(&timev);}
+  CrudeTimer(){m_dStartTime = double(clock())/CLOCKS_PER_SEC ;}
 
   //copy ctor and assignment should be private
   CrudeTimer(const CrudeTimer&);
@@ -40,7 +40,7 @@ public:
   static CrudeTimer* Instance();
 
   //returns how much time has elapsed since the timer was started
-  double GetCurrentTime(){return time(&timev)  - m_dStartTime;}
+  double GetCurrentTime(){return  (double(clock())/CLOCKS_PER_SEC)  - m_dStartTime;}
 
 };
 

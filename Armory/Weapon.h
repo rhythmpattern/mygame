@@ -1,5 +1,5 @@
-#ifndef WEAPON_BASE_H
-#define WEAPON_BASE_H
+#ifndef WEAPON_H
+#define WEAPON_H
 #pragma warning (disable:4786)
 //-----------------------------------------------------------------------------
 //
@@ -150,7 +150,8 @@ inline bool Weapon::isReadyForNextShot()
 //-----------------------------------------------------------------------------
 inline void Weapon::UpdateTimeWeaponIsNextAvailable()
 {
-  m_dTimeNextAvailable = Clock->GetCurrentTime() + 1.0/m_dRateOfFire;
+ 
+    m_dTimeNextAvailable = Clock->GetCurrentTime() +1.0/m_dRateOfFire;
 }
 
 

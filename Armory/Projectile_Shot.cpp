@@ -25,7 +25,7 @@ Projectile_Shot::Projectile_Shot(Character* shooter, Vector2D target):
 		   script->getNum("boltmaxforce"))
 {
    assert (target != Vector2D());
-     
+    
 }
 
 
@@ -61,7 +61,7 @@ void Projectile_Shot::Update()
     { 
       m_bImpacted = true;
       m_bDead     = true;
-
+      
       //send a message to the bot to let it know it's been hit, and who the
       //shot came from
       Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
@@ -78,7 +78,8 @@ void Projectile_Shot::Update()
                                                  dist,
                                                  m_vImpactPoint,
                                                  m_pWorld->GetMap()->GetWalls()))
-     { 
+     {
+      
        m_bDead     = true;
        m_bImpacted = true;
 

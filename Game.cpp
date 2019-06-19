@@ -294,7 +294,7 @@ bool Game::LoadMap(const std::string& filename)
     #ifdef LOG
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    CharManager::Instance()->AddChars(3);
+    CharManager::Instance()->AddChars(1);
   
     return true;
   }

@@ -209,19 +209,21 @@ void Character::Update()
     //examine all the opponents in the bots sensory memory and select one
     //to be the current target
     if (m_pTargetSelectionRegulator->isReady())
-      {      
+      {     
 	m_pTargSys->Update();
     }
 
     //appraise and arbitrate between all possible high level goals
     if (m_pGoalArbitrationRegulator->isReady())
     {
+     
        m_pBrain->Arbitrate(); 
     }
 
     //update the sensory memory with any visual stimulus
     if (m_pVisionUpdateRegulator->isReady())
     {
+     
       m_pSensoryMem->UpdateVision();
     }
   
