@@ -93,7 +93,7 @@ void Trigger_OnButtonSendMsg<entity_type>::Read(std::ifstream& is)
 
   this->SetPos(Vector2D(x,y));
   this->SetBRadius(r);
-
+  is>>r;
   //create and set this trigger's region of fluence
   this->AddRectangularTriggerRegion(this->Pos()-Vector2D(this->BRadius(), this->BRadius()),   //top left corner
                               this->Pos()+Vector2D(this->BRadius(), this->BRadius()));  //bottom right corner

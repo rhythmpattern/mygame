@@ -24,7 +24,7 @@ Player::Player(Game* world,Vector2D pos):
 bool Player::HandleMessage(const Telegram& msg)
 {
     
-  std::cout << "MSSAGE IS : " <<MessageToString(msg.Msg);
+  
   //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
 
   //first see if the current goal accepts the message
@@ -90,7 +90,7 @@ bool Player::HandleMessage(const Telegram& msg)
 
   case Msg_OpenSesame:
     {
-      std::cout << "OPEN SESAME";
+     
     }
   default: return false;
   }

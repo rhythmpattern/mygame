@@ -339,7 +339,7 @@ bool Character::isReadyForTriggerUpdate()const
 bool Character::HandleMessage(const Telegram& msg)
 {
     
-  std::cout << "MSSAGE IS : " <<MessageToString(msg.Msg);
+  std::cout << "Character MESSAGE IS : " <<MessageToString(msg.Msg);
   //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
 
   //first see if the current goal accepts the message
