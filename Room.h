@@ -16,6 +16,10 @@ class Room
  private:
   Map* m_pMap;
   void Clear();
+  Room* m_pNorth;
+  Room* m_pEast;
+  Room* m_pSouth;
+  Room* m_pWest;
 };
 
 

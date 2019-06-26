@@ -26,7 +26,7 @@ enum
 inline std::string GetNameOfType(int w)
 {
   std::string s;
-  
+ 
   switch (w)
   {
   case type_wall:
@@ -70,6 +70,10 @@ inline std::string GetNameOfType(int w)
   case type_door_trigger:
     
     s =  "door_trigger"; break;
+
+  case type_player:
+
+    s = "player"; break;
 
   default:
 

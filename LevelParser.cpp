@@ -81,7 +81,7 @@ void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Lay
     // create an object layer
     ObjectLayer* pObjectLayer = new ObjectLayer();
     
-    std::cout << pObjectElement->Value();
+   
     
     pLayers->push_back(pObjectLayer);
 }

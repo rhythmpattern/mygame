@@ -134,7 +134,7 @@ void Map::AddDoorTrigger(std::ifstream& in)
 {
 
   #ifdef Debug
-  std::cout << "ADDING DOOR TRIGGER";
+  std::cout << "ADDING DOOR TRIGGER\n";
   #endif
   Trigger_OnButtonSendMsg<Character>* tr = new Trigger_OnButtonSendMsg<Character>(in);
 
@@ -255,9 +255,9 @@ m_pNavGraph->Load(in);
      AddHealth_Giver(in); break;
 
     default:
-
+ throw std::runtime_error("<Map::Load>: Attempting to load undefined object");
 break;
-      throw std::runtime_error("<Map::Load>: Attempting to load undefined object");
+     
 
 
 

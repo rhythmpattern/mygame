@@ -21,7 +21,7 @@ Entity* EntityManager::GetEntityFromID(int id)const
   EntityMap::const_iterator ent = m_EntityMap.find(id);
 
   //assert that the entity is a member of the map
-  // assert ( (ent !=  m_EntityMap.end()) && "<EntityManager::GetEntityFromID>: invalid ID");
+   assert ( (ent !=  m_EntityMap.end()) && "<EntityManager::GetEntityFromID>: invalid ID");
 
   return ent->second;
 }
@@ -37,6 +37,7 @@ void EntityManager::RemoveEntity(Entity* pEntity)
 //-----------------------------------------------------------------------------
 void EntityManager::RegisterEntity(Entity* NewEntity)
 {
+  std::cout << "Registering: " << NewEntity->ID() << " with type : " << NewEntity->EntityType() << "\n";
   m_EntityMap.insert(std::make_pair(NewEntity->ID(), NewEntity));
  
 }

@@ -18,7 +18,7 @@
 #include "Goals/Goal_Think.h"
 #include "Goals/Goal_Think_Zombie.h"
 #include "InputHandler.h"
-//#define debug
+#define debug
 
 //-------------------------- ctor ---------------------------------------------
 Character::Character(Game* world,Vector2D pos):
@@ -47,6 +47,7 @@ Character::Character(Game* world,Vector2D pos):
   m_dFieldOfView(DegsToRads(script->getNum("charfov")))
            
 {
+  
   SetEntityType(type_bot);
 
   SetUpVertexBuffer();
@@ -172,7 +173,7 @@ void Character::draw()
 void Character::Spawn(Vector2D pos)
 {
 #ifdef debug
-    std::cout << "Bot Spawning";
+  std::cout << "Bot Spawning.\n";
     #endif
     SetAlive();
     m_pBrain->RemoveAllSubgoals();
@@ -337,15 +338,17 @@ bool Character::isReadyForTriggerUpdate()const
 //-----------------------------------------------------------------------------
 bool Character::HandleMessage(const Telegram& msg)
 {
-  
-  //std::cout << "MSSAGE IS : " <<MessageToString(msg.Msg);
+    
+  std::cout << "MSSAGE IS : " <<MessageToString(msg.Msg);
   //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
+
   //first see if the current goal accepts the message
   if (GetBrain()->HandleMessage(msg)) return true;
  
   //handle any messages not handles by the goals
   switch(msg.Msg)
   {
+   
   case Msg_TakeThatMF:
      #ifdef debug
     std::cout << "HIT";
@@ -481,7 +484,7 @@ void Character::TakePossession()
   {
     m_bPossessed = true;
 
-    std::cout << "Player Possesses bot " << this->ID() << "";
+    std::cout << "Player Possesses bot " << this->ID() << "\n";
   }
 }
 //------------------------------- Exorcise ------------------------------------

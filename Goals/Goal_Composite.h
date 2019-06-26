@@ -151,7 +151,7 @@ template <class entity_type>
 bool Goal_Composite<entity_type>::ForwardMessageToFrontMostSubgoal(const Telegram& msg)
 {
   if (!m_SubGoals.empty())
-  {
+    {
     return m_SubGoals.front()->HandleMessage(msg);
   }
 

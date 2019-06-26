@@ -62,7 +62,7 @@ Game::~Game()
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
 
   
- LoadMap("test.map");
+ LoadMap("DM1.map");
     m_levelFiles.push_back("assets/test.xml");
    m_currentLevel = 1;
 
@@ -209,7 +209,9 @@ void Game::Update()
  
 
   //update the triggers
-  m_pMap->UpdateTriggerSystem(m_Bots);
+  std::vector<Character*> a;
+  a =  CharManager::Instance()->GetAllChars();
+  m_pMap->UpdateTriggerSystem(a);
 
 
  
@@ -294,7 +296,7 @@ bool Game::LoadMap(const std::string& filename)
     #ifdef LOG
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    CharManager::Instance()->AddChars(1);
+    CharManager::Instance()->AddChars(0);
   
     return true;
   }

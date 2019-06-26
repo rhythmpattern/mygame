@@ -2,10 +2,17 @@
 #define PLAYER_H
 
 #include "Character.h"
+#include "Messaging/Telegram.h"
+#include "Messages.h"
+#include "SensoryMemory.h"
+#include "Messaging/MessageDispatcher.h"
+#include "Goals/Goal_Think.h"
 
 class Player : public Character{
  public:
   Player(Game* world, Vector2D pos);
+  bool HandleMessage(const Telegram& msg);
+  void test(){std::cout << "WORKING";}
 
 };
 

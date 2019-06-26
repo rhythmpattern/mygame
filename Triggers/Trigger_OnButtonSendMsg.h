@@ -62,7 +62,6 @@ void  Trigger_OnButtonSendMsg<entity_type>::Try(entity_type* pEnt)
   if (this->isTouchingTrigger(pEnt->Pos(), pEnt->BRadius()))
   {
     
-   
       Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
                               this->ID(),
                               m_iReceiver,

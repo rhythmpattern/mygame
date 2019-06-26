@@ -67,7 +67,8 @@ void CharManager::Update()
     //if this bot is alive update it.
     else if ( (*curChar)->isAlive())
     { 
-      (*curChar)->Update(); 
+      (*curChar)->Update();
+     
        
     }  
   } 

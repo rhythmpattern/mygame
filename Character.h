@@ -11,6 +11,7 @@
 #include "LoadParams.h"
 #include "ZombieWeaponSystem.h"
 #include "GameObjectFactory.h"
+#include "ObjectEnumerations.h"
 
 class Game;
 class Steering;
@@ -77,7 +78,7 @@ class Character : public MovingEntity{
 	
 	       void handleinput();
 		void Update();
-		bool HandleMessage(const Telegram& msg);
+	     	bool HandleMessage(const Telegram& msg);
 		void Write(std::ostream& os)const{}
 		void Read(std::ifstream& is) {}
 		bool RotateFacingTowardPosition(Vector2D target);

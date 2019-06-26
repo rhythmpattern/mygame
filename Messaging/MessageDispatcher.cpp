@@ -2,6 +2,7 @@
 #include "../Game/Entity.h"
 #include "../misc/FrameCounter.h"
 #include "../Game/EntityManager.h"
+#include "../Player.h"
 
 using std::set;
 
@@ -27,8 +28,9 @@ void MessageDispatcher::Discharge(Entity* pReceiver, const Telegram& telegram)
 {
   // if (pReceiver == NULL | telegram.Msg == NULL ) {std::cout << "RECEIVER or telegram IS NULL, MESSAGE NOT HANDLED" << endl; return;}
   //else
-  {
- 
+
+  
+  
   if (!pReceiver->HandleMessage(telegram))
   {
     //telegram could not be handled
@@ -36,7 +38,7 @@ void MessageDispatcher::Discharge(Entity* pReceiver, const Telegram& telegram)
     std::cout << "Message not handled" << "";
     #endif
   }
-  }
+  
 }
 
 //---------------------------- DispatchMsg ---------------------------
@@ -52,6 +54,7 @@ void MessageDispatcher::DispatchMsg(double       delay,
                                     void*        AdditionalInfo = NULL)
 {
 
+  
   //get a pointer to the receiver
   Entity* pReceiver = EntityMgr->GetEntityFromID(receiver);
 
