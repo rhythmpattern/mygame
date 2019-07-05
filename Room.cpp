@@ -1,5 +1,11 @@
 #include "Room.h"
+#include "CharManager.h"
 
+
+bool Room::init(std::string mapName)
+{
+  
+}
 
 //Destructor
 
@@ -39,5 +45,12 @@ bool Room::LoadMap(const std::string& filename)
 
 void Room::Clear()
 {
+  #ifdef LOG
+    std::cout << "\n------------------------------ Clearup -------------------------------" << endl;
+#endif
+
+    m_pCharManager->Clear();
+ 
+ 
   
 }

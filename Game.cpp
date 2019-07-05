@@ -56,6 +56,8 @@ Game::~Game()
   
   GraveManager::Instance()->Clear();
   ProjectileManager::Instance()->Clear();
+  SDL_Quit();
+ 
 }
 
 
@@ -67,12 +69,12 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
    m_currentLevel = 1;
 
     
-   Player* player = new Player(this, Vector2D(0,0));
-    //switch the default steering behaviors on
+   m_pPlayer = new Player(this, Vector2D(0,0));
+    
    
-    CharManager::Instance()->AddChar(player);
+    CharManager::Instance()->AddChar(m_pPlayer);
     //register the bot with the entity manager
-     EntityMgr->RegisterEntity(player);
+     EntityMgr->RegisterEntity(m_pPlayer);
 
   
  int flags = 0;
@@ -82,7 +84,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     m_gameWidth = width;
     m_gameHeight = height;
 
-   
+    GraveManager::Instance()->load();
 
     
     if(fullscreen)
@@ -127,7 +129,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     }
 
 
-    // GameObjectFactory::Instance();
+    
     
      m_pGameStateMachine = new GameStateMachine();
      m_pGameStateMachine->changeState(new PlayState());
@@ -165,9 +167,8 @@ void Game::Clear()
 
     CharManager::Instance()->Clear();
  
-  GraveManager::Instance()->load();
-  SDL_Quit();
  
+  
 
 }
 

@@ -5,6 +5,8 @@
 #include <vector>
 #include "Map.h"
 
+class CharManager;
+
 class Room
 {
  public:
@@ -12,10 +14,12 @@ class Room
   ~Room();
   void Update();
   void Render();
-  bool LoadMap(const std::string& filename);
- private:
-  Map* m_pMap;
   void Clear();
+  bool LoadMap(const std::string& filename);
+  bool init(std::string sMap);  
+ private:
+  CharManager* m_pCharManager; 
+  Map* m_pMap;
   Room* m_pNorth;
   Room* m_pEast;
   Room* m_pSouth;

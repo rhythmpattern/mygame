@@ -50,7 +50,7 @@ class Game {
     GameStateMachine* m_pGameStateMachine;
       std::vector<std::string> m_levelFiles;
       int m_currentLevel;
-
+      Player* m_pPlayer;
 public:
  
 Game();
@@ -111,7 +111,7 @@ void TagCharactersWithinViewRange(Entity* pBot , double range)
 
 
 
-
+ Player* GetPlayer() { return m_pPlayer;} 
 
 
 
