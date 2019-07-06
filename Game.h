@@ -97,7 +97,7 @@ void TogglePause(){m_bPaused = !m_bPaused;}
 void ExorciseAnyPossessedBot();
 void GetPlayerInput()const;
  void handleInput();
-Character* PossessedBot()const{return m_pSelectedBot;}
+Character* GetPlayer()const{return m_pPlayer;}
 const Map* const GetMap()const{return m_pMap;}
 Map* const GetMap(){return m_pMap;}
 const std::vector<Character*> GetAllBots()const{return m_Bots;}

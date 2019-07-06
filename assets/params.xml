@@ -1,7 +1,7 @@
 <params>
  <hitflashtime value="0.2" />
  <charscale value="1" />
- <charmaxspeed value="0.8" />
+ <charmaxspeed value="1" />
  <charmass value="0.2" />
  <charscale value="1" />
  <charmaxheadturnrate value="0.2" />

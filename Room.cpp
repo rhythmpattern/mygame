@@ -2,9 +2,10 @@
 #include "CharManager.h"
 
 
-bool Room::init(std::string mapName)
+bool Room::init(const std::string mapName)
 {
-  
+  LoadMap(mapName);
+  AddChar(Game::Instance()->GetPlayer());
 }
 
 //Destructor
@@ -53,4 +54,10 @@ void Room::Clear()
  
  
   
+}
+
+
+void Room::AddChar(Character* pChar)
+{
+  m_Chars.push_back(pChar); 
 }

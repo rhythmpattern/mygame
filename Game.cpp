@@ -382,7 +382,7 @@ Game::isSecondVisibleToFirst(const Character* pFirst,
 
 void Game::GetPlayerInput()const
 {
-  if (m_pSelectedBot && m_pSelectedBot->isPossessed())
+  if (m_pPlayer && m_pPlayer->isPossessed())
   {
       
    }

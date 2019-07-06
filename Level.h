@@ -49,7 +49,7 @@ public:
 private:
     
     friend class LevelParser;
-    
+    Room* currentRoom;
     Level();
     
     //  Player* m_pPlayer;

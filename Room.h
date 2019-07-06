@@ -16,9 +16,12 @@ class Room
   void Render();
   void Clear();
   bool LoadMap(const std::string& filename);
-  bool init(std::string sMap);  
+  bool init(const std::string sMap);
+  void AddChar(Character* pChar);
+  void AddChars(unsigned int NumCharsToAdd);
  private:
-  CharManager* m_pCharManager; 
+  CharManager* m_pCharManager;
+  std::vector<Character*> m_Chars;
   Map* m_pMap;
   Room* m_pNorth;
   Room* m_pEast;
