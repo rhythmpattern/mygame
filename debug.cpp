@@ -14,7 +14,7 @@ int main( int argc, char* args[] )
   SDL_Renderer* m_pRenderer;
   SDL_Event e;
   bool running = true;
-  Game::Instance()->init("Test", 0,0,1455,796,false);
+  Game::Instance()->init("Test", 0,0,640,480,false);
  
   //LevelParser* lp = new LevelParser();
   //lp->parseLevel("assets/test.xml");

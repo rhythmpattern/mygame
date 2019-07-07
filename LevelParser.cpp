@@ -25,22 +25,54 @@ Level* LevelParser::parseLevel(const char *levelFile)
      
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
-    TiXmlElement* pSRoot = pRoot->FirstChildElement();
-    
-     for (TiXmlElement* e = pSRoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
-      {
-	parseTextures(e);
-      }
-    TiXmlElement* pORoot = pSRoot->NextSiblingElement();
-    for (TiXmlElement* e = pORoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
-      {
-	parseObjectLayer(e, pLevel->getLayers() , pLevel);
+    TiXmlElement* pProperties = pRoot->FirstChildElement();
 
+     std::cout << "Loading level:\n" << "Version: " << pRoot->Attribute("version") << "\n";
+    std::cout << "Width:" << pRoot->Attribute("width") << " - Height:" << pRoot->Attribute("height") << "\n";
+    std::cout << "Tile Width:" << pRoot->Attribute("tilewidth") << " - Tile Height:" << pRoot->Attribute("tileheight") << "\n";
+
+    pRoot->Attribute("tilewidth", &m_tileSize);
+    pRoot->Attribute("width", &m_width);
+    pRoot->Attribute("height", &m_height);
+   
+    
+     for (TiXmlElement* e = pProperties->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
+      {
+	if(e->Value() == std::string("property"))
+	  {
+	    parseTextures(e);
+	  }
+          
       }
+
+
+     // time to parse tilesets
+     for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
+       {
+	 if(e->Value() == std::string("tileset"))
+	   {
+	     
+	     parseTilesets(e,pLevel->getTilesets());
+	   }
+       }
+     
+    for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
+      {
+	if (e->Value() == std::string("objectgroup") || e->Value() == std::string("layer"))
+	 if(e->FirstChildElement()->Value() == std::string("object"))
+            {
+                parseObjectLayer(e, pLevel->getLayers(), pLevel);
+            }
+            else if(e->FirstChildElement()->Value() == std::string("data") ||
+                    (e->FirstChildElement()->NextSiblingElement() != 0 && e->FirstChildElement()->NextSiblingElement()->Value() == std::string("data")))
+            {
+	      
+	      parseTileLayer(e, pLevel->getLayers(), pLevel->getTilesets(), pLevel->getCollisionLayers());
+            }
+
+	}
     
-    //  pRoot->Attribute("width", &m_width);
-    // pRoot->Attribute("height", &m_height);
-    
+  
    
     
     return pLevel;
@@ -56,10 +88,12 @@ void LevelParser::parseTextures(TiXmlElement* pTextureRoot)
 void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>* pTilesets)
 {
 	std::string assetsTag = "assets/";
+        
     // first add the tileset to texture manager
     std::cout << "adding texture " << pTilesetRoot->FirstChildElement()->Attribute("source") << " with ID " << pTilesetRoot->Attribute("name") << std::endl;
-	TheTextureManager::Instance()->load(assetsTag.append(pTilesetRoot->FirstChildElement()->Attribute("source")), pTilesetRoot->Attribute("name"), Game::Instance()->getRenderer());
-    
+   
+	TextureManager::Instance()->load(assetsTag.append(pTilesetRoot->FirstChildElement()->Attribute("source")), pTilesetRoot->Attribute("name"), Game::Instance()->getRenderer());
+	
     // create a tileset object
     Tileset tileset;
     pTilesetRoot->FirstChildElement()->Attribute("width", &tileset.width);

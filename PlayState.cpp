@@ -42,10 +42,10 @@ void PlayState::update()
       //       TheGame::Instance()->getStateMachine()->changeState(new GameOverState());
       //   }
         
-      // if(pLevel != 0)
-      //  {
-      //      pLevel->update();
-      //  }
+       if(pLevel != 0)
+        {
+            pLevel->update();
+        }
     }
 }
 
@@ -55,7 +55,7 @@ void PlayState::render()
     {
       TextureManager::Instance()->drawFrame("background",  0, 0, 1455, 796,0,0, Game::Instance()->getRenderer(),0,100);
         if(pLevel != 0)
-        {
+	  { 
 	   pLevel->render();
 	  
         }

@@ -24,8 +24,8 @@ void Level::render()
 {
   
    for(int i = 0; i < m_layers.size(); i++)
-   {
-        m_layers[i]->render();
+     {  
+       m_layers[i]->render();
     }
 
 }

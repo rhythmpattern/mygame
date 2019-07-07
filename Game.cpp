@@ -65,7 +65,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
   
   LoadMap("DM1.map");
-    m_levelFiles.push_back("assets/test.xml");
+    m_levelFiles.push_back("assets/DM1.tmx");
    m_currentLevel = 1;
 
     
