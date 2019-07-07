@@ -96,7 +96,7 @@ void StateParser::parseObjects(TiXmlElement *pStateRoot, std::vector<Entity *> *
         
         textureID = e->Attribute("textureID");
         //int x, int y, int width, int height, std::string textureID, int numFrames, void()
-         Character* pEntity = GameObjectFactory::Instance()->create(e->Attribute("type"));
+	Character* pEntity =(Character*) GameObjectFactory::Instance()->create(e->Attribute("type"));
 	 //pEntity->load(std::unique_ptr<LoadParams>(new LoadParams(x, y, width, height, textureID, numFrames, callbackID, animSpeed)));
         pObjects->push_back(pEntity);
     }

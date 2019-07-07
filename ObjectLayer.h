@@ -7,7 +7,7 @@
 #include "Layer.h"
 //#include "CollisionManager.h"
 
-class Character;
+class Entity;
 
 class ObjectLayer : public Layer
 {

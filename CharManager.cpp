@@ -130,7 +130,7 @@ void CharManager::AddChars(unsigned int NumCharsToAdd)
     std::cout << "Creating new Character()\n";
     #endif
     //Character* rb = new Character(this, Vector2D(0,0));
-    Character* rb =  GameObjectFactory::Instance()->create("Character");
+    Character* rb = (Character*) GameObjectFactory::Instance()->create("Character");
     //Zombie* rb = new Zombie(this, Vector2D(0,0));
 
     rb->load();
