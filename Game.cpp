@@ -64,17 +64,17 @@ Game::~Game()
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
 
   
- LoadMap("DM1.map");
+  LoadMap("DM1.map");
     m_levelFiles.push_back("assets/test.xml");
    m_currentLevel = 1;
 
     
-   m_pPlayer = new Player(this, Vector2D(0,0));
+      m_pPlayer = new Player(this, Vector2D(0,0));
     
    
     CharManager::Instance()->AddChar(m_pPlayer);
     //register the bot with the entity manager
-     EntityMgr->RegisterEntity(m_pPlayer);
+   EntityMgr->RegisterEntity(m_pPlayer);
 
   
  int flags = 0;
@@ -192,7 +192,7 @@ void Game::Update()
  
   
   GraveManager::Instance()->Update();
-  CharManager::Instance()->Update();
+    CharManager::Instance()->Update();
  
   
   //update all the queued searches in the path manager
@@ -297,7 +297,7 @@ bool Game::LoadMap(const std::string& filename)
     #ifdef LOG
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    CharManager::Instance()->AddChars(0);
+    CharManager::Instance()->AddChars(1);
   
     return true;
   }

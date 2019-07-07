@@ -133,7 +133,7 @@ class Character : public MovingEntity{
 
 class CharacterCreator : public BaseCreator
 {
-  Character* createGameObject() const
+  Entity* createGameObject() const
   {
     return new Character();
   }

@@ -17,22 +17,22 @@ int main( int argc, char* args[] )
   Game::Instance()->init("Test", 0,0,1455,796,false);
  
   //LevelParser* lp = new LevelParser();
-  // lp->parseLevel("assets/test.xml");
+  //lp->parseLevel("assets/test.xml");
  
 
- 
-  while (Game::Instance()->Running())
+  
+   while (Game::Instance()->Running())
     {
      
-      Game::Instance()->handleInput();
-       Game::Instance()->Update();
-       Game::Instance()->Render();
+       Game::Instance()->handleInput();
+      Game::Instance()->Update();
+      Game::Instance()->Render();
 
 
     }
-
-   Game::Instance()->Clear();
-
+  
+  Game::Instance()->Clear();
+  
 
 
 

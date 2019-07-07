@@ -20,7 +20,7 @@ public:
     virtual void render();
     
     // return a pointer to this layers objects, the level parser will fill this
-    std::vector<Character*>* getGameObjects() { return &m_gameObjects; }
+    std::vector<Entity*>* getGameObjects() { return &m_gameObjects; }
     
 private:
     
@@ -28,7 +28,7 @@ private:
     // CollisionManager m_collisionManager;
     
     // a list of game objects
-    std::vector<Character*> m_gameObjects;
+    std::vector<Entity*> m_gameObjects;
 };
 
 #endif 
