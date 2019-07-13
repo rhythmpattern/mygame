@@ -4,7 +4,6 @@
 #include <iostream>
 #include <vector>
 #include "tinyxml.h"
-#include "LoadParams.h"
 #include <memory>
 #include "GameObjectFactory.h"
 #include "TextureManager.h"

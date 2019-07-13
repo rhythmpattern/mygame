@@ -8,7 +8,6 @@
 #include "misc/utils.h"
 #include "TargetingSystem.h"
 #include "WeaponSystem.h"
-#include "LoadParams.h"
 #include "ZombieWeaponSystem.h"
 #include "GameObjectFactory.h"
 #include "ObjectEnumerations.h"
