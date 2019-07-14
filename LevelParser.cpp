@@ -93,9 +93,12 @@ void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>
     std::cout << "adding texture " << pTilesetRoot->FirstChildElement()->Attribute("source") << " with ID " << pTilesetRoot->Attribute("name") << std::endl;
    
 	TextureManager::Instance()->load(assetsTag.append(pTilesetRoot->FirstChildElement()->Attribute("source")), pTilesetRoot->Attribute("name"), Game::Instance()->getRenderer());
+    
 	
     // create a tileset object
     Tileset tileset;
+    tileset.spacing = 0;
+    tileset.margin = 0;
     pTilesetRoot->FirstChildElement()->Attribute("width", &tileset.width);
     pTilesetRoot->FirstChildElement()->Attribute("height", &tileset.height);
     pTilesetRoot->Attribute("firstgid", &tileset.firstGridID);
@@ -219,9 +222,11 @@ void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>
     
     for(TiXmlNode* e = pDataNode->FirstChild(); e != NULL; e = e->NextSibling())
     {
+      
         TiXmlText* text = e->ToText();
         std::string t = text->Value();
         decodedIDs = base64_decode(t);
+       
     }
     
     // uncompress zlib compression

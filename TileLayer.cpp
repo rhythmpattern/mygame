@@ -32,8 +32,8 @@ void TileLayer::render()
     x = m_position.x / m_tileSize;
     y = m_position.y / m_tileSize;
     
-    x2 = int(m_position.x) % m_tileSize;
-    y2 = int(m_position.y) % m_tileSize;
+     x2 = int(m_position.x) % m_tileSize;
+     y2 = int(m_position.y) % m_tileSize;
     
     for(int i = 0; i < m_numRows; i++)
     {
@@ -49,8 +49,8 @@ void TileLayer::render()
             Tileset tileset = getTilesetByID(id);
 	   
             id--;
-            TextureManager::Instance()->drawFrame(tileset.name,  0, 0, 1455, 796,0,0, Game::Instance()->getRenderer(),0,100);
-            TextureManager::Instance()->drawTile(tileset.name, tileset.margin, tileset.spacing, (j * m_tileSize) - x2, (i * m_tileSize) - y2, m_tileSize, m_tileSize, (id - (tileset.firstGridID - 1)) / tileset.numColumns, (id - (tileset.firstGridID - 1)) % tileset.numColumns, Game::Instance()->getRenderer());
+            
+	    TextureManager::Instance()->drawTile(tileset.name, tileset.margin, tileset.spacing, (j * m_tileSize) - x2, (i * m_tileSize) - y2, m_tileSize, m_tileSize, (id - (tileset.firstGridID - 1)) / tileset.numColumns, (id - (tileset.firstGridID - 1)) % tileset.numColumns, Game::Instance()->getRenderer());
         }
     }
 }
