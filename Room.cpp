@@ -27,7 +27,7 @@ bool Room::LoadMap(const std::string& filename)
   //in with the new
   m_pMap = new Map();
   
- 
+  
 
  
   //load the new map data
@@ -44,13 +44,26 @@ bool Room::LoadMap(const std::string& filename)
   return false;
 }
 
+
+void Room::Update()
+{
+   //update any doors
+  std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
+  for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
+  {
+    (*curDoor)->Update();
+  }
+  
+  m_pMap->UpdateTriggerSystem(m_Chars);
+}
+
 void Room::Clear()
 {
   #ifdef LOG
     std::cout << "\n------------------------------ Clearup -------------------------------" << endl;
 #endif
 
-    m_pCharManager->Clear();
+   
  
  
   
@@ -61,3 +74,4 @@ void Room::AddChar(Character* pChar)
 {
   m_Chars.push_back(pChar); 
 }
+
