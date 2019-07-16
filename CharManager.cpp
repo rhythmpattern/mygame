@@ -3,11 +3,6 @@
 
 CharManager* CharManager::pInstance = 0;
 
-CharManager::CharManager(Room* pRoom)
-{
-  m_pRoom = pRoom;
-   
-}
 
 CharManager::CharManager(){}
 
@@ -59,7 +54,7 @@ void CharManager::Update()
     else if ((*curChar)->isDead())
     { 
       //create a grave
-      m_pRoom->GetGraveManager()->AddGrave((*curChar)->Pos());
+      GraveManager::Instance()->AddGrave((*curChar)->Pos());
 
       //change its status to spawning
       (*curChar)->SetSpawning();
@@ -80,20 +75,20 @@ bool CharManager::AttemptToAddChar(Character* pChar)
 {
   
   //make sure there are some spawn points available
-  if (m_pRoom->GetMap()->GetSpawnPoints().size() <= 0)
+  if (Game::Instance()->GetMap()->GetSpawnPoints().size() <= 0)
   {
     std::cout << ("Map has no spawn points!"); return false;
   }
 
   //we'll make the same number of attempts to spawn a bot this update as
   //there are spawn points
-  int attempts = m_pRoom->GetMap()->GetSpawnPoints().size();
+  int attempts = Game::Instance()->GetMap()->GetSpawnPoints().size();
   //g_screenLog->log(LL_INFO, "attempts = %d",attempts);
 
   while (--attempts >= 0)
   { 
     //select a random spawn point
-    Vector2D pos = m_pRoom->GetMap()->GetRandomSpawnPoint();
+    Vector2D pos = Game::Instance()->GetMap()->GetRandomSpawnPoint();
 
     //check to see if it's occupied
     std::vector<Character*>::const_iterator curChar = m_Chars.begin();
