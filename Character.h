@@ -120,6 +120,7 @@ class Character : public MovingEntity{
   		bool canStepBackward(Vector2D& PositionOfStep)const;
 		
 		Game* const GetWorld(){return m_pWorld;}
+	        //Room* GetRoom(){return m_pRoom;}
 		Steering* const GetSteering(){return m_pSteering;}
 		Goal_Think* const GetBrain(){return m_pBrain;}
 		const TargetingSystem* const GetTargetSys()const{return m_pTargSys;}
