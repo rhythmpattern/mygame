@@ -22,6 +22,7 @@ bool Room::init(const std::string mapName)
 Room::~Room()
 {
   delete m_pMap;
+  delete m_pPathManager;
 }
 
 
@@ -32,6 +33,7 @@ bool Room::LoadMap(const std::string& filename)
   
   //out with the old
   delete m_pMap;
+  delete m_pPathManager;
 
   //in with the new
   m_pMap = new Map();
@@ -98,7 +100,8 @@ void Room::Update()
   
   /*
   
-  
+  //update all the queued searches in the path manager
+  m_pPathManager->UpdateSearches();
  
     m_pCharManager->Update();
  
