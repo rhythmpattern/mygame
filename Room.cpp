@@ -51,6 +51,37 @@ bool Room::LoadMap(const std::string& filename)
   
   
   return false;
+  
+  /*
+  //clear any current bots and projectiles
+   Clear();
+  
+  //out with the old
+  delete m_pMap;
+  delete m_pPathManager;
+
+  //in with the new
+  m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
+  m_pMap = new Map();
+  
+  //make sure the entity manager is reset
+  //EntityMgr->Reset();
+
+ 
+  //load the new map data
+  if (m_pMap->LoadMap(filename))
+  {
+    #ifdef LOG
+    std::cout << "LoadMap called succesfully" <<endl;
+    #endif
+    m_pCharManager->AddChars(1);
+  
+    return true;
+  }
+  
+  return false;
+  */
+  
 }
 
 
