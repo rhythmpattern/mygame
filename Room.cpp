@@ -5,7 +5,7 @@
 bool Room::init(const std::string mapName)
 {
   LoadMap(mapName);
-  AddChar(Game::Instance()->GetPlayer());
+  
   /*
   LoadMap(mapName);
    
