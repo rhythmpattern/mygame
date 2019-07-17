@@ -64,6 +64,31 @@ void Room::Update()
   }
   
   m_pMap->UpdateTriggerSystem(m_Chars);
+  
+  /*
+  
+  
+ 
+    m_pCharManager->Update();
+ 
+  
+
+  //update any doors
+  std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
+  for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
+  {
+    (*curDoor)->Update();
+  }
+
+
+  //update the triggers
+  std::vector<Character*> a;
+  a =  m_pCharManager->GetAllChars();
+  m_pMap->UpdateTriggerSystem(a);
+
+
+  */
+  
 }
 
 void Room::Clear()
