@@ -13,6 +13,7 @@
 #include "ObjectEnumerations.h"
 
 class Game;
+class Room;
 class Steering;
 class PathPlanner;
 class Regulator;
@@ -34,6 +35,7 @@ class Character : public MovingEntity{
 		
 		Status                m_Status;	
 		Game*                    m_pWorld;
+	        Room*                   m_pRoom;
 		Goal_Think*		m_pBrain;
 		SensoryMemory*		m_pSensoryMem;
 		bool			m_bPossessed ;
@@ -69,6 +71,7 @@ class Character : public MovingEntity{
 
 		Character(Game* world, Vector2D pos);
  Character():MovingEntity(){}
+	//Character(Room* pRoom):MovingEntity(){ m_pRoom = pRoom;}
 
 		void load();
 		virtual void draw();
