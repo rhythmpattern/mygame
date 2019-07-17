@@ -6,6 +6,14 @@ bool Room::init(const std::string mapName)
 {
   LoadMap(mapName);
   AddChar(Game::Instance()->GetPlayer());
+  /*
+  LoadMap(mapName);
+   
+      m_pPlayer = new Player(this, Vector2D(0,0));
+    
+   
+    m_CharManager->AddChar(m_pPlayer);
+  */
 }
 
 //Destructor
@@ -70,8 +78,5 @@ void Room::Clear()
 }
 
 
-void Room::AddChar(Character* pChar)
-{
-  m_Chars.push_back(pChar); 
-}
+
 
