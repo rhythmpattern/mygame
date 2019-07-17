@@ -5,6 +5,7 @@ CharManager* CharManager::pInstance = 0;
 
 
 CharManager::CharManager(){}
+//CharManager::CharManager(Room* pRoom){m_pRoom = pRoom;}
 
 void CharManager::Clear()
 {
@@ -75,6 +76,7 @@ bool CharManager::AttemptToAddChar(Character* pChar)
 {
   
   //make sure there are some spawn points available
+   //if (m_pRoom->GetMap()->GetSpawnPoints().size() <= 0)
   if (Game::Instance()->GetMap()->GetSpawnPoints().size() <= 0)
   {
     std::cout << ("Map has no spawn points!"); return false;
@@ -82,12 +84,14 @@ bool CharManager::AttemptToAddChar(Character* pChar)
 
   //we'll make the same number of attempts to spawn a bot this update as
   //there are spawn points
+   //int attemps = m_pRoom->GetMap()->GetSpawnPoints().size();
   int attempts = Game::Instance()->GetMap()->GetSpawnPoints().size();
-  //g_screenLog->log(LL_INFO, "attempts = %d",attempts);
+ 
 
   while (--attempts >= 0)
   { 
     //select a random spawn point
+     // Vector2D pos = m_pRoom->GetMap()->GetRandomSpawnPoint();
     Vector2D pos = Game::Instance()->GetMap()->GetRandomSpawnPoint();
 
     //check to see if it's occupied
