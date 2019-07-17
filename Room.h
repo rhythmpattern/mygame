@@ -21,6 +21,7 @@ class Room
   void AddChars(unsigned int NumCharsToAdd);
  private:
   CharManager* m_pCharManager;
+  PathManager<PathPlanner>* m_pPathManager;
   std::vector<Character*> m_Chars;
   Map* m_pMap;
   Room* m_pNorth;
