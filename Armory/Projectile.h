@@ -64,6 +64,8 @@ protected:
 
 public:
 
+//Why not pass in room here to use in allbots calculations?
+
   Projectile(Vector2D  target,   //the target's position
                    Game* world,  //a pointer to the world data
                    int      ShooterID, //the ID of the bot that fired this shot
