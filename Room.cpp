@@ -13,6 +13,7 @@ bool Room::init(const std::string mapName)
     
    
     m_CharManager->AddChar(m_pPlayer);
+    EntityMgr->AddEntity(m_pPlayer);
   */
 }
 
