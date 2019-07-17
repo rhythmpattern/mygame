@@ -59,7 +59,7 @@ void PlayState::render()
 	   pLevel->render();
 	  
         }
-      
+            
   GraveManager::Instance()->Render();
   CharManager::Instance()->Render();
   ProjectileManager::Instance()->Render();  

@@ -94,5 +94,6 @@ void Projectile_Shot::Update()
 
 void Projectile_Shot::Render()
 {
+  
    TextureManager::Instance()->drawFrame("dot",  m_vPosition.x -20, m_vPosition.y-20, 20, 20,0,0, Game::Instance()->getRenderer(),0,100);
 }

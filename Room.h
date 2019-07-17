@@ -4,8 +4,11 @@
 #include <string>
 #include <vector>
 #include "Map.h"
+#include "Navigation/PathManager.h"
+#include "Door.h"
 
 class CharManager;
+
 
 class Room
 {

@@ -49,6 +49,7 @@ void ProjectileManager::Update()
 
 void ProjectileManager::Render()
 {
+ 
   std::list<Projectile*>::iterator curW = m_Projectiles.begin();
   while (curW != m_Projectiles.end())
     { if(!(*curW)->isDead() && !(*curW)==NULL)
@@ -65,6 +66,6 @@ void ProjectileManager::AddShot(Character* shooter, Vector2D target)
   m_Projectiles.push_back(rp);
  
   #ifdef LOG
-  // std::cout << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "\n";
+   std::cout << "Adding a shot " << rp->ID() << " at pos " << rp->Pos() << "\n";
   #endif
 }
