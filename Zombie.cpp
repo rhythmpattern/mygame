@@ -1,5 +1,5 @@
 #include "Zombie.h"
-Zombie::Zombie(Game* world, Vector2D pos) : Character(world,pos)
+Zombie::Zombie(Room* pRoom, Vector2D pos) : Character(Game::Instance(),pos)
 					   
 {
   SetEntityType(type_zomb);

@@ -16,14 +16,15 @@
 #include "Messages.h"
 #include "Messaging/MessageDispatcher.h"
 #include "Goals/Goal_Think_Zombie.h"
-
+#include "Room.h"
 
 class Zombie : public Character
 {
  private:
   bool speedUp;
+  Room* m_pRoom;
  public:
-  Zombie(Game* world, Vector2D pos);
+  Zombie(Room* room, Vector2D pos);
   virtual bool HandleMessage(const Telegram& msg);
   virtual void Update();
 
