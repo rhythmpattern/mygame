@@ -439,5 +439,10 @@ Game::GetPosOfClosestSwitch(Vector2D botPos, unsigned int doorID)const
 
 
 
+void Game::TagCharactersWithinViewRange(Entity* pChar, double range)
+   {
+     std::vector<Character*> allChars = CharManager::Instance()->GetAllChars();
+     TagNeighbors(pChar, allChars , range);}
+  
 
 

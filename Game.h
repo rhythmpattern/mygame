@@ -106,8 +106,9 @@ int GetNumBots()const{return m_Bots.size();}
 PathManager<PathPlanner>* const    GetPathManager(){return m_pPathManager;}
 
 
-void TagCharactersWithinViewRange(Entity* pBot , double range)
-		{TagNeighbors(pBot, m_Bots, range);}
+  void TagCharactersWithinViewRange(Entity* pBot , double range);
+    
+ 
 
 
 

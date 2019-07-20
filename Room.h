@@ -23,6 +23,7 @@ class Room
   bool init(const std::string sMap);
   void AddChar(Character* pChar);
   void AddChars(unsigned int NumCharsToAdd);
+  Map* GetMap() { return m_pMap; }
  private:
   CharManager* m_pCharManager;
   PathManager<PathPlanner>* m_pPathManager;
