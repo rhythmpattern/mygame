@@ -5,10 +5,10 @@
 bool Room::init(const std::string mapName)
 {
   LoadMap(mapName);
+  GraveManager::Instance()->load();
   
   /*
-  LoadMap(mapName);
-   
+ 
       m_pPlayer = new Player(this, Vector2D(0,0));
     
    
@@ -17,17 +17,22 @@ bool Room::init(const std::string mapName)
   */
 }
 
+Room::Room() {m_pCharManager = new CharManager(); m_pMap = NULL; m_pPathManager = NULL;}
+
 //Destructor
 
 Room::~Room()
 {
   delete m_pMap;
   delete m_pPathManager;
+  GraveManager::Instance()->Clear();
+  ProjectileManager::Instance()->Clear();
 }
 
 
 bool Room::LoadMap(const std::string& filename)
 {
+ 
    //clear any current chars and projectiles
    Clear();
   
@@ -131,6 +136,7 @@ void Room::Clear()
     std::cout << "\n------------------------------ Clearup -------------------------------" << endl;
 #endif
 
+    m_pCharManager->Clear();
    
  
  

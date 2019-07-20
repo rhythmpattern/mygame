@@ -6,14 +6,14 @@
 #include "Map.h"
 #include "Navigation/PathManager.h"
 #include "Door.h"
+#include "ProjectileManager.h"
 
 class CharManager;
-
 
 class Room
 {
  public:
-  Room(std::string mapName);
+  Room();
   ~Room();
   void Update();
   void Render();
