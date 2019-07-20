@@ -183,10 +183,11 @@ void Game::handleInput()
 //-----------------------------------------------------------------------------
 void Game::Update()
 {
+    //don't update if the user has paused the game
+  if (m_bPaused) return;
   
   m_pGameStateMachine->update(); 
-   //don't update if the user has paused the game
-  if (m_bPaused) return;
+ 
   
  
  

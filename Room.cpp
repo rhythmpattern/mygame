@@ -1,11 +1,11 @@
 #include "Room.h"
 #include "CharManager.h"
-
+#include "Scriptor.h"
 
 bool Room::init(const std::string mapName)
 {
   LoadMap(mapName);
-  GraveManager::Instance()->load();
+ 
   
   /*
  
@@ -42,37 +42,8 @@ bool Room::LoadMap(const std::string& filename)
 
   //in with the new
   m_pMap = new Map();
-  
-  
-
- 
-  //load the new map data
-  if (m_pMap->LoadMap(filename))
-  {
-    #ifdef LOG
-    std::cout << "LoadMap called succesfully" <<endl;
-    #endif
-   
-    return true;
-  }
-  
-  
-  return false;
-  
-  /*
-  //clear any current bots and projectiles
-   Clear();
-  
-  //out with the old
-  delete m_pMap;
-  delete m_pPathManager;
-
-  //in with the new
-  m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
-  m_pMap = new Map();
-  
-  //make sure the entity manager is reset
-  //EntityMgr->Reset();
+   m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
+   GraveManager::Instance()->load();
 
  
   //load the new map data
@@ -82,51 +53,31 @@ bool Room::LoadMap(const std::string& filename)
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
     m_pCharManager->AddChars(1);
-  
     return true;
   }
   
-  return false;
-  */
   
+  return false;
+  
+
 }
 
 
 void Room::Update()
 {
+  
+  GraveManager::Instance()->Update();
+  ProjectileManager::Instance()->Update();
+  m_pCharManager->Update();
+  m_pPathManager->UpdateSearches();
+  m_pMap->UpdateTriggerSystem(m_Chars);
    //update any doors
   std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
   for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
   {
     (*curDoor)->Update();
   }
-  
-  m_pMap->UpdateTriggerSystem(m_Chars);
-  
-  /*
-  
-  //update all the queued searches in the path manager
-  m_pPathManager->UpdateSearches();
  
-    m_pCharManager->Update();
- 
-  
-
-  //update any doors
-  std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
-  for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
-  {
-    (*curDoor)->Update();
-  }
-
-
-  //update the triggers
-  std::vector<Character*> a;
-  a =  m_pCharManager->GetAllChars();
-  m_pMap->UpdateTriggerSystem(a);
-
-
-  */
   
 }
 

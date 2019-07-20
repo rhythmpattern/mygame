@@ -7,6 +7,7 @@
 #include "Navigation/PathManager.h"
 #include "Door.h"
 #include "ProjectileManager.h"
+#include "Navigation/PathPlanner.h"
 
 class CharManager;
 

@@ -31,7 +31,7 @@ private:
     
     std::vector<Entity*> m_gameObjects;
     
-    Level* pLevel;
+  
 };
 
 

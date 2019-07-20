@@ -73,6 +73,7 @@ SDL_Renderer* getRenderer() const { return m_pRenderer; }
     SDL_Window* getWindow() const { return m_pWindow; }
     int getGameWidth(){return m_gameWidth;}
     int getGameHeight(){return m_gameHeight;}
+  Room* getRoom() { getStateMachine()->getGameStates().back()->getLevel()->getRooms()->back();}
 
     void Render();
 void Update();

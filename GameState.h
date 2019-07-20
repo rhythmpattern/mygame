@@ -4,6 +4,7 @@
 
 #include <string>
 #include <vector>
+#include "Level.h"
 
 class GameState
 {
@@ -18,6 +19,7 @@ public:
     virtual bool onExit() = 0;
     
     virtual void resume() {}
+  Level* getLevel() { return pLevel;}
     
     virtual std::string getStateID() const = 0;
     
@@ -27,7 +29,7 @@ protected:
     {
         
     }
-    
+  Level* pLevel;
     bool m_loadingComplete;
     bool m_exiting;
     
