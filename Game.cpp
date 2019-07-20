@@ -134,6 +134,11 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
      m_pGameStateMachine = new GameStateMachine();
      m_pGameStateMachine->changeState(new PlayState());
 
+     Room* pRoom = new Room();
+  pRoom->init("assets/test.map");
+  getStateMachine()->getGameStates().back()->getLevel()->getRooms()->push_back(pRoom);
+  getRoom();
+     
    return true;
 
     

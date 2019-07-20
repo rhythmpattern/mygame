@@ -8,8 +8,7 @@
 
 Level::Level()
 {
-  Room* pRoom = new Room();
-  pRoom->init("assets/test.map");
+ 
 }
 
 Level::~Level()
