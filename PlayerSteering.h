@@ -21,6 +21,7 @@
 class Wall2D;
 class Entity;
 class Game;
+class Room;
 
 
 
@@ -67,6 +68,7 @@ private:
   
   //pointer to the world data
   Game*    m_pWorld;
+  Room*    m_pRoom;
   
   //the steering force created by the combined effect of all
   //the selected behaviors
@@ -175,7 +177,7 @@ private:
   
 public:
 
-  PlayerSteering(Game* world, Player* agent);
+  PlayerSteering(Room* room, Player* agent);
 
   virtual ~PlayerSteering();
 

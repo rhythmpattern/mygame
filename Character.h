@@ -69,11 +69,11 @@ class Character : public MovingEntity{
 	public : 
 
 
-		Character(Game* world, Vector2D pos);
+  Character(Room* room, Vector2D pos);
  Character():MovingEntity(){}
 	//Character(Room* pRoom):MovingEntity(){ m_pRoom = pRoom;}
 
-		void load();
+		void load(Room* room);
 		virtual void draw();
 		virtual ~Character();
 
@@ -120,7 +120,7 @@ class Character : public MovingEntity{
   		bool canStepBackward(Vector2D& PositionOfStep)const;
 		
 		Game* const GetWorld(){return m_pWorld;}
-	        //Room* GetRoom(){return m_pRoom;}
+	        Room* GetRoom(){return m_pRoom;}
 		Steering* const GetSteering(){return m_pSteering;}
 		Goal_Think* const GetBrain(){return m_pBrain;}
 		const TargetingSystem* const GetTargetSys()const{return m_pTargSys;}

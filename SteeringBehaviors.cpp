@@ -18,9 +18,9 @@ using std::vector;
 //------------------------- ctor -----------------------------------------
 //
 //------------------------------------------------------------------------
-Steering::Steering(Game* world, Character* agent):
+Steering::Steering(Room* room, Character* agent):
                                   
-             m_pWorld(world),
+             m_pRoom(room),
              m_pCharacter(agent),
              m_iFlags(0),
              m_dWeightSeparation(script->getNum("separationweight")),
@@ -74,7 +74,7 @@ Vector2D Steering::Calculate()
   //tag neighbors if any of the following 3 group behaviors are switched on
   if (On(separation))
   {
-    m_pWorld->TagCharactersWithinViewRange(m_pCharacter, m_dViewDistance);
+    m_pRoom->TagCharactersWithinViewRange(m_pCharacter, m_dViewDistance);
   }
 
   m_vSteeringForce = CalculatePrioritized();
@@ -158,7 +158,7 @@ Vector2D Steering::CalculatePrioritized()
  if (On(wall_avoidance))
   {
    
-    force = WallAvoidance(m_pWorld->GetMap()->GetWalls()) *
+    force = WallAvoidance(m_pRoom->GetMap()->GetWalls()) *
             m_dWeightWallAvoidance;
     
    
@@ -174,7 +174,7 @@ Vector2D Steering::CalculatePrioritized()
 
     if (On(separation))
     {
-      force = Separation(CharManager::Instance()->GetAllChars()) * m_dWeightSeparation;
+      force = Separation(m_pRoom->GetCharManager()->GetAllChars()) * m_dWeightSeparation;
 
       if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
     }

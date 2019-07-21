@@ -56,7 +56,7 @@ inline void Melee::ShootAt(Vector2D pos)
 
     //add a trigger to the game so that the other bots can hear this shot
     //(provided they are within range)
-    m_pOwner->GetWorld()->GetMap()->AddSoundTrigger(m_pOwner, 10);
+    m_pOwner->GetRoom()->GetMap()->AddSoundTrigger(m_pOwner, 10);
   }
 }
 

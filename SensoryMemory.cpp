@@ -56,7 +56,7 @@ void SensoryMemory::UpdateWithSoundSource(Character* pNoiseMaker)
     MemoryRecord& info = m_MemoryMap[pNoiseMaker];
 
     //test if there is LOS between bots 
-    if (m_pOwner->GetWorld()->isLOSOkay(m_pOwner->Pos(), pNoiseMaker->Pos()))
+    if (m_pOwner->GetRoom()->isLOSOkay(m_pOwner->Pos(), pNoiseMaker->Pos()))
     {
       info.bShootable = true;
       
@@ -83,7 +83,7 @@ void SensoryMemory::UpdateVision()
 {
   //for each bot in the world test to see if it is visible to the owner of
   //this class
-  const std::vector<Character*>& bots = CharManager::Instance()->GetAllChars();
+  const std::vector<Character*>& bots = m_pOwner->GetRoom()->GetCharManager()->GetAllChars();
   std::vector<Character*>::const_iterator curBot;
   for (curBot = bots.begin(); curBot!=bots.end(); ++curBot)
   {
@@ -97,7 +97,7 @@ void SensoryMemory::UpdateVision()
       MemoryRecord& info = m_MemoryMap[*curBot];
 
       //test if there is LOS between bots 
-      if (m_pOwner->GetWorld()->isLOSOkay(m_pOwner->Pos(), (*curBot)->Pos()))
+      if (m_pOwner->GetRoom()->isLOSOkay(m_pOwner->Pos(), (*curBot)->Pos()))
       {
         info.bShootable = true;
 

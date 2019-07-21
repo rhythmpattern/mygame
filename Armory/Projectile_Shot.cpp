@@ -14,7 +14,7 @@
 Projectile_Shot::Projectile_Shot(Character* shooter, Vector2D target):
 
         Projectile(target,
-                         shooter->GetWorld(),
+		   shooter->GetRoom(),
                          shooter->ID(),
                          shooter->Pos(),
                          shooter->Facing(),
@@ -77,7 +77,7 @@ void Projectile_Shot::Update()
                                                  m_vPosition,
                                                  dist,
                                                  m_vImpactPoint,
-                                                 m_pWorld->GetMap()->GetWalls()))
+                                                 m_pRoom->GetMap()->GetWalls()))
      {
       
        m_bDead     = true;

@@ -34,7 +34,7 @@ void Goal_NegotiateDoor::Activate()
   RemoveAllSubgoals();
   
   //get the position of the closest navigable switch
-  Vector2D posSw = m_pOwner->GetWorld()->GetPosOfClosestSwitch(m_pOwner->Pos(),
+  Vector2D posSw = m_pOwner->GetRoom()->GetPosOfClosestSwitch(m_pOwner->Pos(),
                                                           m_PathEdge.DoorID());
 
   //because goals are *pushed* onto the front of the subgoal list they must

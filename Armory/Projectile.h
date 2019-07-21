@@ -19,6 +19,7 @@
 
 class Game;
 class Character;
+class Room;
 
 
 class Projectile : public MovingEntity
@@ -33,6 +34,8 @@ protected:
 
   //a pointer to the world data
   Game*   m_pWorld;
+
+  Room* m_pRoom;
 
   //where the projectile was fired from
   Vector2D      m_vOrigin;
@@ -67,7 +70,7 @@ public:
 //Why not pass in room here to use in allbots calculations?
 
   Projectile(Vector2D  target,   //the target's position
-                   Game* world,  //a pointer to the world data
+	     Room* room,  //a pointer to the world data
                    int      ShooterID, //the ID of the bot that fired this shot
                    Vector2D origin,  //the start position of the projectile
                    Vector2D heading,   //the heading of the projectile
@@ -88,7 +91,7 @@ public:
                                         m_vTarget(target),
                                         m_bDead(false),
                                         m_bImpacted(false),
-                                        m_pWorld(world),
+					 m_pRoom(room),
                                         m_iDamageInflicted(damage),
                                         m_vOrigin(origin),
                                         m_iShooterID(ShooterID)

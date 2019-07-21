@@ -5,8 +5,8 @@ class PlayerSteering;
 
 
 //-------------------------- ctor ---------------------------------------------
-Player::Player(Game* world,Vector2D pos):
-  Character(world,pos)
+Player::Player(Room* room,Vector2D pos):
+  Character(room,pos)
            
 {
   SetEntityType(type_player);

@@ -28,7 +28,8 @@ void Level::render()
      {  
        m_layers[i]->render();
     }
-
+   getRooms()->back()->Render();
+ 
 }
 
 void Level::update()
@@ -38,5 +39,5 @@ void Level::update()
     {
         m_layers[i]->update(this);
     }
-
+    getRooms()->back()->Update();
 }

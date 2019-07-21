@@ -21,7 +21,7 @@
 #define debug
 
 //-------------------------- ctor ---------------------------------------------
-Character::Character(Game* world,Vector2D pos):
+Character::Character(Room* room,Vector2D pos):
 
   MovingEntity(pos,
                script->getNum("charscale"),
@@ -37,7 +37,7 @@ Character::Character(Game* world,Vector2D pos):
 	       m_iHealth(script->getInt("charmaxhealth")),
                  m_pPathPlanner(NULL),
                  m_pSteering(NULL),
-                 m_pWorld(world),
+                 m_pRoom(room),
                  m_pBrain(NULL),
 	       m_iNumUpdatesHitPersistant((int)(FrameRate * script->getNum("hitflashtime"))),
                  m_bHit(false),
@@ -59,7 +59,7 @@ Character::Character(Game* world,Vector2D pos):
   m_pPathPlanner = new PathPlanner(this);
 
   //create the steering behavior class
-  m_pSteering = new Steering(world, this);
+  m_pSteering = new Steering(room, this);
 
   //create the regulators
   m_pWeaponSelectionRegulator = new Regulator(script->getNum("weaponselectionfrequency"));
@@ -110,7 +110,7 @@ Character::~Character()
 //-------------------------------load-------------------------
 //
 //---------------------------------------------------
-void Character::load()
+void Character::load(Room* room)
 {
   m_bTag = false;
   SetID(GetNextValidID());
@@ -122,7 +122,7 @@ void Character::load()
   m_dMaxTurnRate = script->getNum("charmaxheadturnrate");
   m_dMaxForce = script->getNum("charmaxforce");
   m_iMaxHealth = script->getInt("charmaxhealth");
-  m_pWorld = Game::Instance();
+  m_pRoom = room;
   m_iNumUpdatesHitPersistant = (int)(FrameRate * script->getNum("hitflashtime"));
   m_bHit = false;
   m_iScore = 0;
@@ -136,7 +136,7 @@ void Character::load()
   SetUpVertexBuffer();
   m_vFacing = m_vHeading;
   m_pPathPlanner = new PathPlanner(this);
-  m_pSteering = new Steering(Game::Instance(), this);
+  m_pSteering = new Steering(m_pRoom, this);
   m_pWeaponSelectionRegulator = new Regulator(script->getNum("weaponselectionfrequency"));
    m_pGoalArbitrationRegulator =  new Regulator(script->getNum("goalappraisalupdatefreq"));
   m_pTargetSelectionRegulator = new Regulator(script->getNum("targetingupdatefreq"));
@@ -543,21 +543,21 @@ bool Character::isAtPosition(Vector2D pos)const
 //-----------------------------------------------------------------------------
 bool Character::hasLOSto(Vector2D pos)const
 {
-  return m_pWorld->isLOSOkay(Pos(), pos);
+  return m_pRoom->isLOSOkay(Pos(), pos);
 }
 
 //returns true if this bot can move directly to the given position
 //without bumping into any walls
 bool Character::canWalkTo(Vector2D pos)const
 {
-  return !m_pWorld->isPathObstructed(Pos(), pos, BRadius());
+  return !m_pRoom->isPathObstructed(Pos(), pos, BRadius());
 }
 
 //similar to above. Returns true if the bot can move between the two
 //given positions without bumping into any walls
 bool Character::canWalkBetween(Vector2D from, Vector2D to)const
 {
- return !m_pWorld->isPathObstructed(from, to, BRadius());
+ return !m_pRoom->isPathObstructed(from, to, BRadius());
 }
 
 //--------------------------- canStep Methods ---------------------------------

@@ -50,12 +50,7 @@ Game::Game():m_pSelectedBot(NULL),
 //-----------------------------------------------------------------------------
 Game::~Game()
 {
-  Clear();
-  delete m_pPathManager;
-  delete m_pMap;
-  
-  GraveManager::Instance()->Clear();
-  ProjectileManager::Instance()->Clear();
+ 
   SDL_Quit();
  
 }
@@ -63,19 +58,12 @@ Game::~Game()
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
 
-  
-  LoadMap("assets/test.map");
+ 
     m_levelFiles.push_back("assets/DM1.tmx");
    m_currentLevel = 1;
 
     
-      m_pPlayer = new Player(this, Vector2D(0,0));
-    
-   
-    CharManager::Instance()->AddChar(m_pPlayer);
-    //register the bot with the entity manager
-   EntityMgr->RegisterEntity(m_pPlayer);
-
+ 
   
  int flags = 0;
  m_bRunning = true;
@@ -84,7 +72,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     m_gameWidth = width;
     m_gameHeight = height;
 
-    GraveManager::Instance()->load();
+    //GraveManager::Instance()->load();
 
     
     if(fullscreen)
@@ -134,11 +122,8 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
      m_pGameStateMachine = new GameStateMachine();
      m_pGameStateMachine->changeState(new PlayState());
 
-     Room* pRoom = new Room();
-  pRoom->init("assets/test.map");
-  getStateMachine()->getGameStates().back()->getLevel()->getRooms()->push_back(pRoom);
-  getRoom();
-     
+ 
+  
    return true;
 
     
@@ -170,9 +155,7 @@ void Game::Clear()
     std::cout << "\n------------------------------ Clearup -------------------------------" << endl;
 #endif
 
-    CharManager::Instance()->Clear();
- 
- 
+
   
 
 }
@@ -192,34 +175,6 @@ void Game::Update()
   if (m_bPaused) return;
   
   m_pGameStateMachine->update(); 
- 
-  
- 
- 
-  
-  GraveManager::Instance()->Update();
-    CharManager::Instance()->Update();
- 
-  
-  //update all the queued searches in the path manager
-  m_pPathManager->UpdateSearches();
-
-  //update any doors
-  std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
-  for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
-  {
-    (*curDoor)->Update();
-  }
-
-  ProjectileManager::Instance()->Update();
-  
- 
-
-  //update the triggers
-  std::vector<Character*> a;
-  a =  CharManager::Instance()->GetAllChars();
-  m_pMap->UpdateTriggerSystem(a);
-
 
  
 
@@ -281,36 +236,8 @@ bool Game::AttemptToAddBot(Character* pBot)
 //-----------------------------------------------------------------------------
 bool Game::LoadMap(const std::string& filename)
 { 
-  //clear any current bots and projectiles
-   Clear();
-  
-  //out with the old
-  delete m_pMap;
-  delete m_pPathManager;
-
-  //in with the new
-  GraveManager::Instance()->load();
-  m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
-  m_pMap = new Map();
-  
-  //make sure the entity manager is reset
-  EntityMgr->Reset();
-
- 
-  //load the new map data
-  if (m_pMap->LoadMap(filename))
-  {
-    #ifdef LOG
-    std::cout << "LoadMap called succesfully" <<endl;
-    #endif
-    CharManager::Instance()->AddChars(1);
-  
-    return true;
-  }
-  
-  return false;
 }
-
+ 
 
 
 
@@ -446,7 +373,7 @@ Game::GetPosOfClosestSwitch(Vector2D botPos, unsigned int doorID)const
 
 void Game::TagCharactersWithinViewRange(Entity* pChar, double range)
    {
-     std::vector<Character*> allChars = CharManager::Instance()->GetAllChars();
+     std::vector<Character*> allChars = getRoom()->GetCharManager()->GetAllChars();
      TagNeighbors(pChar, allChars , range);}
   
 

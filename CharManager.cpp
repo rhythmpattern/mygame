@@ -5,7 +5,7 @@ CharManager* CharManager::pInstance = 0;
 
 
 CharManager::CharManager(){}
-//CharManager::CharManager(Room* pRoom){m_pRoom = pRoom;}
+CharManager::CharManager(Room* pRoom){m_pRoom = pRoom;}
 
 void CharManager::Clear()
 {
@@ -76,23 +76,23 @@ bool CharManager::AttemptToAddChar(Character* pChar)
 {
   
   //make sure there are some spawn points available
-   //if (m_pRoom->GetMap()->GetSpawnPoints().size() <= 0)
-  if (Game::Instance()->GetMap()->GetSpawnPoints().size() <= 0)
+  
+  if (m_pRoom->GetMap()->GetSpawnPoints().size() <= 0)
   {
     std::cout << ("Map has no spawn points!"); return false;
   }
 
   //we'll make the same number of attempts to spawn a bot this update as
   //there are spawn points
-   //int attemps = m_pRoom->GetMap()->GetSpawnPoints().size();
-  int attempts = Game::Instance()->GetMap()->GetSpawnPoints().size();
+  
+  int attempts = m_pRoom->GetMap()->GetSpawnPoints().size();
  
 
   while (--attempts >= 0)
   { 
     //select a random spawn point
-     // Vector2D pos = m_pRoom->GetMap()->GetRandomSpawnPoint();
-    Vector2D pos = Game::Instance()->GetMap()->GetRandomSpawnPoint();
+     
+    Vector2D pos = m_pRoom->GetMap()->GetRandomSpawnPoint();
 
     //check to see if it's occupied
     std::vector<Character*>::const_iterator curChar = m_Chars.begin();
@@ -133,7 +133,7 @@ void CharManager::AddChars(unsigned int NumCharsToAdd)
     Character* rb = (Character*) GameObjectFactory::Instance()->create("Character");
     //Zombie* rb = new Zombie(this, Vector2D(0,0));
 
-    rb->load();
+    rb->load(m_pRoom);
     //switch the default steering behaviors on
     rb->GetSteering()->WallAvoidanceOn();
     rb->GetSteering()->SeparationOn();

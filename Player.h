@@ -10,7 +10,7 @@
 
 class Player : public Character{
  public:
-  Player(Game* world, Vector2D pos);
+  Player(Room* room, Vector2D pos);
   bool HandleMessage(const Telegram& msg);
   void test(){std::cout << "WORKING";}
 

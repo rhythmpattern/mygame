@@ -71,9 +71,10 @@ Level* LevelParser::parseLevel(const char *levelFile)
             }
 
 	}
-    
-  
-   
+      
+    Room* pRoom = new Room();
+    pRoom->init("assets/test.map");
+    pLevel->getRooms()->push_back(pRoom);
     
     return pLevel;
 }

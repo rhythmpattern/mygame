@@ -24,6 +24,13 @@ class Room
   void AddChar(Character* pChar);
   void AddChars(unsigned int NumCharsToAdd);
   Map* GetMap() { return m_pMap; }
+  bool isSecondVisibleToFirst(const Character* pFirst, const Character* pSecond) const;
+  bool isLOSOkay(Vector2D A, Vector2D B)const ;
+  bool isPathObstructed(Vector2D A, Vector2D B, double BoundingRadius)const;
+  Vector2D GetPosOfClosestSwitch(Vector2D botPos, unsigned int doorID)const;
+  void TagCharactersWithinViewRange(Entity* pChar, double range);
+  PathManager<PathPlanner>* GetPathManager() { return m_pPathManager;}
+  CharManager* GetCharManager() { return m_pCharManager;}
  private:
   CharManager* m_pCharManager;
   PathManager<PathPlanner>* m_pPathManager;

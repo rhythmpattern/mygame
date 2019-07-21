@@ -21,7 +21,7 @@ class PathPlanner;
 //---------------------------- ctor -------------------------------------------
 //-----------------------------------------------------------------------------
 PathPlanner::PathPlanner(Character* owner):m_pOwner(owner),
-               m_NavGraph(m_pOwner->GetWorld()->GetMap()->GetNavGraph()),
+					   m_NavGraph(m_pOwner->GetRoom()->GetMap()->GetNavGraph()),
                m_pCurrentSearch(NULL)
 {
 }
@@ -41,7 +41,7 @@ PathPlanner::~PathPlanner()
 void PathPlanner::GetReadyForNewSearch()
 {
   //unregister any existing search with the path manager
-  PathManager<PathPlanner> tPath =(PathManager<PathPlanner>)*m_pOwner->GetWorld()->GetPathManager();
+  PathManager<PathPlanner> tPath =(PathManager<PathPlanner>)*m_pOwner->GetRoom()->GetPathManager();
  tPath.UnRegister(this);
 
   //clean up memory used by any existing search
@@ -64,7 +64,7 @@ double PathPlanner::GetCostToNode(unsigned int NodeIdx)const
                             m_NavGraph.GetNode(nd).Pos());
 
   //add the cost to the target node and return
-  return cost + m_pOwner->GetWorld()->GetMap()->CalculateCostToTravelBetweenNodes(nd, NodeIdx);
+  return cost + m_pOwner->GetRoom()->GetMap()->CalculateCostToTravelBetweenNodes(nd, NodeIdx);
 }
 
 //------------------------ GetCostToClosestItem ---------------------------
@@ -85,7 +85,7 @@ double PathPlanner::GetCostToClosestItem(unsigned int GiverType)const
 
   //iterate through all the triggers to find the closest *active* trigger of 
   //type GiverType
-  const Map::TrigSystem::TriggerList& triggers = m_pOwner->GetWorld()->GetMap()->GetTriggers();
+  const Map::TrigSystem::TriggerList& triggers = m_pOwner->GetRoom()->GetMap()->GetTriggers();
   
   Map::TrigSystem::TriggerList::const_iterator it;
   for (it = triggers.begin(); it != triggers.end(); ++it)
@@ -93,7 +93,7 @@ double PathPlanner::GetCostToClosestItem(unsigned int GiverType)const
     if ( ((*it)->EntityType() == GiverType) && (*it)->isActive())
     {
       double cost = 
-      m_pOwner->GetWorld()->GetMap()->CalculateCostToTravelBetweenNodes(nd,
+	m_pOwner->GetRoom()->GetMap()->CalculateCostToTravelBetweenNodes(nd,
                                                       (*it)->GraphNodeIndex());
 
       if (cost < ClosestSoFar)
@@ -293,15 +293,15 @@ int PathPlanner::GetClosestNodeToPosition(Vector2D pos)const
   //when the cell space is queried this the the range searched for neighboring
   //graph nodes. This value is inversely proportional to the density of a 
   //navigation graph (less dense = bigger values)
-  const double range = m_pOwner->GetWorld()->GetMap()->GetCellSpaceNeighborhoodRange();
+  const double range = m_pOwner->GetRoom()->GetMap()->GetCellSpaceNeighborhoodRange();
 
   //calculate the graph nodes that are neighboring this position
-  m_pOwner->GetWorld()->GetMap()->GetCellSpace()->CalculateNeighbors(pos, range);
+  m_pOwner->GetRoom()->GetMap()->GetCellSpace()->CalculateNeighbors(pos, range);
 
   //iterate through the neighbors and sum up all the position vectors
-  for (NodeType* pN = m_pOwner->GetWorld()->GetMap()->GetCellSpace()->begin();
-                 !m_pOwner->GetWorld()->GetMap()->GetCellSpace()->end();     
-                 pN = m_pOwner->GetWorld()->GetMap()->GetCellSpace()->next())
+  for (NodeType* pN = m_pOwner->GetRoom()->GetMap()->GetCellSpace()->begin();
+                 !m_pOwner->GetRoom()->GetMap()->GetCellSpace()->end();     
+                 pN = m_pOwner->GetRoom()->GetMap()->GetCellSpace()->next())
   {
     //if the path between this node and pos is unobstructed calculate the
     //distance
@@ -398,7 +398,7 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
                                ClosestNodeToTarget);
 
   //and register the search with the path manager
-  PathManager<PathPlanner> tPath =(PathManager<PathPlanner>)* m_pOwner->GetWorld()->GetPathManager();
+  PathManager<PathPlanner> tPath =(PathManager<PathPlanner>)* m_pOwner->GetRoom()->GetPathManager();
 	tPath.Register(this);
 
   return true;
@@ -441,7 +441,7 @@ bool PathPlanner::RequestPathToItem(unsigned int ItemType)
                                    ClosestNodeToBot,
                                    ItemType);  
 
-  PathManager<PathPlanner> tPath= (PathManager<PathPlanner>)*m_pOwner->GetWorld()->GetPathManager();
+  PathManager<PathPlanner> tPath= (PathManager<PathPlanner>)*m_pOwner->GetRoom()->GetPathManager();
   //register the search with the path manager
   tPath.Register(this);
 

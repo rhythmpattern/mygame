@@ -14,7 +14,7 @@ Character* Projectile::GetClosestIntersectingBot(Vector2D    From,
   //iterate through all entities checking against the line segment FromTo
   std::vector<Character*>::const_iterator curBot;
   //Creating new variable here is critical to avoid Segmentation Faults! Straight m_pWorld->GetAllBots() leads to faulty memory.
-  const std::vector<Character* > allbots = CharManager::Instance()->GetAllChars();
+  const std::vector<Character* > allbots = m_pRoom->GetCharManager()->GetAllChars();
  
   for (curBot =  allbots.begin();
        curBot != allbots.end();
@@ -55,8 +55,8 @@ std::vector<Character*> Projectile::GetListOfIntersectingBots(Vector2D From,
 
   //iterate through all entities checking against the line segment FromTo
   std::vector<Character*>::const_iterator curBot;
-  for (curBot =  CharManager::Instance()->GetAllChars().begin();
-       curBot != CharManager::Instance()->GetAllChars().end();
+  for (curBot =  m_pRoom->GetCharManager()->GetAllChars().begin();
+       curBot != m_pRoom->GetCharManager()->GetAllChars().end();
        ++curBot)
   {
     if ((*curBot != NULL))

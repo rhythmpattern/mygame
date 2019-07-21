@@ -23,7 +23,7 @@ class CharManager
     return pInstance;
   }
   CharManager();
- //CharManager(Room* pRoom);
+ CharManager(Room* pRoom);
   ~CharManager();
   void Clear();
   void Update();
@@ -33,7 +33,7 @@ class CharManager
   const std::vector<Character*> GetAllChars()const{ return m_Chars;}
  private:
   static CharManager* pInstance;
-  //Room* m_pRoom;
+  Room* m_pRoom;
   std::vector<Character*> m_Chars;
   bool AttemptToAddChar(Character* pChar);
 

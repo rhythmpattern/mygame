@@ -59,10 +59,7 @@ void PlayState::render()
 	   pLevel->render();
 	  
         }
-            
-  GraveManager::Instance()->Render();
-  CharManager::Instance()->Render();
-  ProjectileManager::Instance()->Render();  
+
 	//  for(int i = 0; i < TheGame::Instance()->getPlayerLives(); i++)
 	//   {
 	//       TheTextureManager::Instance()->drawFrame("lives", i * 30, 0, 32, 30, 0, 0, TheGame::Instance()->getRenderer(), 0.0, 255);
@@ -78,6 +75,8 @@ bool PlayState::onEnter()
    
   LevelParser* levelParser = new LevelParser();
    pLevel = levelParser->parseLevel(Game::Instance()->getLevelFiles()[Game::Instance()->getCurrentLevel() - 1].c_str());
+   
+  
    // TextureManager::Instance()-> load("assets/background.png", "background", Game::Instance()->getRenderer());
    // TextureManager::Instance()-> load("assets/isaac.png", "isaac", Game::Instance()->getRenderer());
    // TextureManager::Instance()->load("assets/dot.bmp","dot",Game::Instance()->getRenderer());
