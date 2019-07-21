@@ -7,10 +7,11 @@ const std::string PauseState::s_pauseID = "PAUSE";
 
 void PauseState::update()
 {
-  std::cout << "UPDATING\n";
+  
   if (!m_exiting && InputHandler::Instance()->isKeyDown(SDL_SCANCODE_B))
     { m_exiting = true;
       Game::Instance()->getStateMachine()->popState();
+     
     }
 }
 
