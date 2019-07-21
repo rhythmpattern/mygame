@@ -7,6 +7,7 @@ const std::string PauseState::s_pauseID = "PAUSE";
 
 void PauseState::update()
 {
+  std::cout << "UPDATING\n";
   if (!m_exiting && InputHandler::Instance()->isKeyDown(SDL_SCANCODE_B))
     { m_exiting = true;
       Game::Instance()->getStateMachine()->popState();
@@ -25,9 +26,9 @@ void PauseState::render()
 bool PauseState::onEnter()
 {
  
- 
+  
       m_loadingComplete = true;
-      Game::Instance()->TogglePause();  
+      //Game::Instance()->TogglePause();  
     #ifdef debug
     std::cout << "entering PauseState\n";
     #endif
@@ -37,7 +38,7 @@ bool PauseState::onEnter()
 bool PauseState::onExit()
 {
     m_exiting = true;
-    
+    Game::Instance()->TogglePause();
   
     std::cout << "exiting PauseState\n";
     return true;

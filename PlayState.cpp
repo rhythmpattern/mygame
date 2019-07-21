@@ -28,6 +28,7 @@ void PlayState::update()
 	  {
 	    m_exiting = true; 
 	    Game::Instance()->getStateMachine()->pushState(new PauseState());
+	    
 	  }
        
 //        if(TheInputHandler::Instance()->getButtonState(0, 8))
@@ -72,6 +73,7 @@ void PlayState::render()
 bool PlayState::onEnter()
 {
   //Game::Instance()->setPlayerLives(3);
+  if (!m_loadingComplete) {
    
   LevelParser* levelParser = new LevelParser();
    pLevel = levelParser->parseLevel(Game::Instance()->getLevelFiles()[Game::Instance()->getCurrentLevel() - 1].c_str());
@@ -86,9 +88,10 @@ bool PlayState::onEnter()
   //  TheTextureManager::Instance()->load("assets/lives.png", "lives", TheGame::Instance()->getRenderer());
 
       m_loadingComplete = true;
-     
+  }
     if(pLevel != 0)
     {
+      
         m_loadingComplete = true;
     }
     #ifdef debug
@@ -101,7 +104,7 @@ bool PlayState::onExit()
 {
     m_exiting = true;
     
-    //TheInputHandler::Instance()->reset();
+    InputHandler::Instance()->reset();
     //TheBulletHandler::Instance()->clearBullets();
     
     std::cout << "exiting PlayState\n";

@@ -54,7 +54,7 @@ bool Room::LoadMap(const std::string& filename)
     #ifdef LOG
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    m_pCharManager->AddChars(2);
+    m_pCharManager->AddChars(6);
     return true;
   }
   
