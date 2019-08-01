@@ -16,6 +16,7 @@ bool Room::init(const std::string mapName)
     m_CharManager->AddChar(m_pPlayer);
     EntityMgr->RegisterEntity(m_pPlayer);
   */
+  return true;
 }
 
 Room::Room() {m_pCharManager = new CharManager(this); m_pMap = NULL; m_pPathManager = NULL;}
