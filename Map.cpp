@@ -12,6 +12,7 @@
 #include "UserOptions.h"
 #include <stdio.h>
 #include "Scriptor.h"
+#include <android/log.h>
 
 #define Debug
 
@@ -101,7 +102,7 @@ void Map::Clear()
 
 //----------------------------- AddWall ---------------------------------------
 //-----------------------------------------------------------------------------
-void Map::AddWall(std::ifstream& in)
+void Map::AddWall(std::istringstream& in)
 {
   m_Walls.push_back(new Wall2D(in));
 }
@@ -117,7 +118,7 @@ Wall2D* Map::AddWall(Vector2D from, Vector2D to)
 
 //--------------------------- AddDoor -----------------------------------------
 //-----------------------------------------------------------------------------
-void Map::AddDoor(std::ifstream& in)
+void Map::AddDoor(std::istringstream& in)
 {
   Door* pDoor = new Door(this, in);
 
@@ -130,7 +131,7 @@ void Map::AddDoor(std::ifstream& in)
 
 //--------------------------- AddDoorTrigger ----------------------------------
 //-----------------------------------------------------------------------------
-void Map::AddDoorTrigger(std::ifstream& in)
+void Map::AddDoorTrigger(std::istringstream& in)
 {
 
   #ifdef Debug
@@ -148,7 +149,7 @@ void Map::AddDoorTrigger(std::ifstream& in)
 
 //---------------------------- AddSpawnPoint ----------------------------------
 //-----------------------------------------------------------------------------
-void Map::AddSpawnPoint(std::ifstream& in)
+void Map::AddSpawnPoint(std::istringstream& in)
 {
   double x, y, dummy;
 
@@ -161,7 +162,7 @@ void Map::AddSpawnPoint(std::ifstream& in)
 
 //----------------------- AddHealth__Giver ----------------------------------
 //-----------------------------------------------------------------------------
-void Map::AddHealth_Giver(std::ifstream& in)
+void Map::AddHealth_Giver(std::istringstream& in)
 {
   Trigger_HealthGiver* hg = new Trigger_HealthGiver(in);
 
@@ -178,7 +179,7 @@ void Map::AddHealth_Giver(std::ifstream& in)
 
 //----------------------- AddWeapon__Giver ----------------------------------
 //-----------------------------------------------------------------------------
-void Map::AddWeapon_Giver(int type_of_weapon, std::ifstream& in)
+void Map::AddWeapon_Giver(int type_of_weapon, std::istringstream& in)
 {
   Trigger_WeaponGiver* wg = new Trigger_WeaponGiver(in);
 
@@ -202,16 +203,20 @@ bool Map::LoadMap(const std::string& filename)
 #ifdef Debug
   std::cout << "LoadMap called"<<endl;
   #endif
-std::ifstream in(filename.c_str());
+std::istringstream in(filename.c_str());
+
+
+ 
 if (!in)
   {
-    throw std::runtime_error("Invalid Map filename");
+     __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "LOADMAPERROR");
+    //throw std::runtime_error("Invalid Map filename");
     return false;
   }
 Clear();
  
 Entity::ResetNextValidID();
-
+ 
 m_pNavGraph = new NavGraph(false);
 
 m_pNavGraph->Load(in);
@@ -219,7 +224,7 @@ m_pNavGraph->Load(in);
  m_dCellSpaceNeighborhoodRange = CalculateAverageGraphEdgeLength(*m_pNavGraph) + 1;
 //load in the map size and adjust the client window accordingly
   in >> m_iSizeX >> m_iSizeY;
-  
+ 
 //partition the graph nodes
   PartitionNavGraph();
 
@@ -228,7 +233,7 @@ m_pNavGraph->Load(in);
   {
     //get type of next map object
     int EntityType;
-
+   
     in >> EntityType;
 
     //create the object
@@ -236,7 +241,7 @@ m_pNavGraph->Load(in);
     {
     case type_wall:
 
-        AddWall(in); break;
+       AddWall(in); break;
 
     case type_sliding_door:
 
@@ -248,14 +253,14 @@ m_pNavGraph->Load(in);
 
    case type_spawn_point:
 
-       AddSpawnPoint(in); break;
+     AddSpawnPoint(in); break;
 
    case type_health:
 
      AddHealth_Giver(in); break;
 
     default:
- throw std::runtime_error("<Map::Load>: Attempting to load undefined object");
+      //throw std::runtime_error("<Map::Load>: Attempting to load undefined object");
 break;
      
 
@@ -268,6 +273,7 @@ break;
 
    //calculate the cost lookup table
   m_PathCosts = CreateAllPairsCostsTable(*m_pNavGraph);
+  
  //g_screenLog->log(LL_INFO, "AFTER COSTS TABLE");
 return true;
 }

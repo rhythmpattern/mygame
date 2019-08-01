@@ -70,12 +70,12 @@ class Map {
 
   
     //stream constructors for loading from a file
-  void AddWall(std::ifstream& in);
-  void AddSpawnPoint(std::ifstream& in);
-void AddWeapon_Giver(int type_of_weapon, std::ifstream& in);
-  void AddHealth_Giver(std::ifstream& in);
-  void AddDoor(std::ifstream& in);
-  void AddDoorTrigger(std::ifstream& in);
+  void AddWall(std::istringstream& in);
+  void AddSpawnPoint(std::istringstream& in);
+void AddWeapon_Giver(int type_of_weapon, std::istringstream& in);
+  void AddHealth_Giver(std::istringstream& in);
+  void AddDoor(std::istringstream& in);
+  void AddDoorTrigger(std::istringstream& in);
 
   void Clear();
 

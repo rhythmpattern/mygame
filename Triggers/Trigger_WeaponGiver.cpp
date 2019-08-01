@@ -8,7 +8,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-Trigger_WeaponGiver::Trigger_WeaponGiver(std::ifstream& datafile):
+Trigger_WeaponGiver::Trigger_WeaponGiver(std::istringstream& datafile):
       
           Trigger_Respawning<Character>(GetValueFromStream<int>(datafile))
 {
@@ -45,7 +45,7 @@ void Trigger_WeaponGiver::Try(Character* pBot)
 
 
 
-void Trigger_WeaponGiver::Read(std::ifstream& in)
+void Trigger_WeaponGiver::Read(std::istringstream& in)
 {
   double x, y, r;
   int GraphNodeIndex;

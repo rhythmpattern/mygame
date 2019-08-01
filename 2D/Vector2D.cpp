@@ -9,7 +9,7 @@ std::ostream& operator<<(std::ostream& os, const Vector2D& rhs)
 }
 
   
-std::ifstream& operator>>(std::ifstream& is, Vector2D& lhs)
+std::istringstream& operator>>(std::istringstream& is, Vector2D& lhs)
 {
   is >> lhs.x >> lhs.y;
 

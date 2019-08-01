@@ -67,7 +67,7 @@ protected:
  
 public:
   
-  Door(Map* pMap, std::ifstream& is);
+  Door(Map* pMap, std::istringstream& is);
   ~Door();
 
   void load(const LoadParams* pParams){}
@@ -75,7 +75,7 @@ public:
   //the usual suspects
   void Update();
   bool HandleMessage(const Telegram& msg);
-  void Read(std::ifstream&  is);
+  void Read(std::istringstream&  is);
   void Write(std::ostream& os);
 
   //adds the ID of a switch

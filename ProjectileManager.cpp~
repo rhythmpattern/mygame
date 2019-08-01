@@ -1,3 +1,0 @@
-#include "ProjectileManager.h"
-
-ProjectileManager* ProjectileManager::pInstance = 0;

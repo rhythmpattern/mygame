@@ -43,7 +43,7 @@ inline std::string btos(bool b)
 //  grabs a value of the specified type from an input stream
 //-----------------------------------------------------------------------------
 template <typename T>
-inline T GetValueFromStream(std::ifstream& stream)
+inline T GetValueFromStream(std::istringstream& stream)
 {
   T val;
 

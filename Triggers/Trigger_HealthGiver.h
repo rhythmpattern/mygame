@@ -27,7 +27,7 @@ private:
   
 public:
 
-  Trigger_HealthGiver(std::ifstream& datafile);
+  Trigger_HealthGiver(std::istringstream& datafile);
 
   //if triggered, the bot's health will be incremented
   void Try(Character* pBot);
@@ -35,7 +35,7 @@ public:
   //draws a box with a red cross at the trigger's location
   void Render();
 
-  void Read (std::ifstream& is);
+  void Read (std::istringstream& is);
 };
 
 

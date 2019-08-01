@@ -24,6 +24,7 @@
 #include "ProjectileManager.h"
 #include "GraveManager.h"
 #include "CharManager.h"
+#include <android/log.h>
 
 //uncomment to write object creation/deletion to debug console
 #define  LOG
@@ -41,7 +42,7 @@ Game::Game():m_pSelectedBot(NULL),
   GameObjectFactory::Instance()->registerType("Character" , new CharacterCreator());
   
  
-   
+    
    
 }
 
@@ -59,10 +60,10 @@ Game::~Game()
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
 
  
-    m_levelFiles.push_back("assets/DM1.tmx");
+    m_levelFiles.push_back("DM1.tmx");
    m_currentLevel = 1;
 
-    
+   
  
   
  int flags = 0;

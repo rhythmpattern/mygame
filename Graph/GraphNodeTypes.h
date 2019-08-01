@@ -28,7 +28,7 @@ public:
   
   GraphNode():m_iIndex(invalid_node_index){}
   GraphNode(int idx):m_iIndex(idx){}
-  GraphNode(std::ifstream& stream){char buffer[50]; stream >> buffer >> m_iIndex;}
+  GraphNode(std::istringstream& stream){char buffer[50]; stream >> buffer >> m_iIndex;}
 
   virtual ~GraphNode(){}
 
@@ -82,7 +82,7 @@ public:
   {}
 
   //stream constructor
-  NavGraphNode(std::ifstream& stream):m_ExtraInfo(extra_info())
+  NavGraphNode(std::istringstream& stream):m_ExtraInfo(extra_info())
   {
     char buffer[50];
     stream >> buffer >> m_iIndex >> buffer >> m_vPosition.x >> buffer >> m_vPosition.y;

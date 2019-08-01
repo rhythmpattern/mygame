@@ -20,7 +20,7 @@ class Room
   void Render();
   void Clear();
   bool LoadMap(const std::string& filename);
-  bool init(const std::string sMap);
+  bool init();
   void AddChar(Character* pChar);
   void AddChars(unsigned int NumCharsToAdd);
   Map* GetMap() { return m_pMap; }

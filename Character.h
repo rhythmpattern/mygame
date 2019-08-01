@@ -82,7 +82,7 @@ class Character : public MovingEntity{
 		void Update();
 	     	bool HandleMessage(const Telegram& msg);
 		void Write(std::ostream& os)const{}
-		void Read(std::ifstream& is) {}
+		void Read(std::istringstream& is) {}
 		bool RotateFacingTowardPosition(Vector2D target);
 		int Health()const{return m_iHealth;}
 		int MaxHealth(unsigned int val);

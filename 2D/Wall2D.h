@@ -3,6 +3,7 @@
 
 #include "Vector2D.h"
 #include <fstream>
+#include <android/log.h>
 
 class Wall2D {
 
@@ -31,7 +32,7 @@ public:
   Wall2D(Vector2D A, Vector2D B, Vector2D N):m_vA(A), m_vB(B), m_vN(N)
   { }
 
-  Wall2D(std::ifstream& in){Read(in);}
+  Wall2D(std::istringstream& in){Read(in);}
 
 Vector2D From()const  {return m_vA;}
   void     SetFrom(Vector2D v){m_vA = v; CalculateNormal();}
@@ -53,11 +54,12 @@ Vector2D From()const  {return m_vA;}
     return os;
   }
 
-  void Read(std::ifstream& in)
+  void Read(std::istringstream& in)
   {
     double x,y;
-
+   
     in >> x >> y;
+   
     SetFrom(Vector2D(x,y));
 
     in >> x >> y;

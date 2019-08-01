@@ -7,30 +7,37 @@
 #include "TileLayer.h"
 #include "GameObjectFactory.h"
 #include "base64.h"
-#include "zlib.h"
+#include <zlib.h>
 #include "Map.h"
+#include "parser.h"
+#include <android/log.h>
 
 Level* LevelParser::parseLevel(const char *levelFile)
 {
+  
   //Create parameters class to send all parameters from data file paragraph into any desired class when creating.
   //New plans and comments here.
   
+   Parser* p = new Parser();
+    char* file_contents = NULL;
+    p->read_text(levelFile , &file_contents);
+   
     // create a tinyXML document and load the map xml
     TiXmlDocument levelDocument;
-    levelDocument.LoadFile(levelFile);
-    
+    levelDocument.Parse(file_contents);
     // create the level object
     Level* pLevel = new Level();
-    
+   
      
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
     TiXmlElement* pProperties = pRoot->FirstChildElement();
-
+   
+   
      std::cout << "Loading level:\n" << "Version: " << pRoot->Attribute("version") << "\n";
     std::cout << "Width:" << pRoot->Attribute("width") << " - Height:" << pRoot->Attribute("height") << "\n";
     std::cout << "Tile Width:" << pRoot->Attribute("tilewidth") << " - Tile Height:" << pRoot->Attribute("tileheight") << "\n";
-
+   
     pRoot->Attribute("tilewidth", &m_tileSize);
     pRoot->Attribute("width", &m_width);
     pRoot->Attribute("height", &m_height);
@@ -41,12 +48,13 @@ Level* LevelParser::parseLevel(const char *levelFile)
 	if(e->Value() == std::string("property"))
 	  {
 	    parseTextures(e);
+	    
 	  }
           
       }
 
 
-     // time to parse tilesets
+       // time to parse tilesets
      for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
        {
 	 if(e->Value() == std::string("tileset"))
@@ -71,11 +79,14 @@ Level* LevelParser::parseLevel(const char *levelFile)
             }
 
 	}
-      
+     
+     
     Room* pRoom = new Room();
-    pRoom->init("assets/test.map");
-    pLevel->getRooms()->push_back(pRoom);
    
+     pRoom->init();
+    
+    pLevel->getRooms()->push_back(pRoom); 
+    
     return pLevel;
 }
 
@@ -88,13 +99,13 @@ void LevelParser::parseTextures(TiXmlElement* pTextureRoot)
 
 void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>* pTilesets)
 {
-	std::string assetsTag = "assets/";
+	std::string assetsTag = "";
         
     // first add the tileset to texture manager
     std::cout << "adding texture " << pTilesetRoot->FirstChildElement()->Attribute("source") << " with ID " << pTilesetRoot->Attribute("name") << std::endl;
    
 	TextureManager::Instance()->load(assetsTag.append(pTilesetRoot->FirstChildElement()->Attribute("source")), pTilesetRoot->Attribute("name"), Game::Instance()->getRenderer());
-    
+	__android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "%s",pTilesetRoot->FirstChildElement()->Attribute("width")); 
 	
     // create a tileset object
     Tileset tileset;
@@ -108,9 +119,9 @@ void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>
     pTilesetRoot->Attribute("spacing", &tileset.spacing);
     pTilesetRoot->Attribute("margin", &tileset.margin);
     tileset.name = pTilesetRoot->Attribute("name");
-    
+    __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "%s",pTilesetRoot->FirstChildElement()->Attribute("width")); 
     tileset.numColumns = tileset.width / (tileset.tileWidth + tileset.spacing);
-    
+  
     pTilesets->push_back(tileset);
 }
 

@@ -2,20 +2,33 @@
 #include "CharManager.h"
 #include "Scriptor.h"
 #include "2D/WallIntersectionTests.h"
+#include "parser.h"
+#include <android/log.h>
+#include <string>
+#include <iostream>
+#include <android/log.h>
 
-bool Room::init(const std::string mapName)
+#define LOG
+
+bool Room::init()
 {
-  LoadMap(mapName);
+ //load in the default map
+  Parser* p = new Parser();
+   char* file_contents;
+   p->read_text("DM1.map",&file_contents);
+
+  LoadMap(file_contents);
  
   
-  /*
+  
  
-      m_pPlayer = new Player(this, Vector2D(0,0));
+  // m_pPlayer = new Player(this, Vector2D(0,0));
     
    
-    m_CharManager->AddChar(m_pPlayer);
-    EntityMgr->RegisterEntity(m_pPlayer);
-  */
+  // m_CharManager->AddChar(m_pPlayer);
+  //EntityMgr->RegisterEntity(m_pPlayer);
+  
+  return true;
 }
 
 Room::Room() {m_pCharManager = new CharManager(this); m_pMap = NULL; m_pPathManager = NULL;}
@@ -34,7 +47,7 @@ Room::~Room()
 
 bool Room::LoadMap(const std::string& filename)
 {
- 
+  
    //clear any current chars and projectiles
    Clear();
   
@@ -45,16 +58,21 @@ bool Room::LoadMap(const std::string& filename)
   //in with the new
   m_pMap = new Map();
    m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
+   
    GraveManager::Instance()->load();
+   
    
  
   //load the new map data
   if (m_pMap->LoadMap(filename))
   {
+   
     #ifdef LOG
+     __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "LOAD MAP CALLED SUCCESSFULLY");
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    m_pCharManager->AddChars(6);
+     m_pCharManager->AddChars(6);
+     
     return true;
   }
   
@@ -68,7 +86,7 @@ bool Room::LoadMap(const std::string& filename)
 void Room::Render()
 {
               
-  GraveManager::Instance()->Render();
+    GraveManager::Instance()->Render();
   m_pCharManager->Render();
   ProjectileManager::Instance()->Render();  
 }
@@ -85,9 +103,9 @@ void Room::Update()
   std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
   for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
   {
-    (*curDoor)->Update();
+     (*curDoor)->Update();
   }
- 
+  
   
 }
 

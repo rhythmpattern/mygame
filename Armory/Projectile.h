@@ -102,7 +102,7 @@ public:
   //unimportant for this class unless you want to implement a full state 
   //save/restore (which can be useful for debugging purposes)
   void Write(std::ostream&  os)const{}
-  void Read (std::ifstream& is){}
+  void Read (std::istringstream& is){}
   void load(const LoadParams* pParams){}
   //must be implemented
   virtual void Update() = 0;

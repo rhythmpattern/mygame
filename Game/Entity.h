@@ -89,7 +89,7 @@ public:
   
   //entities should be able to read/write their data to a stream
   virtual void Write(std::ostream&  os)const{}
-  virtual void Read (std::ifstream& is)const{}
+  virtual void Read (std::istringstream& is)const{}
 
   //use this to grab the next valid ID
   static int   GetNextValidID(){return m_iNextValidID;}

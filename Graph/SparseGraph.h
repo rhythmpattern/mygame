@@ -15,6 +15,7 @@
 #include <cassert>
 #include <string>
 #include <fstream>
+#include <android/log.h>
 
 #include "../2D/Vector2D.h"
 #include "../misc/utils.h" 
@@ -151,7 +152,7 @@ public:
   bool  Save(std::ofstream& stream)const;
 
   bool  Load(const char* FileName);
-  bool  Load(std::ifstream& stream);
+  bool  Load(std::istringstream& stream);
 
   //clears the graph ready for new node insertions
   void Clear(){m_iNextNodeIndex = 0; m_Nodes.clear(); m_Edges.clear();}
@@ -764,10 +765,11 @@ template <class node_type, class edge_type>
 bool SparseGraph<node_type, edge_type>::Load(const char* FileName)
 {
   //open file and make sure it's valid
-  std::ifstream in(FileName);
+  std::istringstream in(FileName);
 
   if (!in)
   {
+     __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "BAD FILENAME TO NAVGRAPH/SPARSEGRAPH");
    // throw std::runtime_error("Cannot open file: " + std::string(FileName));
     return false;
   }
@@ -778,7 +780,7 @@ bool SparseGraph<node_type, edge_type>::Load(const char* FileName)
 //------------------------------- Load ----------------------------------------
 //-----------------------------------------------------------------------------
 template <class node_type, class edge_type>
-bool SparseGraph<node_type, edge_type>::Load(std::ifstream& stream)
+bool SparseGraph<node_type, edge_type>::Load(std::istringstream& stream)
 {
   Clear();
   //get the number of nodes and read them in

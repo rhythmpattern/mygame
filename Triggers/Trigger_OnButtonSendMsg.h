@@ -30,7 +30,7 @@ private:
 
 public:
 
-  Trigger_OnButtonSendMsg(std::ifstream& datafile):
+  Trigger_OnButtonSendMsg(std::istringstream& datafile):
       
       Trigger<entity_type>(GetValueFromStream<int>(datafile))
   {
@@ -45,7 +45,7 @@ public:
   void Render();
 
   void Write(std::ostream&  os)const{}
-  void Read (std::ifstream& is);
+  void Read (std::istringstream& is);
 
   bool HandleMessage(const Telegram& msg);
 };
@@ -80,7 +80,7 @@ void Trigger_OnButtonSendMsg<entity_type>::Update()
 
 
 template <class entity_type>
-void Trigger_OnButtonSendMsg<entity_type>::Read(std::ifstream& is)
+void Trigger_OnButtonSendMsg<entity_type>::Read(std::istringstream& is)
 {
   //grab the id of the entity it messages
   is >> m_iReceiver;

@@ -46,7 +46,7 @@ public:
   {}
 
   //stream constructor
-  GraphEdge(std::ifstream& stream)
+  GraphEdge(std::istringstream& stream)
   {
     char buffer[50];
     stream  >> buffer >> m_iFrom >> buffer >> m_iTo >> buffer >> m_dCost;
@@ -129,7 +129,7 @@ public:
 
 
   //stream constructor
-  NavGraphEdge(std::ifstream& stream)
+  NavGraphEdge(std::istringstream& stream)
   {
     char buffer[50];
     stream  >> buffer >> m_iFrom >> buffer >> m_iTo >> buffer >> m_dCost;

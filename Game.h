@@ -12,8 +12,8 @@
 #include "Character.h"
 #include "Navigation/PathManager.h"
 #include "Game/EntityFunctionTemplates.h"
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
 #include "GameStateMachine.h"
 #include "GameState.h"
 #include "PlayState.h"

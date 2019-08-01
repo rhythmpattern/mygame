@@ -10,7 +10,7 @@
 //---------------------------- ctor -------------------------------------------
 //-----------------------------------------------------------------------------
 Door::Door(Map* pMap,
-                       std::ifstream& is):
+                       std::istringstream& is):
 
                                   Entity(GetValueFromStream<int>(is)),
                                   m_Status(closed),
@@ -138,7 +138,7 @@ void Door::AddSwitch(unsigned int id)
 
 //----------------------------- Read -----------------------------------------
 //-----------------------------------------------------------------------------
-void Door::Read(std::ifstream&  os)
+void Door::Read(std::istringstream&  os)
 {
   double x, y;
 

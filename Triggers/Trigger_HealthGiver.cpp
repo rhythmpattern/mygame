@@ -6,7 +6,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////
-Trigger_HealthGiver::Trigger_HealthGiver(std::ifstream& datafile):
+Trigger_HealthGiver::Trigger_HealthGiver(std::istringstream& datafile):
       
      Trigger_Respawning<Character>(GetValueFromStream<int>(datafile))
 {
@@ -27,7 +27,7 @@ void Trigger_HealthGiver::Try(Character* pBot)
 
 
 
-void Trigger_HealthGiver::Read(std::ifstream& in)
+void Trigger_HealthGiver::Read(std::istringstream& in)
 {
   double x, y, r;
   int GraphNodeIndex;

@@ -1,13 +1,17 @@
 #ifndef SCRIPTOR_H
 #define SCRIPTOR_H
+#include "parser.h"
 
 #include <string>
 #include "tinyxml.h"
+#include "parser.h"
+#include <android/log.h>
 
 class Scriptor
 {
  public:
-  Scriptor(){file="assets/params.xml"; doc.LoadFile(file.c_str()); pRoot = doc.RootElement();}
+  Scriptor(){p = new Parser();char* file_contents = NULL; p->read_text("params.xml" , &file_contents); doc.Parse(file_contents); pRoot = doc.RootElement();
+   }
   ~Scriptor(){}
 
 
@@ -30,6 +34,7 @@ class Scriptor
  
  private:
 static Scriptor* s_pInstance;
+  Parser* p;
  std::string file;
  TiXmlDocument doc;
  TiXmlElement* pRoot;
