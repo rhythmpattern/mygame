@@ -2,20 +2,15 @@
 #include "CharManager.h"
 #include "Scriptor.h"
 #include "2D/WallIntersectionTests.h"
+#include "Player.h"
 
 bool Room::init(const std::string mapName)
 {
   LoadMap(mapName);
- 
-  
-  /*
- 
-      m_pPlayer = new Player(this, Vector2D(0,0));
-    
-   
-    m_CharManager->AddChar(m_pPlayer);
+  Player* m_pPlayer = new Player(this,Vector2D(150,150));
+   m_pCharManager->AddChar(m_pPlayer);
     EntityMgr->RegisterEntity(m_pPlayer);
-  */
+  
   return true;
 }
 
