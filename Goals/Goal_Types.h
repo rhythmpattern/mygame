@@ -28,7 +28,8 @@ enum
   goal_fly,
   goal_flywander,
   goal_flyexplore,
-  goal_zombie
+  goal_zombie,
+  goal_2dmove
   
 };
 
