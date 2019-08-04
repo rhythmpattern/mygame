@@ -1,0 +1,13 @@
+#ifndef LEVEL_CREATOR_H
+#define LEVEL_CREATOR_H
+
+class LevelCreator
+{
+  LevelCreator();
+    ~LevelCreator();
+
+ public:
+    Level* Create();
+};
+
+#endif

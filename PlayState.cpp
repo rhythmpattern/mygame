@@ -10,7 +10,9 @@
 #include "GraveManager.h"
 #include "ProjectileManager.h"
 #include "CharManager.h"
+#include "LevelCreator.h"
 #define debug
+
 
 const std::string PlayState::s_playID = "PLAY";
 
@@ -75,8 +77,8 @@ bool PlayState::onEnter()
   //Game::Instance()->setPlayerLives(3);
   if (!m_loadingComplete) {
    
-  LevelParser* levelParser = new LevelParser();
-   pLevel = levelParser->parseLevel(Game::Instance()->getLevelFiles()[Game::Instance()->getCurrentLevel() - 1].c_str());
+   
+    pLevel = LevelCreator::Instance()->Create();
    
   
    // TextureManager::Instance()-> load("assets/background.png", "background", Game::Instance()->getRenderer());

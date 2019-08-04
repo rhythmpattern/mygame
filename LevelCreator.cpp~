@@ -1,0 +1,6 @@
+#include "LevelCreator.h"
+
+Level* Create()
+{
+  
+}
