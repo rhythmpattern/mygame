@@ -1,26 +1,19 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <vector>
-#include <string>
-#include <list>
 
-#include "ObjectEnumerations.h"
+
+
 #include "misc/utils.h"
 #include "Navigation/PathManager.h"
 #include "Game/EntityFunctionTemplates.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include "GameStateMachine.h"
-#include "GameObjectFactory.h"
-#include "PlayState.h"
 #include "2D/Vector2D.h"
-
+#include "GameStateMachine.h"
 
 class Entity;
-class Projectile;
 class Map;
-class GraveMarkers;
 class Character;
 class Player;
 class Room;

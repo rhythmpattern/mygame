@@ -1,33 +1,37 @@
 #include "Game.h"
 #include "ObjectEnumerations.h"
-#include "SteeringBehaviors.h"
 #include "Navigation/PathPlanner.h"
 #include "Game/EntityManager.h"
 #include "2D/WallIntersectionTests.h"
-#include "Map.h"
-#include "Door.h"
 #include "UserOptions.h"
-#include "SensoryMemory.h"
-#include "WeaponSystem.h"
-#include "Messaging/MessageDispatcher.h"
 #include "Messages.h"
 #include "GraveMarkers.h"
 #include "Scriptor.h"
-#include "Armory/Projectile.h"
-#include "Armory/Projectile_Shot.h"
-#include "Armory/Shooter.h"
-#include "Goals/Goal_Think.h"
 #include "Goals/Goal_Types.h"
-#include "Player.h"
+#include "GameObjectFactory.h"
 #include "InputHandler.h"
-#include "Zombie.h"
-#include "ProjectileManager.h"
-#include "GraveManager.h"
 #include "CharManager.h"
-
+#include "PlayState.h"
+#include <vector>
+#include <string>
+#include <list>
 //uncomment to write object creation/deletion to debug console
 #define  LOG
 
+class Steering;
+class Map;
+class Door;
+class SensoryMemory;
+class WeaponSystem;
+class MessageDispatcher;
+class Projectile;
+class Projectile_Shot;
+class Shooter;
+class Goal_Think;
+class Player;
+class Character;
+class Zombie;
+class ProjectileManager;
 
 Game* Game::s_pInstance = 0;
 //----------------------------- ctor ------------------------------------------
