@@ -5,24 +5,25 @@
 #include <string>
 #include <list>
 
-#include "Graph/SparseGraph.h"
 #include "ObjectEnumerations.h"
-#include "2D/Wall2D.h"
 #include "misc/utils.h"
-#include "Character.h"
 #include "Navigation/PathManager.h"
 #include "Game/EntityFunctionTemplates.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include "GameStateMachine.h"
-#include "GameState.h"
-#include "PlayState.h"
 #include "GameObjectFactory.h"
+#include "PlayState.h"
+#include "2D/Vector2D.h"
+
 
 class Entity;
 class Projectile;
 class Map;
 class GraveMarkers;
+class Character;
+class Player;
+class Room;
 
 class Game {
 
