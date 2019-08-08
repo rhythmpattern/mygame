@@ -27,9 +27,9 @@
  <wanderweight value="1" />
  <seekweight value="1" />
  <arriveweight value="1" />
- <viewdistance value="15" />
- <walldetectionfeelerlength value="25" />
- <waypointseekdist value="5" />
+ <viewdistance value="200" />
+ <walldetectionfeelerlength value="10" />
+ <waypointseekdist value="10" />
  <defaultgivertriggerrange value="10" />
  <healthrespawndelay value="10" />
  <weaponrespawndelay value="15" />
@@ -45,7 +45,7 @@
  <boltscale value="1" />
  <boltdamage value="1" />
  <gravelifetime value="5" />
- <maxsearchcyclesperupdatestep value="100" />
+ <maxsearchcyclesperupdatestep value="10" />
  <numcellsx value="10" />
  <numcellsy value="10" />
 </params>

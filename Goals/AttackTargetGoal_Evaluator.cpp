@@ -34,7 +34,7 @@ double AttackTargetGoal_Evaluator::CalculateDesirability(Character* pBot)
 //----------------------------- SetGoal ---------------------------------------
 //-----------------------------------------------------------------------------
 void AttackTargetGoal_Evaluator::SetGoal(Character* pBot)
-{
+{ 
   pBot->GetBrain()->AddGoal_AttackTarget(); 
 }
 

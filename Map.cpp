@@ -219,7 +219,6 @@ m_pNavGraph->Load(in);
  m_dCellSpaceNeighborhoodRange = CalculateAverageGraphEdgeLength(*m_pNavGraph) + 1;
 //load in the map size and adjust the client window accordingly
   in >> m_iSizeX >> m_iSizeY;
-  
 //partition the graph nodes
   PartitionNavGraph();
 
@@ -348,7 +347,6 @@ Vector2D Map::GetRandomNodeLocation()const
   {
     pN = NodeItr.next();
   }
-
   return pN->Pos();
 }
 

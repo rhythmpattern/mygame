@@ -3,11 +3,15 @@
 #include "../Game.h"
 #include "../constants.h"
 #include "../2D/WallIntersectionTests.h"
-#include "../Map.h"
+#include "../2D/Vector2D.h"
 #include "../Scriptor.h"
 #include "../Messages.h"
 #include "../Messaging/MessageDispatcher.h"
+#include "../TextureManager.h"
 
+class Map;
+class Walls2D;
+class Room;
 
 //-------------------------- ctor ---------------------------------------------
 //-----------------------------------------------------------------------------

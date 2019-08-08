@@ -1,8 +1,9 @@
+
 #include "Character.h"
+#include "Game.h"
 #include "misc/utils.h"
 #include "2D/Transformations.h"
 #include "2D/Geometry.h"
-#include "Game.h"
 #include "Navigation/PathPlanner.h"
 #include "SteeringBehaviors.h"
 #include "UserOptions.h"
@@ -18,6 +19,7 @@
 #include "Goals/Goal_Think.h"
 #include "Goals/Goal_Think_Zombie.h"
 #include "InputHandler.h"
+
 #define debug
 
 //-------------------------- ctor ---------------------------------------------
@@ -338,7 +340,7 @@ bool Character::isReadyForTriggerUpdate()const
 //-----------------------------------------------------------------------------
 bool Character::HandleMessage(const Telegram& msg)
 {
-    
+      
   std::cout << "Character MESSAGE IS : " <<MessageToString(msg.Msg);
   //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
 
@@ -523,6 +525,7 @@ void Character::FireWeapon(Vector2D pos)
 //-----------------------------------------------------------------------------
 double Character::CalculateTimeToReachPosition(Vector2D pos)const
 {
+  
   return Vec2DDistance(Pos(), pos) / (MaxSpeed() * FrameRate);
 }
 
@@ -531,7 +534,7 @@ double Character::CalculateTimeToReachPosition(Vector2D pos)const
 //  returns true if the bot is close to the given position
 //-----------------------------------------------------------------------------
 bool Character::isAtPosition(Vector2D pos)const
-{
+{ 
   const static double tolerance = 10.0;
   
   return Vec2DDistanceSq(Pos(), pos) < tolerance * tolerance;

@@ -9,9 +9,6 @@
 #include "Goal_Wander.h"
 #include "Goal_Types.h"
 #include "Goal_AttackTarget.h"
-
-
-
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
 //#define debug
@@ -98,7 +95,7 @@ void Goal_Think::Arbitrate()
   for (curDes; curDes != m_Evaluators.end(); ++curDes)
   {
     double desirabilty = (*curDes)->CalculateDesirability(m_pOwner);
-
+   
     if (desirabilty >= best)
     {
       best = desirabilty;

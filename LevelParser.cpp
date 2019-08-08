@@ -21,8 +21,8 @@ Level* LevelParser::parseLevel(const char *levelFile)
     
     // create the level object
     Level* pLevel = new Level();
-    
-     
+    int numChars;
+    std::string mapName ;     
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
     TiXmlElement* pProperties = pRoot->FirstChildElement();
@@ -34,6 +34,8 @@ Level* LevelParser::parseLevel(const char *levelFile)
     pRoot->Attribute("tilewidth", &m_tileSize);
     pRoot->Attribute("width", &m_width);
     pRoot->Attribute("height", &m_height);
+    mapName = pRoot->Attribute("name");
+    pRoot->Attribute("numChars", &numChars);
    
     
      for (TiXmlElement* e = pProperties->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
@@ -73,7 +75,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
 	}
       
     Room* pRoom = new Room();
-    pRoom->init("assets/test.map");
+    pRoom->LoadMap(mapName, numChars);
     pLevel->getRooms()->push_back(pRoom);
    
     return pLevel;

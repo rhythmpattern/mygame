@@ -317,7 +317,7 @@ int PathPlanner::GetClosestNodeToPosition(Vector2D pos)const
       }
     }
   }
-   
+  
   return ClosestNode;
 }
 
@@ -335,7 +335,7 @@ int PathPlanner::GetClosestNodeToPosition(Vector2D pos)const
 bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
 { 
   #ifdef SHOW_NAVINFO
-    debug_con << "------------------------------------------------" << "";
+  std::cout << "------------------------------------------------" << "";
 #endif
   GetReadyForNewSearch();
 
@@ -346,7 +346,7 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
   //be calculated, the bot can go straight to the position by ARRIVING at
   //the current waypoint
   if (m_pOwner->canWalkTo(TargetPos))
-  { 
+    {
     return true;
   }
   
@@ -360,14 +360,14 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
   if (ClosestNodeToBot == no_closest_node_found)
   { 
 #ifdef SHOW_NAVINFO
-    debug_con << "No closest node to bot found!" << "";
+    std::cout << "No closest node to bot found!" << "";
 #endif
 
     return false; 
   }
 
   #ifdef SHOW_NAVINFO
-    debug_con << "Closest node to bot is " << ClosestNodeToBot << "";
+   std::cout << "Closest node to bot is " << ClosestNodeToBot << "";
 #endif
 
   //find the closest visible node to the target position
@@ -380,14 +380,14 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
   if (ClosestNodeToTarget == no_closest_node_found)
   { 
 #ifdef SHOW_NAVINFO
-    debug_con << "No closest node to target (" << ClosestNodeToTarget << ") found!" << "";
+    std::cout << "No closest node to target (" << ClosestNodeToTarget << ") found!" << "";
 #endif
 
     return false; 
   }
 
   #ifdef SHOW_NAVINFO
-    debug_con << "Closest node to target is " << ClosestNodeToTarget << "";
+    std::cout << "Closest node to target is " << ClosestNodeToTarget << "";
 #endif
 
   //create an instance of a the distributed A* search class
@@ -396,7 +396,7 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
   m_pCurrentSearch = new AStar(m_NavGraph,
                                ClosestNodeToBot,
                                ClosestNodeToTarget);
-
+ 
   //and register the search with the path manager
   PathManager<PathPlanner> tPath =(PathManager<PathPlanner>)* m_pOwner->GetRoom()->GetPathManager();
 	tPath.Register(this);
@@ -427,7 +427,7 @@ bool PathPlanner::RequestPathToItem(unsigned int ItemType)
   if (ClosestNodeToBot == no_closest_node_found)
   { 
 #ifdef SHOW_NAVINFO
-    debug_con << "No closest node to bot found!" << "";
+    std::cout << "No closest node to bot found!" << "";
 #endif
 
     return false; 

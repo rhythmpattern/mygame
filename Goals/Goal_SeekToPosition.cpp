@@ -33,8 +33,7 @@ void Goal_SeekToPosition::Activate()
   const double MarginOfError = 1.0;
 
   m_dTimeToReachPos += MarginOfError;
-
-  
+ 
   m_pOwner->GetSteering()->SetTarget(m_vPosition);
 
   m_pOwner->GetSteering()->SeekOn();
@@ -58,10 +57,10 @@ int Goal_SeekToPosition::Process()
   else
   { 
     if (m_pOwner->isAtPosition(m_vPosition))
-    {
+      { 
       m_iStatus = completed;
     }
-  }
+      }
 
   return m_iStatus;
 }
@@ -72,7 +71,7 @@ int Goal_SeekToPosition::Process()
 //  currently active waypoint
 //-----------------------------------------------------------------------------
 bool Goal_SeekToPosition::isStuck()const
-{  
+{
   double TimeTaken = Clock->GetCurrentTime() - m_dStartTime;
 
   if (TimeTaken > m_dTimeToReachPos)

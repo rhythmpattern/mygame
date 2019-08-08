@@ -25,7 +25,7 @@ void Goal_Explore::Activate()
   {
     //grab a random location
     m_CurrentDestination = m_pOwner->GetRoom()->GetMap()->GetRandomNodeLocation();
-
+   
     m_bDestinationIsSet = true;
   }
 
@@ -56,6 +56,7 @@ int Goal_Explore::Process()
 //-----------------------------------------------------------------------------
 bool Goal_Explore::HandleMessage(const Telegram& msg)
 {
+  std::cout << "HANDLING EXPLORE MESSAGE\n"; 
   //first, pass the message down the goal hierarchy
   bool bHandled = ForwardMessageToFrontMostSubgoal(msg);
 
@@ -65,7 +66,7 @@ bool Goal_Explore::HandleMessage(const Telegram& msg)
     switch(msg.Msg)
     {
     case Msg_PathReady:
-
+     
       //clear any existing goals
       RemoveAllSubgoals();
 

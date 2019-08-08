@@ -6,10 +6,7 @@
 
 bool Room::init(const std::string mapName)
 {
-  LoadMap(mapName);
-  Player* m_pPlayer = new Player(this,Vector2D(150,150));
-   m_pCharManager->AddChar(m_pPlayer);
-    EntityMgr->RegisterEntity(m_pPlayer);
+ 
   
   return true;
 }
@@ -28,7 +25,7 @@ Room::~Room()
 }
 
 
-bool Room::LoadMap(const std::string& filename)
+bool Room::LoadMap(const std::string& filename, int numChars)
 {
  
    //clear any current chars and projectiles
@@ -50,7 +47,10 @@ bool Room::LoadMap(const std::string& filename)
     #ifdef LOG
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    m_pCharManager->AddChars(6);
+    m_pCharManager->AddChars(numChars);
+     Player* m_pPlayer = new Player(this,Vector2D(150,150));
+   m_pCharManager->AddChar(m_pPlayer);
+    EntityMgr->RegisterEntity(m_pPlayer);
     return true;
   }
   
@@ -76,6 +76,7 @@ void Room::Update()
   ProjectileManager::Instance()->Update();
   m_pCharManager->Update();
   m_pPathManager->UpdateSearches();
+ 
   m_pMap->UpdateTriggerSystem(m_Chars);
    //update any doors
   std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
