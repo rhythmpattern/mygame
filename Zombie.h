@@ -16,7 +16,9 @@
 #include "Messages.h"
 #include "Messaging/MessageDispatcher.h"
 #include "Goals/Goal_Think_Zombie.h"
-#include "Room.h"
+#include "2D/Vector2D.h"
+
+class Room;
 
 class Zombie : public Character
 {

@@ -341,7 +341,7 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
 
   //make a note of the target position.
   m_vDestinationPos = TargetPos;
-
+ 
   //if the target is walkable from the bot's position a path does not need to
   //be calculated, the bot can go straight to the position by ARRIVING at
   //the current waypoint

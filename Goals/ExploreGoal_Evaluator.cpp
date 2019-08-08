@@ -24,7 +24,7 @@ double ExploreGoal_Evaluator::CalculateDesirability(Character* pBot)
 //----------------------------- SetGoal ---------------------------------------
 //-----------------------------------------------------------------------------
 void ExploreGoal_Evaluator::SetGoal(Character* pBot)
-{
+{ 
   pBot->GetBrain()->AddGoal_Explore();
 }
 

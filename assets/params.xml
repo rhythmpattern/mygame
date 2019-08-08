@@ -27,7 +27,7 @@
  <wanderweight value="1" />
  <seekweight value="1" />
  <arriveweight value="1" />
- <viewdistance value="200" />
+ <viewdistance value="20" />
  <walldetectionfeelerlength value="10" />
  <waypointseekdist value="10" />
  <defaultgivertriggerrange value="10" />

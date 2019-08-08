@@ -25,7 +25,7 @@ void Goal_Explore::Activate()
   {
     //grab a random location
     m_CurrentDestination = m_pOwner->GetRoom()->GetMap()->GetRandomNodeLocation();
-   
+    
     m_bDestinationIsSet = true;
   }
 
@@ -47,7 +47,7 @@ int Goal_Explore::Process()
 
   //process the subgoals
   m_iStatus = ProcessSubgoals();
-
+ 
   return m_iStatus;
 }
 

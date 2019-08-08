@@ -9,6 +9,7 @@
 #include "GameObjectFactory.h"
 #include "ObjectEnumerations.h"
 #include "2D/Vector2D.h"
+#include "ZombieWeaponSystem.h"
 
 class Game;
 class Room;
@@ -20,7 +21,6 @@ class Character;
 class Goal_Think;
 class SensoryMemory;
 class WeaponSystem;
-class ZombieWeaponSystem;
 class Goal_Think_Zombie;
 class Goal_Think;
 class BaseCreator;
