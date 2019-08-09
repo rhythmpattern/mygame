@@ -49,8 +49,8 @@ bool Room::LoadMap(const std::string& filename, int numChars)
     #endif
     m_pCharManager->AddChars(numChars);
      Player* m_pPlayer = new Player(this,Vector2D(150,150));
-   m_pCharManager->AddChar(m_pPlayer);
-    EntityMgr->RegisterEntity(m_pPlayer);
+     m_pCharManager->AddChar(m_pPlayer);
+      EntityMgr->RegisterEntity(m_pPlayer);
     return true;
   }
   

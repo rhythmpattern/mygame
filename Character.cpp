@@ -534,7 +534,7 @@ double Character::CalculateTimeToReachPosition(Vector2D pos)const
 //  returns true if the bot is close to the given position
 //-----------------------------------------------------------------------------
 bool Character::isAtPosition(Vector2D pos)const
-{ 
+{  
   const static double tolerance = 10.0;
   
   return Vec2DDistanceSq(Pos(), pos) < tolerance * tolerance;

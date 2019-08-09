@@ -220,7 +220,7 @@ Vector2D Steering::Seek(const Vector2D &target)
  
   Vector2D DesiredVelocity = Vec2DNormalize(target - m_pCharacter->Pos())
                             * m_pCharacter->MaxSpeed();
-
+ 
   return (DesiredVelocity - m_pCharacter->Velocity());
 }
 
