@@ -12,7 +12,8 @@
 #include "UserOptions.h"
 #include <stdio.h>
 #include "Scriptor.h"
-
+#include <SDL2/SDL.h>
+#include "Game.h"
 #define Debug
 
 //----------------------------- ctor ------------------------------------------
@@ -53,7 +54,15 @@ void Map::update() {}
 ///
 //---------------------------------------------------------------
 
-void Map::render(){}
+void Map::render(){
+   std::vector<Wall2D*>::iterator curWall = m_Walls.begin();
+  for (curWall; curWall != m_Walls.end(); ++curWall)
+  {SDL_SetRenderDrawColor(Game::Instance()->getRenderer(), 255, 255, 255, SDL_ALPHA_OPAQUE);
+    SDL_RenderDrawLine(Game::Instance()->getRenderer(), (*curWall)->From().x, (*curWall)->From().y, (*curWall)->To().x, (*curWall)->To().y);
+  }
+
+ 
+}
 
 
 

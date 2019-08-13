@@ -14,6 +14,7 @@
 #include <cassert>
 #include <algorithm>
 #include "TimeSlicedGraphAlgorithms.h"
+#include "PathPlanner.h"
 
 
 template <class path_planner>
@@ -63,12 +64,12 @@ template <class path_planner>
 inline void PathManager<path_planner>::UpdateSearches()
 {
   int NumCyclesRemaining = m_iNumSearchCyclesPerUpdate;
-
+ 
   //iterate through the search requests until either all requests have been
   //fulfilled or there are no search cycles remaining for this update-step.
   typename std::list<path_planner*>::iterator curPath = m_SearchRequests.begin();
   while (NumCyclesRemaining-- && !m_SearchRequests.empty())
-  {
+    {   std::cout << "A NON EMPTY SEARCH REQUESTS RUN!\n";
     //make one search cycle of this path request
     int result = (*curPath)->CycleOnce();
 
@@ -100,12 +101,12 @@ inline void PathManager<path_planner>::UpdateSearches()
 //-----------------------------------------------------------------------------
 template <class path_planner>
 inline void PathManager<path_planner>::Register(path_planner* pPathPlanner)
-{
+{ 
   //make sure the bot does not already have a current search in the queue
   if(std::find(m_SearchRequests.begin(),
                m_SearchRequests.end(),
                pPathPlanner) == m_SearchRequests.end())
-  { 
+    {
     //add to the list
     m_SearchRequests.push_back(pPathPlanner);
   }

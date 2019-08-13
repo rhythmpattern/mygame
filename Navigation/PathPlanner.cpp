@@ -15,7 +15,7 @@
 #include "PathPlanner.h"
 
 
-//#define SHOW_NAVINFO
+#define SHOW_NAVINFO
 #include <cassert>
 class PathPlanner;
 //---------------------------- ctor -------------------------------------------

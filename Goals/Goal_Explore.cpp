@@ -36,6 +36,7 @@ void Goal_Explore::Activate()
   //so for appearances sake it simple ARRIVES at the destination until a path
   //has been found
   AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_CurrentDestination));
+  
 }
 
 //------------------------------ Process -------------------------------------

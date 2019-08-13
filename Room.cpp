@@ -48,9 +48,9 @@ bool Room::LoadMap(const std::string& filename, int numChars)
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
     m_pCharManager->AddChars(numChars);
-     Player* m_pPlayer = new Player(this,Vector2D(150,150));
-     m_pCharManager->AddChar(m_pPlayer);
-      EntityMgr->RegisterEntity(m_pPlayer);
+    // Player* m_pPlayer = new Player(this,Vector2D(150,150));
+    // m_pCharManager->AddChar(m_pPlayer);
+    // EntityMgr->RegisterEntity(m_pPlayer);
     return true;
   }
   
@@ -66,7 +66,8 @@ void Room::Render()
               
   GraveManager::Instance()->Render();
   m_pCharManager->Render();
-  ProjectileManager::Instance()->Render();  
+  ProjectileManager::Instance()->Render();
+  m_pMap->render();
 }
 
 void Room::Update()

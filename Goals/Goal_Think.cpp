@@ -32,6 +32,7 @@ Goal_Think::Goal_Think(Character* pBot):Goal_Composite<Character>(pBot, goal_thi
 
   m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
+  AddGoal_Explore();
 }
 
 //----------------------------- dtor ------------------------------------------
@@ -51,7 +52,7 @@ void Goal_Think::Activate()
 {
   if (!m_pOwner->isPossessed())
   {
-    Arbitrate();
+     Arbitrate();
   }
 
   m_iStatus = active;
