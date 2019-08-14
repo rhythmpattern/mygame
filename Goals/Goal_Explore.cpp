@@ -57,7 +57,7 @@ int Goal_Explore::Process()
 //-----------------------------------------------------------------------------
 bool Goal_Explore::HandleMessage(const Telegram& msg)
 {
-  std::cout << "HANDLING EXPLORE MESSAGE\n"; 
+ 
   //first, pass the message down the goal hierarchy
   bool bHandled = ForwardMessageToFrontMostSubgoal(msg);
 
@@ -71,8 +71,8 @@ bool Goal_Explore::HandleMessage(const Telegram& msg)
       //clear any existing goals
       RemoveAllSubgoals();
 
-      AddSubgoal(new Goal_FollowPath(m_pOwner,
-                                     m_pOwner->GetPathPlanner()->GetPath()));
+       AddSubgoal(new Goal_FollowPath(m_pOwner,
+         m_pOwner->GetPathPlanner()->GetPath()));
 
       return true; //msg handled
 

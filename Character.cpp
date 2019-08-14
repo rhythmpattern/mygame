@@ -20,7 +20,7 @@
 #include "Goals/Goal_Think_Zombie.h"
 #include "InputHandler.h"
 
-#define debug
+//#define debug
 
 //-------------------------- ctor ---------------------------------------------
 Character::Character(Room* room,Vector2D pos):
@@ -341,7 +341,7 @@ bool Character::isReadyForTriggerUpdate()const
 bool Character::HandleMessage(const Telegram& msg)
 {
       
-  std::cout << "Character MESSAGE IS : " <<MessageToString(msg.Msg);
+ 
   //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
 
   //first see if the current goal accepts the message
@@ -407,7 +407,7 @@ bool Character::HandleMessage(const Telegram& msg)
 
   case Msg_OpenSesame:
     {
-      std::cout << "OPEN SESAME";
+      //std::cout << "OPEN SESAME";
     }
   default: return false;
   }

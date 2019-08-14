@@ -1,12 +1,11 @@
 <params>
  <hitflashtime value="0.2" />
  <charscale value="0.8" />
- <charmaxspeed value="0.4" />
+ <charmaxspeed value="0.2" />
  <charmass value="1" />
- <charscale value="0.8" />
  <charmaxheadturnrate value="0.2" />
  <charmaxforce value="1" />
- <charmaxhealth value="100" />
+ <charmaxhealth value="5" />
  <charfov value="180" />
  <charreactiontime value="0.2" />
  <charaimpersistance value="1" />
@@ -18,7 +17,7 @@
  <charrocketlaunchertweaker value="1" />
  <charaggrogoaltweaker value="1" />
  <weaponselectionfrequency value="2" />
- <goalappraisalupdatefreq value="2" />
+ <goalappraisalupdatefreq value="4" />
  <targetingupdatefreq value="2" />
  <triggerupdatefreq value="8" />
  <visionupdatefreq value="4" />
@@ -45,7 +44,7 @@
  <boltscale value="1" />
  <boltdamage value="1" />
  <gravelifetime value="5" />
- <maxsearchcyclesperupdatestep value="10" />
+ <maxsearchcyclesperupdatestep value="1000" />
  <numcellsx value="10" />
  <numcellsy value="10" />
 </params>

@@ -27,7 +27,7 @@ class Game {
     Map* m_pMap;
     std::vector<Character*>       m_Bots; 
     Character* m_pSelectedBot;
-    PathManager<PathPlanner>* m_pPathManager;
+    PathManager* m_pPathManager;
     bool m_bPaused;
     bool m_bRemoveABot;
     void UpdateTriggers();
@@ -97,7 +97,7 @@ const Map* const GetMap()const{return m_pMap;}
 Map* const GetMap(){return m_pMap;}
 const std::vector<Character*> GetAllBots()const{return m_Bots;}
 int GetNumBots()const{return m_Bots.size();}
-PathManager<PathPlanner>* const    GetPathManager(){return m_pPathManager;}
+PathManager* const    GetPathManager(){return m_pPathManager;}
 
 
   void TagCharactersWithinViewRange(Entity* pBot , double range);

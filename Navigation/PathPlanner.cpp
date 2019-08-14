@@ -15,7 +15,7 @@
 #include "PathPlanner.h"
 
 
-#define SHOW_NAVINFO
+//#define SHOW_NAVINFO
 #include <cassert>
 class PathPlanner;
 //---------------------------- ctor -------------------------------------------
@@ -41,8 +41,7 @@ PathPlanner::~PathPlanner()
 void PathPlanner::GetReadyForNewSearch()
 {
   //unregister any existing search with the path manager
-  PathManager<PathPlanner> tPath =(PathManager<PathPlanner>)*m_pOwner->GetRoom()->GetPathManager();
- tPath.UnRegister(this);
+  m_pOwner->GetRoom()->GetPathManager()->UnRegister(this);
 
   //clean up memory used by any existing search
   delete m_pCurrentSearch;    
@@ -398,8 +397,7 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
                                ClosestNodeToTarget);
  
   //and register the search with the path manager
-  PathManager<PathPlanner> tPath =(PathManager<PathPlanner>)* m_pOwner->GetRoom()->GetPathManager();
-	tPath.Register(this);
+ m_pOwner->GetRoom()->GetPathManager()->Register(this);
 
   return true;
 }
@@ -441,9 +439,9 @@ bool PathPlanner::RequestPathToItem(unsigned int ItemType)
                                    ClosestNodeToBot,
                                    ItemType);  
 
-  PathManager<PathPlanner> tPath= (PathManager<PathPlanner>)*m_pOwner->GetRoom()->GetPathManager();
+  m_pOwner->GetRoom()->GetPathManager()->Register(this);
   //register the search with the path manager
-  tPath.Register(this);
+ 
 
   return true;
 }

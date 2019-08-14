@@ -16,7 +16,7 @@
 #include <string>
 #include <list>
 //uncomment to write object creation/deletion to debug console
-#define  LOG
+//#define  LOG
 
 class Steering;
 class Map;

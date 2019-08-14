@@ -11,7 +11,7 @@
 #include "ProjectileManager.h"
 #include "CharManager.h"
 #include "LevelCreator.h"
-#define debug
+//#define debug
 
 
 const std::string PlayState::s_playID = "PLAY";

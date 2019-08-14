@@ -29,11 +29,11 @@ class Room
   bool isPathObstructed(Vector2D A, Vector2D B, double BoundingRadius)const;
   Vector2D GetPosOfClosestSwitch(Vector2D botPos, unsigned int doorID)const;
   void TagCharactersWithinViewRange(Entity* pChar, double range);
-  PathManager<PathPlanner>* GetPathManager() { return m_pPathManager;}
+  PathManager* GetPathManager() { return m_pPathManager;}
   CharManager* GetCharManager() { return m_pCharManager;}
  private:
   CharManager* m_pCharManager;
-  PathManager<PathPlanner>* m_pPathManager;
+  PathManager* m_pPathManager;
   std::vector<Character*> m_Chars;
   Map* m_pMap;
   Room* m_pNorth;

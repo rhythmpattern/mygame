@@ -37,7 +37,7 @@ bool Room::LoadMap(const std::string& filename, int numChars)
 
   //in with the new
   m_pMap = new Map();
-   m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
+   m_pPathManager = new PathManager(script->getInt("maxsearchcyclesperupdatestep"));
    GraveManager::Instance()->load();
    
  
@@ -48,7 +48,7 @@ bool Room::LoadMap(const std::string& filename, int numChars)
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
     m_pCharManager->AddChars(numChars);
-    // Player* m_pPlayer = new Player(this,Vector2D(150,150));
+    //Player* m_pPlayer = new Player(this,Vector2D(150,150));
     // m_pCharManager->AddChar(m_pPlayer);
     // EntityMgr->RegisterEntity(m_pPlayer);
     return true;

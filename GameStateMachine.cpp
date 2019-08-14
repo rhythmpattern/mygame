@@ -1,7 +1,7 @@
 #include "GameStateMachine.h"
 #include <iostream>
 
-#define debug
+//#define debug
 
 void GameStateMachine::clean()
 {
