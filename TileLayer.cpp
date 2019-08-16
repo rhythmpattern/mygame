@@ -1,8 +1,10 @@
-
+//The Map size created in Tiles must equal the Game::width and Game::height for this render function to run.
 
 #include "TileLayer.h"
 #include "TextureManager.h"
 #include "Game.h"
+
+
 
 TileLayer::TileLayer(int tileSize, const std::vector<Tileset>& tilesets) : m_tileSize(tileSize), m_tilesets(tilesets), m_position(0,0), m_velocity(0,0)
 {

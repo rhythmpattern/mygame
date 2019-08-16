@@ -33,6 +33,7 @@ Goal_Think::Goal_Think(Character* pBot):Goal_Composite<Character>(pBot, goal_thi
   m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
   AddGoal_Explore();
+ 
 }
 
 //----------------------------- dtor ------------------------------------------
@@ -64,19 +65,18 @@ void Goal_Think::Activate()
 //-----------------------------------------------------------------------------
 int Goal_Think::Process()
 {
-
+   ActivateIfInactive();
  
-  ActivateIfInactive();
-  
   int SubgoalStatus = ProcessSubgoals();
-
-  if (SubgoalStatus == completed || SubgoalStatus == failed)
+   if (SubgoalStatus == completed || SubgoalStatus == failed)
   {
     if (!m_pOwner->isPossessed())
     {
       m_iStatus = inactive;
     }
   }
+ 
+ 
 
   return m_iStatus;
 }

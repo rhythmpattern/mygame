@@ -24,9 +24,9 @@ class Goal_Think : public Goal_Composite<Character>
 private:
   
   typedef std::vector<Goal_Evaluator*>   GoalEvaluators;
-
-
-  
+ 
+  std::vector<Goal<Character*>* > ExploreVector;
+ 
   GoalEvaluators  m_Evaluators;
 
 public:

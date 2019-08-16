@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+<map version="1.2" name="DM1.map" numChars="4" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
  <properties>
   <property name="isaac" value="assets/isaac.png"/>
   <property name="dot" value="assets/dot.png"/>
@@ -10,7 +10,7 @@
  </tileset>
  <layer id="1" name="Tile Layer 1" width="40" height="30">
   <data encoding="base64" compression="zlib">
-   eJztzrENACAMA7BI/f9nTuiCRAEP3l1JCoBWBhy6n6PjFLccTx9eOU5/Ou47nj4A8K8FrbsN1Q==
+   eJztlUEKACAIBD30C///zy5BHYxScivYw0BgsVNGFREphBBCyAdo48UsDaw54bebp5Nxpp8n66bfKs+ak+nozbLqSL9V3qyW5ejNe8Xv5Nmi/CJ3M9vP85ag/cZ65G1E+UX/FoSf1Wd0j9H7JYR0KmhhGDw=
   </data>
  </layer>
 </map>

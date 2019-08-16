@@ -7,6 +7,7 @@
 #include "TextureManager.h"
 #include "GameObjectFactory.h"
 #include "BLayer.h"
+#include "Scriptor.h"
 
 int main( int argc, char* args[] )
 {srand(time(NULL));
@@ -15,10 +16,10 @@ int main( int argc, char* args[] )
   SDL_Renderer* m_pRenderer;
   SDL_Event e;
   bool running = true;
+  Scriptor::Instance();
 
 
-
-  Game::Instance()->init("Test", 0,0,640,480,false);
+  Game::Instance()->init("Test", 0,0,script->getNum("width"),script->getNum("height"),false);
  
   //LevelParser* lp = new LevelParser();
   //lp->parseLevel("assets/test.xml");
