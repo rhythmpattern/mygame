@@ -16,6 +16,7 @@
 #include <string>
 #include <list>
 #include "GoalFactory.h"
+#include "Goals/Goal_Explore.h"
 //uncomment to write object creation/deletion to debug console
 //#define  LOG
 
@@ -44,8 +45,8 @@ Game::Game():m_pSelectedBot(NULL),
                          m_pPathManager(NULL)
 {
   GameObjectFactory::Instance()->registerType("Character" , new CharacterCreator());
-  GoalFactory::Instance();
-  
+    GoalFactory::Instance()->registerType("GoalExplore" , new GoalExploreCreator());
+    GoalFactory::Instance()->create("GoalExplore" , new Character());
  
    
    

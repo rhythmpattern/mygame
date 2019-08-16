@@ -4,13 +4,13 @@
 #include <string>
 #include <iostream>
 #include <map>
-#include "Goals/Goal.h"
+#include "Goals/Goal_Composite.h"
 #include "Character.h"
 
 class GoalCreator
 {
  public:
-  virtual Goal<Character>* createGoal() const = 0;
+  virtual Goal_Composite<Character>* createGoal(Character* m_pOwner) const = 0;
   virtual ~GoalCreator() {}
 
 
@@ -50,7 +50,7 @@ class GoalFactory
 
 
   
-  Goal<Character>* create(std::string typeID)
+  Goal_Composite<Character>* create(std::string typeID , Character* pOwner)
   {
     std::map<std::string, GoalCreator*>::iterator it = m_creators.find(typeID);
 
@@ -60,7 +60,7 @@ class GoalFactory
 	return NULL;
       }
     GoalCreator* pCreator = (*it).second;
-    return pCreator->createGoal();
+    return pCreator->createGoal(pOwner);
   }
 
  private:

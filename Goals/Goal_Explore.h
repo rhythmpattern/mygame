@@ -4,7 +4,7 @@
 
 #include "Goal_Composite.h"
 #include "Goal_Types.h"
-
+#include "../GoalFactory.h"
 
 class Character;
 
@@ -33,6 +33,14 @@ public:
   void Terminate(){}
 
   bool HandleMessage(const Telegram& msg);
+};
+
+class GoalExploreCreator : public GoalCreator
+{
+  Goal_Composite<Character>* createGoal(Character* pOwner) const
+  {
+    return new Goal_Explore(pOwner);
+  }
 };
 
 

@@ -11,6 +11,7 @@
 #include "Goal_AttackTarget.h"
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
+#include "../GoalFactory.h"
 //#define debug
 
 
@@ -138,7 +139,7 @@ void Goal_Think::AddGoal_Explore()
   if (notPresent(goal_explore))
   {
     RemoveAllSubgoals();
-    AddSubgoal( new Goal_Explore(m_pOwner));
+    AddSubgoal( GoalFactory::Instance()->create("GoalExplore", m_pOwner));
   }
 }
 
