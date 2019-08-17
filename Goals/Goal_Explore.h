@@ -37,7 +37,7 @@ public:
 
 class GoalExploreCreator : public GoalCreator
 {
-  Goal_Composite<Character>* createGoal(Character* pOwner) const
+  Goal_Composite<Character>* createGoal(Character* pOwner, Vector2D pos) const
   {
     return new Goal_Explore(pOwner);
   }

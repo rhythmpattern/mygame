@@ -6,7 +6,7 @@
 #include "../2D/Vector2D.h"
 #include "../Character.h"
 #include "Goal_Types.h"
-
+#include "../GoalFactory.h"
 
 
 class Goal_MoveToPosition : public Goal_Composite<Character>
@@ -36,7 +36,14 @@ public:
 
 };
 
-
+class GoalMoveCreator : public GoalCreator
+{
+  Goal_Composite<Character>* createGoal(Character* pOwner, Vector2D pos) const
+  {
+    return new Goal_MoveToPosition(pOwner , pos);
+  }
+  
+};
 
 
 

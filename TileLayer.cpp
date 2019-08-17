@@ -24,6 +24,7 @@ void TileLayer::update(Level* pLevel)
     else
     {
         m_velocity.x =0;
+	
     }
 }
 
@@ -44,7 +45,7 @@ void TileLayer::render()
             int id = m_tileIDs[i + y][j + x];
             
             if(id == 0)
-            {
+	      {  
                 continue;
             }
             

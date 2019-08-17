@@ -10,7 +10,7 @@
 class GoalCreator
 {
  public:
-  virtual Goal_Composite<Character>* createGoal(Character* m_pOwner) const = 0;
+  virtual Goal_Composite<Character>* createGoal(Character* m_pOwner, Vector2D pos) const = 0;
   virtual ~GoalCreator() {}
 
 
@@ -50,7 +50,7 @@ class GoalFactory
 
 
   
-  Goal_Composite<Character>* create(std::string typeID , Character* pOwner)
+  Goal_Composite<Character>* create(std::string typeID , Character* pOwner, Vector2D pos)
   {
     std::map<std::string, GoalCreator*>::iterator it = m_creators.find(typeID);
 
@@ -60,7 +60,7 @@ class GoalFactory
 	return NULL;
       }
     GoalCreator* pCreator = (*it).second;
-    return pCreator->createGoal(pOwner);
+    return pCreator->createGoal(pOwner, pos);
   }
 
  private:

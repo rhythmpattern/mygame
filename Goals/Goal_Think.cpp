@@ -46,6 +46,11 @@ Goal_Think::~Goal_Think()
   {
     delete *curDes;
   }
+  std::vector<GoalCreator*>::iterator curCre = GoalCreators.begin();
+  for (curCre; curCre != GoalCreators.end(); ++curCre)
+  {
+    delete *curCre;
+  }
 }
 
 //------------------------------- Activate ------------------------------------
@@ -131,15 +136,16 @@ void Goal_Think::AddGoal_MoveToPosition(Vector2D pos)
   #ifdef debug
   std::cout << "Moving to Position";
   #endif
-  AddSubgoal( new Goal_MoveToPosition(m_pOwner, pos));
+  AddSubgoal( GoalFactory::Instance()->create("GoalMove",m_pOwner, pos));
 }
 
 void Goal_Think::AddGoal_Explore()
 {
+  
   if (notPresent(goal_explore))
   {
     RemoveAllSubgoals();
-    AddSubgoal( GoalFactory::Instance()->create("GoalExplore", m_pOwner));
+    AddSubgoal( GoalFactory::Instance()->create("GoalExplore", m_pOwner, Vector2D()));
   }
 }
 

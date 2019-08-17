@@ -1702,7 +1702,6 @@ m_iFrom: 206 m_iTo: 207 m_dCost: 20 m_iFlags: 0 ID: -1
 m_iFrom: 207 m_iTo: 203 m_dCost: 28.2843 m_iFlags: 0 ID: -1
 m_iFrom: 207 m_iTo: 205 m_dCost: 20 m_iFlags: 0 ID: -1
 m_iFrom: 207 m_iTo: 206 m_dCost: 20 m_iFlags: 0 ID: -1
-
 1164 691
 0  40 20  370 20  0 1
 0  370 20  370 300  -1 0

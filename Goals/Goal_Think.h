@@ -16,8 +16,7 @@
 #include "Goal_Composite.h"
 #include "Goal_Evaluator.h"
 #include "../Character.h"
-
-
+#include "../GoalFactory.h"
 
 class Goal_Think : public Goal_Composite<Character>
 {
@@ -25,8 +24,7 @@ private:
   
   typedef std::vector<Goal_Evaluator*>   GoalEvaluators;
  
-  std::vector<Goal<Character*>* > ExploreVector;
- 
+  std::vector<GoalCreator*> GoalCreators;
   GoalEvaluators  m_Evaluators;
 
 public:

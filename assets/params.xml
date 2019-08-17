@@ -1,9 +1,9 @@
 <params>
- <width value="1280" />
- <height value="960" />
+ <width value="640" />
+ <height value="480" />
  <hitflashtime value="0.2" />
  <charscale value="0.8" />
- <charmaxspeed value="0.4" />
+ <charmaxspeed value="0.2" />
  <charmass value="1" />
  <charmaxheadturnrate value="0.2" />
  <charmaxforce value="1" />
@@ -34,7 +34,7 @@
  <defaultgivertriggerrange value="10" />
  <healthrespawndelay value="10" />
  <weaponrespawndelay value="15" />
- <blasterfiringfreq value="1" />
+ <blasterfiringfreq value="5" />
  <blastermaxspeed value="10" />
  <blasterdefaultrounds value="100" />
  <blastermaxroundscarried value="100" />
