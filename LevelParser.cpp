@@ -46,8 +46,11 @@ Level* LevelParser::parseLevel(const char *levelFile)
 	  }
           
       }
-
-
+ 
+ m_pRoom = new Room();
+    m_pRoom->LoadMap(mapName, numChars); 
+   
+    m_pRoom->SetLevel(pLevel);
      // time to parse tilesets
      for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
        {
@@ -57,7 +60,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
 	     parseTilesets(e,pLevel->getTilesets());
 	   }
        }
-     
+    
     for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL ; e = e->NextSiblingElement())
       {
 	if (e->Value() == std::string("objectgroup") || e->Value() == std::string("layer"))
@@ -74,10 +77,8 @@ Level* LevelParser::parseLevel(const char *levelFile)
 
 	}
       
-    Room* pRoom = new Room();
-    pRoom->LoadMap(mapName, numChars);
-    pLevel->getRooms()->push_back(pRoom);
-   
+  
+      pLevel->getRooms()->push_back(m_pRoom);
     return pLevel;
 }
 
@@ -260,7 +261,7 @@ void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>
     {
         pCollisionLayers->push_back(pTileLayer);
     }
-    
+     m_pRoom->GetMap()->GetNavGraph().Load(pTileLayer);
     pLayers->push_back(pTileLayer);
 }
 

@@ -21,6 +21,8 @@
 #include "NodeTypeEnumerations.h"
 
 
+class TileLayer;
+
 
 template <class node_type, class edge_type>   
 class SparseGraph                                 
@@ -152,7 +154,7 @@ public:
 
   bool  Load(const char* FileName);
   bool  Load(std::ifstream& stream);
-
+  bool Load(TileLayer* layer);
   //clears the graph ready for new node insertions
   void Clear(){m_iNextNodeIndex = 0; m_Nodes.clear(); m_Edges.clear();}
 
@@ -820,6 +822,26 @@ bool SparseGraph<node_type, edge_type>::Load(std::ifstream& stream)
 
   return true;
 }
-   
+
+
+
+//------------------------------- Load ----------------------------------------
+//-----------------------------------------------------------------------------
+template <class node_type, class edge_type>
+bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
+{
+     int m_tileSize = layer->getTileSize();
+     int  m_numColumns = layer->getNumColumns();
+     int   m_numRows = layer->getNumRows();
+    
+     const std::vector<std::vector<int>>& ids = layer->getTileIDs();
+  for(int i = 0; i < m_numRows; i++)
+    {
+        for(int j = 0; j < m_numColumns; j++)
+	  {}
+    }
+  return true;
+  }
+
 
 #endif

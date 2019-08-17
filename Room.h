@@ -10,6 +10,7 @@
 #include "Navigation/PathPlanner.h"
 
 class CharManager;
+class Level;
 
 class Room
 {
@@ -31,10 +32,13 @@ class Room
   void TagCharactersWithinViewRange(Entity* pChar, double range);
   PathManager* GetPathManager() { return m_pPathManager;}
   CharManager* GetCharManager() { return m_pCharManager;}
- private:
+  Level* GetLevel() {return m_pLevel;}
+  void SetLevel(Level* pLevel) { m_pLevel = pLevel;}
+private:
   CharManager* m_pCharManager;
   PathManager* m_pPathManager;
   std::vector<Character*> m_Chars;
+  Level* m_pLevel;
   Map* m_pMap;
   Room* m_pNorth;
   Room* m_pEast;

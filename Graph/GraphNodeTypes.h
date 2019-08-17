@@ -87,8 +87,8 @@ public:
     char buffer[50];
     stream >> buffer >> m_iIndex >> buffer >> m_vPosition.x >> buffer >> m_vPosition.y;
   }
- 
 
+ 
   virtual ~NavGraphNode(){}
 
   Vector2D   Pos()const{return m_vPosition;}

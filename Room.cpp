@@ -53,7 +53,7 @@ bool Room::LoadMap(const std::string& filename, int numChars)
     return true;
   }
   
-  
+    
   return false;
   
 

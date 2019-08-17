@@ -10,6 +10,7 @@ class Level;
 struct Tileset;
 class Layer;
 class TileLayer;
+class Room;
 
 class LevelParser
 {
@@ -18,7 +19,7 @@ public:
    Level* parseLevel(const char* stateFile);
     
 private:
-    
+  Room* m_pRoom;
     void parseTextures(TiXmlElement* pTextureRoot);
      void parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>* pTilesets);
      void parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Layer*> *pLayers, Level* pLevel);
