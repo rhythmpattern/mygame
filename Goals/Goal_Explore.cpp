@@ -67,7 +67,7 @@ bool Goal_Explore::HandleMessage(const Telegram& msg)
     switch(msg.Msg)
     {
     case Msg_PathReady:
-     
+      std::cout << "PATH READY!\n";
       //clear any existing goals
       RemoveAllSubgoals();
 

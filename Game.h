@@ -71,43 +71,12 @@ SDL_Renderer* getRenderer() const { return m_pRenderer; }
 
     void Render();
 void Update();
-bool LoadMap(const std::string& FileName);
  bool Running() {return m_bRunning;}
 
- bool init(const char* title, int xpos, int ypos, int width , int height, bool fullscreen);
-void AddBots(unsigned int NumBotsToAdd);
-void RemoveBot();
+  bool init(const char* title, int xpos, int ypos, int width , int height, bool fullscreen);
  void Quit() {m_bRunning = false;}
-void AddShooter(Character* shooter, Vector2D target);
-
-bool isPathObstructed(Vector2D A, Vector2D B, double BoundingRadius = 0)const;
-std::vector<Character*> GetAllBotsInFOV(const Character* pBot)const;
-bool isSecondVisibleToFirst(const Character* pFirst,
-			    const Character* pSecond)const;
-bool isLOSOkay(Vector2D A, Vector2D B)const;
-double GetDistanceToClosestWall(Vector2D Origin, Vector2D Heading)const;
-Vector2D GetPosOfClosestSwitch(Vector2D botPos, unsigned int doorID)const;
-Character* GetBotAtPosition(Vector2D CursorPos)const;
 void TogglePause(){m_bPaused = !m_bPaused;}
-void ExorciseAnyPossessedBot();
-void GetPlayerInput()const;
  void handleInput();
-Character* GetPlayer()const{return m_pPlayer;}
-const Map* const GetMap()const{return m_pMap;}
-Map* const GetMap(){return m_pMap;}
-const std::vector<Character*> GetAllBots()const{return m_Bots;}
-int GetNumBots()const{return m_Bots.size();}
-PathManager* const    GetPathManager(){return m_pPathManager;}
-
-
-  void TagCharactersWithinViewRange(Entity* pBot , double range);
-    
- 
-
-
-
-
- Player* GetPlayer() { return m_pPlayer;} 
 
 
 

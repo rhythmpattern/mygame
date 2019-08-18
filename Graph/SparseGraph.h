@@ -721,7 +721,7 @@ bool SparseGraph<node_type, edge_type>::Save(const char* FileName)const
 
   if (!out)
   {
-    //throw std::runtime_error("Cannot open file: " + std::string(FileName));
+    throw std::runtime_error("Cannot open file: " + std::string(FileName));
     return false;
   }
 
@@ -829,30 +829,48 @@ bool SparseGraph<node_type, edge_type>::Load(std::ifstream& stream)
 template <class node_type, class edge_type>
 bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
 {
-     int m_tileSize = layer->getTileSize();
-     int  m_numColumns = layer->getNumColumns() -1;
-     int   m_numRows = layer->getNumRows();
-     int newIndex = 0;
-     const std::vector<std::vector<int>>& ids = layer->getTileIDs();
+  int m_tileSize = layer->getTileSize();
+  int  m_numColumns = layer->getNumColumns() -1;
+  int   m_numRows = layer->getNumRows();
+  const std::vector<std::vector<int>>& ids = layer->getTileIDs();
   for(int i = 0; i < m_numRows; i++)
     {
-        for(int j = 0; j < m_numColumns; j++)
-	  {
-	    if (ids[i][j] == 0) {}
-	    else {
-	    NodeType NewNode(newIndex , Vector2D(i*(m_tileSize) + m_tileSize/2 , j*(m_tileSize) + m_tileSize/2));
-m_Nodes.push_back(NewNode);
+      for(int j = 0; j < m_numColumns; j++)
+	{
+	    
 
-      //make sure an edgelist is added for each node
-      m_Edges.push_back(EdgeList());
+	  if (ids[i][j] == 0) {
+	    NodeType NewNode(invalid_node_index , Vector2D(j*(m_tileSize) + m_tileSize/2 , i*(m_tileSize) + m_tileSize/2));
+	    m_Nodes.push_back(NewNode);
+	    //make sure an edgelist is added for each node
+	    m_Edges.push_back(EdgeList());
       
-	    ++newIndex;
-	    }
+	    ++m_iNextNodeIndex;}
+	  else {
 	   
+	    NodeType NewNode(m_iNextNodeIndex , Vector2D(j*(m_tileSize) + m_tileSize/2 , i*(m_tileSize) + m_tileSize/2));
+	    AddNode(NewNode);
+     
 	  }
+	   
+	}
     }
+  
+  //Create the edges.
+  for (int i = 0; i < m_numRows; i++)
+    {
+      for (int j = 0; j < m_numColumns; j++)
+	{
+	  GraphHelper_AddAllNeighboursToGridNode(*this,
+						 i,
+						 j,
+						 m_numColumns,
+						 m_numRows);
+	}
+    }
+  
   return true;
-  }
+}
 
 
 #endif

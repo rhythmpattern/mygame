@@ -258,8 +258,8 @@ void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>
         pCollisionLayers->push_back(pTileLayer);
     }
     m_pRoom = new Room();
-    m_pRoom->LoadMap(pTileLayer, numChars); 
-   
+    //m_pRoom->LoadMap("DM1.map", numChars); 
+     m_pRoom->LoadMap(pTileLayer, numChars);
     pLayers->push_back(pTileLayer);
 }
 

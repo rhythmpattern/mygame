@@ -296,7 +296,8 @@ bool Map::LoadMap(TileLayer* tLayer)
   #endif
 
 Clear();
- 
+ m_iSizeX = 640;
+ m_iSizeY = 480;
 Entity::ResetNextValidID();
 
 m_pNavGraph = new NavGraph(false);
@@ -306,10 +307,13 @@ m_pNavGraph->Load(tLayer);
  m_dCellSpaceNeighborhoodRange = CalculateAverageGraphEdgeLength(*m_pNavGraph) + 1;
 
 //partition the graph nodes
- // PartitionNavGraph();
+  PartitionNavGraph();
  m_SpawnPoints.push_back(Vector2D(100,200));
  m_SpawnPoints.push_back(Vector2D(100,100));
-
+ AddWall(Vector2D(220,230) , Vector2D(220,320));
+ AddWall(Vector2D(220,320) , Vector2D(330,320));
+ AddWall(Vector2D(330,320) , Vector2D(330,200));
+ AddWall(Vector2D(330,200) , Vector2D(220,230));
    //calculate the cost lookup table
   m_PathCosts = CreateAllPairsCostsTable(*m_pNavGraph);
  

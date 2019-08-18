@@ -1,0 +1,2128 @@
+300
+Index: 0 PosX: 16 PosY: 16
+Index: 1 PosX: 48 PosY: 16
+Index: 2 PosX: 80 PosY: 16
+Index: 3 PosX: 112 PosY: 16
+Index: 4 PosX: 144 PosY: 16
+Index: 5 PosX: 176 PosY: 16
+Index: 6 PosX: 208 PosY: 16
+Index: 7 PosX: 240 PosY: 16
+Index: 8 PosX: 272 PosY: 16
+Index: 9 PosX: 304 PosY: 16
+Index: 10 PosX: 336 PosY: 16
+Index: 11 PosX: 368 PosY: 16
+Index: 12 PosX: 400 PosY: 16
+Index: 13 PosX: 432 PosY: 16
+Index: 14 PosX: 464 PosY: 16
+Index: 15 PosX: 496 PosY: 16
+Index: 16 PosX: 528 PosY: 16
+Index: 17 PosX: 560 PosY: 16
+Index: 18 PosX: 592 PosY: 16
+Index: 19 PosX: 624 PosY: 16
+Index: 20 PosX: 16 PosY: 48
+Index: 21 PosX: 48 PosY: 48
+Index: 22 PosX: 80 PosY: 48
+Index: 23 PosX: 112 PosY: 48
+Index: 24 PosX: 144 PosY: 48
+Index: 25 PosX: 176 PosY: 48
+Index: 26 PosX: 208 PosY: 48
+Index: 27 PosX: 240 PosY: 48
+Index: 28 PosX: 272 PosY: 48
+Index: 29 PosX: 304 PosY: 48
+Index: 30 PosX: 336 PosY: 48
+Index: 31 PosX: 368 PosY: 48
+Index: 32 PosX: 400 PosY: 48
+Index: 33 PosX: 432 PosY: 48
+Index: 34 PosX: 464 PosY: 48
+Index: 35 PosX: 496 PosY: 48
+Index: 36 PosX: 528 PosY: 48
+Index: 37 PosX: 560 PosY: 48
+Index: 38 PosX: 592 PosY: 48
+Index: 39 PosX: 624 PosY: 48
+Index: 40 PosX: 16 PosY: 80
+Index: 41 PosX: 48 PosY: 80
+Index: 42 PosX: 80 PosY: 80
+Index: 43 PosX: 112 PosY: 80
+Index: 44 PosX: 144 PosY: 80
+Index: 45 PosX: 176 PosY: 80
+Index: 46 PosX: 208 PosY: 80
+Index: 47 PosX: 240 PosY: 80
+Index: 48 PosX: 272 PosY: 80
+Index: 49 PosX: 304 PosY: 80
+Index: 50 PosX: 336 PosY: 80
+Index: 51 PosX: 368 PosY: 80
+Index: 52 PosX: 400 PosY: 80
+Index: 53 PosX: 432 PosY: 80
+Index: 54 PosX: 464 PosY: 80
+Index: 55 PosX: 496 PosY: 80
+Index: 56 PosX: 528 PosY: 80
+Index: 57 PosX: 560 PosY: 80
+Index: 58 PosX: 592 PosY: 80
+Index: 59 PosX: 624 PosY: 80
+Index: 60 PosX: 16 PosY: 112
+Index: 61 PosX: 48 PosY: 112
+Index: 62 PosX: 80 PosY: 112
+Index: 63 PosX: 112 PosY: 112
+Index: 64 PosX: 144 PosY: 112
+Index: 65 PosX: 176 PosY: 112
+Index: 66 PosX: 208 PosY: 112
+Index: 67 PosX: 240 PosY: 112
+Index: 68 PosX: 272 PosY: 112
+Index: 69 PosX: 304 PosY: 112
+Index: 70 PosX: 336 PosY: 112
+Index: 71 PosX: 368 PosY: 112
+Index: 72 PosX: 400 PosY: 112
+Index: 73 PosX: 432 PosY: 112
+Index: 74 PosX: 464 PosY: 112
+Index: 75 PosX: 496 PosY: 112
+Index: 76 PosX: 528 PosY: 112
+Index: 77 PosX: 560 PosY: 112
+Index: 78 PosX: 592 PosY: 112
+Index: 79 PosX: 624 PosY: 112
+Index: 80 PosX: 16 PosY: 144
+Index: 81 PosX: 48 PosY: 144
+Index: 82 PosX: 80 PosY: 144
+Index: 83 PosX: 112 PosY: 144
+Index: 84 PosX: 144 PosY: 144
+Index: 85 PosX: 176 PosY: 144
+Index: 86 PosX: 208 PosY: 144
+Index: 87 PosX: 240 PosY: 144
+Index: 88 PosX: 272 PosY: 144
+Index: -1 PosX: 304 PosY: 144
+Index: 90 PosX: 336 PosY: 144
+Index: 91 PosX: 368 PosY: 144
+Index: 92 PosX: 400 PosY: 144
+Index: 93 PosX: 432 PosY: 144
+Index: 94 PosX: 464 PosY: 144
+Index: 95 PosX: 496 PosY: 144
+Index: 96 PosX: 528 PosY: 144
+Index: 97 PosX: 560 PosY: 144
+Index: 98 PosX: 592 PosY: 144
+Index: 99 PosX: 624 PosY: 144
+Index: 100 PosX: 16 PosY: 176
+Index: 101 PosX: 48 PosY: 176
+Index: 102 PosX: 80 PosY: 176
+Index: 103 PosX: 112 PosY: 176
+Index: 104 PosX: 144 PosY: 176
+Index: 105 PosX: 176 PosY: 176
+Index: 106 PosX: 208 PosY: 176
+Index: 107 PosX: 240 PosY: 176
+Index: -1 PosX: 272 PosY: 176
+Index: -1 PosX: 304 PosY: 176
+Index: -1 PosX: 336 PosY: 176
+Index: -1 PosX: 368 PosY: 176
+Index: -1 PosX: 400 PosY: 176
+Index: 113 PosX: 432 PosY: 176
+Index: 114 PosX: 464 PosY: 176
+Index: 115 PosX: 496 PosY: 176
+Index: 116 PosX: 528 PosY: 176
+Index: 117 PosX: 560 PosY: 176
+Index: 118 PosX: 592 PosY: 176
+Index: 119 PosX: 624 PosY: 176
+Index: 120 PosX: 16 PosY: 208
+Index: 121 PosX: 48 PosY: 208
+Index: 122 PosX: 80 PosY: 208
+Index: 123 PosX: 112 PosY: 208
+Index: 124 PosX: 144 PosY: 208
+Index: 125 PosX: 176 PosY: 208
+Index: 126 PosX: 208 PosY: 208
+Index: -1 PosX: 240 PosY: 208
+Index: -1 PosX: 272 PosY: 208
+Index: -1 PosX: 304 PosY: 208
+Index: -1 PosX: 336 PosY: 208
+Index: -1 PosX: 368 PosY: 208
+Index: -1 PosX: 400 PosY: 208
+Index: -1 PosX: 432 PosY: 208
+Index: 134 PosX: 464 PosY: 208
+Index: 135 PosX: 496 PosY: 208
+Index: 136 PosX: 528 PosY: 208
+Index: 137 PosX: 560 PosY: 208
+Index: 138 PosX: 592 PosY: 208
+Index: 139 PosX: 624 PosY: 208
+Index: 140 PosX: 16 PosY: 240
+Index: 141 PosX: 48 PosY: 240
+Index: 142 PosX: 80 PosY: 240
+Index: 143 PosX: 112 PosY: 240
+Index: 144 PosX: 144 PosY: 240
+Index: 145 PosX: 176 PosY: 240
+Index: 146 PosX: 208 PosY: 240
+Index: -1 PosX: 240 PosY: 240
+Index: -1 PosX: 272 PosY: 240
+Index: -1 PosX: 304 PosY: 240
+Index: -1 PosX: 336 PosY: 240
+Index: -1 PosX: 368 PosY: 240
+Index: -1 PosX: 400 PosY: 240
+Index: -1 PosX: 432 PosY: 240
+Index: 154 PosX: 464 PosY: 240
+Index: 155 PosX: 496 PosY: 240
+Index: 156 PosX: 528 PosY: 240
+Index: 157 PosX: 560 PosY: 240
+Index: 158 PosX: 592 PosY: 240
+Index: 159 PosX: 624 PosY: 240
+Index: 160 PosX: 16 PosY: 272
+Index: 161 PosX: 48 PosY: 272
+Index: 162 PosX: 80 PosY: 272
+Index: 163 PosX: 112 PosY: 272
+Index: 164 PosX: 144 PosY: 272
+Index: 165 PosX: 176 PosY: 272
+Index: 166 PosX: 208 PosY: 272
+Index: -1 PosX: 240 PosY: 272
+Index: -1 PosX: 272 PosY: 272
+Index: -1 PosX: 304 PosY: 272
+Index: -1 PosX: 336 PosY: 272
+Index: -1 PosX: 368 PosY: 272
+Index: -1 PosX: 400 PosY: 272
+Index: -1 PosX: 432 PosY: 272
+Index: 174 PosX: 464 PosY: 272
+Index: 175 PosX: 496 PosY: 272
+Index: 176 PosX: 528 PosY: 272
+Index: 177 PosX: 560 PosY: 272
+Index: 178 PosX: 592 PosY: 272
+Index: 179 PosX: 624 PosY: 272
+Index: 180 PosX: 16 PosY: 304
+Index: 181 PosX: 48 PosY: 304
+Index: 182 PosX: 80 PosY: 304
+Index: 183 PosX: 112 PosY: 304
+Index: 184 PosX: 144 PosY: 304
+Index: 185 PosX: 176 PosY: 304
+Index: 186 PosX: 208 PosY: 304
+Index: -1 PosX: 240 PosY: 304
+Index: -1 PosX: 272 PosY: 304
+Index: -1 PosX: 304 PosY: 304
+Index: -1 PosX: 336 PosY: 304
+Index: -1 PosX: 368 PosY: 304
+Index: -1 PosX: 400 PosY: 304
+Index: 193 PosX: 432 PosY: 304
+Index: 194 PosX: 464 PosY: 304
+Index: 195 PosX: 496 PosY: 304
+Index: 196 PosX: 528 PosY: 304
+Index: 197 PosX: 560 PosY: 304
+Index: 198 PosX: 592 PosY: 304
+Index: 199 PosX: 624 PosY: 304
+Index: 200 PosX: 16 PosY: 336
+Index: 201 PosX: 48 PosY: 336
+Index: 202 PosX: 80 PosY: 336
+Index: 203 PosX: 112 PosY: 336
+Index: 204 PosX: 144 PosY: 336
+Index: 205 PosX: 176 PosY: 336
+Index: 206 PosX: 208 PosY: 336
+Index: -1 PosX: 240 PosY: 336
+Index: -1 PosX: 272 PosY: 336
+Index: -1 PosX: 304 PosY: 336
+Index: -1 PosX: 336 PosY: 336
+Index: -1 PosX: 368 PosY: 336
+Index: 212 PosX: 400 PosY: 336
+Index: 213 PosX: 432 PosY: 336
+Index: 214 PosX: 464 PosY: 336
+Index: 215 PosX: 496 PosY: 336
+Index: 216 PosX: 528 PosY: 336
+Index: 217 PosX: 560 PosY: 336
+Index: 218 PosX: 592 PosY: 336
+Index: 219 PosX: 624 PosY: 336
+Index: 220 PosX: 16 PosY: 368
+Index: 221 PosX: 48 PosY: 368
+Index: 222 PosX: 80 PosY: 368
+Index: 223 PosX: 112 PosY: 368
+Index: 224 PosX: 144 PosY: 368
+Index: 225 PosX: 176 PosY: 368
+Index: 226 PosX: 208 PosY: 368
+Index: 227 PosX: 240 PosY: 368
+Index: 228 PosX: 272 PosY: 368
+Index: 229 PosX: 304 PosY: 368
+Index: 230 PosX: 336 PosY: 368
+Index: 231 PosX: 368 PosY: 368
+Index: 232 PosX: 400 PosY: 368
+Index: 233 PosX: 432 PosY: 368
+Index: 234 PosX: 464 PosY: 368
+Index: 235 PosX: 496 PosY: 368
+Index: 236 PosX: 528 PosY: 368
+Index: 237 PosX: 560 PosY: 368
+Index: 238 PosX: 592 PosY: 368
+Index: 239 PosX: 624 PosY: 368
+Index: 240 PosX: 16 PosY: 400
+Index: 241 PosX: 48 PosY: 400
+Index: 242 PosX: 80 PosY: 400
+Index: 243 PosX: 112 PosY: 400
+Index: 244 PosX: 144 PosY: 400
+Index: 245 PosX: 176 PosY: 400
+Index: 246 PosX: 208 PosY: 400
+Index: 247 PosX: 240 PosY: 400
+Index: 248 PosX: 272 PosY: 400
+Index: 249 PosX: 304 PosY: 400
+Index: 250 PosX: 336 PosY: 400
+Index: 251 PosX: 368 PosY: 400
+Index: 252 PosX: 400 PosY: 400
+Index: 253 PosX: 432 PosY: 400
+Index: 254 PosX: 464 PosY: 400
+Index: 255 PosX: 496 PosY: 400
+Index: 256 PosX: 528 PosY: 400
+Index: 257 PosX: 560 PosY: 400
+Index: 258 PosX: 592 PosY: 400
+Index: 259 PosX: 624 PosY: 400
+Index: 260 PosX: 16 PosY: 432
+Index: 261 PosX: 48 PosY: 432
+Index: 262 PosX: 80 PosY: 432
+Index: 263 PosX: 112 PosY: 432
+Index: 264 PosX: 144 PosY: 432
+Index: 265 PosX: 176 PosY: 432
+Index: 266 PosX: 208 PosY: 432
+Index: 267 PosX: 240 PosY: 432
+Index: 268 PosX: 272 PosY: 432
+Index: 269 PosX: 304 PosY: 432
+Index: 270 PosX: 336 PosY: 432
+Index: 271 PosX: 368 PosY: 432
+Index: 272 PosX: 400 PosY: 432
+Index: 273 PosX: 432 PosY: 432
+Index: 274 PosX: 464 PosY: 432
+Index: 275 PosX: 496 PosY: 432
+Index: 276 PosX: 528 PosY: 432
+Index: 277 PosX: 560 PosY: 432
+Index: 278 PosX: 592 PosY: 432
+Index: 279 PosX: 624 PosY: 432
+Index: 280 PosX: 16 PosY: 464
+Index: 281 PosX: 48 PosY: 464
+Index: 282 PosX: 80 PosY: 464
+Index: 283 PosX: 112 PosY: 464
+Index: 284 PosX: 144 PosY: 464
+Index: 285 PosX: 176 PosY: 464
+Index: 286 PosX: 208 PosY: 464
+Index: 287 PosX: 240 PosY: 464
+Index: 288 PosX: 272 PosY: 464
+Index: 289 PosX: 304 PosY: 464
+Index: 290 PosX: 336 PosY: 464
+Index: 291 PosX: 368 PosY: 464
+Index: 292 PosX: 400 PosY: 464
+Index: 293 PosX: 432 PosY: 464
+Index: 294 PosX: 464 PosY: 464
+Index: 295 PosX: 496 PosY: 464
+Index: 296 PosX: 528 PosY: 464
+Index: 297 PosX: 560 PosY: 464
+Index: 298 PosX: 592 PosY: 464
+Index: 299 PosX: 624 PosY: 464
+1822
+m_iFrom: 0 m_iTo: 1 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 0 m_iTo: 20 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 0 m_iTo: 21 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 1 m_iTo: 0 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 1 m_iTo: 2 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 1 m_iTo: 20 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 1 m_iTo: 21 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 1 m_iTo: 22 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 2 m_iTo: 1 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 2 m_iTo: 3 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 2 m_iTo: 21 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 2 m_iTo: 22 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 2 m_iTo: 23 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 3 m_iTo: 2 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 3 m_iTo: 4 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 3 m_iTo: 22 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 3 m_iTo: 23 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 3 m_iTo: 24 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 4 m_iTo: 3 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 4 m_iTo: 5 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 4 m_iTo: 23 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 4 m_iTo: 24 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 4 m_iTo: 25 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 5 m_iTo: 4 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 5 m_iTo: 6 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 5 m_iTo: 24 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 5 m_iTo: 25 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 5 m_iTo: 26 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 6 m_iTo: 5 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 6 m_iTo: 7 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 6 m_iTo: 25 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 6 m_iTo: 26 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 6 m_iTo: 27 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 7 m_iTo: 6 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 7 m_iTo: 8 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 7 m_iTo: 26 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 7 m_iTo: 27 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 7 m_iTo: 28 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 8 m_iTo: 7 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 8 m_iTo: 9 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 8 m_iTo: 27 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 8 m_iTo: 28 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 8 m_iTo: 29 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 9 m_iTo: 8 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 9 m_iTo: 10 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 9 m_iTo: 28 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 9 m_iTo: 29 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 9 m_iTo: 30 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 10 m_iTo: 9 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 10 m_iTo: 11 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 10 m_iTo: 29 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 10 m_iTo: 30 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 10 m_iTo: 31 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 11 m_iTo: 10 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 11 m_iTo: 12 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 11 m_iTo: 30 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 11 m_iTo: 31 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 11 m_iTo: 32 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 12 m_iTo: 11 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 12 m_iTo: 13 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 12 m_iTo: 31 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 12 m_iTo: 32 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 12 m_iTo: 33 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 13 m_iTo: 12 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 13 m_iTo: 14 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 13 m_iTo: 32 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 13 m_iTo: 33 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 13 m_iTo: 34 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 14 m_iTo: 13 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 14 m_iTo: 15 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 14 m_iTo: 33 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 14 m_iTo: 34 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 14 m_iTo: 35 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 15 m_iTo: 14 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 15 m_iTo: 16 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 15 m_iTo: 34 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 15 m_iTo: 35 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 15 m_iTo: 36 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 16 m_iTo: 15 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 16 m_iTo: 17 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 16 m_iTo: 35 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 16 m_iTo: 36 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 16 m_iTo: 37 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 17 m_iTo: 16 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 17 m_iTo: 18 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 17 m_iTo: 36 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 17 m_iTo: 37 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 17 m_iTo: 38 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 18 m_iTo: 17 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 18 m_iTo: 19 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 18 m_iTo: 37 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 18 m_iTo: 38 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 18 m_iTo: 39 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 19 m_iTo: 18 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 19 m_iTo: 38 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 19 m_iTo: 39 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 20 m_iTo: 0 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 20 m_iTo: 1 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 20 m_iTo: 21 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 20 m_iTo: 40 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 20 m_iTo: 41 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 0 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 1 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 2 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 20 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 22 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 40 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 41 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 21 m_iTo: 42 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 1 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 2 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 3 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 21 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 23 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 41 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 42 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 22 m_iTo: 43 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 2 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 3 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 4 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 22 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 24 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 42 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 43 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 23 m_iTo: 44 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 3 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 4 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 5 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 23 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 25 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 43 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 44 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 24 m_iTo: 45 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 4 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 5 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 6 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 24 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 26 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 44 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 45 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 25 m_iTo: 46 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 5 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 6 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 7 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 25 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 27 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 45 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 46 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 26 m_iTo: 47 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 6 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 7 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 8 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 26 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 28 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 46 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 47 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 27 m_iTo: 48 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 7 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 8 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 9 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 27 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 29 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 47 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 48 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 28 m_iTo: 49 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 8 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 9 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 10 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 28 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 30 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 48 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 49 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 29 m_iTo: 50 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 9 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 10 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 11 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 29 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 31 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 49 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 50 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 30 m_iTo: 51 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 10 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 11 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 12 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 30 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 32 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 50 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 51 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 31 m_iTo: 52 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 11 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 12 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 13 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 31 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 33 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 51 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 52 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 32 m_iTo: 53 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 12 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 13 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 14 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 32 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 34 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 52 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 53 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 33 m_iTo: 54 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 13 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 14 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 15 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 33 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 35 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 53 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 54 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 34 m_iTo: 55 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 14 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 15 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 16 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 34 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 36 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 54 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 55 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 35 m_iTo: 56 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 15 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 16 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 17 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 35 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 37 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 55 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 56 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 36 m_iTo: 57 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 16 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 17 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 18 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 36 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 38 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 56 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 57 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 37 m_iTo: 58 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 17 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 18 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 19 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 37 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 39 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 57 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 58 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 38 m_iTo: 59 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 39 m_iTo: 18 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 39 m_iTo: 19 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 39 m_iTo: 38 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 39 m_iTo: 58 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 39 m_iTo: 59 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 40 m_iTo: 20 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 40 m_iTo: 21 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 40 m_iTo: 41 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 40 m_iTo: 60 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 40 m_iTo: 61 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 20 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 21 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 22 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 40 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 42 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 60 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 61 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 41 m_iTo: 62 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 21 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 22 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 23 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 41 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 43 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 61 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 62 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 42 m_iTo: 63 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 22 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 23 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 24 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 42 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 44 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 62 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 63 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 43 m_iTo: 64 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 23 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 24 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 25 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 43 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 45 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 63 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 64 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 44 m_iTo: 65 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 24 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 25 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 26 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 44 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 46 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 64 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 65 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 45 m_iTo: 66 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 25 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 26 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 27 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 45 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 47 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 65 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 66 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 46 m_iTo: 67 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 26 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 27 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 28 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 46 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 48 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 66 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 67 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 47 m_iTo: 68 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 27 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 28 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 29 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 47 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 49 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 67 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 68 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 48 m_iTo: 69 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 28 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 29 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 30 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 48 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 50 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 68 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 69 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 49 m_iTo: 70 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 29 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 30 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 31 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 49 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 51 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 69 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 70 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 50 m_iTo: 71 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 30 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 31 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 32 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 50 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 52 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 70 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 71 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 51 m_iTo: 72 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 31 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 32 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 33 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 51 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 53 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 71 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 72 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 52 m_iTo: 73 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 32 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 33 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 34 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 52 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 54 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 72 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 73 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 53 m_iTo: 74 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 33 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 34 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 35 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 53 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 55 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 73 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 74 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 54 m_iTo: 75 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 34 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 35 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 36 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 54 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 56 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 74 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 75 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 55 m_iTo: 76 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 35 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 36 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 37 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 55 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 57 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 75 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 76 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 56 m_iTo: 77 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 36 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 37 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 38 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 56 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 58 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 76 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 77 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 57 m_iTo: 78 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 37 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 38 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 39 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 57 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 59 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 77 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 78 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 58 m_iTo: 79 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 59 m_iTo: 38 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 59 m_iTo: 39 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 59 m_iTo: 58 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 59 m_iTo: 78 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 59 m_iTo: 79 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 60 m_iTo: 40 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 60 m_iTo: 41 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 60 m_iTo: 61 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 60 m_iTo: 80 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 60 m_iTo: 81 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 40 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 41 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 42 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 60 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 62 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 80 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 81 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 61 m_iTo: 82 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 41 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 42 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 43 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 61 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 63 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 81 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 82 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 62 m_iTo: 83 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 42 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 43 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 44 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 62 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 64 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 82 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 83 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 63 m_iTo: 84 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 43 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 44 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 45 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 63 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 65 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 83 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 84 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 64 m_iTo: 85 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 44 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 45 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 46 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 64 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 66 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 84 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 85 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 65 m_iTo: 86 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 45 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 46 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 47 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 65 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 67 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 85 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 86 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 66 m_iTo: 87 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 46 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 47 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 48 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 66 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 68 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 86 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 87 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 67 m_iTo: 88 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 68 m_iTo: 47 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 68 m_iTo: 48 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 68 m_iTo: 49 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 68 m_iTo: 67 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 68 m_iTo: 69 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 68 m_iTo: 87 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 68 m_iTo: 88 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 69 m_iTo: 48 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 69 m_iTo: 49 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 69 m_iTo: 50 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 69 m_iTo: 68 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 69 m_iTo: 70 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 69 m_iTo: 88 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 69 m_iTo: 90 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 70 m_iTo: 49 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 70 m_iTo: 50 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 70 m_iTo: 51 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 70 m_iTo: 69 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 70 m_iTo: 71 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 70 m_iTo: 90 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 70 m_iTo: 91 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 50 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 51 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 52 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 70 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 72 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 90 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 91 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 71 m_iTo: 92 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 51 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 52 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 53 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 71 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 73 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 91 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 92 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 72 m_iTo: 93 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 52 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 53 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 54 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 72 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 74 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 92 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 93 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 73 m_iTo: 94 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 53 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 54 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 55 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 73 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 75 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 93 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 94 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 74 m_iTo: 95 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 54 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 55 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 56 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 74 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 76 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 94 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 95 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 75 m_iTo: 96 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 55 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 56 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 57 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 75 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 77 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 95 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 96 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 76 m_iTo: 97 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 56 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 57 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 58 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 76 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 78 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 96 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 97 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 77 m_iTo: 98 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 57 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 58 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 59 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 77 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 79 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 97 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 98 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 78 m_iTo: 99 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 79 m_iTo: 58 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 79 m_iTo: 59 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 79 m_iTo: 78 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 79 m_iTo: 98 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 79 m_iTo: 99 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 80 m_iTo: 60 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 80 m_iTo: 61 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 80 m_iTo: 81 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 80 m_iTo: 100 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 80 m_iTo: 101 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 60 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 61 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 62 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 80 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 82 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 100 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 101 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 81 m_iTo: 102 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 61 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 62 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 63 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 81 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 83 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 101 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 102 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 82 m_iTo: 103 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 62 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 63 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 64 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 82 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 84 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 102 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 103 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 83 m_iTo: 104 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 63 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 64 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 65 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 83 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 85 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 103 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 104 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 84 m_iTo: 105 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 64 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 65 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 66 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 84 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 86 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 104 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 105 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 85 m_iTo: 106 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 65 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 66 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 67 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 85 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 87 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 105 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 106 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 86 m_iTo: 107 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 87 m_iTo: 66 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 87 m_iTo: 67 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 87 m_iTo: 68 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 87 m_iTo: 86 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 87 m_iTo: 88 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 87 m_iTo: 106 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 87 m_iTo: 107 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 88 m_iTo: 67 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 88 m_iTo: 68 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 88 m_iTo: 69 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 88 m_iTo: 87 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 88 m_iTo: 107 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 90 m_iTo: 69 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 90 m_iTo: 70 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 90 m_iTo: 71 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 90 m_iTo: 91 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 91 m_iTo: 70 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 91 m_iTo: 71 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 91 m_iTo: 72 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 91 m_iTo: 90 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 91 m_iTo: 92 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 92 m_iTo: 71 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 92 m_iTo: 72 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 92 m_iTo: 73 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 92 m_iTo: 91 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 92 m_iTo: 93 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 92 m_iTo: 113 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 93 m_iTo: 72 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 93 m_iTo: 73 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 93 m_iTo: 74 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 93 m_iTo: 92 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 93 m_iTo: 94 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 93 m_iTo: 113 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 93 m_iTo: 114 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 73 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 74 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 75 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 93 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 95 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 113 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 114 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 94 m_iTo: 115 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 74 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 75 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 76 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 94 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 96 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 114 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 115 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 95 m_iTo: 116 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 75 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 76 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 77 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 95 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 97 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 115 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 116 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 96 m_iTo: 117 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 76 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 77 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 78 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 96 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 98 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 116 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 117 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 97 m_iTo: 118 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 77 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 78 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 79 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 97 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 99 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 117 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 118 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 98 m_iTo: 119 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 99 m_iTo: 78 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 99 m_iTo: 79 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 99 m_iTo: 98 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 99 m_iTo: 118 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 99 m_iTo: 119 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 100 m_iTo: 80 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 100 m_iTo: 81 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 100 m_iTo: 101 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 100 m_iTo: 120 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 100 m_iTo: 121 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 80 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 81 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 82 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 100 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 102 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 120 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 121 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 101 m_iTo: 122 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 81 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 82 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 83 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 101 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 103 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 121 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 122 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 102 m_iTo: 123 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 82 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 83 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 84 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 102 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 104 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 122 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 123 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 103 m_iTo: 124 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 83 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 84 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 85 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 103 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 105 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 123 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 124 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 104 m_iTo: 125 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 84 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 85 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 86 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 104 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 106 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 124 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 125 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 105 m_iTo: 126 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 106 m_iTo: 85 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 106 m_iTo: 86 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 106 m_iTo: 87 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 106 m_iTo: 105 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 106 m_iTo: 107 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 106 m_iTo: 125 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 106 m_iTo: 126 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 107 m_iTo: 86 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 107 m_iTo: 87 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 107 m_iTo: 88 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 107 m_iTo: 106 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 107 m_iTo: 126 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 113 m_iTo: 92 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 113 m_iTo: 93 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 113 m_iTo: 94 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 113 m_iTo: 114 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 113 m_iTo: 134 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 114 m_iTo: 93 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 114 m_iTo: 94 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 114 m_iTo: 95 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 114 m_iTo: 113 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 114 m_iTo: 115 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 114 m_iTo: 134 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 114 m_iTo: 135 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 94 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 95 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 96 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 114 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 116 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 134 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 135 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 115 m_iTo: 136 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 95 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 96 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 97 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 115 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 117 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 135 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 136 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 116 m_iTo: 137 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 96 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 97 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 98 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 116 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 118 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 136 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 137 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 117 m_iTo: 138 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 97 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 98 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 99 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 117 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 119 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 137 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 138 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 118 m_iTo: 139 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 119 m_iTo: 98 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 119 m_iTo: 99 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 119 m_iTo: 118 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 119 m_iTo: 138 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 119 m_iTo: 139 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 120 m_iTo: 100 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 120 m_iTo: 101 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 120 m_iTo: 121 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 120 m_iTo: 140 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 120 m_iTo: 141 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 100 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 101 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 102 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 120 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 122 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 140 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 141 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 121 m_iTo: 142 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 101 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 102 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 103 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 121 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 123 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 141 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 142 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 122 m_iTo: 143 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 102 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 103 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 104 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 122 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 124 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 142 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 143 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 123 m_iTo: 144 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 103 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 104 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 105 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 123 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 125 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 143 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 144 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 124 m_iTo: 145 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 104 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 105 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 106 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 124 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 126 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 144 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 145 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 125 m_iTo: 146 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 126 m_iTo: 105 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 126 m_iTo: 106 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 126 m_iTo: 107 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 126 m_iTo: 125 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 126 m_iTo: 145 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 126 m_iTo: 146 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 134 m_iTo: 113 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 134 m_iTo: 114 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 134 m_iTo: 115 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 134 m_iTo: 135 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 134 m_iTo: 154 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 134 m_iTo: 155 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 114 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 115 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 116 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 134 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 136 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 154 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 155 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 135 m_iTo: 156 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 115 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 116 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 117 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 135 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 137 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 155 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 156 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 136 m_iTo: 157 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 116 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 117 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 118 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 136 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 138 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 156 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 157 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 137 m_iTo: 158 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 117 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 118 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 119 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 137 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 139 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 157 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 158 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 138 m_iTo: 159 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 139 m_iTo: 118 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 139 m_iTo: 119 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 139 m_iTo: 138 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 139 m_iTo: 158 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 139 m_iTo: 159 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 140 m_iTo: 120 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 140 m_iTo: 121 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 140 m_iTo: 141 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 140 m_iTo: 160 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 140 m_iTo: 161 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 120 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 121 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 122 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 140 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 142 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 160 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 161 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 141 m_iTo: 162 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 121 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 122 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 123 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 141 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 143 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 161 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 162 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 142 m_iTo: 163 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 122 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 123 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 124 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 142 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 144 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 162 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 163 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 143 m_iTo: 164 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 123 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 124 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 125 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 143 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 145 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 163 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 164 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 144 m_iTo: 165 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 124 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 125 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 126 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 144 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 146 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 164 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 165 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 145 m_iTo: 166 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 146 m_iTo: 125 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 146 m_iTo: 126 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 146 m_iTo: 145 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 146 m_iTo: 165 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 146 m_iTo: 166 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 154 m_iTo: 134 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 154 m_iTo: 135 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 154 m_iTo: 155 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 154 m_iTo: 174 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 154 m_iTo: 175 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 134 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 135 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 136 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 154 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 156 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 174 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 175 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 155 m_iTo: 176 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 135 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 136 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 137 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 155 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 157 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 175 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 176 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 156 m_iTo: 177 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 136 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 137 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 138 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 156 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 158 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 176 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 177 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 157 m_iTo: 178 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 137 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 138 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 139 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 157 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 159 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 177 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 178 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 158 m_iTo: 179 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 159 m_iTo: 138 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 159 m_iTo: 139 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 159 m_iTo: 158 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 159 m_iTo: 178 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 159 m_iTo: 179 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 160 m_iTo: 140 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 160 m_iTo: 141 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 160 m_iTo: 161 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 160 m_iTo: 180 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 160 m_iTo: 181 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 140 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 141 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 142 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 160 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 162 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 180 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 181 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 161 m_iTo: 182 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 141 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 142 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 143 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 161 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 163 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 181 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 182 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 162 m_iTo: 183 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 142 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 143 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 144 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 162 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 164 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 182 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 183 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 163 m_iTo: 184 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 143 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 144 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 145 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 163 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 165 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 183 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 184 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 164 m_iTo: 185 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 144 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 145 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 146 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 164 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 166 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 184 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 185 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 165 m_iTo: 186 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 166 m_iTo: 145 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 166 m_iTo: 146 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 166 m_iTo: 165 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 166 m_iTo: 185 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 166 m_iTo: 186 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 174 m_iTo: 154 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 174 m_iTo: 155 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 174 m_iTo: 175 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 174 m_iTo: 193 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 174 m_iTo: 194 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 174 m_iTo: 195 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 154 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 155 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 156 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 174 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 176 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 194 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 195 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 175 m_iTo: 196 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 155 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 156 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 157 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 175 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 177 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 195 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 196 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 176 m_iTo: 197 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 156 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 157 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 158 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 176 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 178 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 196 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 197 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 177 m_iTo: 198 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 157 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 158 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 159 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 177 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 179 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 197 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 198 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 178 m_iTo: 199 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 179 m_iTo: 158 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 179 m_iTo: 159 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 179 m_iTo: 178 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 179 m_iTo: 198 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 179 m_iTo: 199 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 180 m_iTo: 160 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 180 m_iTo: 161 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 180 m_iTo: 181 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 180 m_iTo: 200 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 180 m_iTo: 201 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 160 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 161 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 162 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 180 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 182 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 200 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 201 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 181 m_iTo: 202 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 161 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 162 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 163 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 181 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 183 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 201 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 202 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 182 m_iTo: 203 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 162 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 163 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 164 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 182 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 184 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 202 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 203 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 183 m_iTo: 204 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 163 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 164 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 165 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 183 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 185 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 203 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 204 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 184 m_iTo: 205 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 164 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 165 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 166 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 184 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 186 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 204 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 205 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 185 m_iTo: 206 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 186 m_iTo: 165 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 186 m_iTo: 166 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 186 m_iTo: 185 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 186 m_iTo: 205 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 186 m_iTo: 206 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 193 m_iTo: 174 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 193 m_iTo: 194 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 193 m_iTo: 212 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 193 m_iTo: 213 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 193 m_iTo: 214 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 194 m_iTo: 174 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 194 m_iTo: 175 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 194 m_iTo: 193 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 194 m_iTo: 195 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 194 m_iTo: 213 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 194 m_iTo: 214 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 194 m_iTo: 215 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 174 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 175 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 176 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 194 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 196 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 214 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 215 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 195 m_iTo: 216 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 175 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 176 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 177 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 195 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 197 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 215 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 216 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 196 m_iTo: 217 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 176 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 177 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 178 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 196 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 198 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 216 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 217 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 197 m_iTo: 218 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 177 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 178 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 179 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 197 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 199 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 217 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 218 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 198 m_iTo: 219 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 199 m_iTo: 178 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 199 m_iTo: 179 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 199 m_iTo: 198 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 199 m_iTo: 218 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 199 m_iTo: 219 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 200 m_iTo: 180 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 200 m_iTo: 181 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 200 m_iTo: 201 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 200 m_iTo: 220 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 200 m_iTo: 221 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 180 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 181 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 182 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 200 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 202 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 220 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 221 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 201 m_iTo: 222 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 181 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 182 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 183 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 201 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 203 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 221 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 222 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 202 m_iTo: 223 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 182 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 183 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 184 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 202 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 204 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 222 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 223 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 203 m_iTo: 224 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 183 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 184 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 185 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 203 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 205 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 223 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 224 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 204 m_iTo: 225 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 184 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 185 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 186 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 204 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 206 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 224 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 225 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 205 m_iTo: 226 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 206 m_iTo: 185 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 206 m_iTo: 186 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 206 m_iTo: 205 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 206 m_iTo: 225 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 206 m_iTo: 226 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 206 m_iTo: 227 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 212 m_iTo: 193 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 212 m_iTo: 213 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 212 m_iTo: 231 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 212 m_iTo: 232 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 212 m_iTo: 233 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 213 m_iTo: 193 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 213 m_iTo: 194 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 213 m_iTo: 212 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 213 m_iTo: 214 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 213 m_iTo: 232 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 213 m_iTo: 233 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 213 m_iTo: 234 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 193 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 194 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 195 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 213 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 215 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 233 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 234 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 214 m_iTo: 235 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 194 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 195 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 196 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 214 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 216 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 234 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 235 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 215 m_iTo: 236 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 195 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 196 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 197 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 215 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 217 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 235 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 236 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 216 m_iTo: 237 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 196 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 197 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 198 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 216 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 218 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 236 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 237 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 217 m_iTo: 238 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 197 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 198 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 199 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 217 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 219 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 237 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 238 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 218 m_iTo: 239 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 219 m_iTo: 198 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 219 m_iTo: 199 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 219 m_iTo: 218 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 219 m_iTo: 238 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 219 m_iTo: 239 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 220 m_iTo: 200 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 220 m_iTo: 201 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 220 m_iTo: 221 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 220 m_iTo: 240 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 220 m_iTo: 241 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 200 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 201 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 202 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 220 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 222 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 240 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 241 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 221 m_iTo: 242 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 201 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 202 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 203 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 221 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 223 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 241 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 242 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 222 m_iTo: 243 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 202 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 203 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 204 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 222 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 224 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 242 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 243 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 223 m_iTo: 244 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 203 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 204 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 205 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 223 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 225 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 243 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 244 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 224 m_iTo: 245 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 204 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 205 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 206 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 224 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 226 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 244 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 245 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 225 m_iTo: 246 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 226 m_iTo: 205 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 226 m_iTo: 206 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 226 m_iTo: 225 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 226 m_iTo: 227 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 226 m_iTo: 245 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 226 m_iTo: 246 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 226 m_iTo: 247 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 227 m_iTo: 206 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 227 m_iTo: 226 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 227 m_iTo: 228 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 227 m_iTo: 246 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 227 m_iTo: 247 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 227 m_iTo: 248 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 228 m_iTo: 227 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 228 m_iTo: 229 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 228 m_iTo: 247 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 228 m_iTo: 248 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 228 m_iTo: 249 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 229 m_iTo: 228 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 229 m_iTo: 230 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 229 m_iTo: 248 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 229 m_iTo: 249 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 229 m_iTo: 250 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 230 m_iTo: 229 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 230 m_iTo: 231 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 230 m_iTo: 249 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 230 m_iTo: 250 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 230 m_iTo: 251 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 231 m_iTo: 212 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 231 m_iTo: 230 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 231 m_iTo: 232 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 231 m_iTo: 250 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 231 m_iTo: 251 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 231 m_iTo: 252 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 232 m_iTo: 212 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 232 m_iTo: 213 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 232 m_iTo: 231 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 232 m_iTo: 233 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 232 m_iTo: 251 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 232 m_iTo: 252 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 232 m_iTo: 253 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 212 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 213 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 214 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 232 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 234 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 252 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 253 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 233 m_iTo: 254 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 213 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 214 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 215 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 233 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 235 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 253 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 254 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 234 m_iTo: 255 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 214 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 215 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 216 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 234 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 236 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 254 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 255 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 235 m_iTo: 256 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 215 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 216 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 217 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 235 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 237 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 255 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 256 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 236 m_iTo: 257 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 216 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 217 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 218 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 236 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 238 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 256 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 257 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 237 m_iTo: 258 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 217 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 218 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 219 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 237 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 239 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 257 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 258 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 238 m_iTo: 259 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 239 m_iTo: 218 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 239 m_iTo: 219 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 239 m_iTo: 238 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 239 m_iTo: 258 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 239 m_iTo: 259 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 240 m_iTo: 220 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 240 m_iTo: 221 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 240 m_iTo: 241 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 240 m_iTo: 260 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 240 m_iTo: 261 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 220 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 221 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 222 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 240 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 242 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 260 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 261 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 241 m_iTo: 262 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 221 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 222 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 223 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 241 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 243 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 261 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 262 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 242 m_iTo: 263 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 222 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 223 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 224 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 242 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 244 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 262 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 263 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 243 m_iTo: 264 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 223 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 224 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 225 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 243 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 245 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 263 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 264 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 244 m_iTo: 265 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 224 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 225 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 226 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 244 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 246 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 264 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 265 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 245 m_iTo: 266 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 225 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 226 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 227 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 245 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 247 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 265 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 266 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 246 m_iTo: 267 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 226 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 227 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 228 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 246 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 248 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 266 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 267 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 247 m_iTo: 268 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 227 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 228 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 229 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 247 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 249 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 267 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 268 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 248 m_iTo: 269 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 228 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 229 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 230 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 248 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 250 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 268 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 269 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 249 m_iTo: 270 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 229 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 230 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 231 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 249 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 251 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 269 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 270 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 250 m_iTo: 271 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 230 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 231 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 232 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 250 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 252 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 270 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 271 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 251 m_iTo: 272 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 231 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 232 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 233 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 251 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 253 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 271 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 272 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 252 m_iTo: 273 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 232 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 233 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 234 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 252 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 254 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 272 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 273 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 253 m_iTo: 274 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 233 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 234 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 235 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 253 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 255 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 273 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 274 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 254 m_iTo: 275 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 234 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 235 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 236 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 254 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 256 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 274 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 275 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 255 m_iTo: 276 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 235 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 236 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 237 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 255 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 257 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 275 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 276 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 256 m_iTo: 277 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 236 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 237 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 238 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 256 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 258 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 276 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 277 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 257 m_iTo: 278 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 237 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 238 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 239 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 257 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 259 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 277 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 278 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 258 m_iTo: 279 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 259 m_iTo: 238 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 259 m_iTo: 239 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 259 m_iTo: 258 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 259 m_iTo: 278 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 259 m_iTo: 279 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 260 m_iTo: 240 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 260 m_iTo: 241 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 260 m_iTo: 261 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 260 m_iTo: 280 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 260 m_iTo: 281 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 240 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 241 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 242 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 260 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 262 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 280 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 281 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 261 m_iTo: 282 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 241 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 242 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 243 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 261 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 263 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 281 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 282 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 262 m_iTo: 283 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 242 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 243 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 244 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 262 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 264 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 282 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 283 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 263 m_iTo: 284 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 243 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 244 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 245 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 263 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 265 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 283 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 284 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 264 m_iTo: 285 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 244 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 245 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 246 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 264 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 266 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 284 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 285 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 265 m_iTo: 286 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 245 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 246 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 247 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 265 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 267 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 285 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 286 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 266 m_iTo: 287 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 246 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 247 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 248 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 266 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 268 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 286 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 287 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 267 m_iTo: 288 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 247 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 248 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 249 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 267 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 269 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 287 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 288 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 268 m_iTo: 289 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 248 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 249 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 250 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 268 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 270 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 288 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 289 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 269 m_iTo: 290 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 249 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 250 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 251 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 269 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 271 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 289 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 290 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 270 m_iTo: 291 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 250 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 251 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 252 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 270 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 272 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 290 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 291 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 271 m_iTo: 292 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 251 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 252 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 253 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 271 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 273 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 291 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 292 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 272 m_iTo: 293 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 252 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 253 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 254 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 272 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 274 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 292 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 293 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 273 m_iTo: 294 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 253 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 254 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 255 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 273 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 275 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 293 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 294 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 274 m_iTo: 295 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 254 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 255 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 256 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 274 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 276 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 294 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 295 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 275 m_iTo: 296 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 255 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 256 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 257 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 275 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 277 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 295 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 296 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 276 m_iTo: 297 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 256 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 257 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 258 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 276 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 278 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 296 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 297 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 277 m_iTo: 298 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 257 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 258 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 259 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 277 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 279 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 297 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 298 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 278 m_iTo: 299 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 279 m_iTo: 258 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 279 m_iTo: 259 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 279 m_iTo: 278 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 279 m_iTo: 298 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 279 m_iTo: 299 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 280 m_iTo: 260 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 280 m_iTo: 261 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 280 m_iTo: 281 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 281 m_iTo: 260 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 281 m_iTo: 261 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 281 m_iTo: 262 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 281 m_iTo: 280 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 281 m_iTo: 282 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 282 m_iTo: 261 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 282 m_iTo: 262 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 282 m_iTo: 263 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 282 m_iTo: 281 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 282 m_iTo: 283 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 283 m_iTo: 262 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 283 m_iTo: 263 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 283 m_iTo: 264 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 283 m_iTo: 282 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 283 m_iTo: 284 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 284 m_iTo: 263 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 284 m_iTo: 264 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 284 m_iTo: 265 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 284 m_iTo: 283 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 284 m_iTo: 285 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 285 m_iTo: 264 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 285 m_iTo: 265 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 285 m_iTo: 266 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 285 m_iTo: 284 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 285 m_iTo: 286 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 286 m_iTo: 265 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 286 m_iTo: 266 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 286 m_iTo: 267 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 286 m_iTo: 285 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 286 m_iTo: 287 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 287 m_iTo: 266 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 287 m_iTo: 267 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 287 m_iTo: 268 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 287 m_iTo: 286 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 287 m_iTo: 288 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 288 m_iTo: 267 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 288 m_iTo: 268 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 288 m_iTo: 269 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 288 m_iTo: 287 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 288 m_iTo: 289 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 289 m_iTo: 268 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 289 m_iTo: 269 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 289 m_iTo: 270 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 289 m_iTo: 288 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 289 m_iTo: 290 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 290 m_iTo: 269 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 290 m_iTo: 270 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 290 m_iTo: 271 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 290 m_iTo: 289 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 290 m_iTo: 291 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 291 m_iTo: 270 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 291 m_iTo: 271 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 291 m_iTo: 272 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 291 m_iTo: 290 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 291 m_iTo: 292 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 292 m_iTo: 271 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 292 m_iTo: 272 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 292 m_iTo: 273 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 292 m_iTo: 291 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 292 m_iTo: 293 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 293 m_iTo: 272 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 293 m_iTo: 273 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 293 m_iTo: 274 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 293 m_iTo: 292 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 293 m_iTo: 294 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 294 m_iTo: 273 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 294 m_iTo: 274 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 294 m_iTo: 275 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 294 m_iTo: 293 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 294 m_iTo: 295 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 295 m_iTo: 274 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 295 m_iTo: 275 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 295 m_iTo: 276 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 295 m_iTo: 294 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 295 m_iTo: 296 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 296 m_iTo: 275 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 296 m_iTo: 276 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 296 m_iTo: 277 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 296 m_iTo: 295 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 296 m_iTo: 297 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 297 m_iTo: 276 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 297 m_iTo: 277 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 297 m_iTo: 278 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 297 m_iTo: 296 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 297 m_iTo: 298 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 298 m_iTo: 277 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 298 m_iTo: 278 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 298 m_iTo: 279 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 298 m_iTo: 297 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 298 m_iTo: 299 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 299 m_iTo: 278 m_dCost: 45.2548 m_iFlags: 0 ID: -1
+m_iFrom: 299 m_iTo: 279 m_dCost: 32 m_iFlags: 0 ID: -1
+m_iFrom: 299 m_iTo: 298 m_dCost: 32 m_iFlags: 0 ID: -1
+640 480
+5 390  350 240 7  -1
+5 391  50 380 7  -1
+5 392  50 40 7  -1

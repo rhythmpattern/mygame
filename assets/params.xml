@@ -1,6 +1,7 @@
 <params>
- <width value="1280" />
- <height value="960" />
+ <width value="640" />
+ <height value="480" />
+ <level value="assets/640x480.tmx" />
  <hitflashtime value="0.2" />
  <charscale value="0.8" />
  <charmaxspeed value="0.2" />
