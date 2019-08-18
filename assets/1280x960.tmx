@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" name="DM1.map" numChars="4" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.1" name="DM1.map" numChars="1" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
  <properties>
-  <property name="isaac" value="assets/isaac.png"/>
   <property name="dot" value="assets/dot.png"/>
+  <property name="isaac" value="assets/isaac.png"/>
   <property name="pause" value="assets/pause.png"/>
  </properties>
  <tileset firstgid="1" name="blocks1" tilewidth="32" tileheight="32" tilecount="209" columns="19">
@@ -10,7 +10,7 @@
  </tileset>
  <layer id="1" name="Tile Layer 1" width="40" height="30">
   <data encoding="base64" compression="zlib">
-   eJztlUEKACAIBD30C///zy5BHYxScivYw0BgsVNGFREphBBCyAdo48UsDaw54bebp5Nxpp8n66bfKs+ak+nozbLqSL9V3qyW5ejNe8Xv5Nmi/CJ3M9vP85ag/cZ65G1E+UX/FoSf1Wd0j9H7JYR0KmhhGDw=
+   eJzt1lEKQBEUhOHzYBf2v08pT0LSDFNG/Y+OL7p1U0Qk55xz7mInq+7LLTXbyKroYjtZS9WFsP18b4hvWd2HdvZzUUaGTemNZ7OV3phtZNhe3+HOTPQ/A9LG8K2M6HOce1EBjQgPdg==
   </data>
  </layer>
 </map>

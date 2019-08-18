@@ -2,7 +2,6 @@
 #ifndef TILELAYER_H
 #define TILELAYER_H
 
-#include <iostream>
 #include <vector>
 #include "Layer.h"
 #include "Level.h"

@@ -1,4 +1,5 @@
 #include "TextureManager.h"
+#include <iostream>
 
 TextureManager* TextureManager::s_pInstance =0;
 

@@ -2,7 +2,6 @@
 #ifndef OBJECTLAYER_H
 #define OBJECTLAYER_H
 
-#include <iostream>
 #include <vector>
 #include "Layer.h"
 //#include "CollisionManager.h"

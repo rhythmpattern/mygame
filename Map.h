@@ -17,9 +17,10 @@
 
 class Entity;
 class Door;
+class TileLayer;
+
 
 class Map {
-
  public:
      typedef NavGraphNode<Trigger<Character>*>         GraphNode;
   typedef SparseGraph<GraphNode, NavGraphEdge>      NavGraph;
@@ -87,6 +88,7 @@ void AddWeapon_Giver(int type_of_weapon, std::ifstream& in);
  void render();
 void update();
  bool LoadMap(const std::string& FileName);
+  bool LoadMap(TileLayer* tLayer);
 
 
     //adds a wall and returns a pointer to that wall. (this method can be

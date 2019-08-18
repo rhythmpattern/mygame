@@ -14,7 +14,12 @@
 #include "Scriptor.h"
 #include <SDL2/SDL.h>
 #include "Game.h"
+#include "TileLayer.h"
+
+
 //#define Debug
+
+
 
 //----------------------------- ctor ------------------------------------------
 //-----------------------------------------------------------------------------
@@ -280,6 +285,36 @@ break;
 return true;
 }
 
+
+
+
+//-------------------------LoadMap------------
+bool Map::LoadMap(TileLayer* tLayer)
+{
+#ifdef Debug
+  std::cout << "LoadMap called"<<endl;
+  #endif
+
+Clear();
+ 
+Entity::ResetNextValidID();
+
+m_pNavGraph = new NavGraph(false);
+
+m_pNavGraph->Load(tLayer);
+
+ m_dCellSpaceNeighborhoodRange = CalculateAverageGraphEdgeLength(*m_pNavGraph) + 1;
+
+//partition the graph nodes
+ // PartitionNavGraph();
+ m_SpawnPoints.push_back(Vector2D(100,200));
+ m_SpawnPoints.push_back(Vector2D(100,100));
+
+   //calculate the cost lookup table
+  m_PathCosts = CreateAllPairsCostsTable(*m_pNavGraph);
+ 
+return true;
+}
 
 
 //-------------------------------------------

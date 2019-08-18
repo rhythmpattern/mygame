@@ -3,6 +3,7 @@
 #include "Scriptor.h"
 #include "2D/WallIntersectionTests.h"
 #include "Player.h"
+#include "TileLayer.h"
 
 bool Room::init(const std::string mapName)
 {
@@ -59,6 +60,40 @@ bool Room::LoadMap(const std::string& filename, int numChars)
 
 }
 
+bool Room::LoadMap(TileLayer* tLayer, int numChars)
+{
+ 
+   //clear any current chars and projectiles
+   Clear();
+  
+  //out with the old
+  delete m_pMap;
+  delete m_pPathManager;
+
+  //in with the new
+  m_pMap = new Map();
+   m_pPathManager = new PathManager(script->getInt("maxsearchcyclesperupdatestep"));
+   GraveManager::Instance()->load();
+   
+ 
+  //load the new map data
+  if (m_pMap->LoadMap(tLayer))
+  {
+    #ifdef LOG
+    std::cout << "LoadMap called succesfully" <<endl;
+    #endif
+    m_pCharManager->AddChars(numChars);
+    // Player* m_pPlayer = new Player(this,Vector2D(150,150));
+    //m_pCharManager->AddChar(m_pPlayer);
+    // EntityMgr->RegisterEntity(m_pPlayer);
+    return true;
+  }
+  
+    
+  return false;
+  
+
+}
 
 void Room::Render()
 {

@@ -2,7 +2,6 @@
 #ifndef INPUT_HANDLER_H
 #define INPUT_HANDLER_H_
 
-#include <iostream>
 #include <vector>
 
 #include <SDL2/SDL.h>

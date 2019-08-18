@@ -11,6 +11,7 @@
 
 class CharManager;
 class Level;
+class TileLayer;
 
 class Room
 {
@@ -21,6 +22,7 @@ class Room
   void Render();
   void Clear();
   bool LoadMap(const std::string& filename , int numChars);
+  bool LoadMap(TileLayer* tLayer , int numChars);
   bool init(const std::string sMap);
   void AddChar(Character* pChar);
   void AddChars(unsigned int NumCharsToAdd);

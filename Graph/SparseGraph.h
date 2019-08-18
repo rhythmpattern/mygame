@@ -20,7 +20,6 @@
 #include "../misc/utils.h" 
 #include "NodeTypeEnumerations.h"
 
-
 class TileLayer;
 
 
@@ -831,14 +830,26 @@ template <class node_type, class edge_type>
 bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
 {
      int m_tileSize = layer->getTileSize();
-     int  m_numColumns = layer->getNumColumns();
+     int  m_numColumns = layer->getNumColumns() -1;
      int   m_numRows = layer->getNumRows();
-    
+     int newIndex = 0;
      const std::vector<std::vector<int>>& ids = layer->getTileIDs();
   for(int i = 0; i < m_numRows; i++)
     {
         for(int j = 0; j < m_numColumns; j++)
-	  {}
+	  {
+	    if (ids[i][j] == 0) {}
+	    else {
+	    NodeType NewNode(newIndex , Vector2D(i*(m_tileSize) + m_tileSize/2 , j*(m_tileSize) + m_tileSize/2));
+m_Nodes.push_back(NewNode);
+
+      //make sure an edgelist is added for each node
+      m_Edges.push_back(EdgeList());
+      
+	    ++newIndex;
+	    }
+	   
+	  }
     }
   return true;
   }

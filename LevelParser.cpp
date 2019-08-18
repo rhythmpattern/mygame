@@ -21,7 +21,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
     
     // create the level object
     Level* pLevel = new Level();
-    int numChars;
+   
     std::string mapName ;     
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
@@ -47,11 +47,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
           
       }
  
- m_pRoom = new Room();
-    m_pRoom->LoadMap(mapName, numChars); 
-   
-    m_pRoom->SetLevel(pLevel);
-     // time to parse tilesets
+ 
      for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
        {
 	 if(e->Value() == std::string("tileset"))
@@ -77,7 +73,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
 
 	}
       
-  
+   m_pRoom->SetLevel(pLevel);
       pLevel->getRooms()->push_back(m_pRoom);
     return pLevel;
 }
@@ -261,7 +257,9 @@ void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>
     {
         pCollisionLayers->push_back(pTileLayer);
     }
-     m_pRoom->GetMap()->GetNavGraph().Load(pTileLayer);
+    m_pRoom = new Room();
+    m_pRoom->LoadMap(pTileLayer, numChars); 
+   
     pLayers->push_back(pTileLayer);
 }
 

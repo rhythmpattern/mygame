@@ -1,7 +1,6 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
-#include <iostream>
 #include <vector>
 #include "Layer.h"
 #include "LevelParser.h"

@@ -18,7 +18,7 @@
 #include "../2D/Geometry.h"
 #include "../misc/utils.h"
 #include "../LoadParams.h"
-
+#include <SDL2/SDL.h>
 
 
 struct Telegram;
@@ -50,6 +50,7 @@ protected:
    //Texture variables.
   int m_width;
   int m_height;
+  SDL_Rect* m_pRect;
   std::string m_textureID;
   int m_numFrames;
   int m_currentFrame;

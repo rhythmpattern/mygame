@@ -2,7 +2,7 @@
 #ifndef LEVELPARSER_H
 #define LEVELPARSER_H
 
-#include <iostream>
+
 #include <vector>
 #include "tinyxml.h"
 
@@ -28,6 +28,7 @@ private:
     int m_tileSize;
     int m_width;
     int m_height;
+  int numChars;
 };
 
 

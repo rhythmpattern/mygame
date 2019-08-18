@@ -2,7 +2,7 @@
 #define GOAL_FACTORY_H
 
 #include <string>
-#include <iostream>
+#include <iosfwd>
 #include <map>
 #include "Goals/Goal_Composite.h"
 #include "Character.h"

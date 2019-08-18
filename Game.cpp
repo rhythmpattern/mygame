@@ -67,7 +67,7 @@ Game::~Game()
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
 
  
-    m_levelFiles.push_back("assets/DM1.tmx");
+    m_levelFiles.push_back("assets/1280x960.tmx");
    m_currentLevel = 1;
 
     
