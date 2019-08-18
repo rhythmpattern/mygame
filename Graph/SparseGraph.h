@@ -15,7 +15,6 @@
 #include <cassert>
 #include <string>
 #include <fstream>
-
 #include "../2D/Vector2D.h"
 #include "../misc/utils.h" 
 #include "NodeTypeEnumerations.h"
@@ -44,6 +43,8 @@ private:
   //the nodes that comprise this graph
   NodeVector      m_Nodes;
 
+ 
+  
   //a vector of adjacency edge lists. (each node index keys into the 
   //list of edges associated with that node)
   EdgeListVector  m_Edges;
@@ -844,7 +845,7 @@ bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
 	    m_Nodes.push_back(NewNode);
 	    //make sure an edgelist is added for each node
 	    m_Edges.push_back(EdgeList());
-      
+           
 	    ++m_iNextNodeIndex;}
 	  else {
 	   
