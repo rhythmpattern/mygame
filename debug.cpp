@@ -8,6 +8,7 @@
 #include "GameObjectFactory.h"
 #include "BLayer.h"
 #include "Scriptor.h"
+#include "CollisionTests.h"
 
 int main( int argc, char* args[] )
 {srand(time(NULL));
@@ -18,14 +19,12 @@ int main( int argc, char* args[] )
   bool running = true;
   Scriptor::Instance();
 
-
   Game::Instance()->init("Test", 0,0,script->getNum("width"),script->getNum("height"),false);
  
   //LevelParser* lp = new LevelParser();
   //lp->parseLevel("assets/test.xml");
  
 
-  
    while (Game::Instance()->Running())
     {
      
