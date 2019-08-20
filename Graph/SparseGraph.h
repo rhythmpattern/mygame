@@ -18,6 +18,8 @@
 #include "../2D/Vector2D.h"
 #include "../misc/utils.h" 
 #include "NodeTypeEnumerations.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 class TileLayer;
 
@@ -36,14 +38,14 @@ public:
   typedef std::vector<node_type>   NodeVector;
   typedef std::list<edge_type>     EdgeList;
   typedef std::vector<EdgeList>    EdgeListVector;
-
+  typedef std::vector<SDL_Rect*>   RectVector;
  
 private:
   
   //the nodes that comprise this graph
   NodeVector      m_Nodes;
 
- 
+  RectVector   m_Rects; 
   
   //a vector of adjacency edge lists. (each node index keys into the 
   //list of edges associated with that node)
@@ -156,8 +158,10 @@ public:
   bool  Load(std::ifstream& stream);
   bool Load(TileLayer* layer);
   //clears the graph ready for new node insertions
-  void Clear(){m_iNextNodeIndex = 0; m_Nodes.clear(); m_Edges.clear();}
-
+  void Clear(){m_iNextNodeIndex = 0; m_Nodes.clear(); m_Edges.clear(); m_Rects.clear();}
+  
+  RectVector& GetRects() { return m_Rects;} 
+  
   void RemoveEdges()
   {
     for (typename EdgeListVector::iterator it = m_Edges.begin(); it != m_Edges.end(); ++it)
@@ -845,7 +849,12 @@ bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
 	    m_Nodes.push_back(NewNode);
 	    //make sure an edgelist is added for each node
 	    m_Edges.push_back(EdgeList());
-           
+	    SDL_Rect* r = new SDL_Rect();
+	    r->x = j*(m_tileSize);
+	    r->y = i*(m_tileSize);
+	    r->w = m_tileSize;
+	    r->h = m_tileSize;
+	    m_Rects.push_back(r);
 	    ++m_iNextNodeIndex;}
 	  else {
 	   

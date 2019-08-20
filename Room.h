@@ -30,6 +30,7 @@ class Room
   bool isSecondVisibleToFirst(const Character* pFirst, const Character* pSecond) const;
   bool isLOSOkay(Vector2D A, Vector2D B)const ;
   bool isPathObstructed(Vector2D A, Vector2D B, double BoundingRadius)const;
+  bool isPathCollision(Vector2D A, Vector2D B, double BoundingRadius)const;
   Vector2D GetPosOfClosestSwitch(Vector2D botPos, unsigned int doorID)const;
   void TagCharactersWithinViewRange(Entity* pChar, double range);
   PathManager* GetPathManager() { return m_pPathManager;}

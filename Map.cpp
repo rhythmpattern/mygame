@@ -310,10 +310,6 @@ m_pNavGraph->Load(tLayer);
   PartitionNavGraph();
  m_SpawnPoints.push_back(Vector2D(100,200));
  m_SpawnPoints.push_back(Vector2D(100,100));
- AddWall(Vector2D(220,230) , Vector2D(220,320));
- AddWall(Vector2D(220,320) , Vector2D(330,320));
- AddWall(Vector2D(330,320) , Vector2D(330,200));
- AddWall(Vector2D(330,200) , Vector2D(220,230));
    //calculate the cost lookup table
   m_PathCosts = CreateAllPairsCostsTable(*m_pNavGraph);
  

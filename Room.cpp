@@ -4,6 +4,7 @@
 #include "2D/WallIntersectionTests.h"
 #include "Player.h"
 #include "TileLayer.h"
+#include "CollisionTests.h"
 
 bool Room::init(const std::string mapName)
 {
@@ -174,7 +175,8 @@ Room::isSecondVisibleToFirst(const Character* pFirst,
 //------------------------------------------------------------------------------
 bool Room::isLOSOkay(Vector2D A, Vector2D B)const
 {
-  return !doWallsObstructLineSegment(A, B, m_pMap->GetWalls());
+  //return !doWallsObstructLineSegment(A, B, m_pMap->GetWalls());
+  return !doRectsObstructLineSegment(A,B,m_pMap->GetNavGraph().GetRects());
 }
 
 //------------------------- isPathObstructed ----------------------------------
@@ -185,6 +187,40 @@ bool Room::isLOSOkay(Vector2D A, Vector2D B)const
 //  each point.
 //-----------------------------------------------------------------------------
 bool Room::isPathObstructed(Vector2D A,
+                                  Vector2D B,
+                                  double    BoundingRadius)const
+{
+  Vector2D ToB = Vec2DNormalize(B-A);
+
+  Vector2D curPos = A;
+
+  while (Vec2DDistanceSq(curPos, B) > BoundingRadius*BoundingRadius)
+  {   
+    //advance curPos one step
+    curPos += ToB * 0.5 * BoundingRadius;
+    
+    //test all walls against the new position
+    // if (doWallsIntersectCircle(m_pMap->GetWalls(), curPos, BoundingRadius))
+    // {
+    //   return true;
+    // }
+    if (doRectsIntersectCircle(m_pMap->GetNavGraph().GetRects(), curPos, BoundingRadius))
+      {
+	return true;
+      }
+  }
+
+  return false;
+}
+
+//------------------------- isPathCollision ----------------------------------
+//
+//  returns true if a bot cannot move from A to B without bumping into 
+//  world geometry. It achieves this by stepping from A to B in steps of
+//  size BoundingRadius and testing for intersection with world geometry at
+//  each point.
+//-----------------------------------------------------------------------------
+bool Room::isPathCollision(Vector2D A,
                                   Vector2D B,
                                   double    BoundingRadius)const
 {
