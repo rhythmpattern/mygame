@@ -22,7 +22,7 @@ class Game {
 
 
   private:
-
+  
     bool m_bRunning;
     Map* m_pMap;
     std::vector<Character*>       m_Bots; 
@@ -46,7 +46,7 @@ class Game {
       int m_currentLevel;
       Player* m_pPlayer;
 public:
- 
+   float deltaTime;
 Game();
 ~Game();
  void Clear();
@@ -68,7 +68,8 @@ SDL_Renderer* getRenderer() const { return m_pRenderer; }
     int getGameWidth(){return m_gameWidth;}
     int getGameHeight(){return m_gameHeight;}
   Room* getRoom() { getStateMachine()->getGameStates().back()->getLevel()->getRooms()->back();}
-
+  float getDeltaTime() {return deltaTime;}
+  void setDeltaTime(float amt) {deltaTime = amt;}
     void Render();
 void Update();
  bool Running() {return m_bRunning;}

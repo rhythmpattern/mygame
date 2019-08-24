@@ -316,8 +316,7 @@ void Character::UpdateMovement()
   m_vVelocity.Truncate(m_dMaxSpeed);
 
   //update the position
-  m_vPosition += m_vVelocity;
-
+  m_vPosition += m_vVelocity*Game::Instance()->getDeltaTime();
   //if the vehicle has a non zero velocity the heading and side vectors must 
   //be updated
   if (!m_vVelocity.isZero())

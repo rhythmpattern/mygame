@@ -4,7 +4,7 @@
  <level value="assets/640x480.tmx" />
  <hitflashtime value="0.2" />
  <charscale value="0.8" />
- <charmaxspeed value="0.2" />
+ <charmaxspeed value="0.3" />
  <charmass value="1" />
  <charmaxheadturnrate value="0.2" />
  <charmaxforce value="1" />
@@ -12,7 +12,7 @@
  <charfov value="180" />
  <charreactiontime value="0.2" />
  <charaimpersistance value="1" />
- <charaimaccuracy value="0.01" />
+ <charaimaccuracy value="0.001" />
  <charmemoryspan value="5" />
  <charhealthgoaltweaker value="1" />
  <charshotgungoaltweaker value="1" />
@@ -36,7 +36,7 @@
  <healthrespawndelay value="10" />
  <weaponrespawndelay value="15" />
  <blasterfiringfreq value="5" />
- <blastermaxspeed value="10" />
+ <blastermaxspeed value="5" />
  <blasterdefaultrounds value="100" />
  <blastermaxroundscarried value="100" />
  <blasteridealrange value="50" />

@@ -50,7 +50,7 @@ Game::Game():m_pSelectedBot(NULL),
     GoalFactory::Instance()->registerType("GoalExplore" , new GoalExploreCreator());
     GoalFactory::Instance()->registerType("GoalMove" , new GoalMoveCreator());
    
-   
+    deltaTime = 0;
 }
 
 
@@ -69,9 +69,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
  
   m_levelFiles.push_back(script->getString("level"));
    m_currentLevel = 1;
-
-    
- 
+  
   
  int flags = 0;
  m_bRunning = true;
@@ -99,7 +97,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         if(m_pWindow != 0) // window init success
         {
             std::cout << "window creation success\n";
-            m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, SDL_RENDERER_ACCELERATED);
+            m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
             
             if(m_pRenderer != 0) // renderer init success
             {
@@ -144,7 +142,7 @@ void Game::Render()
   SDL_RenderClear(m_pRenderer);
   SDL_SetRenderDrawColor(m_pRenderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
               
-
+  
  
   m_pGameStateMachine->render();
   SDL_RenderPresent(m_pRenderer);
@@ -180,12 +178,13 @@ void Game::handleInput()
 //-----------------------------------------------------------------------------
 void Game::Update()
 {
+  
+    
     //don't update if the user has paused the game
   if (m_bPaused) return;
   
   m_pGameStateMachine->update(); 
 
- 
 
   
 }
