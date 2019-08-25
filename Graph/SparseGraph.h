@@ -865,7 +865,7 @@ bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
 	   
 	}
     }
-  
+ 
   //Create the edges.
   for (int i = 0; i < m_numRows; i++)
     {
@@ -876,6 +876,7 @@ bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
 						 j,
 						 m_numColumns,
 						 m_numRows);
+         
 	}
     }
   

@@ -127,7 +127,7 @@ PathPlanner::Path PathPlanner::GetPath()
   Path path =  m_pCurrentSearch->GetPathAsPathEdges();
 
   int closest = GetClosestNodeToPosition(m_pOwner->Pos());
-
+  if(closest >= 0)
   path.push_front(PathEdge(m_pOwner->Pos(),
                             GetNodePosition(closest),
                             NavGraphEdge::normal));
@@ -316,7 +316,7 @@ int PathPlanner::GetClosestNodeToPosition(Vector2D pos)const
       }
     }
   }
-  
+ 
   return ClosestNode;
 }
 
