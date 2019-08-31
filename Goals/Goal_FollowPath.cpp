@@ -20,7 +20,7 @@ Goal_FollowPath(Character*          pBot,
 //------------------------------ Activate -------------------------------------
 //-----------------------------------------------------------------------------
 void Goal_FollowPath::Activate()
-{
+{ 
   m_iStatus = active;
   
   //get a reference to the next edge

@@ -1,13 +1,17 @@
-
+//The Map size created in Tiles must equal the Game::width and Game::height for this render function to run.
 
 #include "TileLayer.h"
 #include "TextureManager.h"
 #include "Game.h"
+#include <android/log.h>
+
+
 
 TileLayer::TileLayer(int tileSize, const std::vector<Tileset>& tilesets) : m_tileSize(tileSize), m_tilesets(tilesets), m_position(0,0), m_velocity(0,0)
-{
+{ 
     m_numColumns = (Game::Instance()->getGameWidth() / m_tileSize) + 1;
     m_numRows = (Game::Instance()->getGameHeight() / m_tileSize);
+   
     
 }
 
@@ -22,6 +26,7 @@ void TileLayer::update(Level* pLevel)
     else
     {
         m_velocity.x =0;
+	
     }
 }
 
@@ -42,7 +47,7 @@ void TileLayer::render()
             int id = m_tileIDs[i + y][j + x];
             
             if(id == 0)
-            {
+	      {  
                 continue;
             }
             

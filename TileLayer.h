@@ -2,7 +2,6 @@
 #ifndef TILELAYER_H
 #define TILELAYER_H
 
-#include <iostream>
 #include <vector>
 #include "Layer.h"
 #include "Level.h"
@@ -28,7 +27,8 @@ public:
     const std::vector<std::vector<int>>& getTileIDs() { return m_tileIDs; }
     
     Tileset getTilesetByID(int tileID);
-    
+  int getNumColumns() {return m_numColumns;}
+  int getNumRows() { return m_numRows;}
     const Vector2D getPosition() { return m_position; }
     
 private:

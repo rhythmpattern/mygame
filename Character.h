@@ -4,13 +4,12 @@
 #include "Game/MovingEntity.h"
 #include <vector>
 #include <iosfwd>
-#include <map>
 #include "misc/utils.h"
 #include "TargetingSystem.h"
-#include "WeaponSystem.h"
-#include "ZombieWeaponSystem.h"
 #include "GameObjectFactory.h"
 #include "ObjectEnumerations.h"
+#include "2D/Vector2D.h"
+#include "ZombieWeaponSystem.h"
 
 class Game;
 class Room;
@@ -25,6 +24,9 @@ class WeaponSystem;
 class Goal_Think_Zombie;
 class Goal_Think;
 class BaseCreator;
+class Telegram;
+class Entity;
+
 class Character : public MovingEntity{
 
 	protected: 

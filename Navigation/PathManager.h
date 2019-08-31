@@ -14,15 +14,16 @@
 #include <cassert>
 #include <algorithm>
 #include "TimeSlicedGraphAlgorithms.h"
+#include "PathPlanner.h"
 
 
-template <class path_planner>
+
 class PathManager
 {
 private:
 
   //a container of all the active search requests
-  std::list<path_planner*>  m_SearchRequests;
+  std::list<PathPlanner*>  m_SearchRequests;
 
   //this is the total number of search cycles allocated to the manager. 
   //Each update-step these are divided equally amongst all registered path
@@ -41,9 +42,9 @@ public:
   //a path planner should call this method to register a search with the 
   //manager. (The method checks to ensure the path planner is only registered
   //once)
-  void Register(path_planner* pPathPlanner);
+  void Register(PathPlanner* pPathPlanner);
 
-  void UnRegister(path_planner* pPathPlanner);
+  void UnRegister(PathPlanner* pPathPlanner);
 
   //returns the amount of path requests currently active.
   int  GetNumActiveSearches()const{return m_SearchRequests.size();}
@@ -59,16 +60,16 @@ public:
 //  If a path is found or the search is unsuccessful the relevant agent is
 //  notified accordingly by Telegram
 //-----------------------------------------------------------------------------
-template <class path_planner>
-inline void PathManager<path_planner>::UpdateSearches()
+
+inline void PathManager::UpdateSearches()
 {
   int NumCyclesRemaining = m_iNumSearchCyclesPerUpdate;
-
+ 
   //iterate through the search requests until either all requests have been
   //fulfilled or there are no search cycles remaining for this update-step.
-  typename std::list<path_planner*>::iterator curPath = m_SearchRequests.begin();
+  typename std::list<PathPlanner*>::iterator curPath = m_SearchRequests.begin();
   while (NumCyclesRemaining-- && !m_SearchRequests.empty())
-  {
+    {  
     //make one search cycle of this path request
     int result = (*curPath)->CycleOnce();
 
@@ -98,14 +99,14 @@ inline void PathManager<path_planner>::UpdateSearches()
 //
 //  this is called to register a search with the manager.
 //-----------------------------------------------------------------------------
-template <class path_planner>
-inline void PathManager<path_planner>::Register(path_planner* pPathPlanner)
-{
+
+inline void PathManager::Register(PathPlanner* pPathPlanner)
+{ 
   //make sure the bot does not already have a current search in the queue
   if(std::find(m_SearchRequests.begin(),
                m_SearchRequests.end(),
                pPathPlanner) == m_SearchRequests.end())
-  { 
+    {
     //add to the list
     m_SearchRequests.push_back(pPathPlanner);
   }
@@ -113,8 +114,8 @@ inline void PathManager<path_planner>::Register(path_planner* pPathPlanner)
 
 //----------------------------- UnRegister ------------------------------------
 //-----------------------------------------------------------------------------
-template <class path_planner>
-inline void PathManager<path_planner>::UnRegister(path_planner* pPathPlanner)
+
+inline void PathManager::UnRegister(PathPlanner* pPathPlanner)
 {
   m_SearchRequests.remove(pPathPlanner);
 

@@ -12,9 +12,14 @@
 #include "UserOptions.h"
 #include <stdio.h>
 #include "Scriptor.h"
-#include <android/log.h>
+#include <SDL.h>
+#include "Game.h"
+#include "TileLayer.h"
 
-#define Debug
+
+//#define Debug
+
+
 
 //----------------------------- ctor ------------------------------------------
 //-----------------------------------------------------------------------------
@@ -54,7 +59,15 @@ void Map::update() {}
 ///
 //---------------------------------------------------------------
 
-void Map::render(){}
+void Map::render(){
+   std::vector<Wall2D*>::iterator curWall = m_Walls.begin();
+  for (curWall; curWall != m_Walls.end(); ++curWall)
+  {SDL_SetRenderDrawColor(Game::Instance()->getRenderer(), 255, 255, 255, SDL_ALPHA_OPAQUE);
+    SDL_RenderDrawLine(Game::Instance()->getRenderer(), (*curWall)->From().x, (*curWall)->From().y, (*curWall)->To().x, (*curWall)->To().y);
+  }
+
+ 
+}
 
 
 
@@ -203,20 +216,18 @@ bool Map::LoadMap(const std::string& filename)
 #ifdef Debug
   std::cout << "LoadMap called"<<endl;
   #endif
-std::istringstream in(filename.c_str());
-
-
  
+std::istringstream in(filename.c_str());
 if (!in)
   {
-     __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "LOADMAPERROR");
-    //throw std::runtime_error("Invalid Map filename");
+     __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "INVALID MAP FILENAME");
+    throw std::runtime_error("Invalid Map filename");
     return false;
   }
 Clear();
  
 Entity::ResetNextValidID();
- 
+
 m_pNavGraph = new NavGraph(false);
 
 m_pNavGraph->Load(in);
@@ -224,7 +235,6 @@ m_pNavGraph->Load(in);
  m_dCellSpaceNeighborhoodRange = CalculateAverageGraphEdgeLength(*m_pNavGraph) + 1;
 //load in the map size and adjust the client window accordingly
   in >> m_iSizeX >> m_iSizeY;
- 
 //partition the graph nodes
   PartitionNavGraph();
 
@@ -233,7 +243,7 @@ m_pNavGraph->Load(in);
   {
     //get type of next map object
     int EntityType;
-   
+
     in >> EntityType;
 
     //create the object
@@ -241,7 +251,7 @@ m_pNavGraph->Load(in);
     {
     case type_wall:
 
-       AddWall(in); break;
+        AddWall(in); break;
 
     case type_sliding_door:
 
@@ -253,14 +263,14 @@ m_pNavGraph->Load(in);
 
    case type_spawn_point:
 
-     AddSpawnPoint(in); break;
+       AddSpawnPoint(in); break;
 
    case type_health:
 
      AddHealth_Giver(in); break;
 
     default:
-      //throw std::runtime_error("<Map::Load>: Attempting to load undefined object");
+ throw std::runtime_error("<Map::Load>: Attempting to load undefined object");
 break;
      
 
@@ -273,11 +283,42 @@ break;
 
    //calculate the cost lookup table
   m_PathCosts = CreateAllPairsCostsTable(*m_pNavGraph);
-  
  //g_screenLog->log(LL_INFO, "AFTER COSTS TABLE");
 return true;
 }
 
+
+
+
+//-------------------------LoadMap------------
+bool Map::LoadMap(TileLayer* tLayer)
+{
+#ifdef Debug
+  std::cout << "LoadMap called"<<endl;
+  #endif
+
+Clear();
+ m_iSizeX = 640;
+ m_iSizeY = 480;
+Entity::ResetNextValidID();
+
+m_pNavGraph = new NavGraph(false);
+
+
+ m_pNavGraph->Load(tLayer->getTileIDs(),tLayer->getTileSize(),tLayer->getNumColumns(),tLayer->getNumRows());
+ 
+
+ m_dCellSpaceNeighborhoodRange = CalculateAverageGraphEdgeLength(*m_pNavGraph) + 1;
+
+//partition the graph nodes
+  PartitionNavGraph();
+ m_SpawnPoints.push_back(Vector2D(100,200));
+ m_SpawnPoints.push_back(Vector2D(100,100));
+   //calculate the cost lookup table
+  m_PathCosts = CreateAllPairsCostsTable(*m_pNavGraph);
+ 
+return true;
+}
 
 
 //-------------------------------------------
@@ -354,7 +395,6 @@ Vector2D Map::GetRandomNodeLocation()const
   {
     pN = NodeItr.next();
   }
-
   return pN->Pos();
 }
 

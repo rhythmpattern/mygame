@@ -1,8 +1,9 @@
+
 #include "Character.h"
+#include "Game.h"
 #include "misc/utils.h"
 #include "2D/Transformations.h"
 #include "2D/Geometry.h"
-#include "Game.h"
 #include "Navigation/PathPlanner.h"
 #include "SteeringBehaviors.h"
 #include "UserOptions.h"
@@ -18,7 +19,8 @@
 #include "Goals/Goal_Think.h"
 #include "Goals/Goal_Think_Zombie.h"
 #include "InputHandler.h"
-#define debug
+
+//#define debug
 
 //-------------------------- ctor ---------------------------------------------
 Character::Character(Room* room,Vector2D pos):
@@ -162,7 +164,7 @@ void Character::load(Room* room)
 //-----------------------------------------------------------
 void Character::draw()
 {
-    TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x - 148/2, m_vPosition.y - 125/2, 148, 125,0,0, Game::Instance()->getRenderer(),0,100);
+    TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x - 56/2, m_vPosition.y - 66/2, 56, 66,0,0, Game::Instance()->getRenderer(),0,100);
 }
 
 
@@ -314,8 +316,7 @@ void Character::UpdateMovement()
   m_vVelocity.Truncate(m_dMaxSpeed);
 
   //update the position
-  m_vPosition += m_vVelocity;
-
+  m_vPosition += m_vVelocity*Game::Instance()->getDeltaTime();
   //if the vehicle has a non zero velocity the heading and side vectors must 
   //be updated
   if (!m_vVelocity.isZero())
@@ -338,8 +339,8 @@ bool Character::isReadyForTriggerUpdate()const
 //-----------------------------------------------------------------------------
 bool Character::HandleMessage(const Telegram& msg)
 {
-    
-  std::cout << "Character MESSAGE IS : " <<MessageToString(msg.Msg);
+      
+ 
   //if (msg.Sender==NULL || msg.Receiver  == NULL) return false;
 
   //first see if the current goal accepts the message
@@ -405,7 +406,7 @@ bool Character::HandleMessage(const Telegram& msg)
 
   case Msg_OpenSesame:
     {
-      std::cout << "OPEN SESAME";
+      //std::cout << "OPEN SESAME";
     }
   default: return false;
   }
@@ -523,6 +524,7 @@ void Character::FireWeapon(Vector2D pos)
 //-----------------------------------------------------------------------------
 double Character::CalculateTimeToReachPosition(Vector2D pos)const
 {
+  
   return Vec2DDistance(Pos(), pos) / (MaxSpeed() * FrameRate);
 }
 
@@ -531,7 +533,7 @@ double Character::CalculateTimeToReachPosition(Vector2D pos)const
 //  returns true if the bot is close to the given position
 //-----------------------------------------------------------------------------
 bool Character::isAtPosition(Vector2D pos)const
-{
+{  
   const static double tolerance = 10.0;
   
   return Vec2DDistanceSq(Pos(), pos) < tolerance * tolerance;

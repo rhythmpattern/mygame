@@ -8,7 +8,6 @@
 #include "Goal_Types.h"
 
 
-
 class Goal_MoveToPosition : public Goal_Composite<Character>
 {
 private:
@@ -35,7 +34,6 @@ public:
   bool HandleMessage(const Telegram& msg);
 
 };
-
 
 
 

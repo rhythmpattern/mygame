@@ -31,7 +31,7 @@ void Goal_AttackTarget::Activate()
 
   //if the bot is able to shoot the target (there is LOS between bot and
   //target), then select a tactic to follow while shooting
-  /*  if (m_pOwner->GetTargetSys()->isTargetShootable())
+    if (m_pOwner->GetTargetSys()->isTargetShootable())
    {
     //if the bot has space to strafe then do so
     Vector2D dummy;
@@ -46,7 +46,7 @@ void Goal_AttackTarget::Activate()
        AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_pOwner->GetTargetBot()->Pos()));
     }
   }
-  */
+  
   //if the target is not visible, go hunt it.
   // else
   {

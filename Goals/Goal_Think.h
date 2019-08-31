@@ -17,16 +17,12 @@
 #include "Goal_Evaluator.h"
 #include "../Character.h"
 
-
-
 class Goal_Think : public Goal_Composite<Character>
 {
 private:
   
   typedef std::vector<Goal_Evaluator*>   GoalEvaluators;
-
-
-  
+ 
   GoalEvaluators  m_Evaluators;
 
 public:

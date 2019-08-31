@@ -2,7 +2,7 @@
 #ifndef LEVELPARSER_H
 #define LEVELPARSER_H
 
-#include <iostream>
+
 #include <vector>
 #include "tinyxml.h"
 
@@ -10,6 +10,7 @@ class Level;
 struct Tileset;
 class Layer;
 class TileLayer;
+class Room;
 
 class LevelParser
 {
@@ -18,7 +19,7 @@ public:
    Level* parseLevel(const char* stateFile);
     
 private:
-    
+  Room* m_pRoom;
     void parseTextures(TiXmlElement* pTextureRoot);
      void parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>* pTilesets);
      void parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Layer*> *pLayers, Level* pLevel);
@@ -27,7 +28,10 @@ private:
     int m_tileSize;
     int m_width;
     int m_height;
+  int numChars;
 };
+
+
 
 #endif
 

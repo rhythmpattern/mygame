@@ -38,14 +38,14 @@ void Goal_TraverseEdge::Activate()
   {
     case NavGraphEdge::swim:
     {
-      m_pOwner->SetMaxSpeed(10);
+      // m_pOwner->SetMaxSpeed(10);
     }
    
     break;
    
     case NavGraphEdge::crawl:
     {
-       m_pOwner->SetMaxSpeed(10);
+      // m_pOwner->SetMaxSpeed(10);
     }
    
     break;
@@ -137,6 +137,6 @@ void Goal_TraverseEdge::Terminate()
   m_pOwner->GetSteering()->ArriveOff();
 
   //return max speed back to normal
-  m_pOwner->SetMaxSpeed(10);
+  // m_pOwner->SetMaxSpeed(10);
 }
 

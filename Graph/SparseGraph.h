@@ -15,12 +15,14 @@
 #include <cassert>
 #include <string>
 #include <fstream>
-#include <android/log.h>
-
 #include "../2D/Vector2D.h"
 #include "../misc/utils.h" 
 #include "NodeTypeEnumerations.h"
+#include <SDL.h>
+#include <SDL_image.h>
+#include <android/log.h>
 
+class TileLayer;
 
 
 template <class node_type, class edge_type>   
@@ -37,13 +39,15 @@ public:
   typedef std::vector<node_type>   NodeVector;
   typedef std::list<edge_type>     EdgeList;
   typedef std::vector<EdgeList>    EdgeListVector;
-
+  typedef std::vector<SDL_Rect*>   RectVector;
  
 private:
   
   //the nodes that comprise this graph
   NodeVector      m_Nodes;
 
+  RectVector   m_Rects; 
+  
   //a vector of adjacency edge lists. (each node index keys into the 
   //list of edges associated with that node)
   EdgeListVector  m_Edges;
@@ -153,10 +157,13 @@ public:
 
   bool  Load(const char* FileName);
   bool  Load(std::istringstream& stream);
-
+  bool Load(const std::vector<std::vector<int>>& ids,int m_tileSize,int m_numColumns,int m_numRows);
   //clears the graph ready for new node insertions
-  void Clear(){m_iNextNodeIndex = 0; m_Nodes.clear(); m_Edges.clear();}
-
+  void Clear(){m_iNextNodeIndex = 0; m_Nodes.clear(); m_Edges.clear(); m_Rects.clear();}
+  
+  RectVector& GetRects() { return m_Rects;}
+  void AddRect(SDL_Rect* r) { m_Rects.push_back(r);}
+  
   void RemoveEdges()
   {
     for (typename EdgeListVector::iterator it = m_Edges.begin(); it != m_Edges.end(); ++it)
@@ -721,7 +728,7 @@ bool SparseGraph<node_type, edge_type>::Save(const char* FileName)const
 
   if (!out)
   {
-    //throw std::runtime_error("Cannot open file: " + std::string(FileName));
+    throw std::runtime_error("Cannot open file: " + std::string(FileName));
     return false;
   }
 
@@ -769,7 +776,6 @@ bool SparseGraph<node_type, edge_type>::Load(const char* FileName)
 
   if (!in)
   {
-     __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "BAD FILENAME TO NAVGRAPH/SPARSEGRAPH");
    // throw std::runtime_error("Cannot open file: " + std::string(FileName));
     return false;
   }
@@ -785,7 +791,7 @@ bool SparseGraph<node_type, edge_type>::Load(std::istringstream& stream)
   Clear();
   //get the number of nodes and read them in
   int NumNodes, NumEdges;
-
+ 
   stream >> NumNodes;
 
   for (int n=0; n<NumNodes; ++n)
@@ -822,6 +828,59 @@ bool SparseGraph<node_type, edge_type>::Load(std::istringstream& stream)
 
   return true;
 }
-   
+
+
+//------------------------------- Load ----------------------------------------
+//-----------------------------------------------------------------------------
+template <class node_type, class edge_type>
+bool SparseGraph<node_type, edge_type>::Load(const std::vector<std::vector<int>>& ids,int m_tileSize,int m_numColumns,int m_numRows)
+{
+ 
+  for(int i = 0; i < m_numRows; i++)
+    {
+      for(int j = 0; j < m_numColumns; j++)
+	{
+	    
+
+	  if (ids[i][j] == 0) {
+	    NodeType NewNode(invalid_node_index , Vector2D(j*(m_tileSize) + m_tileSize/2 , i*(m_tileSize) + m_tileSize/2));
+	    m_Nodes.push_back(NewNode);
+	    //make sure an edgelist is added for each node
+	    m_Edges.push_back(EdgeList());
+	    SDL_Rect* r = new SDL_Rect();
+	    r->x = j*(m_tileSize);
+	    r->y = i*(m_tileSize);
+	    r->w = m_tileSize;
+	    r->h = m_tileSize;
+	    m_Rects.push_back(r);
+	    ++m_iNextNodeIndex;}
+	  else {
+	   
+	    NodeType NewNode(m_iNextNodeIndex , Vector2D(j*(m_tileSize) + m_tileSize/2 , i*(m_tileSize) + m_tileSize/2));
+	    AddNode(NewNode);
+     
+	  }
+	   
+	}
+    }
+ 
+  //Create the edges.
+  for (int i = 0; i < m_numRows; i++)
+    {
+      for (int j = 0; j < m_numColumns; j++)
+	{
+	  GraphHelper_AddAllNeighboursToGridNode(*this,
+						 i,
+						 j,
+						 m_numColumns,
+						 m_numRows);
+         
+	}
+    }
+  
+  return true;
+}
+
+
 
 #endif

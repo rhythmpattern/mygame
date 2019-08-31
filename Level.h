@@ -1,7 +1,6 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
-#include <iostream>
 #include <vector>
 #include "Layer.h"
 #include "LevelParser.h"
@@ -55,7 +54,7 @@ private:
     //  Player* m_pPlayer;
     Map* m_pMap;
     std::vector<Character*> m_Bots;
-    PathManager<PathPlanner>* m_pPathManager;
+    PathManager* m_pPathManager;
      std::vector<Layer*> m_layers;
      std::vector<Room*> m_rooms;
       std::vector<Tileset> m_tilesets;

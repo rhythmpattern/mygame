@@ -15,7 +15,7 @@
 #include "PathEdge.h"
 #include "../Graph/SparseGraph.h"
 #include "../Map.h"
-
+#include "../2D/Vector2D.h"
 
 class Character;
 class EdgeType;

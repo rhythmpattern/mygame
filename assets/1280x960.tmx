@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" name="DM1.map" numChars="1" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <properties>
+  <property name="dot" value="assets/dot.png"/>
+  <property name="isaac" value="assets/isaac.png"/>
+  <property name="pause" value="assets/pause.png"/>
+ </properties>
+ <tileset firstgid="1" name="blocks1" tilewidth="32" tileheight="32" tilecount="209" columns="19">
+  <image source="blocks1.png" width="614" height="376"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="40" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1lEKQBEUhOHzYBf2v08pT0LSDFNG/Y+OL7p1U0Qk55xz7mInq+7LLTXbyKroYjtZS9WFsP18b4hvWd2HdvZzUUaGTemNZ7OV3phtZNhe3+HOTPQ/A9LG8K2M6HOce1EBjQgPdg==
+  </data>
+ </layer>
+</map>

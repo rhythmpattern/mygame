@@ -1,6 +1,5 @@
 #ifndef SCRIPTOR_H
 #define SCRIPTOR_H
-#include "parser.h"
 
 #include <string>
 #include "tinyxml.h"
@@ -10,7 +9,10 @@
 class Scriptor
 {
  public:
-  Scriptor(){p = new Parser();char* file_contents = NULL; p->read_text("params.xml" , &file_contents); doc.Parse(file_contents); pRoot = doc.RootElement();
+  Scriptor(){file="assets/params.xml";p = new Parser();
+    char* file_contents = NULL;
+    p->read_text("params.xml" , &file_contents); doc.Parse(file_contents); pRoot = doc.RootElement();
+   
    }
   ~Scriptor(){}
 

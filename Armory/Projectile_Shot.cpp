@@ -3,11 +3,15 @@
 #include "../Game.h"
 #include "../constants.h"
 #include "../2D/WallIntersectionTests.h"
-#include "../Map.h"
+#include "../2D/Vector2D.h"
 #include "../Scriptor.h"
 #include "../Messages.h"
 #include "../Messaging/MessageDispatcher.h"
+#include "../TextureManager.h"
 
+class Map;
+class Walls2D;
+class Room;
 
 //-------------------------- ctor ---------------------------------------------
 //-----------------------------------------------------------------------------
@@ -41,7 +45,7 @@ void Projectile_Shot::Update()
     m_vVelocity.Truncate(m_dMaxSpeed);
 
     //update the position
-    m_vPosition += m_vVelocity;
+    m_vPosition += m_vVelocity*Game::Instance()->getDeltaTime();
     
    
     //TextureManager::Instance()->drawFrame("isaac",  m_vPosition.x, m_vPosition.y, 20, 20,0,0, Game::Instance()->getRenderer(),0,100);

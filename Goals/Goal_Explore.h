@@ -5,7 +5,6 @@
 #include "Goal_Composite.h"
 #include "Goal_Types.h"
 
-
 class Character;
 
 
@@ -34,6 +33,7 @@ public:
 
   bool HandleMessage(const Telegram& msg);
 };
+
 
 
 

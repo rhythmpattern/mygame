@@ -12,10 +12,9 @@
 //
 //-----------------------------------------------------------------------------
 #include "Projectile.h"
+#include "../2D/Vector2D.h"
 
 class Character;
-class Projectile;
-
 
 
 class Projectile_Shot : public Projectile

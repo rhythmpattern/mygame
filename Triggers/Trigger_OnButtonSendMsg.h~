@@ -11,7 +11,7 @@
 //-----------------------------------------------------------------------------
 #include "Trigger.h"
 #include "../Messaging/MessageDispatcher.h"
-#include <iostream>
+#include <iosfwd>
 #include <fstream>
 #include <sstream>
 #include "../misc/Stream_Utility_Functions.h"

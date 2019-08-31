@@ -2,31 +2,16 @@
 #include "CharManager.h"
 #include "Scriptor.h"
 #include "2D/WallIntersectionTests.h"
-#include "parser.h"
-#include <android/log.h>
-#include <string>
-#include <iostream>
+#include "Player.h"
+#include "TileLayer.h"
+#include "CollisionTests.h"
+#include "Navigation/PathPlanner.h"
 #include <android/log.h>
 
-#define LOG
 
-bool Room::init()
+bool Room::init(const std::string mapName)
 {
- //load in the default map
-  Parser* p = new Parser();
-   char* file_contents;
-   p->read_text("DM1.map",&file_contents);
-
-  LoadMap(file_contents);
  
-  
-  
- 
-  // m_pPlayer = new Player(this, Vector2D(0,0));
-    
-   
-  // m_CharManager->AddChar(m_pPlayer);
-  //EntityMgr->RegisterEntity(m_pPlayer);
   
   return true;
 }
@@ -40,14 +25,13 @@ Room::~Room()
   Clear();
   delete m_pMap;
   delete m_pPathManager;
-  GraveManager::Instance()->Clear();
-  ProjectileManager::Instance()->Clear();
+ 
 }
 
 
-bool Room::LoadMap(const std::string& filename)
+bool Room::LoadMap(const std::string& filename, int numChars)
 {
-  
+ 
    //clear any current chars and projectiles
    Clear();
   
@@ -57,38 +41,73 @@ bool Room::LoadMap(const std::string& filename)
 
   //in with the new
   m_pMap = new Map();
-   m_pPathManager = new PathManager<PathPlanner>(script->getInt("maxsearchcyclesperupdatestep"));
-   
+  m_pPathManager = new PathManager(script->getInt("maxsearchcyclesperupdatestep"));
    GraveManager::Instance()->load();
    
-   
- 
+
   //load the new map data
   if (m_pMap->LoadMap(filename))
   {
-   
+    
     #ifdef LOG
-     __android_log_print(ANDROID_LOG_ERROR, "TRACKERS" , "LOAD MAP CALLED SUCCESSFULLY");
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-     m_pCharManager->AddChars(6);
-     
+    m_pCharManager->AddChars(numChars);
+    // Player* m_pPlayer = new Player(this,Vector2D(150,150));
+    //  m_pCharManager->AddChar(m_pPlayer);
+    //  EntityMgr->RegisterEntity(m_pPlayer);
     return true;
   }
   
-  
+    
   return false;
   
 
 }
 
+bool Room::LoadMap(TileLayer* tLayer, int numChars)
+{
+
+   //clear any current chars and projectiles
+   Clear();
+  
+  //out with the old
+  delete m_pMap;
+  delete m_pPathManager;
+
+  //in with the new
+  m_pMap = new Map();
+   
+   m_pPathManager = new PathManager(script->getInt("maxsearchcyclesperupdatestep"));
+   GraveManager::Instance()->load();
+   
+ 
+  //load the new map data
+  if (m_pMap->LoadMap(tLayer))
+  {
+    #ifdef LOG
+    std::cout << "LoadMap called succesfully" <<endl;
+    #endif
+    m_pCharManager->AddChars(3);
+    // Player* m_pPlayer = new Player(this,Vector2D(150,150));
+    //m_pCharManager->AddChar(m_pPlayer);
+    // EntityMgr->RegisterEntity(m_pPlayer);
+    return true;
+  }
+  
+    
+  return false;
+  
+
+}
 
 void Room::Render()
 {
               
-    GraveManager::Instance()->Render();
+  GraveManager::Instance()->Render();
   m_pCharManager->Render();
-  ProjectileManager::Instance()->Render();  
+  ProjectileManager::Instance()->Render();
+  m_pMap->render();
 }
 
 void Room::Update()
@@ -98,14 +117,15 @@ void Room::Update()
   ProjectileManager::Instance()->Update();
   m_pCharManager->Update();
   m_pPathManager->UpdateSearches();
+ 
   m_pMap->UpdateTriggerSystem(m_Chars);
    //update any doors
   std::vector<Door*>::iterator curDoor =m_pMap->GetDoors().begin();
   for (curDoor; curDoor != m_pMap->GetDoors().end(); ++curDoor)
   {
-     (*curDoor)->Update();
+    (*curDoor)->Update();
   }
-  
+ 
   
 }
 
@@ -116,7 +136,8 @@ void Room::Clear()
 #endif
 
     m_pCharManager->Clear();
-   
+    GraveManager::Instance()->Clear();
+  ProjectileManager::Instance()->Clear();
  
  
   
@@ -159,7 +180,8 @@ Room::isSecondVisibleToFirst(const Character* pFirst,
 //------------------------------------------------------------------------------
 bool Room::isLOSOkay(Vector2D A, Vector2D B)const
 {
-  return !doWallsObstructLineSegment(A, B, m_pMap->GetWalls());
+  //return !doWallsObstructLineSegment(A, B, m_pMap->GetWalls());
+  return !doRectsObstructLineSegment(A,B,m_pMap->GetNavGraph().GetRects());
 }
 
 //------------------------- isPathObstructed ----------------------------------
@@ -170,6 +192,40 @@ bool Room::isLOSOkay(Vector2D A, Vector2D B)const
 //  each point.
 //-----------------------------------------------------------------------------
 bool Room::isPathObstructed(Vector2D A,
+                                  Vector2D B,
+                                  double    BoundingRadius)const
+{
+  Vector2D ToB = Vec2DNormalize(B-A);
+
+  Vector2D curPos = A;
+
+  while (Vec2DDistanceSq(curPos, B) > BoundingRadius*BoundingRadius)
+  {   
+    //advance curPos one step
+    curPos += ToB * 0.5 * BoundingRadius;
+    
+    //test all walls against the new position
+    // if (doWallsIntersectCircle(m_pMap->GetWalls(), curPos, BoundingRadius))
+    // {
+    //   return true;
+    // }
+    if (doRectsIntersectCircle(m_pMap->GetNavGraph().GetRects(), curPos, BoundingRadius))
+      {
+	return true;
+      }
+  }
+
+  return false;
+}
+
+//------------------------- isPathCollision ----------------------------------
+//
+//  returns true if a bot cannot move from A to B without bumping into 
+//  world geometry. It achieves this by stepping from A to B in steps of
+//  size BoundingRadius and testing for intersection with world geometry at
+//  each point.
+//-----------------------------------------------------------------------------
+bool Room::isPathCollision(Vector2D A,
                                   Vector2D B,
                                   double    BoundingRadius)const
 {

@@ -25,7 +25,7 @@ void Goal_Explore::Activate()
   {
     //grab a random location
     m_CurrentDestination = m_pOwner->GetRoom()->GetMap()->GetRandomNodeLocation();
-
+    
     m_bDestinationIsSet = true;
   }
 
@@ -36,6 +36,7 @@ void Goal_Explore::Activate()
   //so for appearances sake it simple ARRIVES at the destination until a path
   //has been found
   AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_CurrentDestination));
+  
 }
 
 //------------------------------ Process -------------------------------------
@@ -47,7 +48,7 @@ int Goal_Explore::Process()
 
   //process the subgoals
   m_iStatus = ProcessSubgoals();
-
+ 
   return m_iStatus;
 }
 
@@ -56,6 +57,7 @@ int Goal_Explore::Process()
 //-----------------------------------------------------------------------------
 bool Goal_Explore::HandleMessage(const Telegram& msg)
 {
+ 
   //first, pass the message down the goal hierarchy
   bool bHandled = ForwardMessageToFrontMostSubgoal(msg);
 
@@ -65,12 +67,12 @@ bool Goal_Explore::HandleMessage(const Telegram& msg)
     switch(msg.Msg)
     {
     case Msg_PathReady:
-
+    
       //clear any existing goals
       RemoveAllSubgoals();
 
-      AddSubgoal(new Goal_FollowPath(m_pOwner,
-                                     m_pOwner->GetPathPlanner()->GetPath()));
+       AddSubgoal(new Goal_FollowPath(m_pOwner,
+         m_pOwner->GetPathPlanner()->GetPath()));
 
       return true; //msg handled
 

@@ -13,7 +13,7 @@ double Scriptor::getNum(const char *in)
 	  e->Attribute("value",&x);
       	}
       	}
-  assert (x != NULL);
+ 
 	  return x;
 }
 

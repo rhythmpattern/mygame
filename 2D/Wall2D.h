@@ -3,7 +3,6 @@
 
 #include "Vector2D.h"
 #include <fstream>
-#include <android/log.h>
 
 class Wall2D {
 
@@ -57,9 +56,8 @@ Vector2D From()const  {return m_vA;}
   void Read(std::istringstream& in)
   {
     double x,y;
-   
+
     in >> x >> y;
-   
     SetFrom(Vector2D(x,y));
 
     in >> x >> y;

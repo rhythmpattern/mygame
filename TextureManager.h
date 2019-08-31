@@ -1,7 +1,6 @@
 #ifndef TEXTURE_MANAGER_H
 #define TEXTURE_MANAGER_H
 
-#include <iostream>
 #include <string>
 #include <map>
 #include <SDL.h>

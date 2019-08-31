@@ -9,9 +9,6 @@
 #include "Goal_Wander.h"
 #include "Goal_Types.h"
 #include "Goal_AttackTarget.h"
-
-
-
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
 //#define debug
@@ -35,6 +32,8 @@ Goal_Think::Goal_Think(Character* pBot):Goal_Composite<Character>(pBot, goal_thi
 
   m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
   m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
+  AddGoal_Explore();
+ 
 }
 
 //----------------------------- dtor ------------------------------------------
@@ -46,6 +45,7 @@ Goal_Think::~Goal_Think()
   {
     delete *curDes;
   }
+ 
 }
 
 //------------------------------- Activate ------------------------------------
@@ -54,7 +54,7 @@ void Goal_Think::Activate()
 {
   if (!m_pOwner->isPossessed())
   {
-    Arbitrate();
+     Arbitrate();
   }
 
   m_iStatus = active;
@@ -66,19 +66,18 @@ void Goal_Think::Activate()
 //-----------------------------------------------------------------------------
 int Goal_Think::Process()
 {
-
+   ActivateIfInactive();
  
-  ActivateIfInactive();
-  
   int SubgoalStatus = ProcessSubgoals();
-
-  if (SubgoalStatus == completed || SubgoalStatus == failed)
+   if (SubgoalStatus == completed || SubgoalStatus == failed)
   {
     if (!m_pOwner->isPossessed())
     {
       m_iStatus = inactive;
     }
   }
+ 
+ 
 
   return m_iStatus;
 }
@@ -98,7 +97,7 @@ void Goal_Think::Arbitrate()
   for (curDes; curDes != m_Evaluators.end(); ++curDes)
   {
     double desirabilty = (*curDes)->CalculateDesirability(m_pOwner);
-
+   
     if (desirabilty >= best)
     {
       best = desirabilty;
@@ -137,6 +136,7 @@ void Goal_Think::AddGoal_MoveToPosition(Vector2D pos)
 
 void Goal_Think::AddGoal_Explore()
 {
+  
   if (notPresent(goal_explore))
   {
     RemoveAllSubgoals();

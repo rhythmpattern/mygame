@@ -1,4 +1,7 @@
 #include "Zombie.h"
+#include "ZombieWeaponSystem.h"
+#include "Goals/Goal_Think_Zombie.h"
+
 Zombie::Zombie(Room* pRoom, Vector2D pos) : Character(pRoom,pos)
 					   
 {
