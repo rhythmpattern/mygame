@@ -19,7 +19,7 @@ void PauseState::render()
 {
     if(m_loadingComplete)
     {
-      TextureManager::Instance()->drawFrame("pause",  0, 0, 1455, 796,0,0, Game::Instance()->getRenderer(),0,100);
+      TextureManager::Instance()->drawFrame("pause",  0, 0, 640, 480,0,0, Game::Instance()->getRenderer(),0,100);
        
     }
 }
