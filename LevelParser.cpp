@@ -72,7 +72,9 @@ Level* LevelParser::parseLevel(const char *levelFile)
             }
 
 	}
-      
+       m_pRoom = new Room();
+    //m_pRoom->LoadMap("DM1.map", numChars); 
+       m_pRoom->LoadMap(pLevel->getCollisionLayers()->front(), numChars);
    m_pRoom->SetLevel(pLevel);
       pLevel->getRooms()->push_back(m_pRoom);
     return pLevel;
@@ -190,7 +192,7 @@ void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>
 {
     TileLayer* pTileLayer = new TileLayer(m_tileSize, *pTilesets);
     
-    bool collidable = false;
+    bool collidable = true;
     
     // tile data
     std::vector<std::vector<int>> data;
@@ -257,9 +259,7 @@ void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>
     {
         pCollisionLayers->push_back(pTileLayer);
     }
-    m_pRoom = new Room();
-    //m_pRoom->LoadMap("DM1.map", numChars); 
-     m_pRoom->LoadMap(pTileLayer, numChars);
+   
     pLayers->push_back(pTileLayer);
 }
 

@@ -1,0 +1,11 @@
+#ifndef TILEGRAPHHELPER_H
+#define TILEGRAPHHELPER_H
+
+template <class node_type, class edge_type>
+  class TileGraphHelper
+{
+}
+
+
+
+#endif
