@@ -5,6 +5,7 @@ find_package (SDL2 REQUIRED)
 find_package (ZLIB REQUIRED)
 find_package (SDL2_image REQUIRED)
 include_directories (
+  $ENV{GMOCK_HOME}/include $ENV{GMOCK_HOME}/gtest/include
   ${PROJECT_SOURCE_DIR}/2D
   ${PROJECT_SOURCE_DIR}/Armory
   ${PROJECT_SOURCE_DIR}/Fuzzy
@@ -15,8 +16,10 @@ include_directories (
   ${PROJECT_SOURCE_DIR}/misc
   ${PROJECT_SOURCE_DIR}/Navigation
   ${PROJECT_SOURCE_DIR}/Time
-  ${PROJECT_SOURCE_DIR}/Triggers)
-
+  ${PROJECT_SOURCE_DIR}/Triggers
+  )
+link_directories ($ENV{GMOCK_HOME}/mybuild $ENV{GMOCK_HOME}/gtest/mybuild)
+add_definitions(-std=c++0x)
 file(GLOB all_SRCS
   "${PROJECT_SOURCE_DIR}/*.h"
   "${PROJECT_SOURCE_DIR}/*.cpp"
@@ -45,4 +48,4 @@ file(GLOB all_SRCS
   )
 add_executable(mygame ${all_SRCS})
 target_compile_options (mygame PRIVATE -g -w)
-target_link_libraries (mygame SDL2::Main SDL2::Image ${ZLIB_LIBRARIES} -ggdb3)
+target_link_libraries (mygame SDL2::Main SDL2::Image ${ZLIB_LIBRARIES} -ggdb3 pthread gmock gtest)

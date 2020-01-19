@@ -1,5 +1,6 @@
 #include <iostream>
- #include <cstdlib>
+#include "gmock/gmock.h"
+#include <cstdlib>
 #include "Game.h"
 #include "Map.h"
 #include <SDL2/SDL.h>
@@ -13,6 +14,7 @@
 
 int main( int argc, char* args[] )
 {
+  testing::InitGoogleMock(&argc , args);
   // freopen("CON", "w", stdout);
   SDL_Window* m_pWindow;
   SDL_Renderer* m_pRenderer;
