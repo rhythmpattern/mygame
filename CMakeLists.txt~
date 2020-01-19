@@ -1,0 +1,7 @@
+cmake_minimum_required( VERSION 3.7)
+project (mygame)
+find_package (SDL2 REQUIRED)
+find_package (ZLIB REQUIRED)
+include_directories (${SDL2_INCLUDE_DIRS} ${ZLIB_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/)
+add_executable(mygame debug.cpp)
+target_link_libraries (mygame ${SDL2_LIBRARIES} ${ZLIB_LIBRARIES})

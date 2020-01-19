@@ -834,6 +834,7 @@ bool SparseGraph<node_type, edge_type>::Load(std::ifstream& stream)
 template <class node_type, class edge_type>
 bool SparseGraph<node_type, edge_type>::Load(TileLayer* layer)
 {
+  m_iNextNodeIndex = 0;
   int m_tileSize = layer->getTileSize();
   int  m_numColumns = layer->getNumColumns() -1;
   int   m_numRows = layer->getNumRows();
