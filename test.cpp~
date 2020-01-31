@@ -1,0 +1,7 @@
+#include "gmock/gmock.h"
+#include "Game.h"
+
+int main( int argc, char* args[] )
+{
+
+}
