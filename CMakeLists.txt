@@ -48,5 +48,8 @@ file(GLOB all_SRCS
   )
 list(REMOVE_ITEM all_SRCS "${PROJECT_SOURCE_DIR}/test.cpp" "${PROJECT_SOURCE_DIR}/debug.cpp")
 add_executable(mygame ${all_SRCS} "debug.cpp")
+add_executable(test ${all_SRCS} "test.cpp")
 target_compile_options (mygame PRIVATE -g -w)
 target_link_libraries (mygame SDL2::Main SDL2::Image ${ZLIB_LIBRARIES} -ggdb3 pthread gmock gtest)
+target_compile_options (test PRIVATE -g -w)
+target_link_libraries (test SDL2::Main SDL2::Image ${ZLIB_LIBRARIES} -ggdb3 pthread gmock gtest)
