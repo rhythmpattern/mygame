@@ -61,7 +61,7 @@ bool Room::LoadMap(const std::string& filename, int numChars)
 
 }
 
-bool Room::LoadMap(TileLayer* tLayer, int numChars)
+bool Room::LoadMap(TileLayer* tLayer)
 {
  
    //clear any current chars and projectiles
@@ -83,7 +83,7 @@ bool Room::LoadMap(TileLayer* tLayer, int numChars)
     #ifdef LOG
     std::cout << "LoadMap called succesfully" <<endl;
     #endif
-    m_pCharManager->AddChars(numChars);
+    // m_pCharManager->AddChars(numChars);
     // Player* m_pPlayer = new Player(this,Vector2D(150,150));
     //m_pCharManager->AddChar(m_pPlayer);
     // EntityMgr->RegisterEntity(m_pPlayer);

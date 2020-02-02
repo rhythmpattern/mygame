@@ -22,7 +22,7 @@ class Room
   void Render();
   void Clear();
   bool LoadMap(const std::string& filename , int numChars);
-  bool LoadMap(TileLayer* tLayer , int numChars);
+  bool LoadMap(TileLayer* tLayer );
   bool init(const std::string sMap);
   void AddChar(Character* pChar);
   void AddChars(unsigned int NumCharsToAdd);

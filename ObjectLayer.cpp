@@ -19,7 +19,7 @@ void ObjectLayer::render()
 {
     for(int i = 0; i < m_gameObjects.size(); i++)
    {
-       if(m_gameObjects[i]->Pos().x <= Game::Instance()->getGameWidth())
+     if(m_gameObjects[i]->Pos().x <= Game::Instance()->getGameWidth() && m_gameObjects[i]->Pos().y <= Game::Instance()->getGameHeight())
       {
            m_gameObjects[i]->draw();
        }
@@ -28,5 +28,5 @@ void ObjectLayer::render()
 
 void ObjectLayer::update(Level* pLevel)
 {
-
+  
 }

@@ -148,5 +148,13 @@ void CharManager::AddChars(unsigned int NumCharsToAdd)
 } 
 }
 
-void CharManager::AddChar(Character* pChar)
- {m_Chars.push_back(pChar);}
+void CharManager::AddChar(Character* pChar , LoadParams* lp)
+ {
+   pChar->load(m_pRoom );
+    //switch the default steering behaviors on
+    pChar->GetSteering()->WallAvoidanceOn();
+    pChar->GetSteering()->SeparationOn();
+    EntityMgr->RegisterEntity(pChar);
+    pChar->Spawn(Vector2D( lp->getX() , lp->getY()));
+    m_Chars.push_back(pChar);
+ }

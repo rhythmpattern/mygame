@@ -8,6 +8,7 @@
 #include "Game/EntityManager.h"
 #include "SteeringBehaviors.h"
 #include "Player.h"
+#include "LoadParams.h"
 
 class CharManager
 {
@@ -29,7 +30,7 @@ class CharManager
   void Update();
   void Render();
    void AddChars(unsigned int NumCharsToAdd);
-   void AddChar(Character* pChar);
+  void AddChar(Character* pChar , LoadParams* lp);
   const std::vector<Character*> GetAllChars()const{ return m_Chars;}
  private:
   static CharManager* pInstance;
