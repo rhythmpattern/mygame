@@ -296,8 +296,8 @@ bool Map::LoadMap(TileLayer* tLayer)
   #endif
 
 Clear();
- m_iSizeX = 640;
- m_iSizeY = 480;
+ m_iSizeX = Game::Instance()->getGameWidth();
+ m_iSizeY = Game::Instance()->getGameHeight();
 Entity::ResetNextValidID();
 
 m_pNavGraph = new NavGraph(false);
