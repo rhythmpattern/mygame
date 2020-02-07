@@ -11,6 +11,7 @@
 #include "Map.h"
 #include "CharManager.h"
 #include "LoadParams.h"
+#include "LevelCommand.h"
 
 Level* LevelParser::parseLevel(const char *levelFile)
 {
@@ -22,8 +23,8 @@ Level* LevelParser::parseLevel(const char *levelFile)
     levelDocument.LoadFile(levelFile);
     
     // create the level object
-    Level* pLevel = new Level();
-   
+     pLevel = new Level();
+   m_pRoom = new Room();
     std::string mapName ;     
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
@@ -74,11 +75,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
             }
 	    else  if(e->FirstChildElement()->Value() == std::string("object"))
             {
-	       m_pRoom = new Room();
-    //m_pRoom->LoadMap("DM1.map", numChars); 
-       m_pRoom->LoadMap(pLevel->getCollisionLayers()->front());
-   m_pRoom->SetLevel(pLevel);
-      pLevel->getRooms()->push_back(m_pRoom);
+	      LevelCommand* LC = new LevelCommand (pLevel, m_pRoom);
                 parseObjectLayer(e, pLevel->getLayers(), pLevel);
             }
            
