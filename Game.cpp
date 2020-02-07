@@ -18,6 +18,7 @@
 #include "GoalFactory.h"
 #include "Goals/Goal_Explore.h"
 #include "Goals/Goal_MoveToPosition.h"
+#include "LevelCommand.h"
 
 //uncomment to write object creation/deletion to debug console
 //#define  LOG
@@ -66,7 +67,7 @@ Game::~Game()
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen){
 
- 
+  LevelCommand* lc = new LevelCommand(); 
   m_levelFiles.push_back(script->getString("level"));
    m_currentLevel = 1;
   
